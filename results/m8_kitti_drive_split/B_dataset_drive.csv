@@ -1,0 +1,801 @@
+protocol,indicator,seed,alpha,source,target,tau,A_hat,hb_L,hb_U,R_hat,outcome,n_select_units,n_eval_units,split,hb_unit
+as_run,u_s,0,0.01,kitti,kitti,0.07,0.0007815552950371239,5.556460657107909e-05,0.003321987420464874,0.014862981885740827,applies,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.001,kitti,kitti,,,,,,no threshold established,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.0001,kitti,kitti,,,,,,no threshold established,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.05,kitti,kitti,0.1,0.027380487169467237,0.02031230612445234,0.03638075261726546,0.20843009753831862,applies,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.1,kitti,kitti,0.13,0.08962113176650105,0.07664950392797165,0.10406344500412787,0.524500696702276,not determined,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.01,kitti,nuscenes,0.07,0.0,0.0,0.0012782667356288622,0.0,applies,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.001,kitti,nuscenes,,,,,,no threshold established,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.0001,kitti,nuscenes,,,,,,no threshold established,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.05,kitti,nuscenes,0.1,0.00034674063800277393,3.2192620076365586e-06,0.002276455963373588,0.0007319572536963841,applies,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.1,kitti,nuscenes,0.13,0.006067961165048544,0.0030593150487168153,0.01064474664123427,0.020128824476650563,applies,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.01,nuscenes,kitti,0.13,0.08962113176650105,0.07664950392797165,0.10406344500412787,0.524500696702276,does not apply,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.001,nuscenes,kitti,,,,,,no threshold established,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.0001,nuscenes,kitti,,,,,,no threshold established,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.05,nuscenes,kitti,0.16,0.17046995382282604,0.15319660337437058,0.18902302352499328,0.7495355318160706,does not apply,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.1,nuscenes,kitti,0.2,0.2889680895973565,0.26781761906566737,0.3108249760542382,0.8848118903855086,does not apply,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.01,nuscenes,nuscenes,0.13,0.006067961165048544,0.0030593150487168153,0.01064474664123427,0.020128824476650563,not determined,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.05,nuscenes,nuscenes,0.16,0.023739350108975633,0.017418681498510336,0.03151125090081391,0.10430390865173474,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.1,nuscenes,nuscenes,0.2,0.0703573770581399,0.059275710358683065,0.08240788624577719,0.32725808812765333,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.01,kitti,kitti,0.07,0.001178318931657502,0.00016606139166441825,0.003984611617957434,0.01681008605163098,applies,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.001,kitti,kitti,,,,,,no threshold established,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.0001,kitti,kitti,,,,,,no threshold established,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.05,kitti,kitti,0.1,0.026027755957056822,0.019063200968753247,0.0347849334412282,0.2282369421652992,applies,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.1,kitti,kitti,0.12,0.058415784486090847,0.047712969307879716,0.07040915632961706,0.45487292375425253,applies,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.01,kitti,nuscenes,0.07,0.0,0.0,0.001273852595244099,0.0,applies,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.001,kitti,nuscenes,,,,,,no threshold established,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.0001,kitti,nuscenes,,,,,,no threshold established,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.05,kitti,nuscenes,0.1,0.0,0.0,0.001273852595244099,0.0011438843042732248,applies,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.1,kitti,nuscenes,0.12,0.0029371112646855565,0.0009898263649262828,0.006530824166331989,0.008088896151646376,applies,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.01,nuscenes,kitti,0.13,0.08070464492302669,0.06828612909407528,0.09452872574198548,0.5527316389833901,does not apply,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.001,nuscenes,kitti,,,,,,no threshold established,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.0001,nuscenes,kitti,,,,,,no threshold established,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.05,nuscenes,kitti,0.17,0.1987909227893517,0.18039455446806518,0.21846641069337913,0.8066840104062437,does not apply,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.1,nuscenes,kitti,0.2,0.2797970618710187,0.2588527912778369,0.3015645291137562,0.8922353412047228,does not apply,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.01,nuscenes,nuscenes,0.13,0.006910850034554251,0.003802416728394098,0.011478941188464285,0.018057030803170195,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.05,nuscenes,nuscenes,0.17,0.04422368117945173,0.03537922280965877,0.05407228563853832,0.1604706266851867,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,1,0.1,nuscenes,nuscenes,0.2,0.08002988718261697,0.06836663010037136,0.09283751601427322,0.33262521447830706,applies,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.01,kitti,kitti,0.08,0.00436046511627907,0.0012752425933261202,0.01065251497863728,0.06342537014805923,not determined,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.001,kitti,kitti,,,,,,no threshold established,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.0001,kitti,kitti,,,,,,no threshold established,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.05,kitti,kitti,0.1,0.02217781007751938,0.013582216605636521,0.033841038449564,0.26630652260904364,applies,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.1,kitti,kitti,0.13,0.09229291985469311,0.07410515126097272,0.1122819045647426,0.600640256102441,not determined,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.01,kitti,nuscenes,0.08,0.0,0.0,0.0012871874318523446,0.0001525320317266626,applies,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.001,kitti,nuscenes,,,,,,no threshold established,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.0001,kitti,nuscenes,,,,,,no threshold established,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.05,kitti,nuscenes,0.1,0.00034916201117318437,3.2417467766832075e-06,0.0022923375414833328,0.0012202562538133007,applies,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.1,kitti,nuscenes,0.13,0.003840782122905028,0.0016471740701086146,0.007544880962170096,0.017312385600976206,applies,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.01,nuscenes,kitti,0.12,0.06456458794758212,0.04934730299725176,0.082001745270521,0.5022008803521408,does not apply,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.001,nuscenes,kitti,,,,,,no threshold established,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.0001,nuscenes,kitti,,,,,,no threshold established,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.05,nuscenes,kitti,0.16,0.18560644176559873,0.16122245891285303,0.21206030704204842,0.7947178871548619,does not apply,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.1,nuscenes,kitti,0.2,0.3101921536151187,0.28044637685631457,0.34061812302529737,0.90656262505002,does not apply,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.01,nuscenes,nuscenes,0.12,0.0022695530726256985,0.0006233203389045539,0.005603045821625786,0.0071690054911531425,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.05,nuscenes,nuscenes,0.16,0.023679835062516624,0.017240307570910995,0.03133420747697879,0.11188224527150702,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,2,0.1,nuscenes,nuscenes,0.2,0.06982360923527124,0.0587236921882599,0.08185633672550177,0.33953630262355095,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.01,kitti,kitti,0.07,0.0008904719501335708,6.330950622057685e-05,0.003784264804020241,0.015494030988061977,applies,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.001,kitti,kitti,,,,,,no threshold established,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.0001,kitti,kitti,,,,,,no threshold established,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.05,kitti,kitti,0.11,0.04713723868888606,0.036853016035682806,0.05881311644426533,0.32651765303530605,not determined,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.1,kitti,kitti,0.13,0.08933846157799853,0.07540990363218458,0.1046687612677771,0.5351790703581407,not determined,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.01,kitti,nuscenes,0.07,0.0,0.0,0.0013049458535650256,0.0,applies,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.001,kitti,nuscenes,,,,,,no threshold established,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.0001,kitti,nuscenes,,,,,,no threshold established,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.05,kitti,nuscenes,0.11,0.0007079646017699115,5.033188789727028e-05,0.0030095519396260216,0.0023594842841493215,applies,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.1,kitti,nuscenes,0.13,0.006371681415929204,0.0033779837088456777,0.010866558207849996,0.016432122693182775,applies,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.01,nuscenes,kitti,0.13,0.08933846157799853,0.07540990363218458,0.1046687612677771,0.5351790703581407,does not apply,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.001,nuscenes,kitti,,,,,,no threshold established,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.0001,nuscenes,kitti,,,,,,no threshold established,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.05,nuscenes,kitti,0.16,0.16766228848820122,0.14922942538567074,0.1872666939336715,0.7529845059690119,does not apply,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.1,nuscenes,kitti,0.2,0.2825026213317816,0.26007686071035563,0.30573040666927387,0.8853187706375413,does not apply,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.01,nuscenes,nuscenes,0.13,0.006371681415929204,0.0033779837088456777,0.010866558207849996,0.016432122693182775,not determined,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.05,nuscenes,nuscenes,0.16,0.02429329962073325,0.01778357350115567,0.03216674509290128,0.10499705064464482,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,3,0.1,nuscenes,nuscenes,0.2,0.07221771345665151,0.06117565840962336,0.08487624046640199,0.32333361422431955,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.01,kitti,kitti,0.07,0.0008733624454148472,6.209285108682572e-05,0.003711657411397605,0.01481903676261043,applies,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.001,kitti,kitti,,,,,,no threshold established,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.0001,kitti,kitti,,,,,,no threshold established,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.05,kitti,kitti,0.1,0.026237263464337697,0.018959480491218872,0.03567254096646953,0.19677970931889427,applies,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.1,kitti,kitti,0.12,0.057628405073819916,0.04633921128344998,0.07014853566665544,0.40709603875748074,applies,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.01,kitti,nuscenes,0.07,0.0,0.0,0.001270780792415111,7.402472425790214e-05,applies,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.001,kitti,nuscenes,,,,,,no threshold established,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.0001,kitti,nuscenes,,,,,,no threshold established,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.05,kitti,nuscenes,0.1,0.0003447087211306446,3.200393754787534e-06,0.0022631286302041273,0.00103634613961063,applies,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.1,kitti,nuscenes,0.12,0.004136504653567736,0.0018513863549377563,0.007907813422592242,0.008216744392627137,applies,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.01,nuscenes,kitti,0.13,0.07976519719969502,0.06668762058080346,0.09424838062587075,0.5009974351667141,does not apply,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.001,nuscenes,kitti,,,,,,no threshold established,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.0001,nuscenes,kitti,,,,,,no threshold established,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.05,nuscenes,kitti,0.18,0.2297082199702287,0.2092479987357101,0.25155665236911523,0.8204616699914505,does not apply,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.1,nuscenes,kitti,0.21,0.3147671158222147,0.2916654261338911,0.338262608094871,0.8982616129951553,does not apply,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.01,nuscenes,nuscenes,0.13,0.008100654946570147,0.00456586077901755,0.013164096466459572,0.0172477607520912,not determined,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.05,nuscenes,nuscenes,0.18,0.06662166302807461,0.056061128015927,0.07859869047272477,0.204234214227552,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,4,0.1,nuscenes,nuscenes,0.21,0.11333653420002955,0.09958032711825171,0.12800603734075391,0.3814494041009697,not determined,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.01,kitti,kitti,0.09,0.003008987885892927,0.0009366132855542775,0.0068442788635582445,0.19414770088248956,applies,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.001,kitti,kitti,,,,,,no threshold established,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.0001,kitti,kitti,,,,,,no threshold established,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.05,kitti,kitti,0.23,0.03880021676035744,0.030241845009924995,0.04906292571836526,0.6267998142127265,applies,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.1,kitti,kitti,0.37,0.08063315261439528,0.06829906590353574,0.09447016161089782,0.816999535531816,applies,1146,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.01,kitti,nuscenes,0.09,0.0033287101248266294,0.001200251339220193,0.007025924422977855,0.06470502122676036,applies,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.001,kitti,nuscenes,,,,,,no threshold established,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.0001,kitti,nuscenes,,,,,,no threshold established,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.05,kitti,nuscenes,0.23,0.02906795200484521,0.021934268815705593,0.037373979062708035,0.32842921973356753,applies,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.1,kitti,nuscenes,0.37,0.06607879752061863,0.05543410664425841,0.07794130340831487,0.5791245791245792,applies,1146,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.01,nuscenes,kitti,0.1,0.004194346750032565,0.0016060091496213902,0.008442260893957672,0.23873664653971202,applies,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.001,nuscenes,kitti,,,,,,no threshold established,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.0001,nuscenes,kitti,,,,,,no threshold established,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.05,nuscenes,kitti,0.25,0.04382517747113292,0.034767592535347225,0.05467568057782746,0.6666279609846726,not determined,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.1,nuscenes,kitti,0.42,0.10032610945565223,0.08650356771222234,0.11527433741909306,0.8572921504876916,not determined,2815,2559,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.01,nuscenes,nuscenes,0.1,0.004507628294036061,0.002093803910946379,0.008411549869453045,0.08798126189430537,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.05,nuscenes,nuscenes,0.25,0.0338629768674845,0.026207020207942078,0.04278960234394494,0.36480749524227785,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,0,0.1,nuscenes,nuscenes,0.42,0.07670897661413553,0.06538128654733055,0.08945724160231056,0.6571512223686137,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.01,kitti,kitti,0.08,0.00039277297721916735,3.6467256052663544e-06,0.0025783414240817867,0.14308585151090655,applies,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.001,kitti,kitti,,,,,,no threshold established,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.0001,kitti,kitti,,,,,,no threshold established,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.05,kitti,kitti,0.16,0.01325421763363633,0.00826133344968727,0.01975030804394533,0.47038222933760254,applies,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.1,kitti,kitti,0.33,0.059933527893072276,0.04914413130103157,0.072114123092053,0.785171102661597,applies,1159,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.01,kitti,nuscenes,0.08,0.003570605851186363,0.001409879382523349,0.0074668127169301626,0.050412615409755696,applies,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.001,kitti,nuscenes,,,,,,no threshold established,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.0001,kitti,nuscenes,,,,,,no threshold established,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.05,kitti,nuscenes,0.16,0.013107167538750124,0.008375821013587248,0.01902541025714491,0.19609445216112428,applies,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.1,kitti,nuscenes,0.33,0.06619511851889184,0.05556008895517317,0.07804506670495664,0.4908897785766811,applies,1159,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.01,nuscenes,kitti,0.1,0.003155276250327311,0.0011252309095489688,0.007198336779480427,0.23954372623574144,applies,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.001,nuscenes,kitti,,,,,,no threshold established,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.0001,nuscenes,kitti,,,,,,no threshold established,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.05,nuscenes,kitti,0.26,0.03896054303556267,0.030396909911779124,0.049312131232764976,0.6902141284770863,applies,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.1,nuscenes,kitti,0.47,0.11810656721300869,0.10319083201509704,0.13411976415109153,0.8998399039423655,does not apply,2805,2546,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.01,nuscenes,nuscenes,0.1,0.004232895646164478,0.0018558688535990076,0.008382541251114317,0.08669008905956369,applies,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.05,nuscenes,nuscenes,0.26,0.04063528711939216,0.03227358319346885,0.050279838660199895,0.36481738704142497,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,1,0.1,nuscenes,nuscenes,0.47,0.10639770848824061,0.09297370879208655,0.12067158252588706,0.7019364327150911,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.01,kitti,kitti,0.11,0.007800387596899225,0.00299009666695349,0.015672283284290767,0.3179271708683473,not determined,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.001,kitti,kitti,,,,,,no threshold established,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.0001,kitti,kitti,,,,,,no threshold established,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.05,kitti,kitti,0.25,0.04617248062015504,0.03349551968692366,0.061657340104779884,0.6864745898359343,not determined,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.1,kitti,kitti,0.39,0.09775883838383838,0.07939022612980884,0.11858544155492226,0.8493397358943577,not determined,2329,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.01,kitti,nuscenes,0.11,0.0056593342644320295,0.0028324450004616475,0.010275209869542067,0.10738255033557047,not determined,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.001,kitti,nuscenes,,,,,,no threshold established,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.0001,kitti,nuscenes,,,,,,no threshold established,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.05,kitti,nuscenes,0.25,0.03284061531268235,0.025464594421174214,0.041922466304681855,0.3595942647956071,applies,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.1,kitti,nuscenes,0.39,0.07004527106227297,0.05904637209477703,0.08223083758793409,0.5998322147651006,applies,2329,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.01,nuscenes,kitti,0.1,0.004869186046511628,0.0013703022537866483,0.011690205878979242,0.2695078031212485,not determined,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.001,nuscenes,kitti,,,,,,no threshold established,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.0001,nuscenes,kitti,,,,,,no threshold established,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.05,nuscenes,kitti,0.25,0.04617248062015504,0.03349551968692366,0.061657340104779884,0.6864745898359343,not determined,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.1,nuscenes,kitti,0.43,0.11565701135105205,0.09603214891688716,0.13816024553589762,0.8807523009203682,not determined,2835,1376,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.01,nuscenes,nuscenes,0.1,0.004428538175046555,0.0018753279900973752,0.008470173625164083,0.08618059792556437,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.05,nuscenes,nuscenes,0.25,0.03284061531268235,0.025464594421174214,0.041922466304681855,0.3595942647956071,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,2,0.1,nuscenes,nuscenes,0.43,0.08032436034707749,0.0687621537043196,0.09343093149864277,0.6587858450274557,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.01,kitti,kitti,0.1,0.004467200949836747,0.001817094714424372,0.009439048786393053,0.2125984251968504,applies,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.001,kitti,kitti,,,,,,no threshold established,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.0001,kitti,kitti,,,,,,no threshold established,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.05,kitti,kitti,0.21,0.0318904121998512,0.02353896513085274,0.0419280440366159,0.5845821691643384,applies,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.1,kitti,kitti,0.36,0.07358633994876204,0.06104359490683753,0.08793285288583158,0.8065786131572263,applies,1459,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.01,kitti,nuscenes,0.1,0.003480825958702065,0.0012673520578148079,0.007172392795279703,0.07516642790932838,applies,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.001,kitti,nuscenes,,,,,,no threshold established,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.0001,kitti,nuscenes,,,,,,no threshold established,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.05,kitti,nuscenes,0.21,0.026335132910354147,0.019618657096183045,0.03456923027363597,0.2868458751158675,applies,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.1,kitti,nuscenes,0.36,0.06670347863746312,0.055945672175730654,0.07879762789297157,0.5544788067750905,applies,1459,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.01,nuscenes,kitti,0.1,0.004467200949836747,0.001817094714424372,0.009439048786393053,0.2125984251968504,applies,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.001,nuscenes,kitti,,,,,,no threshold established,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.0001,nuscenes,kitti,,,,,,no threshold established,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.05,nuscenes,kitti,0.25,0.039751718302475196,0.030538704721041032,0.05091455456584944,0.6656083312166624,not determined,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.1,nuscenes,kitti,0.44,0.10538644038755349,0.0903238772263647,0.12174745549897531,0.872237744475489,not determined,2874,2246,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.01,nuscenes,nuscenes,0.1,0.003480825958702065,0.0012673520578148079,0.007172392795279703,0.07516642790932838,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.05,nuscenes,nuscenes,0.25,0.03578870981525849,0.028011557064413828,0.045250018876085984,0.36226510491278335,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,3,0.1,nuscenes,nuscenes,0.44,0.08705423981998682,0.07466652980443578,0.10036478077359778,0.6796157411308671,not determined,2874,2825,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.01,kitti,kitti,0.09,0.00240174672489083,0.0005742305954701266,0.0063338403346977455,0.15175263607865488,applies,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.001,kitti,kitti,,,,,,no threshold established,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.0001,kitti,kitti,,,,,,no threshold established,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.05,kitti,kitti,0.2,0.02727438136826783,0.01970486901184787,0.036668664756645736,0.5448845825021373,applies,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.1,kitti,kitti,0.32,0.05378077163011661,0.04318605690845123,0.0663301431684592,0.7579082359646623,applies,1415,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.01,kitti,nuscenes,0.09,0.00563598759048604,0.002796276278637655,0.010144440319342078,0.05611074098748982,not determined,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.001,kitti,nuscenes,,,,,,no threshold established,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.0001,kitti,nuscenes,,,,,,no threshold established,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.05,kitti,nuscenes,0.2,0.03243933189641566,0.02513865450339503,0.0413901730901229,0.2504996668887408,applies,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.1,kitti,nuscenes,0.32,0.0720028979760331,0.06084019470368607,0.08414415877225712,0.4720556665926419,applies,1415,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.01,nuscenes,kitti,0.14,0.011397379912663754,0.006787189969098217,0.018268487789529594,0.37460815047021945,not determined,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.001,nuscenes,kitti,,,,,,no threshold established,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.0001,nuscenes,kitti,,,,,,no threshold established,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.05,nuscenes,kitti,0.29,0.04602182145850268,0.03614149165752123,0.05768986250967462,0.7197207181533201,not determined,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.1,nuscenes,kitti,0.49,0.114827139745262,0.0992056758597577,0.13146172928939348,0.9009689370190938,not determined,2798,2290,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.01,nuscenes,nuscenes,0.14,0.016939971438420246,0.01175768695938173,0.023822323869092967,0.14360796506033016,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.05,nuscenes,nuscenes,0.29,0.06014351043609931,0.05003509846948151,0.07154736251961946,0.4193500629210156,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_e,4,0.1,nuscenes,nuscenes,0.49,0.11961431563346409,0.1057777677493813,0.13488782676490962,0.7432082315493375,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.01,kitti,kitti,0.07,0.00039184952978056425,3.6381501342663825e-06,0.002572286109072358,0.014862981885740827,applies,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.001,kitti,kitti,,,,,,no threshold established,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.0001,kitti,kitti,,,,,,no threshold established,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.05,kitti,kitti,0.11,0.024710311240483653,0.018010422552531713,0.03336658076305161,0.31456107756618673,applies,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.1,kitti,kitti,0.14,0.0794341195203264,0.06703592998681218,0.0930499032853412,0.6137947050627032,applies,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.01,kitti,nuscenes,0.07,0.0,0.0,0.0012782667356288622,0.0,applies,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.001,kitti,nuscenes,,,,,,no threshold established,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.0001,kitti,nuscenes,,,,,,no threshold established,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.05,kitti,nuscenes,0.11,0.0010402219140083217,0.00014659394754035215,0.0035182014677299133,0.0030742204655248135,applies,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.1,kitti,nuscenes,0.14,0.010402219140083218,0.0064673918857707235,0.015777074654774133,0.037768994290733424,applies,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.01,nuscenes,kitti,0.13,0.056853479375031095,0.046530838663669916,0.06896747417045443,0.524500696702276,does not apply,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.001,nuscenes,kitti,,,,,,no threshold established,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.0001,nuscenes,kitti,,,,,,no threshold established,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.05,nuscenes,kitti,0.16,0.1272168053124166,0.11182985488611152,0.14370032904040242,0.7495355318160706,does not apply,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.1,nuscenes,kitti,0.2,0.23986409285108112,0.2201174610025557,0.26074265037999056,0.8848118903855086,does not apply,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.01,nuscenes,nuscenes,0.13,0.006067961165048544,0.0030593150487168153,0.01064474664123427,0.020128824476650563,not determined,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.05,nuscenes,nuscenes,0.16,0.023739350108975633,0.017418681498510336,0.03151125090081391,0.10430390865173474,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,0,0.1,nuscenes,nuscenes,0.2,0.0703573770581399,0.059275710358683065,0.08240788624577719,0.32725808812765333,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.01,kitti,kitti,0.08,0.004919323101141283,0.0021139758936383757,0.009544463443475513,0.052131278767260356,applies,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.001,kitti,kitti,,,,,,no threshold established,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.0001,kitti,kitti,,,,,,no threshold established,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.05,kitti,kitti,0.12,0.04379571847104314,0.034663039964960674,0.05462736000094631,0.45487292375425253,not determined,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.1,kitti,kitti,0.14,0.08248628694319367,0.06988045784779462,0.09639692338115194,0.6361817090254153,applies,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.01,kitti,nuscenes,0.08,0.0,0.0,0.001273852595244099,0.00016341204346760355,applies,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.001,kitti,nuscenes,,,,,,no threshold established,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.0001,kitti,nuscenes,,,,,,no threshold established,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.05,kitti,nuscenes,0.12,0.0029371112646855565,0.0009898263649262828,0.006530824166331989,0.008088896151646376,applies,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.1,kitti,nuscenes,0.14,0.013476157567380787,0.008936422612702888,0.019433997745392922,0.03848353623662064,applies,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.01,nuscenes,kitti,0.13,0.06144414857519934,0.05067752886229526,0.07396126684172757,0.5527316389833901,does not apply,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.001,nuscenes,kitti,,,,,,no threshold established,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.0001,nuscenes,kitti,,,,,,no threshold established,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.05,nuscenes,kitti,0.17,0.16514296735666276,0.14789054584000372,0.18339122208611777,0.8066840104062437,does not apply,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.1,nuscenes,kitti,0.2,0.2406484037230964,0.22070065887556178,0.2614519254946225,0.8922353412047228,does not apply,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.01,nuscenes,nuscenes,0.13,0.006910850034554251,0.003802416728394098,0.011478941188464285,0.018057030803170195,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.05,nuscenes,nuscenes,0.17,0.04422368117945173,0.03537922280965877,0.05407228563853832,0.1604706266851867,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,1,0.1,nuscenes,nuscenes,0.2,0.08002988718261697,0.06836663010037136,0.09283751601427322,0.33262521447830706,applies,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.01,kitti,kitti,0.08,0.004369992716678805,0.0012780322974138558,0.010675716834477007,0.06342537014805923,not determined,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.001,kitti,kitti,,,,,,no threshold established,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.0001,kitti,kitti,,,,,,no threshold established,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.05,kitti,kitti,0.12,0.04159238835131042,0.029832205445529558,0.056824873408360455,0.5022008803521408,not determined,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.1,kitti,kitti,0.14,0.08278104108402724,0.06571005634715588,0.10221151467153852,0.6794717887154862,not determined,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.01,kitti,nuscenes,0.08,0.0,0.0,0.0012871874318523446,0.0001525320317266626,applies,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.001,kitti,nuscenes,,,,,,no threshold established,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.0001,kitti,nuscenes,,,,,,no threshold established,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.05,kitti,nuscenes,0.12,0.0022695530726256985,0.0006233203389045539,0.005603045821625786,0.0071690054911531425,applies,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.1,kitti,nuscenes,0.14,0.008438081936685288,0.004889768570797259,0.01376296438082785,0.039048200122025624,applies,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.01,nuscenes,kitti,0.12,0.04159238835131042,0.029832205445529558,0.056824873408360455,0.5022008803521408,does not apply,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.001,nuscenes,kitti,,,,,,no threshold established,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.0001,nuscenes,kitti,,,,,,no threshold established,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.05,nuscenes,kitti,0.16,0.14582020916689525,0.12393458351691433,0.170297994695321,0.7947178871548619,does not apply,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.1,nuscenes,kitti,0.2,0.26733118584903,0.23950165626430198,0.2972356337197989,0.90656262505002,does not apply,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.01,nuscenes,nuscenes,0.12,0.0022695530726256985,0.0006233203389045539,0.005603045821625786,0.0071690054911531425,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.05,nuscenes,nuscenes,0.16,0.023679835062516624,0.017240307570910995,0.03133420747697879,0.11188224527150702,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,2,0.1,nuscenes,nuscenes,0.2,0.06982360923527124,0.0587236921882599,0.08185633672550177,0.33953630262355095,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.01,kitti,kitti,0.07,0.0004464285714285714,4.145004569355848e-06,0.0029301233454572047,0.015494030988061977,applies,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.001,kitti,kitti,,,,,,no threshold established,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.0001,kitti,kitti,,,,,,no threshold established,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.05,kitti,kitti,0.11,0.02404496173469388,0.016736174136793958,0.032882832329544844,0.32651765303530605,applies,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.1,kitti,kitti,0.13,0.052483444135229845,0.04174592742335881,0.06486531915795243,0.5351790703581407,applies,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.01,kitti,nuscenes,0.07,0.0,0.0,0.0013049458535650256,0.0,applies,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.001,kitti,nuscenes,,,,,,no threshold established,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.0001,kitti,nuscenes,,,,,,no threshold established,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.05,kitti,nuscenes,0.11,0.0007079646017699115,5.033188789727028e-05,0.0030095519396260216,0.0023594842841493215,applies,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.1,kitti,nuscenes,0.13,0.006371681415929204,0.0033779837088456777,0.010866558207849996,0.016432122693182775,applies,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.01,nuscenes,kitti,0.13,0.052483444135229845,0.04174592742335881,0.06486531915795243,0.5351790703581407,does not apply,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.001,nuscenes,kitti,,,,,,no threshold established,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.0001,nuscenes,kitti,,,,,,no threshold established,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.05,nuscenes,kitti,0.16,0.11909764095031952,0.103116029413312,0.13625509411070547,0.7529845059690119,does not apply,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.1,nuscenes,kitti,0.2,0.22522991929143452,0.2044905620804771,0.24697493732479925,0.8853187706375413,does not apply,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.01,nuscenes,nuscenes,0.13,0.006371681415929204,0.0033779837088456777,0.010866558207849996,0.016432122693182775,not determined,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.05,nuscenes,nuscenes,0.16,0.02429329962073325,0.01778357350115567,0.03216674509290128,0.10499705064464482,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,3,0.1,nuscenes,nuscenes,0.2,0.07221771345665151,0.06117565840962336,0.08487624046640199,0.32333361422431955,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.01,kitti,kitti,0.08,0.0032837127845884414,0.0010042946800383756,0.007666625560829697,0.04445711028783129,applies,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.001,kitti,kitti,,,,,,no threshold established,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.0001,kitti,kitti,,,,,,no threshold established,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.05,kitti,kitti,0.11,0.02337638645650905,0.01641271435669389,0.03225216317863596,0.29595326303790254,applies,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.1,kitti,kitti,0.14,0.07679040530397797,0.06404207960004238,0.09119883078859245,0.5920490168139071,applies,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.01,kitti,nuscenes,0.08,0.0,0.0,0.001270780792415111,0.00014804944851580428,applies,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.001,kitti,nuscenes,,,,,,no threshold established,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.0001,kitti,nuscenes,,,,,,no threshold established,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.05,kitti,nuscenes,0.11,0.001034126163391934,0.00014573466625578124,0.0034976100780396155,0.002738914797542379,applies,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.1,kitti,nuscenes,0.14,0.015282086636791911,0.010327311064247002,0.021816570969430377,0.03827078244133541,applies,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.01,nuscenes,kitti,0.13,0.0529546465404609,0.042117873452211185,0.0650643842903157,0.5009974351667141,does not apply,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.001,nuscenes,kitti,,,,,,no threshold established,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.0001,nuscenes,kitti,,,,,,no threshold established,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.05,nuscenes,kitti,0.18,0.18777431339821882,0.16849195829011454,0.20786514070236317,0.8204616699914505,does not apply,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.1,nuscenes,kitti,0.21,0.2696484213350263,0.2475905202490316,0.2922130666794952,0.8982616129951553,does not apply,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.01,nuscenes,nuscenes,0.13,0.008100654946570147,0.00456586077901755,0.013164096466459572,0.0172477607520912,not determined,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.05,nuscenes,nuscenes,0.18,0.06662166302807461,0.056061128015927,0.07859869047272477,0.204234214227552,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_s,4,0.1,nuscenes,nuscenes,0.21,0.11333653420002955,0.09958032711825171,0.12800603734075391,0.3814494041009697,not determined,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.01,kitti,kitti,0.09,0.0,0.0,0.0014444414682784892,0.19414770088248956,applies,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.001,kitti,kitti,,,,,,no threshold established,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.0001,kitti,kitti,,,,,,no threshold established,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.05,kitti,kitti,0.27,0.02554950818077777,0.01868183483828345,0.034258306820745626,0.7011147236414306,applies,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.1,kitti,kitti,0.4,0.058064363579645714,0.047600197833175706,0.07024466377345537,0.8405712958662331,applies,1144,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.01,kitti,nuscenes,0.09,0.0033287101248266294,0.001200251339220193,0.007025924422977855,0.06470502122676036,applies,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.001,kitti,nuscenes,,,,,,no threshold established,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.0001,kitti,nuscenes,,,,,,no threshold established,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.05,kitti,nuscenes,0.27,0.04011389056720296,0.03176464717205507,0.04969025897660303,0.4037476211389255,applies,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.1,kitti,nuscenes,0.4,0.07209394781933891,0.06087980757282563,0.08426557955205724,0.6237739716000585,applies,1144,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.01,nuscenes,kitti,0.1,0.0006008359456635318,2.0638554562357747e-05,0.00301197323210967,0.23873664653971202,applies,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.001,nuscenes,kitti,,,,,,no threshold established,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.0001,nuscenes,kitti,,,,,,no threshold established,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.05,nuscenes,kitti,0.25,0.021427412277725755,0.015014222770606378,0.029329782288805742,0.6666279609846726,applies,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.1,nuscenes,kitti,0.42,0.06404632625733722,0.05296525138544095,0.07661267849354467,0.8572921504876916,applies,2815,2552,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.01,nuscenes,nuscenes,0.1,0.004507628294036061,0.002093803910946379,0.008411549869453045,0.08798126189430537,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.05,nuscenes,nuscenes,0.25,0.0338629768674845,0.026207020207942078,0.04278960234394494,0.36480749524227785,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,0,0.1,nuscenes,nuscenes,0.42,0.07670897661413553,0.06538128654733055,0.08945724160231056,0.6571512223686137,applies,2815,2884,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.01,kitti,kitti,0.16,0.00900001874027848,0.004917405894894755,0.01453843118351273,0.47038222933760254,not determined,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.001,kitti,kitti,,,,,,no threshold established,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.0001,kitti,kitti,,,,,,no threshold established,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.05,kitti,kitti,0.35,0.0538705456946307,0.04351924324108225,0.06540832345686592,0.8040824494696818,not determined,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.1,kitti,kitti,0.52,0.11559844856601577,0.10079882219941783,0.13147783922414674,0.9267560536321793,does not apply,1155,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.01,kitti,nuscenes,0.16,0.013107167538750124,0.008375821013587248,0.01902541025714491,0.19609445216112428,not determined,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.001,kitti,nuscenes,,,,,,no threshold established,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.0001,kitti,nuscenes,,,,,,no threshold established,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.05,kitti,nuscenes,0.35,0.07152987245419865,0.060668254835588464,0.083976311876823,0.523899011357137,does not apply,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.1,kitti,nuscenes,0.52,0.12688693131422138,0.11259003421765357,0.14245782359539733,0.7632159490154424,does not apply,1155,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.01,nuscenes,kitti,0.1,0.0025711662075298437,0.000709059198492068,0.006333809675817554,0.23954372623574144,applies,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.001,nuscenes,kitti,,,,,,no threshold established,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.0001,nuscenes,kitti,,,,,,no threshold established,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.05,nuscenes,kitti,0.26,0.03187654642790416,0.0238741499989904,0.04107111138979169,0.6902141284770863,applies,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.1,nuscenes,kitti,0.47,0.09591189234046377,0.082335812182738,0.1106549362166481,0.8998399039423655,not determined,2805,2541,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.01,nuscenes,nuscenes,0.1,0.004232895646164478,0.0018558688535990076,0.008382541251114317,0.08669008905956369,applies,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.05,nuscenes,nuscenes,0.26,0.04063528711939216,0.03227358319346885,0.050279838660199895,0.36481738704142497,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,1,0.1,nuscenes,nuscenes,0.47,0.10639770848824061,0.09297370879208655,0.12067158252588706,0.7019364327150911,not determined,2805,2894,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.01,kitti,kitti,0.15,0.00679256407588527,0.00252333141041039,0.01468467340521664,0.4769907963185274,not determined,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.001,kitti,kitti,,,,,,no threshold established,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.0001,kitti,kitti,,,,,,no threshold established,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.05,kitti,kitti,0.33,0.043995936894698724,0.031696233177927136,0.0593121773040725,0.795718287314926,not determined,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.1,kitti,kitti,0.48,0.09619433330285478,0.07823914762037731,0.11726427917911639,0.910764305722289,not determined,2323,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.01,kitti,nuscenes,0.15,0.007596352088321361,0.0041010682568314305,0.012470136015920584,0.18334350213544845,not determined,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.001,kitti,nuscenes,,,,,,no threshold established,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.0001,kitti,nuscenes,,,,,,no threshold established,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.05,kitti,nuscenes,0.33,0.05883250782388363,0.04876424071684038,0.07020380796604887,0.5069402074435632,not determined,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.1,kitti,nuscenes,0.48,0.09380750788933127,0.08115436403499365,0.10753314752283896,0.7264338010982306,not determined,2323,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.01,nuscenes,kitti,0.1,0.0037873270211216314,0.0009131413070154748,0.010208713562927338,0.2695078031212485,not determined,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.001,nuscenes,kitti,,,,,,no threshold established,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.0001,nuscenes,kitti,,,,,,no threshold established,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.05,nuscenes,kitti,0.25,0.025619082301529494,0.016517093646436942,0.03824923980314078,0.6864745898359343,applies,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.1,nuscenes,kitti,0.43,0.07793164187920197,0.061782534359486996,0.09742962092266268,0.8807523009203682,applies,2835,1373,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.01,nuscenes,nuscenes,0.1,0.004428538175046555,0.0018753279900973752,0.008470173625164083,0.08618059792556437,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.05,nuscenes,nuscenes,0.25,0.03284061531268235,0.025464594421174214,0.041922466304681855,0.3595942647956071,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,2,0.1,nuscenes,nuscenes,0.43,0.08032436034707749,0.0687621537043196,0.09343093149864277,0.6587858450274557,applies,2835,2864,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.01,kitti,kitti,0.1,0.0005952380952380952,1.4101427549206846e-05,0.0032486738203760107,0.2125984251968504,applies,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.001,kitti,kitti,,,,,,no threshold established,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.0001,kitti,kitti,,,,,,no threshold established,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.05,kitti,kitti,0.26,0.02066268552875696,0.014122974238804598,0.029267604165269565,0.6838963677927355,applies,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.1,kitti,kitti,0.42,0.06297147730741481,0.05142674498811606,0.07656528646630703,0.8576327152654305,applies,1456,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.01,kitti,nuscenes,0.1,0.003480825958702065,0.0012673520578148079,0.007172392795279703,0.07516642790932838,applies,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.001,kitti,nuscenes,,,,,,no threshold established,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.0001,kitti,nuscenes,,,,,,no threshold established,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.05,kitti,nuscenes,0.26,0.03931821137391153,0.03116425250161825,0.04916294226748524,0.38147804836942784,applies,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.1,kitti,nuscenes,0.42,0.08166126948356599,0.06971727556084706,0.09471165151235204,0.6492795146203758,applies,1456,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.01,nuscenes,kitti,0.1,0.0005952380952380952,1.4101427549206846e-05,0.0032486738203760107,0.2125984251968504,applies,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.001,nuscenes,kitti,,,,,,no threshold established,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.0001,nuscenes,kitti,,,,,,no threshold established,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.05,nuscenes,kitti,0.25,0.018292330189651616,0.01191686039505091,0.02613702046914359,0.6656083312166624,applies,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.1,nuscenes,kitti,0.44,0.06918060919735027,0.056713976722995385,0.082860168878096,0.872237744475489,applies,2874,2240,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.01,nuscenes,nuscenes,0.1,0.003480825958702065,0.0012673520578148079,0.007172392795279703,0.07516642790932838,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.05,nuscenes,nuscenes,0.25,0.03578870981525849,0.028011557064413828,0.045250018876085984,0.36226510491278335,applies,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,3,0.1,nuscenes,nuscenes,0.44,0.08705423981998682,0.07466652980443578,0.10036478077359778,0.6796157411308671,not determined,2874,2825,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.01,kitti,kitti,0.1,0.0005837711617046118,1.382969388208366e-05,0.0031861714649062786,0.19791963522371045,applies,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.001,kitti,kitti,,,,,,no threshold established,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.0001,kitti,kitti,,,,,,no threshold established,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.05,kitti,kitti,0.29,0.028779523405180148,0.020881954053144636,0.03825869558679944,0.7197207181533201,applies,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.1,kitti,kitti,0.42,0.061963570944525405,0.05043031889660343,0.0751005092139852,0.8528070675406099,applies,1412,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.01,kitti,nuscenes,0.1,0.007359531196139262,0.004048687433730547,0.01231146852058734,0.07187800725442298,not determined,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.001,kitti,nuscenes,,,,,,no threshold established,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.0001,kitti,nuscenes,,,,,,no threshold established,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.05,kitti,nuscenes,0.29,0.06014351043609931,0.05003509846948151,0.07154736251961946,0.4193500629210156,does not apply,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.1,kitti,nuscenes,0.42,0.09865884355766406,0.0859349399761381,0.11273987798437364,0.6396476423125323,not determined,1412,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.01,nuscenes,kitti,0.14,0.0036923525977816695,0.0012544244583269082,0.008271250469928937,0.37460815047021945,applies,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.001,nuscenes,kitti,,,,,,no threshold established,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.0001,nuscenes,kitti,,,,,,no threshold established,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.05,nuscenes,kitti,0.29,0.028779523405180148,0.020881954053144636,0.03825869558679944,0.7197207181533201,applies,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.1,nuscenes,kitti,0.49,0.08160080639831077,0.06847913383675042,0.09637439483513797,0.9009689370190938,applies,2798,2284,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.01,nuscenes,nuscenes,0.14,0.016939971438420246,0.01175768695938173,0.023822323869092967,0.14360796506033016,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.05,nuscenes,nuscenes,0.29,0.06014351043609931,0.05003509846948151,0.07154736251961946,0.4193500629210156,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+kitti_ignore,u_e,4,0.1,nuscenes,nuscenes,0.49,0.11961431563346409,0.1057777677493813,0.13488782676490962,0.7432082315493375,does not apply,2798,2901,drive (KITTI) / scene (nuScenes),frame
+as_run,u_s,0,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.05,nuscenes,kitti,0.12,0.02987393959782653,5.207887024161195e-05,0.22754103195868394,0.42440780306549003,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.1,nuscenes,kitti,0.15,0.07386500555898147,0.0033566135412311793,0.30429420846797395,0.6895030190431956,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.05,nuscenes,nuscenes,0.12,0.0028213466750052116,2.7902236077181897e-11,0.05894036570185904,0.008856682769726247,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,0,0.1,nuscenes,nuscenes,0.15,0.016390453629478018,0.00030807703245250284,0.09065603982905679,0.06638852291026204,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.05,nuscenes,kitti,0.12,0.04416251110635429,0.0004440485586004739,0.25465911511347894,0.45487292375425253,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.1,nuscenes,kitti,0.16,0.11814306685361123,0.0131247535070953,0.3687777094524929,0.7628577146287773,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.05,nuscenes,nuscenes,0.12,0.0028215551386283097,2.7940205704624077e-11,0.05894100384857088,0.008088896151646376,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,1,0.1,nuscenes,nuscenes,0.16,0.03388190077349256,0.0032590510873936607,0.12223507367037464,0.11201895579704224,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.05,nuscenes,kitti,0.11,0.02912907746005241,4.4239939849921583e-05,0.22604023783483618,0.3877551020408163,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.1,nuscenes,kitti,0.15,0.06856902008967494,0.002610111955206884,0.29592785188962606,0.7462985194077632,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.05,nuscenes,nuscenes,0.11,0.0006585365853658537,0.0,0.0513803520313454,0.0029743746186699205,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,2,0.1,nuscenes,nuscenes,0.15,0.014018714347982639,0.00015723189472949262,0.08585830583589056,0.07184258694325808,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.05,nuscenes,kitti,0.12,0.042021325031535384,0.0003501811456821935,0.25076973783731515,0.43573787147574294,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.1,nuscenes,kitti,0.15,0.07826294583154061,0.004050102077852724,0.31111430643165083,0.6967233934467869,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.05,nuscenes,nuscenes,0.12,0.002658953512612049,9.066858375206266e-12,0.05843973536071295,0.007246987444172916,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,3,0.1,nuscenes,nuscenes,0.15,0.01732152332049636,0.0003840112386589434,0.09249248467925383,0.06522288699755625,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.05,nuscenes,kitti,0.12,0.02099954888562292,3.7637285557057254e-06,0.20889729156696102,0.40709603875748074,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.1,nuscenes,kitti,0.16,0.07636750027033071,0.0037431253096048556,0.30818853296838294,0.7348247363921345,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.05,nuscenes,nuscenes,0.12,0.003983948301021473,6.385134088127131e-09,0.062346813950224844,0.008216744392627137,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_s,4,0.1,nuscenes,nuscenes,0.16,0.03839230557959698,0.004475081099305722,0.12913427902736513,0.10570730624028425,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.05,nuscenes,kitti,0.07,0.00022644927536231882,0.0,0.1496605622524536,0.11158848118903855,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.1,nuscenes,kitti,0.19,0.013855333097690388,4.820102561531314e-08,0.1922863141626251,0.5412215513237343,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.05,nuscenes,nuscenes,0.07,0.0011626016260162602,0.0,0.053382172234002344,0.030229834577660663,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,0,0.1,nuscenes,nuscenes,0.19,0.020001185666055157,0.0006563385869595706,0.09765123317896873,0.2566242131459523,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.05,nuscenes,kitti,0.08,0.00014688601645123384,0.0,0.14919610372261866,0.14308585151090655,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.1,nuscenes,kitti,0.2,0.020019282738018923,2.467166209774163e-06,0.20671914768552152,0.5742445467280368,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.05,nuscenes,nuscenes,0.08,0.0034226929111396374,7.242421107278574e-10,0.06073769037551419,0.050412615409755696,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,1,0.1,nuscenes,nuscenes,0.2,0.025176827599078345,0.0014041624923657459,0.1071765756655451,0.2611324454612305,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.05,nuscenes,kitti,0.09,0.00014688601645123384,0.0,0.14919610372261866,0.21588635454181673,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.1,nuscenes,kitti,0.19,0.01808801913009594,9.466533962276813e-07,0.2023426320277299,0.5766306522609044,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.05,nuscenes,nuscenes,0.09,0.0034945799457994577,9.938224687644492e-10,0.06094719328228715,0.06497864551555826,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,2,0.1,nuscenes,nuscenes,0.19,0.016783522697985685,0.0003389648159598524,0.09143432441865923,0.2515253203172666,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.05,nuscenes,kitti,0.07,0.00022644927536231882,0.0,0.1496605622524536,0.08585217170434341,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.1,nuscenes,kitti,0.2,0.01784625791831151,8.281787280406405e-07,0.20178626198451965,0.5612141224282449,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.05,nuscenes,nuscenes,0.07,0.00016260162601626016,0.0,0.04904081356122962,0.02654419819667987,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,3,0.1,nuscenes,nuscenes,0.2,0.02501586474035421,0.0013766608770494626,0.10688776464190547,0.2696553467599225,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.05,nuscenes,kitti,0.12,0.0026216338923646452,0.0,0.1599030521285137,0.2885437446565973,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.1,nuscenes,kitti,0.24,0.012473896011738088,1.203328525711811e-08,0.1888377260599316,0.6302365346252493,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.05,nuscenes,nuscenes,0.12,0.0114900614053374,5.911172922212771e-05,0.08051768480312388,0.10644755348286328,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+as_run,u_e,4,0.1,nuscenes,nuscenes,0.24,0.043512364987456836,0.00603668222644449,0.13790007344852903,0.3230438966614849,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.05,nuscenes,kitti,0.12,0.018359002130625728,1.095346674251374e-06,0.20296392062942306,0.42440780306549003,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.1,nuscenes,kitti,0.15,0.05685386854406755,0.0013102163636741215,0.27674200158569245,0.6895030190431956,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.05,nuscenes,nuscenes,0.12,0.0028213466750052116,2.7902236077181897e-11,0.05894036570185904,0.008856682769726247,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,0,0.1,nuscenes,nuscenes,0.15,0.016390453629478018,0.00030807703245250284,0.09065603982905679,0.06638852291026204,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.05,nuscenes,kitti,0.12,0.03001080043909606,5.362017764187765e-05,0.22781567639922784,0.45487292375425253,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.1,nuscenes,kitti,0.16,0.09944666680186773,0.008277720472679051,0.34257835578428775,0.7628577146287773,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.05,nuscenes,nuscenes,0.12,0.0028215551386283097,2.7940205704624077e-11,0.05894100384857088,0.008088896151646376,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,1,0.1,nuscenes,nuscenes,0.16,0.03388190077349256,0.0032590510873936607,0.12223507367037464,0.11201895579704224,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.05,nuscenes,kitti,0.11,0.020539213552209175,3.1012535233188032e-06,0.20787788212955233,0.3877551020408163,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.1,nuscenes,kitti,0.15,0.05060276282354713,0.0008150808865305947,0.26605764261666204,0.7462985194077632,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.05,nuscenes,nuscenes,0.11,0.0006585365853658537,0.0,0.0513803520313454,0.0029743746186699205,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,2,0.1,nuscenes,nuscenes,0.15,0.014018714347982639,0.00015723189472949262,0.08585830583589056,0.07184258694325808,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.05,nuscenes,kitti,0.12,0.021111243163338473,3.94002616788125e-06,0.2091437356308745,0.43573787147574294,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.1,nuscenes,kitti,0.15,0.053218186625360736,0.0010056652734553584,0.27057009913161467,0.6967233934467869,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.05,nuscenes,nuscenes,0.12,0.002658953512612049,9.066858375206266e-12,0.05843973536071295,0.007246987444172916,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,3,0.1,nuscenes,nuscenes,0.15,0.01732152332049636,0.0003840112386589434,0.09249248467925383,0.06522288699755625,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.05,nuscenes,kitti,0.12,0.013811188833389571,4.63011814444414e-08,0.19217753092316062,0.40709603875748074,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.1,nuscenes,kitti,0.16,0.0641145389171055,0.0020584630987985353,0.28874976804724106,0.7348247363921345,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.05,nuscenes,nuscenes,0.12,0.003983948301021473,6.385134088127131e-09,0.062346813950224844,0.008216744392627137,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_s,4,0.1,nuscenes,nuscenes,0.16,0.03839230557959698,0.004475081099305722,0.12913427902736513,0.10570730624028425,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.05,nuscenes,kitti,0.07,0.0,0.0,0.14818512891522512,0.11158848118903855,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.1,nuscenes,kitti,0.19,0.004991858322839438,0.0,0.16792528511093902,0.5412215513237343,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.05,nuscenes,nuscenes,0.07,0.0011626016260162602,0.0,0.053382172234002344,0.030229834577660663,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,0,0.1,nuscenes,nuscenes,0.19,0.020001185666055157,0.0006563385869595706,0.09765123317896873,0.2566242131459523,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.05,nuscenes,kitti,0.08,0.0,0.0,0.14818512891522512,0.14308585151090655,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.1,nuscenes,kitti,0.2,0.015179560241652795,1.450640465527897e-07,0.1955092750653255,0.5742445467280368,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.05,nuscenes,nuscenes,0.08,0.0034226929111396374,7.242421107278574e-10,0.06073769037551419,0.050412615409755696,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,1,0.1,nuscenes,nuscenes,0.2,0.025176827599078345,0.0014041624923657459,0.1071765756655451,0.2611324454612305,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.05,nuscenes,kitti,0.09,0.0,0.0,0.14818512891522512,0.21588635454181673,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.1,nuscenes,kitti,0.19,0.011075266993579514,2.1050113874210297e-09,0.185244610922904,0.5766306522609044,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.05,nuscenes,nuscenes,0.09,0.0034945799457994577,9.938224687644492e-10,0.06094719328228715,0.06497864551555826,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,2,0.1,nuscenes,nuscenes,0.19,0.016783522697985685,0.0003389648159598524,0.09143432441865923,0.2515253203172666,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.05,nuscenes,kitti,0.07,0.0,0.0,0.14818512891522512,0.08585217170434341,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.1,nuscenes,kitti,0.2,0.007958545236365485,5.200728736554083e-12,0.17678516089977858,0.5612141224282449,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.05,nuscenes,nuscenes,0.07,0.00016260162601626016,0.0,0.04904081356122962,0.02654419819667987,applies,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,3,0.1,nuscenes,nuscenes,0.2,0.02501586474035421,0.0013766608770494626,0.10688776464190547,0.2696553467599225,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.01,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.0001,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.05,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.1,kitti,kitti,,,,,,no threshold established,22,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.01,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.0001,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.05,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.1,kitti,nuscenes,,,,,,no threshold established,22,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.01,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.0001,nuscenes,kitti,,,,,,no threshold established,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.05,nuscenes,kitti,0.12,0.0005835904141037755,0.0,0.15152080531864276,0.2885437446565973,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.1,nuscenes,kitti,0.24,0.007486235191002799,1.3715695246219184e-12,0.1754368034545526,0.6302365346252493,not determined,75,23,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.01,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.0001,nuscenes,nuscenes,,,,,,no threshold established,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.05,nuscenes,nuscenes,0.12,0.0114900614053374,5.911172922212771e-05,0.08051768480312388,0.10644755348286328,not determined,75,75,drive (KITTI) / scene (nuScenes),drive
+kitti_ignore,u_e,4,0.1,nuscenes,nuscenes,0.24,0.043512364987456836,0.00603668222644449,0.13790007344852903,0.3230438966614849,not determined,75,75,drive (KITTI) / scene (nuScenes),drive

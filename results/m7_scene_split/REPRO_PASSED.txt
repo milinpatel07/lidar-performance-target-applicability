@@ -1,0 +1,1 @@
+REPRODUCTION frame split: m3 1200 rows, m6 A/B/C all rows, input hashes: EQUAL

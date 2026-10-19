@@ -1,0 +1,401 @@
+indicator,seed,alpha,established,applied,frames_select,frames_eval,tau,A_hat,hb_L,hb_U,R_hat,outcome,split,hb_unit
+u_s,0,0.01,clear,clear,1948,1908,0.1271150699935021,0.006551362683438155,0.0028163497623127087,0.012701547343340554,0.016154608523290388,not determined,scene,frame
+u_s,0,0.01,clear,rain,1948,399,0.1271150699935021,0.0,0.0,0.00920270542340397,0.021371769383697812,applies,scene,frame
+u_s,0,0.01,rain,clear,337,1908,,,,,,no threshold established,scene,frame
+u_s,0,0.01,rain,rain,337,399,,,,,,no threshold established,scene,frame
+u_s,0,0.001,clear,clear,1948,1908,,,,,,no threshold established,scene,frame
+u_s,0,0.001,clear,rain,1948,399,,,,,,no threshold established,scene,frame
+u_s,0,0.001,rain,clear,337,1908,,,,,,no threshold established,scene,frame
+u_s,0,0.001,rain,rain,337,399,,,,,,no threshold established,scene,frame
+u_s,0,0.0001,clear,clear,1948,1908,,,,,,no threshold established,scene,frame
+u_s,0,0.0001,clear,rain,1948,399,,,,,,no threshold established,scene,frame
+u_s,0,0.0001,rain,clear,337,1908,,,,,,no threshold established,scene,frame
+u_s,0,0.0001,rain,rain,337,399,,,,,,no threshold established,scene,frame
+u_s,0,0.05,clear,clear,1948,1908,0.16738986607758477,0.03599880203653789,0.026369049363685115,0.047535157144568914,0.1377601585728444,applies,scene,frame
+u_s,0,0.05,clear,rain,1948,399,0.16738986607758477,0.02882205513784461,0.011891574470704214,0.05681292499107146,0.15009940357852883,not determined,scene,frame
+u_s,0,0.05,rain,clear,337,1908,0.1271150699935021,0.006551362683438155,0.0028163497623127087,0.012701547343340554,0.016154608523290388,applies,scene,frame
+u_s,0,0.05,rain,rain,337,399,0.1271150699935021,0.0,0.0,0.00920270542340397,0.021371769383697812,applies,scene,frame
+u_s,0,0.1,clear,clear,1948,1908,0.20567742763053684,0.08848111619338034,0.07338468532328124,0.10506231610021927,0.3605550049554014,not determined,scene,frame
+u_s,0,0.1,clear,rain,1948,399,0.20567742763053684,0.09893782074233201,0.06570516409148341,0.14113883687419154,0.37375745526838966,not determined,scene,frame
+u_s,0,0.1,rain,clear,337,1908,0.14774707537418902,0.018597134870719775,0.011871704812690287,0.027572027767283857,0.05758176412289395,applies,scene,frame
+u_s,0,0.1,rain,rain,337,399,0.14774707537418902,0.010442773600668335,0.002018201488470095,0.03075705448365583,0.06759443339960239,applies,scene,frame
+u_s,1,0.01,clear,clear,1768,1952,0.12745181776104408,0.005122950819672131,0.002091122135639001,0.010371658255018354,0.013254463796691861,not determined,scene,frame
+u_s,1,0.01,clear,rain,1768,410,0.12745181776104408,0.006097560975609756,0.0005640316960566771,0.023059276939008402,0.02474864655839134,not determined,scene,frame
+u_s,1,0.01,rain,clear,421,1952,,,,,,no threshold established,scene,frame
+u_s,1,0.01,rain,rain,421,410,,,,,,no threshold established,scene,frame
+u_s,1,0.001,clear,clear,1768,1952,,,,,,no threshold established,scene,frame
+u_s,1,0.001,clear,rain,1768,410,,,,,,no threshold established,scene,frame
+u_s,1,0.001,rain,clear,421,1952,,,,,,no threshold established,scene,frame
+u_s,1,0.001,rain,rain,421,410,,,,,,no threshold established,scene,frame
+u_s,1,0.0001,clear,clear,1768,1952,,,,,,no threshold established,scene,frame
+u_s,1,0.0001,clear,rain,1768,410,,,,,,no threshold established,scene,frame
+u_s,1,0.0001,rain,clear,421,1952,,,,,,no threshold established,scene,frame
+u_s,1,0.0001,rain,rain,421,410,,,,,,no threshold established,scene,frame
+u_s,1,0.05,clear,clear,1768,1952,0.16782088262843298,0.03692793715846994,0.027544179313883754,0.04878345942181006,0.1417460839084237,applies,scene,frame
+u_s,1,0.05,clear,rain,1768,410,0.16782088262843298,0.07195121951219512,0.04405517546053317,0.10914858730605914,0.168600154679041,not determined,scene,frame
+u_s,1,0.05,rain,clear,421,1952,0.14342917378026382,0.014643101092896176,0.0087602771265749,0.02266158725647953,0.04425457333771497,applies,scene,frame
+u_s,1,0.05,rain,rain,421,410,0.14342917378026382,0.020934959349593496,0.007050388088969628,0.04561956470545658,0.05877803557617943,applies,scene,frame
+u_s,1,0.1,clear,clear,1768,1952,0.20747177117932333,0.08486647687467358,0.07030601374380496,0.10106070699029285,0.3658670171979406,not determined,scene,frame
+u_s,1,0.1,clear,rain,1768,410,0.20747177117932333,0.1490185830429733,0.10979877697313722,0.19760725888239866,0.3843774168600155,does not apply,scene,frame
+u_s,1,0.1,rain,clear,421,1952,0.1781416169276766,0.04321209016393442,0.03290839286617253,0.05567817589972333,0.19750246467302005,applies,scene,frame
+u_s,1,0.1,rain,rain,421,410,0.1781416169276766,0.08455284552845528,0.05388153114220995,0.12338875376430228,0.22273781902552203,not determined,scene,frame
+u_s,2,0.01,clear,clear,1890,1964,,,,,,no threshold established,scene,frame
+u_s,2,0.01,clear,rain,1890,357,,,,,,no threshold established,scene,frame
+u_s,2,0.01,rain,clear,394,1964,,,,,,no threshold established,scene,frame
+u_s,2,0.01,rain,rain,394,357,,,,,,no threshold established,scene,frame
+u_s,2,0.001,clear,clear,1890,1964,,,,,,no threshold established,scene,frame
+u_s,2,0.001,clear,rain,1890,357,,,,,,no threshold established,scene,frame
+u_s,2,0.001,rain,clear,394,1964,,,,,,no threshold established,scene,frame
+u_s,2,0.001,rain,rain,394,357,,,,,,no threshold established,scene,frame
+u_s,2,0.0001,clear,clear,1890,1964,,,,,,no threshold established,scene,frame
+u_s,2,0.0001,clear,rain,1890,357,,,,,,no threshold established,scene,frame
+u_s,2,0.0001,rain,clear,394,1964,,,,,,no threshold established,scene,frame
+u_s,2,0.0001,rain,rain,394,357,,,,,,no threshold established,scene,frame
+u_s,2,0.05,clear,clear,1890,1964,0.16965950973909644,0.031722189894287656,0.022989214656665924,0.04272168868096819,0.1570027712641228,applies,scene,frame
+u_s,2,0.05,clear,rain,1890,357,0.16965950973909644,0.044911297852474316,0.022918928115481352,0.08106529858377844,0.18259162303664922,not determined,scene,frame
+u_s,2,0.05,rain,clear,394,1964,0.13911845715653293,0.005515953835709436,0.00212380259272571,0.01099292842618122,0.03442762737156257,applies,scene,frame
+u_s,2,0.05,rain,rain,394,357,0.13911845715653293,0.013538748832866479,0.0028854589386062557,0.036650337835096906,0.051047120418848166,applies,scene,frame
+u_s,2,0.1,clear,clear,1890,1964,0.2039525117343406,0.07151609563778606,0.05823927484950475,0.08668545765192587,0.3631421871669154,applies,scene,frame
+u_s,2,0.1,clear,rain,1890,357,0.2039525117343406,0.10977390956382552,0.07357570013758885,0.15731545426923915,0.3736910994764398,not determined,scene,frame
+u_s,2,0.1,rain,clear,394,1964,0.15443695546032746,0.01603869653767821,0.009907033289350053,0.024361455852318886,0.08814751652099766,applies,scene,frame
+u_s,2,0.1,rain,rain,394,357,0.15443695546032746,0.021475256769374416,0.006707408588607189,0.04849707493732542,0.10929319371727748,applies,scene,frame
+u_s,3,0.01,clear,clear,2028,1746,0.12083788093672378,0.0028636884306987398,0.0007179121093905394,0.007562991597035427,0.006939982007454055,applies,scene,frame
+u_s,3,0.01,clear,rain,2028,458,0.12083788093672378,0.006550218340611353,0.0009244347190121571,0.022008712363403387,0.014064015518913677,not determined,scene,frame
+u_s,3,0.01,rain,clear,375,1746,,,,,,no threshold established,scene,frame
+u_s,3,0.01,rain,rain,375,458,,,,,,no threshold established,scene,frame
+u_s,3,0.001,clear,clear,2028,1746,,,,,,no threshold established,scene,frame
+u_s,3,0.001,clear,rain,2028,458,,,,,,no threshold established,scene,frame
+u_s,3,0.001,rain,clear,375,1746,,,,,,no threshold established,scene,frame
+u_s,3,0.001,rain,rain,375,458,,,,,,no threshold established,scene,frame
+u_s,3,0.0001,clear,clear,2028,1746,,,,,,no threshold established,scene,frame
+u_s,3,0.0001,clear,rain,2028,458,,,,,,no threshold established,scene,frame
+u_s,3,0.0001,rain,clear,375,1746,,,,,,no threshold established,scene,frame
+u_s,3,0.0001,rain,rain,375,458,,,,,,no threshold established,scene,frame
+u_s,3,0.05,clear,clear,2028,1746,0.16340870258865423,0.02584683357879234,0.017659093116651814,0.03683792238152694,0.11361007582572934,applies,scene,frame
+u_s,3,0.05,clear,rain,2028,458,0.16340870258865423,0.05367540029112081,0.030835596352826733,0.08491131540503194,0.12851600387972842,not determined,scene,frame
+u_s,3,0.05,rain,clear,375,1746,0.13835088812839522,0.008972890416189386,0.004247343838336026,0.016100258188091562,0.02904510988304845,applies,scene,frame
+u_s,3,0.05,rain,rain,375,458,0.13835088812839522,0.017467248908296942,0.006278462345988611,0.03791454222892318,0.0431619786614937,applies,scene,frame
+u_s,3,0.1,clear,clear,2028,1746,0.19980486573716907,0.0626286164516405,0.04952337822794384,0.0780418249647098,0.3103714175555841,applies,scene,frame
+u_s,3,0.1,clear,rain,2028,458,0.19980486573716907,0.12516115616552298,0.09048042725667182,0.16771776498134516,0.3355965082444229,not determined,scene,frame
+u_s,3,0.1,rain,clear,375,1746,0.1601832758556057,0.019642175312278402,0.012516869761722171,0.02943813627936077,0.10037270273743734,applies,scene,frame
+u_s,3,0.1,rain,rain,375,458,0.1601832758556057,0.049490538573508,0.02749442835590543,0.07964084708235958,0.11881668283220174,applies,scene,frame
+u_s,4,0.01,clear,clear,1957,1980,0.12665859026188536,0.005303030303030303,0.002061513835767914,0.01090433597139557,0.010682178741406664,not determined,scene,frame
+u_s,4,0.01,clear,rain,1957,372,0.12665859026188536,0.012096774193548387,0.0024000824252446984,0.03440007909811893,0.03908045977011494,not determined,scene,frame
+u_s,4,0.01,rain,clear,343,1980,,,,,,no threshold established,scene,frame
+u_s,4,0.01,rain,rain,343,372,,,,,,no threshold established,scene,frame
+u_s,4,0.001,clear,clear,1957,1980,,,,,,no threshold established,scene,frame
+u_s,4,0.001,clear,rain,1957,372,,,,,,no threshold established,scene,frame
+u_s,4,0.001,rain,clear,343,1980,,,,,,no threshold established,scene,frame
+u_s,4,0.001,rain,rain,343,372,,,,,,no threshold established,scene,frame
+u_s,4,0.0001,clear,clear,1957,1980,,,,,,no threshold established,scene,frame
+u_s,4,0.0001,clear,rain,1957,372,,,,,,no threshold established,scene,frame
+u_s,4,0.0001,rain,clear,343,1980,,,,,,no threshold established,scene,frame
+u_s,4,0.0001,rain,rain,343,372,,,,,,no threshold established,scene,frame
+u_s,4,0.05,clear,clear,1957,1980,0.17857636626876103,0.05971380471380471,0.047714681565947936,0.07387410007191075,0.18603913273400316,not determined,scene,frame
+u_s,4,0.05,clear,rain,1957,372,0.17857636626876103,0.10672043010752687,0.07055713629363569,0.15112954493446043,0.22988505747126436,does not apply,scene,frame
+u_s,4,0.05,rain,clear,343,1980,0.1447888404268842,0.019562289562289562,0.012663507908544869,0.028365358346599517,0.04410364886303543,applies,scene,frame
+u_s,4,0.05,rain,rain,343,372,0.1447888404268842,0.03203405017921147,0.013084205699911422,0.06087497971416893,0.0896551724137931,not determined,scene,frame
+u_s,4,0.1,clear,clear,1957,1980,0.22155070360404083,0.12556538399628744,0.10824645440735214,0.1443498661046061,0.44082496033844526,does not apply,scene,frame
+u_s,4,0.1,clear,rain,1957,372,0.22155070360404083,0.21889187574671445,0.16929011247107573,0.2753862869512859,0.43908045977011495,does not apply,scene,frame
+u_s,4,0.1,rain,clear,343,1980,0.17637228396071353,0.05579184704184704,0.0440888888872929,0.06943969160046431,0.17620306716023268,applies,scene,frame
+u_s,4,0.1,rain,rain,343,372,0.17637228396071353,0.10044802867383511,0.06609856629019539,0.14498118289111606,0.21915708812260537,not determined,scene,frame
+u_e,0,0.01,clear,clear,1948,1908,0.10575444936752319,0.008005765199161425,0.003886093778352029,0.014737643003058546,0.1068384539147671,not determined,scene,frame
+u_e,0,0.01,clear,rain,1948,399,0.10575444936752319,0.0,0.0,0.00920270542340397,0.10089463220675944,applies,scene,frame
+u_e,0,0.01,rain,clear,337,1908,0.0608461132645607,0.0005241090146750524,4.866440059814181e-06,0.003439232904260951,0.02101090188305253,applies,scene,frame
+u_e,0,0.01,rain,rain,337,399,0.0608461132645607,0.0,0.0,0.00920270542340397,0.016898608349900597,applies,scene,frame
+u_e,0,0.001,clear,clear,1948,1908,,,,,,no threshold established,scene,frame
+u_e,0,0.001,clear,rain,1948,399,,,,,,no threshold established,scene,frame
+u_e,0,0.001,rain,clear,337,1908,,,,,,no threshold established,scene,frame
+u_e,0,0.001,rain,rain,337,399,,,,,,no threshold established,scene,frame
+u_e,0,0.0001,clear,clear,1948,1908,,,,,,no threshold established,scene,frame
+u_e,0,0.0001,clear,rain,1948,399,,,,,,no threshold established,scene,frame
+u_e,0,0.0001,rain,clear,337,1908,,,,,,no threshold established,scene,frame
+u_e,0,0.0001,rain,rain,337,399,,,,,,no threshold established,scene,frame
+u_e,0,0.05,clear,clear,1948,1908,0.26489104807376856,0.043235672707555795,0.03275170263843896,0.055782940114518204,0.39613478691774034,not determined,scene,frame
+u_e,0,0.05,clear,rain,1948,399,0.26489104807376856,0.06015534868918328,0.035448558808276354,0.09723365133051895,0.4532803180914513,not determined,scene,frame
+u_e,0,0.05,rain,clear,337,1908,0.1402550435066223,0.014432340021962661,0.008555016929282622,0.022547845845722912,0.17720515361744302,applies,scene,frame
+u_e,0,0.05,rain,rain,337,399,0.1402550435066223,0.002882205513784461,4.36026203368689e-05,0.01716736611858312,0.18538767395626243,applies,scene,frame
+u_e,0,0.1,clear,clear,1948,1908,0.4532398716360331,0.0907390163123527,0.07579623319513773,0.10787921726847385,0.7089197224975223,not determined,scene,frame
+u_e,0,0.1,clear,rain,1948,399,0.4532398716360331,0.1385508601674015,0.09978558673794757,0.18628185464738087,0.7196819085487077,not determined,scene,frame
+u_e,0,0.1,rain,clear,337,1908,0.215876202583313,0.027309224085953647,0.0192183308258137,0.037971223774371454,0.30842418235877106,applies,scene,frame
+u_e,0,0.1,rain,rain,337,399,0.215876202583313,0.04515455304928989,0.024112812599004663,0.07897696753822622,0.34642147117296224,applies,scene,frame
+u_e,1,0.01,clear,clear,1768,1952,0.10403584763407707,0.004730191256830601,0.0017739904294453712,0.010273018944046336,0.09179537736882462,not determined,scene,frame
+u_e,1,0.01,clear,rain,1768,410,0.10403584763407707,0.00853658536585366,0.0012748599939008676,0.027268899494422176,0.0920340293890178,not determined,scene,frame
+u_e,1,0.01,rain,clear,421,1952,0.08671844214200973,0.002945696721311475,0.0007321041463890232,0.007516167343363791,0.05750903713440684,applies,scene,frame
+u_e,1,0.01,rain,rain,421,410,0.08671844214200973,0.00853658536585366,0.0012748599939008676,0.027268899494422176,0.07579273008507348,not determined,scene,frame
+u_e,1,0.001,clear,clear,1768,1952,,,,,,no threshold established,scene,frame
+u_e,1,0.001,clear,rain,1768,410,,,,,,no threshold established,scene,frame
+u_e,1,0.001,rain,clear,421,1952,,,,,,no threshold established,scene,frame
+u_e,1,0.001,rain,rain,421,410,,,,,,no threshold established,scene,frame
+u_e,1,0.0001,clear,clear,1768,1952,,,,,,no threshold established,scene,frame
+u_e,1,0.0001,clear,rain,1768,410,,,,,,no threshold established,scene,frame
+u_e,1,0.0001,rain,clear,421,1952,,,,,,no threshold established,scene,frame
+u_e,1,0.0001,rain,rain,421,410,,,,,,no threshold established,scene,frame
+u_e,1,0.05,clear,clear,1768,1952,0.2538297961652279,0.031239225539942753,0.02225587140627705,0.04181570353766058,0.3542556687479461,applies,scene,frame
+u_e,1,0.05,clear,rain,1768,410,0.2538297961652279,0.09292682926829271,0.0618933078809345,0.13464108443283104,0.33874709976798145,does not apply,scene,frame
+u_e,1,0.05,rain,clear,421,1952,0.17795210182666776,0.01610619145199063,0.009968103986430221,0.024510599470740364,0.23135064081498521,applies,scene,frame
+u_e,1,0.05,rain,rain,421,410,0.17795210182666776,0.03292682926829268,0.014821363153816436,0.061597843873574004,0.2003093580819799,not determined,scene,frame
+u_e,1,0.1,clear,clear,1768,1952,0.4655772545933724,0.09277549920480248,0.07785295578831586,0.10986855343889493,0.6949282506298609,not determined,scene,frame
+u_e,1,0.1,clear,rain,1768,410,0.4655772545933724,0.20976535659462486,0.1642280017356781,0.26378434920997906,0.7014694508894045,does not apply,scene,frame
+u_e,1,0.1,rain,clear,421,1952,0.2984530967473984,0.04729488976415206,0.03651896957902934,0.06024134668858022,0.4326870412969657,applies,scene,frame
+u_e,1,0.1,rain,rain,421,410,0.2984530967473984,0.11378048780487807,0.07824289455572964,0.15683983605041174,0.4091260634184068,not determined,scene,frame
+u_e,2,0.01,clear,clear,1890,1964,0.08948063105344772,0.0005091649694501018,4.727647085367437e-06,0.003341308306716447,0.06736303560008527,applies,scene,frame
+u_e,2,0.01,clear,rain,1890,357,0.08948063105344772,0.004201680672268907,0.00013679922470899442,0.021185853614381064,0.08376963350785341,not determined,scene,frame
+u_e,2,0.01,rain,clear,394,1964,,,,,,no threshold established,scene,frame
+u_e,2,0.01,rain,rain,394,357,,,,,,no threshold established,scene,frame
+u_e,2,0.001,clear,clear,1890,1964,,,,,,no threshold established,scene,frame
+u_e,2,0.001,clear,rain,1890,357,,,,,,no threshold established,scene,frame
+u_e,2,0.001,rain,clear,394,1964,,,,,,no threshold established,scene,frame
+u_e,2,0.001,rain,rain,394,357,,,,,,no threshold established,scene,frame
+u_e,2,0.0001,clear,clear,1890,1964,,,,,,no threshold established,scene,frame
+u_e,2,0.0001,clear,rain,1890,357,,,,,,no threshold established,scene,frame
+u_e,2,0.0001,rain,clear,394,1964,,,,,,no threshold established,scene,frame
+u_e,2,0.0001,rain,rain,394,357,,,,,,no threshold established,scene,frame
+u_e,2,0.05,clear,clear,1890,1964,0.25133771300315855,0.024151612135318856,0.016537861341518134,0.03395175562025713,0.35280324024728205,applies,scene,frame
+u_e,2,0.05,clear,rain,1890,357,0.25133771300315855,0.069234360410831,0.0396737196212581,0.10843439140900261,0.42212041884816753,not determined,scene,frame
+u_e,2,0.05,rain,clear,394,1964,0.1448197692632675,0.005172267481330618,0.0020783293592702146,0.010880480777409801,0.1712854402046472,applies,scene,frame
+u_e,2,0.05,rain,rain,394,357,0.1448197692632675,0.0037348272642390287,8.861544981098035e-05,0.020241536486505642,0.20157068062827224,applies,scene,frame
+u_e,2,0.1,clear,clear,1890,1964,0.44194009006023405,0.07126383265078304,0.057776357523438904,0.08613253245225798,0.6696866339799616,applies,scene,frame
+u_e,2,0.1,clear,rain,1890,357,0.44194009006023405,0.14423324885509758,0.10209222023518205,0.19511702360522382,0.7264397905759162,does not apply,scene,frame
+u_e,2,0.1,rain,clear,394,1964,0.2191515803337097,0.015300811431157663,0.009504993566154418,0.02375059655809454,0.29450010658708164,applies,scene,frame
+u_e,2,0.1,rain,rain,394,357,0.2191515803337097,0.046171802054155,0.022918928115481352,0.08116707605067774,0.35143979057591623,applies,scene,frame
+u_e,3,0.01,clear,clear,2028,1746,0.07494609832763671,0.000859106529209622,2.7925707717812998e-05,0.004361482124562941,0.030330291736280685,applies,scene,frame
+u_e,3,0.01,clear,rain,2028,458,0.07494609832763671,0.0,0.0,0.008021972809557604,0.039282250242483024,applies,scene,frame
+u_e,3,0.01,rain,clear,375,1746,0.051244633793830874,0.0,0.0,0.002110529975969498,0.00475517285695926,applies,scene,frame
+u_e,3,0.01,rain,rain,375,458,0.051244633793830874,0.0,0.0,0.008021972809557604,0.010184287099903006,applies,scene,frame
+u_e,3,0.001,clear,clear,2028,1746,,,,,,no threshold established,scene,frame
+u_e,3,0.001,clear,rain,2028,458,,,,,,no threshold established,scene,frame
+u_e,3,0.001,rain,clear,375,1746,,,,,,no threshold established,scene,frame
+u_e,3,0.001,rain,rain,375,458,,,,,,no threshold established,scene,frame
+u_e,3,0.0001,clear,clear,2028,1746,,,,,,no threshold established,scene,frame
+u_e,3,0.0001,clear,rain,2028,458,,,,,,no threshold established,scene,frame
+u_e,3,0.0001,rain,clear,375,1746,,,,,,no threshold established,scene,frame
+u_e,3,0.0001,rain,rain,375,458,,,,,,no threshold established,scene,frame
+u_e,3,0.05,clear,clear,2028,1746,0.25601725578308104,0.03890060014478855,0.02833362633502512,0.051269634064324894,0.36794756458038813,not determined,scene,frame
+u_e,3,0.05,clear,rain,2028,458,0.25601725578308104,0.07081340542039233,0.044627151469841864,0.10560669444139903,0.40591658583899126,not determined,scene,frame
+u_e,3,0.05,rain,clear,375,1746,0.16876784205436707,0.01657827662982302,0.009796818871099067,0.025323421074070564,0.21115537848605578,applies,scene,frame
+u_e,3,0.05,rain,rain,375,458,0.16876784205436707,0.026200873362445413,0.011788250294340386,0.049582871131619535,0.22938894277400582,applies,scene,frame
+u_e,3,0.1,clear,clear,2028,1746,0.42515179514884954,0.0762787956218584,0.06192126178634516,0.0930586195167258,0.649402390438247,applies,scene,frame
+u_e,3,0.1,clear,rain,2028,458,0.42515179514884954,0.14305059326893388,0.10572230740743438,0.18705251475620338,0.6648884578079535,does not apply,scene,frame
+u_e,3,0.1,rain,clear,375,1746,0.22705507338047026,0.029245558755868036,0.020527374765622164,0.04081465924697643,0.3169258450070685,applies,scene,frame
+u_e,3,0.1,rain,rain,375,458,0.22705507338047026,0.057849864836764395,0.034224099749097014,0.09013922106458594,0.34966052376333656,applies,scene,frame
+u_e,4,0.01,clear,clear,1957,1980,0.12974349409341812,0.014576719576719577,0.008636080785494937,0.022342374796797335,0.11877313590692755,not determined,scene,frame
+u_e,4,0.01,clear,rain,1957,372,0.12974349409341812,0.010080645161290322,0.0016369868179486602,0.031139240188550972,0.1417624521072797,not determined,scene,frame
+u_e,4,0.01,rain,clear,343,1980,0.09494040012359618,0.00691077441077441,0.003051208563471186,0.012900222175765908,0.059227921734531994,not determined,scene,frame
+u_e,4,0.01,rain,rain,343,372,0.09494040012359618,0.006720430107526882,0.0006218243429715331,0.025392524390975495,0.08812260536398467,not determined,scene,frame
+u_e,4,0.001,clear,clear,1957,1980,,,,,,no threshold established,scene,frame
+u_e,4,0.001,clear,rain,1957,372,,,,,,no threshold established,scene,frame
+u_e,4,0.001,rain,clear,343,1980,,,,,,no threshold established,scene,frame
+u_e,4,0.001,rain,rain,343,372,,,,,,no threshold established,scene,frame
+u_e,4,0.0001,clear,clear,1957,1980,,,,,,no threshold established,scene,frame
+u_e,4,0.0001,clear,rain,1957,372,,,,,,no threshold established,scene,frame
+u_e,4,0.0001,rain,clear,343,1980,,,,,,no threshold established,scene,frame
+u_e,4,0.0001,rain,rain,343,372,,,,,,no threshold established,scene,frame
+u_e,4,0.05,clear,clear,1957,1980,0.2668896234035492,0.04708097120084642,0.036446433679923174,0.059955792361967894,0.36795346377578003,not determined,scene,frame
+u_e,4,0.05,clear,rain,1957,372,0.2668896234035492,0.10147849462365591,0.06609856629019539,0.14498118289111572,0.39846743295019155,does not apply,scene,frame
+u_e,4,0.05,rain,clear,343,1980,0.17767947137355805,0.025629327182357484,0.017668984316928316,0.03543246942393249,0.20179799048122687,applies,scene,frame
+u_e,4,0.05,rain,rain,343,372,0.17767947137355805,0.0360663082437276,0.016347766675887443,0.06779070669384588,0.2413793103448276,not determined,scene,frame
+u_e,4,0.1,clear,clear,1957,1980,0.5080154307186604,0.11888556908746369,0.10209577952833027,0.13739844774707427,0.7589635113696457,does not apply,scene,frame
+u_e,4,0.1,clear,rain,1957,372,0.5080154307186604,0.23595420409936535,0.18395577095020443,0.29259529437431153,0.7754789272030651,does not apply,scene,frame
+u_e,4,0.1,rain,clear,343,1980,0.24581201374530792,0.03934924362954666,0.029348073549298803,0.050937990427013934,0.3246959280803807,applies,scene,frame
+u_e,4,0.1,rain,rain,343,372,0.24581201374530792,0.08848566308243727,0.055101318703665525,0.12947102111732486,0.3563218390804598,not determined,scene,frame
+u_s,0,0.01,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_s,0,0.01,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_s,0,0.01,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_s,0,0.01,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,0,0.001,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_s,0,0.001,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_s,0,0.001,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_s,0,0.001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,0,0.0001,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_s,0,0.0001,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_s,0,0.0001,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_s,0,0.0001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,0,0.05,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_s,0,0.05,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_s,0,0.05,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_s,0,0.05,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,0,0.1,clear,clear,52,49,0.15027849853375178,0.020645398929371055,0.00020209529502257517,0.1272134037029673,0.06650148662041626,not determined,scene,scene
+u_s,0,0.1,clear,rain,52,10,0.15027849853375178,0.010576923076923076,0.0,0.3433918686440356,0.0775347912524851,not determined,scene,scene
+u_s,0,0.1,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_s,0,0.1,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,1,0.01,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_s,1,0.01,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_s,1,0.01,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_s,1,0.01,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_s,1,0.001,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_s,1,0.001,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_s,1,0.001,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_s,1,0.001,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_s,1,0.0001,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_s,1,0.0001,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_s,1,0.0001,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_s,1,0.0001,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_s,1,0.05,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_s,1,0.05,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_s,1,0.05,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_s,1,0.05,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_s,1,0.1,clear,clear,48,50,0.14342917378026382,0.014761628953702123,3.703062917814748e-05,0.1133413247682483,0.04425457333771497,not determined,scene,scene
+u_s,1,0.1,clear,rain,48,11,0.14342917378026382,0.022004706889174153,1.9695557407217734e-09,0.3476994035716968,0.05877803557617943,not determined,scene,scene
+u_s,1,0.1,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_s,1,0.1,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_s,2,0.01,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_s,2,0.01,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_s,2,0.01,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_s,2,0.01,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_s,2,0.001,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_s,2,0.001,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_s,2,0.001,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_s,2,0.001,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_s,2,0.0001,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_s,2,0.0001,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_s,2,0.0001,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_s,2,0.0001,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_s,2,0.05,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_s,2,0.05,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_s,2,0.05,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_s,2,0.05,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_s,2,0.1,clear,clear,49,52,0.12947562135637555,0.003131765045461105,0.0,0.08104721869848978,0.01577488808356427,applies,scene,scene
+u_s,2,0.1,clear,rain,49,9,0.12947562135637555,0.006944444444444444,0.0,0.36066898231991484,0.02617801047120419,not determined,scene,scene
+u_s,2,0.1,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_s,2,0.1,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_s,3,0.01,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_s,3,0.01,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_s,3,0.01,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_s,3,0.01,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_s,3,0.001,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_s,3,0.001,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_s,3,0.001,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_s,3,0.001,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_s,3,0.0001,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_s,3,0.0001,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_s,3,0.0001,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_s,3,0.0001,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_s,3,0.05,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_s,3,0.05,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_s,3,0.05,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_s,3,0.05,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_s,3,0.1,clear,clear,52,47,0.14341963274750466,0.009334707197317473,7.696621033836948e-07,0.10546521342170861,0.039583601079552756,not determined,scene,scene
+u_s,3,0.1,clear,rain,52,12,0.14341963274750466,0.02218916976619159,7.943778856933648e-09,0.32831378812982803,0.05771096023278371,not determined,scene,scene
+u_s,3,0.1,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_s,3,0.1,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_s,4,0.01,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_s,4,0.01,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_s,4,0.01,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_s,4,0.01,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,4,0.001,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_s,4,0.001,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_s,4,0.001,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_s,4,0.001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,4,0.0001,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_s,4,0.0001,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_s,4,0.0001,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_s,4,0.0001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,4,0.05,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_s,4,0.05,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_s,4,0.05,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_s,4,0.05,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_s,4,0.1,clear,clear,51,51,0.15143593048969906,0.024966303490335056,0.0005238421726029285,0.13256634540657117,0.06536224219989424,not determined,scene,scene
+u_s,4,0.1,clear,rain,51,10,0.15143593048969906,0.05634229805282437,3.060502687812772e-05,0.4350054018842663,0.11340996168582375,not determined,scene,scene
+u_s,4,0.1,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_s,4,0.1,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,0,0.01,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_e,0,0.01,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_e,0,0.01,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_e,0,0.01,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,0,0.001,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_e,0,0.001,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_e,0,0.001,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_e,0,0.001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,0,0.0001,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_e,0,0.0001,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_e,0,0.0001,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_e,0,0.0001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,0,0.05,clear,clear,52,49,,,,,,no threshold established,scene,scene
+u_e,0,0.05,clear,rain,52,10,,,,,,no threshold established,scene,scene
+u_e,0,0.05,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_e,0,0.05,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,0,0.1,clear,clear,52,49,0.17439606338739394,0.017361625899455665,8.472049186747377e-05,0.12045584374625233,0.2354806739345887,not determined,scene,scene
+u_e,0,0.1,clear,rain,52,10,0.17439606338739394,0.018108974358974357,9.567124870102361e-12,0.36186170260014683,0.26043737574552683,not determined,scene,scene
+u_e,0,0.1,rain,clear,9,49,,,,,,no threshold established,scene,scene
+u_e,0,0.1,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,1,0.01,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_e,1,0.01,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_e,1,0.01,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_e,1,0.01,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_e,1,0.001,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_e,1,0.001,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_e,1,0.001,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_e,1,0.001,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_e,1,0.0001,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_e,1,0.0001,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_e,1,0.0001,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_e,1,0.0001,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_e,1,0.05,clear,clear,48,50,,,,,,no threshold established,scene,scene
+u_e,1,0.05,clear,rain,48,11,,,,,,no threshold established,scene,scene
+u_e,1,0.05,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_e,1,0.05,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_e,1,0.1,clear,clear,48,50,0.14809987768530844,0.011851816273157735,8.687693129449947e-06,0.1068087187164558,0.17964727790557564,not determined,scene,scene
+u_e,1,0.1,clear,rain,48,11,0.14809987768530844,0.02420255183413078,8.654518102169106e-09,0.352480225445375,0.15467904098994587,not determined,scene,scene
+u_e,1,0.1,rain,clear,11,50,,,,,,no threshold established,scene,scene
+u_e,1,0.1,rain,rain,11,11,,,,,,no threshold established,scene,scene
+u_e,2,0.01,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_e,2,0.01,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_e,2,0.01,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_e,2,0.01,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_e,2,0.001,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_e,2,0.001,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_e,2,0.001,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_e,2,0.001,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_e,2,0.0001,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_e,2,0.0001,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_e,2,0.0001,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_e,2,0.0001,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_e,2,0.05,clear,clear,49,52,,,,,,no threshold established,scene,scene
+u_e,2,0.05,clear,rain,49,9,,,,,,no threshold established,scene,scene
+u_e,2,0.05,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_e,2,0.05,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_e,2,0.1,clear,clear,49,52,0.1360185205936432,0.0038342950045576686,1.3036127732846126e-11,0.08323189796989175,0.15615007461095715,applies,scene,scene
+u_e,2,0.1,clear,rain,49,9,0.1360185205936432,0.003703703703703704,0.0,0.3508085713044149,0.17604712041884818,not determined,scene,scene
+u_e,2,0.1,rain,clear,11,52,,,,,,no threshold established,scene,scene
+u_e,2,0.1,rain,rain,11,9,,,,,,no threshold established,scene,scene
+u_e,3,0.01,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_e,3,0.01,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_e,3,0.01,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_e,3,0.01,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_e,3,0.001,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_e,3,0.001,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_e,3,0.001,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_e,3,0.001,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_e,3,0.0001,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_e,3,0.0001,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_e,3,0.0001,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_e,3,0.0001,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_e,3,0.05,clear,clear,52,47,,,,,,no threshold established,scene,scene
+u_e,3,0.05,clear,rain,52,12,,,,,,no threshold established,scene,scene
+u_e,3,0.05,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_e,3,0.05,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_e,3,0.1,clear,clear,52,47,0.16115511178970338,0.01687180309952441,5.994486258542597e-05,0.12269302154962229,0.19714689628582444,not determined,scene,scene
+u_e,3,0.1,clear,rain,52,12,0.16115511178970338,0.028460204705791994,2.1639651481830668e-07,0.3416987154452984,0.2162948593598448,not determined,scene,scene
+u_e,3,0.1,rain,clear,10,47,,,,,,no threshold established,scene,scene
+u_e,3,0.1,rain,rain,10,12,,,,,,no threshold established,scene,scene
+u_e,4,0.01,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_e,4,0.01,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_e,4,0.01,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_e,4,0.01,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,4,0.001,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_e,4,0.001,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_e,4,0.001,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_e,4,0.001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,4,0.0001,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_e,4,0.0001,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_e,4,0.0001,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_e,4,0.0001,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,4,0.05,clear,clear,51,51,,,,,,no threshold established,scene,scene
+u_e,4,0.05,clear,rain,51,10,,,,,,no threshold established,scene,scene
+u_e,4,0.05,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_e,4,0.05,rain,rain,9,10,,,,,,no threshold established,scene,scene
+u_e,4,0.1,clear,clear,51,51,0.2043298092484474,0.033353365796028524,0.001489746749753773,0.14799289456721454,0.2504494976203067,not determined,scene,scene
+u_e,4,0.1,clear,rain,51,10,0.2043298092484474,0.0491486002764886,1.0198334659650143e-05,0.42281484109529777,0.285823754789272,not determined,scene,scene
+u_e,4,0.1,rain,clear,9,51,,,,,,no threshold established,scene,scene
+u_e,4,0.1,rain,rain,9,10,,,,,,no threshold established,scene,scene

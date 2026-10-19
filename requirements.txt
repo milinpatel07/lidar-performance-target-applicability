@@ -1,0 +1,4 @@
+# versions of the container in which the recorded runs were made
+numpy==1.26.3
+pandas==2.2.3
+matplotlib==3.10.0

@@ -1,0 +1,19 @@
+run,target_group,cell,applies,does not apply,not determined,no threshold established,total
+m2_kitti_range,exploratory,diagonal,341,0,139,0,480
+m2_kitti_range,exploratory,off-diagonal,242,163,75,0,480
+m2_kitti_range,frozen 1e-2,diagonal,120,0,92,28,240
+m2_kitti_range,frozen 1e-2,off-diagonal,108,41,63,28,240
+m2_kitti_range,frozen <=1e-3,diagonal,0,0,0,480,480
+m2_kitti_range,frozen <=1e-3,off-diagonal,0,0,0,480,480
+m3_nuscenes_range,exploratory,diagonal,126,0,114,0,240
+m3_nuscenes_range,exploratory,off-diagonal,123,78,39,0,240
+m3_nuscenes_range,frozen 1e-2,diagonal,75,0,31,14,120
+m3_nuscenes_range,frozen 1e-2,off-diagonal,52,28,26,14,120
+m3_nuscenes_range,frozen <=1e-3,diagonal,0,0,0,240,240
+m3_nuscenes_range,frozen <=1e-3,off-diagonal,0,0,0,240,240
+m4_dataset_shift,exploratory,diagonal,5,0,3,0,8
+m4_dataset_shift,exploratory,off-diagonal,4,2,2,0,8
+m4_dataset_shift,frozen 1e-2,diagonal,2,0,2,0,4
+m4_dataset_shift,frozen 1e-2,off-diagonal,2,1,1,0,4
+m4_dataset_shift,frozen <=1e-3,diagonal,0,0,0,8,8
+m4_dataset_shift,frozen <=1e-3,off-diagonal,0,0,0,8,8

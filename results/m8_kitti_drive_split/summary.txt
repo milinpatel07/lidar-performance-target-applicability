@@ -1,0 +1,166 @@
+M8 SUMMARY (m8-0.1): KITTI split by drive; 45 drives in the 3769 KITTI validation frames, 150 nuScenes scenes
+REPRODUCTION frame split: m6 A EQUAL, m6 B EQUAL, input hashes EQUAL
+
+A. KITTI distance, outcome counts over 5 seeds:
+   drive as_run u_e 0.0001 far near: no threshold established 5
+   drive as_run u_e 0.0001 near far: no threshold established 5
+   drive as_run u_e 0.001 far near: no threshold established 5
+   drive as_run u_e 0.001 near far: no threshold established 5
+   drive as_run u_e 0.01 far near: no threshold established 5
+   drive as_run u_e 0.01 near far: no threshold established 5
+   drive as_run u_e 0.05 far near: no threshold established 5
+   drive as_run u_e 0.05 near far: no threshold established 5
+   drive as_run u_e 0.1 far near: no threshold established 5
+   drive as_run u_e 0.1 near far: no threshold established 5
+   drive as_run u_s 0.0001 far near: no threshold established 5
+   drive as_run u_s 0.0001 near far: no threshold established 5
+   drive as_run u_s 0.001 far near: no threshold established 5
+   drive as_run u_s 0.001 near far: no threshold established 5
+   drive as_run u_s 0.01 far near: no threshold established 5
+   drive as_run u_s 0.01 near far: no threshold established 5
+   drive as_run u_s 0.05 far near: no threshold established 5
+   drive as_run u_s 0.05 near far: no threshold established 5
+   drive as_run u_s 0.1 far near: no threshold established 5
+   drive as_run u_s 0.1 near far: no threshold established 5
+   drive kitti_ignore u_e 0.0001 far near: no threshold established 5
+   drive kitti_ignore u_e 0.0001 near far: no threshold established 5
+   drive kitti_ignore u_e 0.001 far near: no threshold established 5
+   drive kitti_ignore u_e 0.001 near far: no threshold established 5
+   drive kitti_ignore u_e 0.01 far near: no threshold established 5
+   drive kitti_ignore u_e 0.01 near far: no threshold established 5
+   drive kitti_ignore u_e 0.05 far near: no threshold established 5
+   drive kitti_ignore u_e 0.05 near far: no threshold established 5
+   drive kitti_ignore u_e 0.1 far near: no threshold established 5
+   drive kitti_ignore u_e 0.1 near far: no threshold established 5
+   drive kitti_ignore u_s 0.0001 far near: no threshold established 5
+   drive kitti_ignore u_s 0.0001 near far: no threshold established 5
+   drive kitti_ignore u_s 0.001 far near: no threshold established 5
+   drive kitti_ignore u_s 0.001 near far: no threshold established 5
+   drive kitti_ignore u_s 0.01 far near: no threshold established 5
+   drive kitti_ignore u_s 0.01 near far: no threshold established 5
+   drive kitti_ignore u_s 0.05 far near: no threshold established 5
+   drive kitti_ignore u_s 0.05 near far: no threshold established 5
+   drive kitti_ignore u_s 0.1 far near: no threshold established 5
+   drive kitti_ignore u_s 0.1 near far: no threshold established 5
+   frame as_run u_e 0.0001 far near: no threshold established 5
+   frame as_run u_e 0.0001 near far: no threshold established 5
+   frame as_run u_e 0.001 far near: no threshold established 5
+   frame as_run u_e 0.001 near far: no threshold established 5
+   frame as_run u_e 0.01 far near: does not apply 1, no threshold established 1, not determined 3
+   frame as_run u_e 0.01 near far: applies 4, no threshold established 1
+   frame as_run u_e 0.05 far near: applies 1, no threshold established 1, not determined 3
+   frame as_run u_e 0.05 near far: applies 3, no threshold established 1, not determined 1
+   frame as_run u_e 0.1 far near: applies 4, no threshold established 1
+   frame as_run u_e 0.1 near far: applies 1, does not apply 3, not determined 1
+   frame as_run u_s 0.0001 far near: no threshold established 5
+   frame as_run u_s 0.0001 near far: no threshold established 5
+   frame as_run u_s 0.001 far near: no threshold established 5
+   frame as_run u_s 0.001 near far: no threshold established 5
+   frame as_run u_s 0.01 far near: applies 2, no threshold established 1, not determined 2
+   frame as_run u_s 0.01 near far: applies 2, no threshold established 1, not determined 2
+   frame as_run u_s 0.05 far near: applies 3, no threshold established 1, not determined 1
+   frame as_run u_s 0.05 near far: applies 1, does not apply 2, not determined 2
+   frame as_run u_s 0.1 far near: applies 5
+   frame as_run u_s 0.1 near far: does not apply 5
+   frame kitti_ignore u_e 0.0001 far near: no threshold established 5
+   frame kitti_ignore u_e 0.0001 near far: no threshold established 5
+   frame kitti_ignore u_e 0.001 far near: no threshold established 5
+   frame kitti_ignore u_e 0.001 near far: no threshold established 5
+   frame kitti_ignore u_e 0.01 far near: no threshold established 1, not determined 4
+   frame kitti_ignore u_e 0.01 near far: applies 2, no threshold established 1, not determined 2
+   frame kitti_ignore u_e 0.05 far near: applies 4, no threshold established 1
+   frame kitti_ignore u_e 0.05 near far: does not apply 3, not determined 2
+   frame kitti_ignore u_e 0.1 far near: applies 5
+   frame kitti_ignore u_e 0.1 near far: does not apply 5
+   frame kitti_ignore u_s 0.0001 far near: no threshold established 5
+   frame kitti_ignore u_s 0.0001 near far: no threshold established 5
+   frame kitti_ignore u_s 0.001 far near: no threshold established 5
+   frame kitti_ignore u_s 0.001 near far: no threshold established 5
+   frame kitti_ignore u_s 0.01 far near: applies 3, no threshold established 1, not determined 1
+   frame kitti_ignore u_s 0.01 near far: applies 1, does not apply 1, no threshold established 1, not determined 2
+   frame kitti_ignore u_s 0.05 far near: applies 4, no threshold established 1
+   frame kitti_ignore u_s 0.05 near far: does not apply 5
+   frame kitti_ignore u_s 0.1 far near: applies 5
+   frame kitti_ignore u_s 0.1 near far: does not apply 5
+
+B. change of dataset, outcome counts over 5 seeds:
+   drive as_run u_e 0.0001 kitti nuscenes: no threshold established 5
+   drive as_run u_e 0.0001 nuscenes kitti: no threshold established 5
+   drive as_run u_e 0.001 kitti nuscenes: no threshold established 5
+   drive as_run u_e 0.001 nuscenes kitti: no threshold established 5
+   drive as_run u_e 0.01 kitti nuscenes: no threshold established 5
+   drive as_run u_e 0.01 nuscenes kitti: no threshold established 5
+   drive as_run u_e 0.05 kitti nuscenes: no threshold established 5
+   drive as_run u_e 0.05 nuscenes kitti: not determined 5
+   drive as_run u_e 0.1 kitti nuscenes: no threshold established 5
+   drive as_run u_e 0.1 nuscenes kitti: not determined 5
+   drive as_run u_s 0.0001 kitti nuscenes: no threshold established 5
+   drive as_run u_s 0.0001 nuscenes kitti: no threshold established 5
+   drive as_run u_s 0.001 kitti nuscenes: no threshold established 5
+   drive as_run u_s 0.001 nuscenes kitti: no threshold established 5
+   drive as_run u_s 0.01 kitti nuscenes: no threshold established 5
+   drive as_run u_s 0.01 nuscenes kitti: no threshold established 5
+   drive as_run u_s 0.05 kitti nuscenes: no threshold established 5
+   drive as_run u_s 0.05 nuscenes kitti: not determined 5
+   drive as_run u_s 0.1 kitti nuscenes: no threshold established 5
+   drive as_run u_s 0.1 nuscenes kitti: not determined 5
+   drive kitti_ignore u_e 0.0001 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_e 0.0001 nuscenes kitti: no threshold established 5
+   drive kitti_ignore u_e 0.001 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_e 0.001 nuscenes kitti: no threshold established 5
+   drive kitti_ignore u_e 0.01 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_e 0.01 nuscenes kitti: no threshold established 5
+   drive kitti_ignore u_e 0.05 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_e 0.05 nuscenes kitti: not determined 5
+   drive kitti_ignore u_e 0.1 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_e 0.1 nuscenes kitti: not determined 5
+   drive kitti_ignore u_s 0.0001 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_s 0.0001 nuscenes kitti: no threshold established 5
+   drive kitti_ignore u_s 0.001 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_s 0.001 nuscenes kitti: no threshold established 5
+   drive kitti_ignore u_s 0.01 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_s 0.01 nuscenes kitti: no threshold established 5
+   drive kitti_ignore u_s 0.05 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_s 0.05 nuscenes kitti: not determined 5
+   drive kitti_ignore u_s 0.1 kitti nuscenes: no threshold established 5
+   drive kitti_ignore u_s 0.1 nuscenes kitti: not determined 5
+   frame as_run u_e 0.0001 kitti nuscenes: no threshold established 5
+   frame as_run u_e 0.0001 nuscenes kitti: no threshold established 5
+   frame as_run u_e 0.001 kitti nuscenes: no threshold established 5
+   frame as_run u_e 0.001 nuscenes kitti: no threshold established 5
+   frame as_run u_e 0.01 kitti nuscenes: applies 3, not determined 2
+   frame as_run u_e 0.01 nuscenes kitti: applies 3, not determined 2
+   frame as_run u_e 0.05 kitti nuscenes: applies 5
+   frame as_run u_e 0.05 nuscenes kitti: applies 1, not determined 4
+   frame as_run u_e 0.1 kitti nuscenes: applies 5
+   frame as_run u_e 0.1 nuscenes kitti: does not apply 1, not determined 4
+   frame as_run u_s 0.0001 kitti nuscenes: no threshold established 5
+   frame as_run u_s 0.0001 nuscenes kitti: no threshold established 5
+   frame as_run u_s 0.001 kitti nuscenes: no threshold established 5
+   frame as_run u_s 0.001 nuscenes kitti: no threshold established 5
+   frame as_run u_s 0.01 kitti nuscenes: applies 5
+   frame as_run u_s 0.01 nuscenes kitti: does not apply 5
+   frame as_run u_s 0.05 kitti nuscenes: applies 5
+   frame as_run u_s 0.05 nuscenes kitti: does not apply 5
+   frame as_run u_s 0.1 kitti nuscenes: applies 5
+   frame as_run u_s 0.1 nuscenes kitti: does not apply 5
+   frame kitti_ignore u_e 0.0001 kitti nuscenes: no threshold established 5
+   frame kitti_ignore u_e 0.0001 nuscenes kitti: no threshold established 5
+   frame kitti_ignore u_e 0.001 kitti nuscenes: no threshold established 5
+   frame kitti_ignore u_e 0.001 nuscenes kitti: no threshold established 5
+   frame kitti_ignore u_e 0.01 kitti nuscenes: applies 2, not determined 3
+   frame kitti_ignore u_e 0.01 nuscenes kitti: applies 4, not determined 1
+   frame kitti_ignore u_e 0.05 kitti nuscenes: applies 2, does not apply 2, not determined 1
+   frame kitti_ignore u_e 0.05 nuscenes kitti: applies 5
+   frame kitti_ignore u_e 0.1 kitti nuscenes: applies 2, does not apply 1, not determined 2
+   frame kitti_ignore u_e 0.1 nuscenes kitti: applies 4, not determined 1
+   frame kitti_ignore u_s 0.0001 kitti nuscenes: no threshold established 5
+   frame kitti_ignore u_s 0.0001 nuscenes kitti: no threshold established 5
+   frame kitti_ignore u_s 0.001 kitti nuscenes: no threshold established 5
+   frame kitti_ignore u_s 0.001 nuscenes kitti: no threshold established 5
+   frame kitti_ignore u_s 0.01 kitti nuscenes: applies 5
+   frame kitti_ignore u_s 0.01 nuscenes kitti: does not apply 5
+   frame kitti_ignore u_s 0.05 kitti nuscenes: applies 5
+   frame kitti_ignore u_s 0.05 nuscenes kitti: does not apply 5
+   frame kitti_ignore u_s 0.1 kitti nuscenes: applies 5
+   frame kitti_ignore u_s 0.1 nuscenes kitti: does not apply 5

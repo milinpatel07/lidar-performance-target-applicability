@@ -1,0 +1,326 @@
+{
+  "script_version": "m3-0.4",
+  "bev_backend": "clip",
+  "started": "2026-10-19 09:04:25",
+  "python": "3.10.13",
+  "numpy": "1.26.3",
+  "m1_version": "m1-0.2",
+  "inputs_sha256": {
+    "/rum/detections/nuscenes/scored_val.pkl": "fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf",
+    "/rum/detections/nuscenes/frame_errors_cache.pkl": "93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0",
+    "/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl": "ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566",
+    "/rum/detections/nuscenes/seed1_val.pkl": "ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7",
+    "/rum/detections/nuscenes/seed2_val.pkl": "50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7",
+    "/rum/detections/nuscenes/seed3_val.pkl": "4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3",
+    "/rum/detections/nuscenes/seed4_val.pkl": "57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d"
+  },
+  "script_sha256": "b6af3474c51156a93ead294e417b1c9438916cd07677899ee4f81b14368b3aff",
+  "config": {
+    "delta": 0.05,
+    "alphas_frozen": [
+      0.01,
+      0.001,
+      0.0001
+    ],
+    "alphas_exploratory": [
+      0.05,
+      0.1
+    ],
+    "frac_grid": 0.1,
+    "frac_select": 0.45,
+    "grid_levels": [
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22,
+      0.23,
+      0.24,
+      0.25,
+      0.26,
+      0.27,
+      0.28,
+      0.29,
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0
+    ],
+    "cut_quantiles": [
+      0.5,
+      0.25,
+      0.75
+    ],
+    "n_boot": 2000,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "iou_settings": {
+      "A_iou0.5": {
+        "car": 0.5,
+        "truck": 0.5,
+        "construction_vehicle": 0.5,
+        "bus": 0.5,
+        "trailer": 0.5,
+        "barrier": 0.5,
+        "motorcycle": 0.5,
+        "bicycle": 0.5,
+        "pedestrian": 0.5,
+        "traffic_cone": 0.5
+      }
+    },
+    "object_sets": {
+      "car": [
+        "car"
+      ],
+      "vehicles": [
+        "car",
+        "truck",
+        "bus",
+        "trailer"
+      ]
+    },
+    "primary": {
+      "iou": "A_iou0.5",
+      "cut_q": 0.5,
+      "objects": "car",
+      "seed": 0
+    },
+    "verify_setting": "A_iou0.5"
+  },
+  "indicator_definitions": {
+    "u_s": "1 - mean pairwise rotated 3D IoU between members (VEHITS Eq. 3)",
+    "u_e": "1 - mean confidence over K members, missing members 0 (VEHITS Eq. 1)",
+    "u_v": "confidence variance across contributing members (VEHITS Eq. 2)"
+  },
+  "rebuild_check": "REBUILD CHECK: consensus set matches scored_val.pkl for 6019/6019 frames",
+  "verification": "VERIFICATION PASSED: per-frame FN and FP match frame_errors_cache.pkl for all 6019 frames",
+  "n_frames": 6019,
+  "n_detections": 140032,
+  "indicator_quantiles": {
+    "u_s": {
+      "0": 0.059278295730680663,
+      "0.25": 0.27956722483620483,
+      "0.5": 0.3483970553021228,
+      "0.75": 0.3993784553298362,
+      "0.95": 0.46305134137409454,
+      "1": 0.570583080970194
+    },
+    "u_e": {
+      "0": 0.008670717477798462,
+      "0.25": 0.5740137007087469,
+      "0.5": 0.77157311886549,
+      "0.75": 0.8573942338116467,
+      "0.95": 0.9022576250135899,
+      "1": 0.9238512925803661
+    },
+    "u_v": {
+      "0": 7.315254476244112e-09,
+      "0.25": 0.00090996402853268,
+      "0.5": 0.0024912011892462838,
+      "0.75": 0.006223679097327758,
+      "0.95": 0.01943730312737185,
+      "1": 0.15265588265279112
+    }
+  },
+  "split": "scene",
+  "nusc_meta_sha256": {
+    "/heinrich_nuscenes/v1.0-trainval/sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d"
+  },
+  "n_scenes": 150,
+  "scene_counts_primary": {
+    "seed0": {
+      "cut_m": 19.888035891343545,
+      "grid": {
+        "scenes": 15,
+        "frames": 597,
+        "near": 15,
+        "far": 15
+      },
+      "select": {
+        "scenes": 68,
+        "frames": 2734,
+        "near": 67,
+        "far": 68
+      },
+      "eval": {
+        "scenes": 67,
+        "frames": 2688,
+        "near": 67,
+        "far": 67
+      }
+    },
+    "seed1": {
+      "cut_m": 19.97535262559952,
+      "grid": {
+        "scenes": 15,
+        "frames": 603,
+        "near": 15,
+        "far": 15
+      },
+      "select": {
+        "scenes": 68,
+        "frames": 2730,
+        "near": 67,
+        "far": 68
+      },
+      "eval": {
+        "scenes": 67,
+        "frames": 2686,
+        "near": 67,
+        "far": 67
+      }
+    },
+    "seed2": {
+      "cut_m": 21.210827150534072,
+      "grid": {
+        "scenes": 15,
+        "frames": 598,
+        "near": 15,
+        "far": 15
+      },
+      "select": {
+        "scenes": 68,
+        "frames": 2731,
+        "near": 68,
+        "far": 68
+      },
+      "eval": {
+        "scenes": 67,
+        "frames": 2690,
+        "near": 66,
+        "far": 67
+      }
+    },
+    "seed3": {
+      "cut_m": 18.15440840995343,
+      "grid": {
+        "scenes": 15,
+        "frames": 600,
+        "near": 15,
+        "far": 15
+      },
+      "select": {
+        "scenes": 68,
+        "frames": 2725,
+        "near": 67,
+        "far": 68
+      },
+      "eval": {
+        "scenes": 67,
+        "frames": 2694,
+        "near": 67,
+        "far": 67
+      }
+    },
+    "seed4": {
+      "cut_m": 19.69407680023256,
+      "grid": {
+        "scenes": 15,
+        "frames": 607,
+        "near": 14,
+        "far": 15
+      },
+      "select": {
+        "scenes": 68,
+        "frames": 2728,
+        "near": 68,
+        "far": 68
+      },
+      "eval": {
+        "scenes": 67,
+        "frames": 2684,
+        "near": 67,
+        "far": 67
+      }
+    }
+  }
+}

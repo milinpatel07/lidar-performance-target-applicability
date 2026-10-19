@@ -1,0 +1,149 @@
+M6 SUMMARY (m6-0.2)
+
+A. KITTI ignore rule (DontCare regions, Van as neighbouring class), car detections
+   median car range 35.06 m; false detections and how many the rule ignores:
+   near: FP 5516, in DontCare 167, on Van 455, share ignored 0.113
+   far: FP 11768, in DontCare 1592, on Van 240, share ignored 0.156
+   outcome counts over 5 seeds (KITTI range, car, median cut):
+   as_run       u_e alpha=0.0001  far->near: no threshold established 5
+   as_run       u_e alpha=0.0001  near->far: no threshold established 5
+   as_run       u_e alpha=0.001   far->near: no threshold established 5
+   as_run       u_e alpha=0.001   near->far: no threshold established 5
+   as_run       u_e alpha=0.01    far->near: does not apply 3, not determined 2
+   as_run       u_e alpha=0.01    near->far: applies 5
+   as_run       u_e alpha=0.05    far->near: not determined 5
+   as_run       u_e alpha=0.05    near->far: applies 5
+   as_run       u_e alpha=0.1     far->near: applies 5
+   as_run       u_e alpha=0.1     near->far: does not apply 5
+   as_run       u_s alpha=0.0001  far->near: no threshold established 5
+   as_run       u_s alpha=0.0001  near->far: no threshold established 5
+   as_run       u_s alpha=0.001   far->near: no threshold established 5
+   as_run       u_s alpha=0.001   near->far: no threshold established 5
+   as_run       u_s alpha=0.01    far->near: applies 3, not determined 2
+   as_run       u_s alpha=0.01    near->far: applies 3, not determined 2
+   as_run       u_s alpha=0.05    far->near: applies 5
+   as_run       u_s alpha=0.05    near->far: does not apply 1, not determined 4
+   as_run       u_s alpha=0.1     far->near: applies 5
+   as_run       u_s alpha=0.1     near->far: does not apply 5
+   kitti_ignore u_e alpha=0.0001  far->near: no threshold established 5
+   kitti_ignore u_e alpha=0.0001  near->far: no threshold established 5
+   kitti_ignore u_e alpha=0.001   far->near: no threshold established 5
+   kitti_ignore u_e alpha=0.001   near->far: no threshold established 5
+   kitti_ignore u_e alpha=0.01    far->near: not determined 5
+   kitti_ignore u_e alpha=0.01    near->far: applies 5
+   kitti_ignore u_e alpha=0.05    far->near: applies 5
+   kitti_ignore u_e alpha=0.05    near->far: does not apply 2, not determined 3
+   kitti_ignore u_e alpha=0.1     far->near: applies 5
+   kitti_ignore u_e alpha=0.1     near->far: does not apply 5
+   kitti_ignore u_s alpha=0.0001  far->near: no threshold established 5
+   kitti_ignore u_s alpha=0.0001  near->far: no threshold established 5
+   kitti_ignore u_s alpha=0.001   far->near: no threshold established 5
+   kitti_ignore u_s alpha=0.001   near->far: no threshold established 5
+   kitti_ignore u_s alpha=0.01    far->near: applies 4, not determined 1
+   kitti_ignore u_s alpha=0.01    near->far: applies 1, does not apply 1, not determined 3
+   kitti_ignore u_s alpha=0.05    far->near: applies 5
+   kitti_ignore u_s alpha=0.05    near->far: does not apply 5
+   kitti_ignore u_s alpha=0.1     far->near: applies 5
+   kitti_ignore u_s alpha=0.1     near->far: does not apply 5
+
+B. Dataset shift, car, outcome counts over 5 seeds:
+   as_run       u_e alpha=0.0001  kitti->nuscenes: no threshold established 5
+   as_run       u_e alpha=0.0001  nuscenes->kitti: no threshold established 5
+   as_run       u_e alpha=0.001   kitti->nuscenes: no threshold established 5
+   as_run       u_e alpha=0.001   nuscenes->kitti: no threshold established 5
+   as_run       u_e alpha=0.01    kitti->nuscenes: applies 3, not determined 2
+   as_run       u_e alpha=0.01    nuscenes->kitti: applies 2, not determined 3
+   as_run       u_e alpha=0.05    kitti->nuscenes: applies 5
+   as_run       u_e alpha=0.05    nuscenes->kitti: not determined 5
+   as_run       u_e alpha=0.1     kitti->nuscenes: applies 5
+   as_run       u_e alpha=0.1     nuscenes->kitti: not determined 5
+   as_run       u_s alpha=0.0001  kitti->nuscenes: no threshold established 5
+   as_run       u_s alpha=0.0001  nuscenes->kitti: no threshold established 5
+   as_run       u_s alpha=0.001   kitti->nuscenes: no threshold established 5
+   as_run       u_s alpha=0.001   nuscenes->kitti: no threshold established 5
+   as_run       u_s alpha=0.01    kitti->nuscenes: applies 5
+   as_run       u_s alpha=0.01    nuscenes->kitti: does not apply 5
+   as_run       u_s alpha=0.05    kitti->nuscenes: applies 5
+   as_run       u_s alpha=0.05    nuscenes->kitti: does not apply 5
+   as_run       u_s alpha=0.1     kitti->nuscenes: applies 5
+   as_run       u_s alpha=0.1     nuscenes->kitti: does not apply 5
+   kitti_ignore u_e alpha=0.0001  kitti->nuscenes: no threshold established 5
+   kitti_ignore u_e alpha=0.0001  nuscenes->kitti: no threshold established 5
+   kitti_ignore u_e alpha=0.001   kitti->nuscenes: no threshold established 5
+   kitti_ignore u_e alpha=0.001   nuscenes->kitti: no threshold established 5
+   kitti_ignore u_e alpha=0.01    kitti->nuscenes: not determined 5
+   kitti_ignore u_e alpha=0.01    nuscenes->kitti: applies 5
+   kitti_ignore u_e alpha=0.05    kitti->nuscenes: not determined 5
+   kitti_ignore u_e alpha=0.05    nuscenes->kitti: applies 5
+   kitti_ignore u_e alpha=0.1     kitti->nuscenes: not determined 5
+   kitti_ignore u_e alpha=0.1     nuscenes->kitti: applies 5
+   kitti_ignore u_s alpha=0.0001  kitti->nuscenes: no threshold established 5
+   kitti_ignore u_s alpha=0.0001  nuscenes->kitti: no threshold established 5
+   kitti_ignore u_s alpha=0.001   kitti->nuscenes: no threshold established 5
+   kitti_ignore u_s alpha=0.001   nuscenes->kitti: no threshold established 5
+   kitti_ignore u_s alpha=0.01    kitti->nuscenes: applies 5
+   kitti_ignore u_s alpha=0.01    nuscenes->kitti: does not apply 5
+   kitti_ignore u_s alpha=0.05    kitti->nuscenes: applies 5
+   kitti_ignore u_s alpha=0.05    nuscenes->kitti: does not apply 5
+   kitti_ignore u_s alpha=0.1     kitti->nuscenes: applies 5
+   kitti_ignore u_s alpha=0.1     nuscenes->kitti: does not apply 5
+
+C. Weather (nuScenes, recorded), frames by scene description: {'clear_day': 4449, 'rain_day': 968, 'night': 482, 'rain_night': 120, 'unknown': 0}
+   AUROC on the evaluation split, seed 0: {'u_s': {'clear': 0.7510550234101765, 'rain': 0.7293794744194168}, 'u_e': {'clear': 0.8440861879538868, 'rain': 0.8563421747189427}}
+   u_e alpha=0.0001  clear->clear: no threshold established 5
+   u_e alpha=0.0001  clear->rain: no threshold established 5
+   u_e alpha=0.0001  rain->clear: no threshold established 5
+   u_e alpha=0.0001  rain->rain: no threshold established 5
+   u_e alpha=0.001   clear->clear: no threshold established 5
+   u_e alpha=0.001   clear->rain: no threshold established 5
+   u_e alpha=0.001   rain->clear: no threshold established 5
+   u_e alpha=0.001   rain->rain: no threshold established 5
+   u_e alpha=0.01    clear->clear: applies 3, not determined 2
+   u_e alpha=0.01    clear->rain: not determined 5
+   u_e alpha=0.01    rain->clear: applies 5
+   u_e alpha=0.01    rain->rain: applies 3, not determined 2
+   u_e alpha=0.05    clear->clear: applies 2, not determined 3
+   u_e alpha=0.05    clear->rain: does not apply 1, not determined 4
+   u_e alpha=0.05    rain->clear: applies 5
+   u_e alpha=0.05    rain->rain: applies 3, not determined 2
+   u_e alpha=0.1     clear->clear: applies 2, not determined 3
+   u_e alpha=0.1     clear->rain: does not apply 4, not determined 1
+   u_e alpha=0.1     rain->clear: applies 5
+   u_e alpha=0.1     rain->rain: applies 2, not determined 3
+   u_s alpha=0.0001  clear->clear: no threshold established 5
+   u_s alpha=0.0001  clear->rain: no threshold established 5
+   u_s alpha=0.0001  rain->clear: no threshold established 5
+   u_s alpha=0.0001  rain->rain: no threshold established 5
+   u_s alpha=0.001   clear->clear: no threshold established 5
+   u_s alpha=0.001   clear->rain: no threshold established 5
+   u_s alpha=0.001   rain->clear: no threshold established 5
+   u_s alpha=0.001   rain->rain: no threshold established 5
+   u_s alpha=0.01    clear->clear: applies 1, no threshold established 3, not determined 1
+   u_s alpha=0.01    clear->rain: no threshold established 3, not determined 2
+   u_s alpha=0.01    rain->clear: no threshold established 5
+   u_s alpha=0.01    rain->rain: no threshold established 5
+   u_s alpha=0.05    clear->clear: applies 3, not determined 2
+   u_s alpha=0.05    clear->rain: not determined 5
+   u_s alpha=0.05    rain->clear: applies 5
+   u_s alpha=0.05    rain->rain: applies 4, not determined 1
+   u_s alpha=0.1     clear->clear: applies 2, not determined 3
+   u_s alpha=0.1     clear->rain: does not apply 1, not determined 4
+   u_s alpha=0.1     rain->clear: applies 5
+   u_s alpha=0.1     rain->rain: applies 5
+   seed 0 cells at exploratory alpha (A with interval, retention):
+   u_s alpha=0.05 clear->clear: not determined | A=0.039 [0.029, 0.051] R=0.15 | frames sel/eval 1917/1900
+   u_s alpha=0.05 clear->rain: not determined | A=0.067 [0.040, 0.102] R=0.16 | frames sel/eval 1917/414
+   u_s alpha=0.05 rain->clear: applies | A=0.012 [0.007, 0.019] R=0.05 | frames sel/eval 392/1900
+   u_s alpha=0.05 rain->rain: not determined | A=0.026 [0.010, 0.052] R=0.07 | frames sel/eval 392/414
+   u_s alpha=0.1 clear->clear: not determined | A=0.087 [0.072, 0.103] R=0.37 | frames sel/eval 1917/1900
+   u_s alpha=0.1 clear->rain: does not apply | A=0.140 [0.100, 0.185] R=0.38 | frames sel/eval 1917/414
+   u_s alpha=0.1 rain->clear: applies | A=0.044 [0.034, 0.057] R=0.16 | frames sel/eval 392/1900
+   u_s alpha=0.1 rain->rain: applies | A=0.064 [0.038, 0.100] R=0.17 | frames sel/eval 392/414
+   u_e alpha=0.05 clear->clear: not determined | A=0.040 [0.030, 0.052] R=0.38 | frames sel/eval 1917/1900
+   u_e alpha=0.05 clear->rain: does not apply | A=0.087 [0.057, 0.128] R=0.42 | frames sel/eval 1917/414
+   u_e alpha=0.05 rain->clear: applies | A=0.016 [0.009, 0.024] R=0.20 | frames sel/eval 392/1900
+   u_e alpha=0.05 rain->rain: applies | A=0.024 [0.009, 0.048] R=0.24 | frames sel/eval 392/414
+   u_e alpha=0.1 clear->clear: not determined | A=0.088 [0.073, 0.105] R=0.70 | frames sel/eval 1917/1900
+   u_e alpha=0.1 clear->rain: does not apply | A=0.170 [0.128, 0.220] R=0.72 | frames sel/eval 1917/414
+   u_e alpha=0.1 rain->clear: applies | A=0.040 [0.030, 0.052] R=0.38 | frames sel/eval 392/1900
+   u_e alpha=0.1 rain->rain: not determined | A=0.087 [0.057, 0.128] R=0.42 | frames sel/eval 392/414

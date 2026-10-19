@@ -1,0 +1,59 @@
+(1) wrote common_threshold_outcomes.csv (120 rows)
+   KITTI distance (KITTI rule)  u_s alpha 0.01  near tau* 0.08901301626105439 A 0.0040 [0.0012, 0.0098] R 0.1498 G 0.0496 applies
+   KITTI distance (KITTI rule)  u_s alpha 0.01  far  tau* 0.08901301626105439 A 0.0078 [0.0035, 0.0148] R 0.0297 G 0.0000 not determined
+   KITTI distance (KITTI rule)  u_s alpha 0.05  near tau* 0.10981774521674374 A 0.0126 [0.0064, 0.0213] R 0.4075 G 0.3114 applies
+   KITTI distance (KITTI rule)  u_s alpha 0.05  far  tau* 0.10981774521674374 A 0.0324 [0.0227, 0.0446] R 0.1402 G 0.0241 applies
+   KITTI distance (KITTI rule)  u_s alpha 0.1   near tau* 0.12695081588877466 A 0.0233 [0.0151, 0.0350] R 0.6044 G 0.2615 applies
+   KITTI distance (KITTI rule)  u_s alpha 0.1   far  tau* 0.12695081588877466 A 0.0702 [0.0554, 0.0874] R 0.3017 G 0.0000 applies
+   KITTI distance (KITTI rule)  u_e alpha 0.01  near tau* 0.13538401544094086 A 0.0050 [0.0015, 0.0117] R 0.5204 G 0.0000 not determined
+   KITTI distance (KITTI rule)  u_e alpha 0.01  far  tau* 0.13538401544094086 A 0.0013 [0.0001, 0.0055] R 0.0489 G 0.0722 applies
+   KITTI distance (KITTI rule)  u_e alpha 0.05  near tau* 0.27466108500957487 A 0.0224 [0.0140, 0.0334] R 0.8270 G 0.0709 applies
+   KITTI distance (KITTI rule)  u_e alpha 0.05  far  tau* 0.27466108500957487 A 0.0294 [0.0200, 0.0416] R 0.3895 G 0.0326 applies
+   KITTI distance (KITTI rule)  u_e alpha 0.1   near tau* 0.3783617709577083 A 0.0376 [0.0267, 0.0513] R 0.9060 G 0.0682 applies
+   KITTI distance (KITTI rule)  u_e alpha 0.1   far  tau* 0.3783617709577083 A 0.0695 [0.0549, 0.0867] R 0.5907 G 0.0000 applies
+   nuScenes distance            u_s alpha 0.01  near tau* 0.12653522962710842 A 0.0023 [0.0006, 0.0060] R 0.0195 G 0.0000 applies
+   nuScenes distance            u_s alpha 0.01  far  tau* 0.12653522962710842 A 0.0024 [0.0006, 0.0064] R 0.0046 G 0.0062 applies
+   nuScenes distance            u_s alpha 0.05  near tau* 0.18148239646205105 A 0.0451 [0.0351, 0.0568] R 0.3068 G 0.0000 not determined
+   nuScenes distance            u_s alpha 0.05  far  tau* 0.18148239646205105 A 0.0371 [0.0282, 0.0478] R 0.0696 G 0.0126 applies
+   nuScenes distance            u_s alpha 0.1   near tau* 0.21037112140323308 A 0.0657 [0.0538, 0.0796] R 0.5308 G 0.1172 applies
+   nuScenes distance            u_s alpha 0.1   far  tau* 0.21037112140323308 A 0.0944 [0.0801, 0.1099] R 0.1576 G 0.0119 not determined
+   nuScenes distance            u_e alpha 0.01  near tau* 0.09253359287977218 A 0.0043 [0.0016, 0.0092] R 0.1015 G 0.0000 applies
+   nuScenes distance            u_e alpha 0.01  far  tau* 0.09253359287977218 A 0.0000 [0.0000, 0.0016] R 0.0034 G 0.0345 applies
+   nuScenes distance            u_e alpha 0.05  near tau* 0.261628492474556 A 0.0393 [0.0299, 0.0502] R 0.5467 G 0.0171 not determined
+   nuScenes distance            u_e alpha 0.05  far  tau* 0.261628492474556 A 0.0250 [0.0176, 0.0339] R 0.0999 G 0.0772 applies
+   nuScenes distance            u_e alpha 0.1   near tau* 0.42102970272302626 A 0.0609 [0.0493, 0.0742] R 0.8132 G 0.1164 applies
+   nuScenes distance            u_e alpha 0.1   far  tau* 0.42102970272302626 A 0.0933 [0.0793, 0.1089] R 0.3754 G 0.0193 not determined
+   outcome counts over 5 splits:
+   KITTI distance (KITTI rule)  u_e alpha 0.01  far : applies 5
+   KITTI distance (KITTI rule)  u_e alpha 0.01  near: applies 1, not determined 4
+   KITTI distance (KITTI rule)  u_e alpha 0.05  far : applies 5
+   KITTI distance (KITTI rule)  u_e alpha 0.05  near: applies 5
+   KITTI distance (KITTI rule)  u_e alpha 0.1   far : applies 5
+   KITTI distance (KITTI rule)  u_e alpha 0.1   near: applies 5
+   KITTI distance (KITTI rule)  u_s alpha 0.01  far : applies 3, not determined 2
+   KITTI distance (KITTI rule)  u_s alpha 0.01  near: applies 4, not determined 1
+   KITTI distance (KITTI rule)  u_s alpha 0.05  far : applies 5
+   KITTI distance (KITTI rule)  u_s alpha 0.05  near: applies 5
+   KITTI distance (KITTI rule)  u_s alpha 0.1   far : applies 4, not determined 1
+   KITTI distance (KITTI rule)  u_s alpha 0.1   near: applies 5
+   nuScenes distance            u_e alpha 0.01  far : applies 5
+   nuScenes distance            u_e alpha 0.01  near: applies 4, not determined 1
+   nuScenes distance            u_e alpha 0.05  far : applies 5
+   nuScenes distance            u_e alpha 0.05  near: applies 2, not determined 3
+   nuScenes distance            u_e alpha 0.1   far : applies 1, not determined 4
+   nuScenes distance            u_e alpha 0.1   near: applies 5
+   nuScenes distance            u_s alpha 0.01  far : applies 5
+   nuScenes distance            u_s alpha 0.01  near: applies 5
+   nuScenes distance            u_s alpha 0.05  far : applies 5
+   nuScenes distance            u_s alpha 0.05  near: applies 3, not determined 2
+   nuScenes distance            u_s alpha 0.1   far : applies 1, not determined 4
+   nuScenes distance            u_s alpha 0.1   near: applies 5
+(2) nuScenes: correct car detections 26074; annotated cars used by the correctness matching (class filter only) 65465, recall 0.3983
+   for information, not used by the matching: with >= 1 LiDAR point 59486; within 50 m of the LiDAR 53042; both 50331
+   score cut-off KITTI: pointpillar_kitti_v2_seed1.yaml SCORE_THRESH 0.1, pointpillar_kitti_v2_seed2.yaml SCORE_THRESH 0.1, pointpillar_kitti_v2_seed3.yaml SCORE_THRESH 0.1, pointpillar_kitti_v2_seed4.yaml SCORE_THRESH 0.1
+   score cut-off nuScenes: cbgs_pp_multihead_nuscenes_seed1.yaml SCORE_THRESH 0.1, cbgs_pp_multihead_nuscenes_seed2.yaml SCORE_THRESH 0.1, cbgs_pp_multihead_nuscenes_seed3.yaml SCORE_THRESH 0.1, cbgs_pp_multihead_nuscenes_seed4.yaml SCORE_THRESH 0.1, cbgs_pp_multihead_nuscenes_seed5.yaml SCORE_THRESH 0.1
+(3) KITTI 004289: annotations [(0, 'Car'), (1, 'Car'), (2, 'Car'), (3, 'Car'), (4, 'Car'), (5, 'Car'), (6, 'Car'), (7, 'Car'), (8, 'Car')]; tau_near(u_s) 0.16931
+   accepted wrong detection 5 at x 39.9 y 26.2, u_s 0.1622: max 3D IoU 0.354 to annotation #5 (Car), BEV overlap / smaller box 0.678; annotated Car #5 is not matched by any detection (IoU 0.354 below the 0.5 threshold): unmatched object
+      3D IoU to every annotation: #5 Car 0.354, #6 Car 0.000
+   accepted wrong detection 7 at x 39.9 y 23.7, u_s 0.1295: max 3D IoU 0.184 to annotation #6 (Car), BEV overlap / smaller box 0.424; annotated Car #6 is not matched by any detection (IoU 0.184 below the 0.5 threshold): unmatched object
+      3D IoU to every annotation: #5 Car 0.040, #6 Car 0.184, #7 Car 0.000

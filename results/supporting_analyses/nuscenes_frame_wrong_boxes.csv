@@ -1,0 +1,2 @@
+token,distance_m,u_e,max_iou_any,class_max_iou,nearest_annotation_centre_m,nearest_class,in_front_camera
+703ac7e5928a41c7a3138afa74e157ad,11.68,0.25009,0.406,car,0.13,car,True

@@ -1,0 +1,75 @@
+M2 SUMMARY  indicators from VEHITS (ref 7): u_s = geometric disagreement (Eq. 3, rotated IoU), u_e = 1 - mean confidence (Eq. 1)
+REBUILD CHECK: consensus set matches scored_val.pkl for 6019/6019 frames
+VERIFICATION PASSED: per-frame FN and FP match frame_errors_cache.pkl for all 6019 frames
+
+======================================================================
+INDICATOR u_s    primary variant: iou=A_iou0.5 objects=car cut_q=0.5 seed=0   range cut (m): 21.40
+  AUROC near: 0.7295 [0.7150, 0.7443]
+  AUROC far: 0.6552 [0.6435, 0.6665]
+  alpha=0.01 [frozen]  tau near/far/star = 0.12654 / 0.14069 / 0.12654
+    T[near -> near]: applies | A=0.0023 HB[0.0006, 0.0060] | R=0.0195 | n_eval=2209
+    T[near -> far]: applies | A=0.0024 HB[0.0006, 0.0064] | R=0.0046 | n_eval=2276
+    T[far -> near]: not determined | A=0.0101 HB[0.0057, 0.0167] | R=0.0550 | n_eval=2209
+    T[far -> far]: applies | A=0.0031 HB[0.0010, 0.0071] | R=0.0108 | n_eval=2276
+    retention gap near: 0.0000 [0.0000, 0.0000]
+    retention gap far: 0.0062 [0.0040, 0.0086]
+  alpha=0.001 [frozen]  tau near/far/star = NA / NA / NA
+    T[near -> near]: no threshold established
+    T[near -> far]: no threshold established
+    T[far -> near]: no threshold established
+    T[far -> far]: no threshold established
+  alpha=0.0001 [frozen]  tau near/far/star = NA / NA / NA
+    T[near -> near]: no threshold established
+    T[near -> far]: no threshold established
+    T[far -> near]: no threshold established
+    T[far -> far]: no threshold established
+  alpha=0.05 [EXPLORATORY]  tau near/far/star = 0.18148 / 0.18612 / 0.18148
+    T[near -> near]: not determined | A=0.0451 HB[0.0351, 0.0568] | R=0.3068 | n_eval=2209
+    T[near -> far]: applies | A=0.0371 HB[0.0282, 0.0478] | R=0.0696 | n_eval=2276
+    T[far -> near]: not determined | A=0.0485 HB[0.0383, 0.0608] | R=0.3450 | n_eval=2209
+    T[far -> far]: not determined | A=0.0434 HB[0.0336, 0.0546] | R=0.0822 | n_eval=2276
+    retention gap near: 0.0000 [0.0000, 0.0000]
+    retention gap far: 0.0126 [0.0094, 0.0161]
+  alpha=0.1 [EXPLORATORY]  tau near/far/star = 0.22789 / 0.21290 / 0.21037
+    T[near -> near]: applies | A=0.0824 HB[0.0691, 0.0977] | R=0.6479 | n_eval=2209
+    T[near -> far]: does not apply | A=0.1282 HB[0.1118, 0.1457] | R=0.2318 | n_eval=2276
+    T[far -> near]: applies | A=0.0691 HB[0.0567, 0.0830] | R=0.5467 | n_eval=2209
+    T[far -> far]: not determined | A=0.1004 HB[0.0858, 0.1164] | R=0.1695 | n_eval=2276
+    retention gap near: 0.1172 [0.1102, 0.1239]
+    retention gap far: 0.0119 [0.0089, 0.0152]
+
+======================================================================
+INDICATOR u_e    primary variant: iou=A_iou0.5 objects=car cut_q=0.5 seed=0   range cut (m): 21.40
+  AUROC near: 0.8284 [0.8140, 0.8435]
+  AUROC far: 0.7979 [0.7878, 0.8074]
+  alpha=0.01 [frozen]  tau near/far/star = 0.09253 / 0.18230 / 0.09253
+    T[near -> near]: applies | A=0.0043 HB[0.0016, 0.0092] | R=0.1015 | n_eval=2209
+    T[near -> far]: applies | A=0.0000 HB[0.0000, 0.0016] | R=0.0034 | n_eval=2276
+    T[far -> near]: does not apply | A=0.0191 HB[0.0128, 0.0276] | R=0.3439 | n_eval=2209
+    T[far -> far]: not determined | A=0.0068 HB[0.0033, 0.0124] | R=0.0379 | n_eval=2276
+    retention gap near: 0.0000 [0.0000, 0.0000]
+    retention gap far: 0.0345 [0.0289, 0.0401]
+  alpha=0.001 [frozen]  tau near/far/star = NA / NA / NA
+    T[near -> near]: no threshold established
+    T[near -> far]: no threshold established
+    T[far -> near]: no threshold established
+    T[far -> far]: no threshold established
+  alpha=0.0001 [frozen]  tau near/far/star = NA / NA / NA
+    T[near -> near]: no threshold established
+    T[near -> far]: no threshold established
+    T[far -> near]: no threshold established
+    T[far -> far]: no threshold established
+  alpha=0.05 [EXPLORATORY]  tau near/far/star = 0.26925 / 0.31326 / 0.26163
+    T[near -> near]: not determined | A=0.0413 HB[0.0319, 0.0528] | R=0.5638 | n_eval=2209
+    T[near -> far]: applies | A=0.0288 HB[0.0210, 0.0384] | R=0.1084 | n_eval=2276
+    T[far -> near]: not determined | A=0.0489 HB[0.0387, 0.0613] | R=0.6497 | n_eval=2209
+    T[far -> far]: not determined | A=0.0470 HB[0.0368, 0.0585] | R=0.1771 | n_eval=2276
+    retention gap near: 0.0171 [0.0142, 0.0201]
+    retention gap far: 0.0772 [0.0696, 0.0851]
+  alpha=0.1 [EXPLORATORY]  tau near/far/star = 0.57197 / 0.43052 / 0.42103
+    T[near -> near]: applies | A=0.0822 HB[0.0687, 0.0972] | R=0.9296 | n_eval=2209
+    T[near -> far]: does not apply | A=0.1718 HB[0.1535, 0.1917] | R=0.6784 | n_eval=2276
+    T[far -> near]: applies | A=0.0612 HB[0.0497, 0.0747] | R=0.8229 | n_eval=2209
+    T[far -> far]: not determined | A=0.0990 HB[0.0846, 0.1150] | R=0.3947 | n_eval=2276
+    retention gap near: 0.1164 [0.1089, 0.1237]
+    retention gap far: 0.0193 [0.0151, 0.0235]

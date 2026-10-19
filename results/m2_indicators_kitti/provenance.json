@@ -1,0 +1,211 @@
+{
+  "script_version": "m2-0.1",
+  "bev_backend": "clip",
+  "started": "2026-10-02 12:48:39",
+  "python": "3.10.13",
+  "numpy": "1.26.3",
+  "m1_version": "m1-0.2",
+  "inputs_sha256": {
+    "/rum/detections/kitti_v2/scored_val.pkl": "d3503186e3cc9afa468989c7c6274bcc7334792b019139e34f134255e888aca7",
+    "/rum/detections/kitti_v2/frame_errors_cache.pkl": "4693a30330184aa3f2d10f7695a6ea4dd97850c72dc01290bb3dc510cb33e2e5",
+    "/rum/third_party/OpenPCDet/data/kitti/kitti_infos_val.pkl": "1efeceb2ef91fa2f02b3377176e5f5b82b6ec633578d185ee67e544f160c151a",
+    "/rum/detections/kitti_v2/seed1_val.pkl": "6232a2f76bc73f37f4eee9e2af4466f197cb6c5e0048825236033e3bf980de97",
+    "/rum/detections/kitti_v2/seed2_val.pkl": "661f34f9d30ba62089f07c8f64be58dd0788e6f72e55483bacffe5516e1f78eb",
+    "/rum/detections/kitti_v2/seed3_val.pkl": "05b208d271a8df035f66c48b3d93066da760ddce1936e4678ef6706eef2378de",
+    "/rum/detections/kitti_v2/seed4_val.pkl": "8ebbe2f25840e6bf2fe9779c46f10e8ddfb01f87ed4ae5d5a3ee719b1f65b37b"
+  },
+  "script_sha256": "86bf80d773f9c03d3a6031c1bbc09868f67941cd1ec7846337d8774fbf1bb9ab",
+  "config": {
+    "delta": 0.05,
+    "alphas_frozen": [
+      0.01,
+      0.001,
+      0.0001
+    ],
+    "alphas_exploratory": [
+      0.05,
+      0.1
+    ],
+    "frac_grid": 0.1,
+    "frac_select": 0.45,
+    "grid_levels": [
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22,
+      0.23,
+      0.24,
+      0.25,
+      0.26,
+      0.27,
+      0.28,
+      0.29,
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8,
+      0.81,
+      0.82,
+      0.83,
+      0.84,
+      0.85,
+      0.86,
+      0.87,
+      0.88,
+      0.89,
+      0.9,
+      0.91,
+      0.92,
+      0.93,
+      0.94,
+      0.95,
+      0.96,
+      0.97,
+      0.98,
+      0.99,
+      1.0
+    ],
+    "cut_quantiles": [
+      0.5,
+      0.25,
+      0.75
+    ],
+    "n_boot": 2000,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "iou_settings": {
+      "A_iou0.5": {
+        "Car": 0.5,
+        "Pedestrian": 0.5,
+        "Cyclist": 0.5
+      },
+      "B_car0.7": {
+        "Car": 0.7,
+        "Pedestrian": 0.5,
+        "Cyclist": 0.5
+      }
+    },
+    "object_sets": {
+      "Car": [
+        "Car"
+      ],
+      "All": [
+        "Car",
+        "Pedestrian",
+        "Cyclist"
+      ]
+    },
+    "primary": {
+      "iou": "A_iou0.5",
+      "cut_q": 0.5,
+      "objects": "Car",
+      "seed": 0
+    },
+    "verify_setting": "A_iou0.5"
+  },
+  "indicator_definitions": {
+    "u_s": "1 - mean pairwise rotated 3D IoU between members (VEHITS Eq. 3)",
+    "u_e": "1 - mean confidence over K members, missing members 0 (VEHITS Eq. 1)",
+    "u_v": "confidence variance across contributing members (VEHITS Eq. 2)"
+  },
+  "rebuild_check": "REBUILD CHECK: consensus set matches scored_val.pkl for 3769/3769 frames",
+  "verification": "VERIFICATION PASSED: per-frame FN and FP match frame_errors_cache.pkl for all 3769 frames",
+  "n_frames": 3769,
+  "n_detections": 55249,
+  "indicator_quantiles": {
+    "u_s": {
+      "0": 0.046138803167817044,
+      "0.25": 0.16988823315727142,
+      "0.5": 0.2581116948291734,
+      "0.75": 0.32752409377145364,
+      "0.95": 0.4068716397094845,
+      "1": 0.5548445331316838
+    },
+    "u_e": {
+      "0": 0.028714627027511597,
+      "0.25": 0.4157816767692566,
+      "0.5": 0.7416494525969028,
+      "0.75": 0.8440819568932056,
+      "0.95": 0.8998073887079954,
+      "1": 0.924183813855052
+    },
+    "u_v": {
+      "0": 9.25955608484704e-10,
+      "0.25": 0.0004768912418383805,
+      "0.5": 0.0014563949189053313,
+      "0.75": 0.0035174367877759405,
+      "0.95": 0.010069503086853813,
+      "1": 0.13478902440812682
+    }
+  }
+}

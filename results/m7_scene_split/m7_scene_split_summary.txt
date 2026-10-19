@@ -1,0 +1,98 @@
+Split by recorded scene (m7-1.0 (2026-10-19))
+REPRODUCTION frame split: m3 1200 rows, m6 A/B/C all rows, input hashes: EQUAL
+
+Codes per split 0-4: A applicable, N not applicable, ? not determined, - no threshold; counts in brackets.
+R(ii): retention per split under variant (ii), on the evaluation part of the applied condition.
+
+distance u_e 0.1      far->far    frame ????A [A1 ?4]  (i) A?AA? [A3 ?2]  (ii) ???A? [A1 ?4]  R(ii) 0.12 0.12 0.12 0.10 0.10
+distance u_e 0.1      far->near   frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ????? [?5]  R(ii) 0.57 0.55 0.56 0.49 0.51
+distance u_e 0.1     near->far    frame NNNNN [N5]  (i) NNNNN [N5]  (ii) A?A?? [A2 ?3]  R(ii) 0.06 0.09 0.04 0.14 0.10
+distance u_e 0.1     near->near   frame AAA?A [A4 ?1]  (i) A?AA? [A3 ?2]  (ii) ??A?? [A1 ?4]  R(ii) 0.44 0.49 0.37 0.55 0.51
+distance u_e 0.05     far->far    frame ?A?AA [A3 ?2]  (i) ?AAA? [A3 ?2]  (ii) ????? [?5]  R(ii) 0.01 0.02 0.02 0.03 0.02
+distance u_e 0.05     far->near   frame ????? [?5]  (i) ???A? [A1 ?4]  (ii) ????? [?5]  R(ii) 0.19 0.25 0.23 0.21 0.22
+distance u_e 0.05    near->far    frame AAAAA [A5]  (i) AAA?N [A3 N1 ?1]  (ii) ??-?? [?4 -1]  R(ii) 0.00 0.00   - 0.00 0.01
+distance u_e 0.05    near->near   frame ?A??A [A2 ?3]  (i) ??A?N [A1 N1 ?3]  (ii) ??-?? [?4 -1]  R(ii) 0.03 0.03   - 0.01 0.11
+distance u_e 0.01     far->far    frame ?A?AA [A3 ?2]  (i) AAAA? [A4 ?1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.01     far->near   frame N??NN [N3 ?2]  (i) ????N [N1 ?4]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.01    near->far    frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.01    near->near   frame AAAA? [A4 ?1]  (i) ??AA? [A2 ?3]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.001    far->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.001    far->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.001   near->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.001   near->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.0001   far->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.0001   far->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.0001  near->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_e 0.0001  near->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.1      far->far    frame ????A [A1 ?4]  (i) ??AAN [A2 N1 ?2]  (ii) A?AA? [A3 ?2]  R(ii) 0.03 0.05 0.03 0.03 0.05
+distance u_s 0.1      far->near   frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ???A? [A1 ?4]  R(ii) 0.16 0.24 0.19 0.14 0.24
+distance u_s 0.1     near->far    frame NNNNN [N5]  (i) NN?NN [N4 ?1]  (ii) A?A?? [A2 ?3]  R(ii) 0.04 0.04 0.02 0.05 0.06
+distance u_s 0.1     near->near   frame A??AA [A3 ?2]  (i) A?AA? [A3 ?2]  (ii) ??AA? [A2 ?3]  R(ii) 0.17 0.20 0.11 0.20 0.27
+distance u_s 0.05     far->far    frame ?A??A [A2 ?3]  (i) A?AA? [A3 ?2]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.05     far->near   frame ?A?A? [A2 ?3]  (i) A?AA? [A3 ?2]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.05    near->far    frame AA?AA [A4 ?1]  (i) A?A?N [A2 N1 ?2]  (ii) ----? [?1 -4]  R(ii)   -   -   -   - 0.00
+distance u_s 0.05    near->near   frame ?AAA? [A3 ?2]  (i) AAAAN [A4 N1]  (ii) ----? [?1 -4]  R(ii)   -   -   -   - 0.02
+distance u_s 0.01     far->far    frame AA?A? [A3 ?2]  (i) A?AAA [A4 ?1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.01     far->near   frame ????? [?5]  (i) ??AA? [A2 ?3]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.01    near->far    frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.01    near->near   frame AAAA? [A4 ?1]  (i) AAAA? [A4 ?1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.001    far->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.001    far->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.001   near->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.001   near->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.0001   far->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.0001   far->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.0001  near->far    frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+distance u_s 0.0001  near->near   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.1    clear->clear  frame ?A??A [A2 ?3]  (i) ??AAN [A2 N1 ?2]  (ii) ??A?? [A1 ?4]  R(ii) 0.24 0.18 0.16 0.20 0.25
+rain     u_e 0.1    clear->rain   frame NNNN? [N4 ?1]  (i) ?NNNN [N4 ?1]  (ii) ????? [?5]  R(ii) 0.26 0.15 0.18 0.22 0.29
+rain     u_e 0.1     rain->clear  frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.1     rain->rain   frame ?A??A [A2 ?3]  (i) A?AA? [A3 ?2]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.05   clear->clear  frame ?A?A? [A2 ?3]  (i) ?AA?? [A2 ?3]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.05   clear->rain   frame N???? [N1 ?4]  (i) ?N??N [N2 ?3]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.05    rain->clear  frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.05    rain->rain   frame AA??A [A3 ?2]  (i) A?AA? [A3 ?2]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.01   clear->clear  frame AAA?? [A3 ?2]  (i) ??AA? [A2 ?3]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.01   clear->rain   frame ????? [?5]  (i) A??A? [A2 ?3]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.01    rain->clear  frame AAAAA [A5]  (i) AA-A? [A3 ?1 -1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.01    rain->rain   frame ?AAA? [A3 ?2]  (i) A?-A? [A2 ?2 -1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.001  clear->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.001  clear->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.001   rain->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.001   rain->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.0001 clear->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.0001 clear->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.0001  rain->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_e 0.0001  rain->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.1    clear->clear  frame ?A??A [A2 ?3]  (i) ??AAN [A2 N1 ?2]  (ii) ??A?? [A1 ?4]  R(ii) 0.07 0.04 0.02 0.04 0.07
+rain     u_s 0.1    clear->rain   frame N???? [N1 ?4]  (i) ?N??N [N2 ?3]  (ii) ????? [?5]  R(ii) 0.08 0.06 0.03 0.06 0.11
+rain     u_s 0.1     rain->clear  frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.1     rain->rain   frame AAAAA [A5]  (i) A?AA? [A3 ?2]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.05   clear->clear  frame ?AAA? [A3 ?2]  (i) AAAA? [A4 ?1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.05   clear->rain   frame ????? [?5]  (i) ????N [N1 ?4]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.05    rain->clear  frame AAAAA [A5]  (i) AAAAA [A5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.05    rain->rain   frame ?AAAA [A4 ?1]  (i) AAAA? [A4 ?1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.01   clear->clear  frame A---? [A1 ?1 -3]  (i) ??-A? [A1 ?3 -1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.01   clear->rain   frame ?---? [?2 -3]  (i) A?-?? [A1 ?3 -1]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.01    rain->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.01    rain->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.001  clear->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.001  clear->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.001   rain->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.001   rain->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.0001 clear->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.0001 clear->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.0001  rain->clear  frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+rain     u_s 0.0001  rain->rain   frame ----- [-5]  (i) ----- [-5]  (ii) ----- [-5]  R(ii)   -   -   -   -   -
+
+Totals over 400 split-cells: frame: applies 119, does not apply 19, no threshold established 176, not determined 86; (i): applies 121, does not apply 26, no threshold established 174, not determined 79; (ii): applies 14, no threshold established 320, not determined 66.
+
+Scenes (frames with a car detection) per condition and part. Distance: a scene counts for near or far if it holds
+a car detection in that condition (most scenes count for both).
+
+split | grid / sel / eval scenes | cut | near sel / eval | far sel / eval | clear sel / eval | rain sel / eval
+0 | 15 / 68 / 67 | 19.888 m | 67 / 67 | 68 / 67 | 52 (1948) / 49 (1908) | 9 (337) / 10 (399)
+1 | 15 / 68 / 67 | 19.975 m | 67 / 67 | 68 / 67 | 48 (1768) / 50 (1952) | 11 (421) / 11 (410)
+2 | 15 / 68 / 67 | 21.211 m | 68 / 66 | 68 / 67 | 49 (1890) / 52 (1964) | 11 (394) / 9 (357)
+3 | 15 / 68 / 67 | 18.154 m | 67 / 67 | 68 / 67 | 52 (2028) / 47 (1746) | 10 (375) / 12 (458)
+4 | 15 / 68 / 67 | 19.694 m | 68 / 67 | 68 / 67 | 51 (1957) / 51 (1980) | 9 (343) / 10 (372)

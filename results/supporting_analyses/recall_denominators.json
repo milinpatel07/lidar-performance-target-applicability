@@ -1,0 +1,36 @@
+{
+ "correct_car_detections": 26074,
+ "annotated_cars_matching": 65465,
+ "with_lidar_pts": 59486,
+ "within_50m": 53042,
+ "both": 50331,
+ "score_thresh": {
+  "cbgs_pp_multihead_nuscenes_seed1.yaml": [
+   "0.1"
+  ],
+  "cbgs_pp_multihead_nuscenes_seed2.yaml": [
+   "0.1"
+  ],
+  "cbgs_pp_multihead_nuscenes_seed3.yaml": [
+   "0.1"
+  ],
+  "cbgs_pp_multihead_nuscenes_seed4.yaml": [
+   "0.1"
+  ],
+  "cbgs_pp_multihead_nuscenes_seed5.yaml": [
+   "0.1"
+  ],
+  "pointpillar_kitti_v2_seed1.yaml": [
+   "0.1"
+  ],
+  "pointpillar_kitti_v2_seed2.yaml": [
+   "0.1"
+  ],
+  "pointpillar_kitti_v2_seed3.yaml": [
+   "0.1"
+  ],
+  "pointpillar_kitti_v2_seed4.yaml": [
+   "0.1"
+  ]
+ }
+}

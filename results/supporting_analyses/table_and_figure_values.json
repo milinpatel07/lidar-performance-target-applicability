@@ -1,0 +1,623 @@
+{
+ "a_distance": {
+  "KITTI_as_run": {
+   "cut_m": 35.68486713209648,
+   "grid": {
+    "frames_in_part": 377,
+    "frames_with_car": 367,
+    "near": 327,
+    "far": 342,
+    "both": 302,
+    "near_only": 25,
+    "far_only": 40,
+    "no_car_detection": 10,
+    "car_detections_near": 1514,
+    "car_detections_far": 1513
+   },
+   "select": {
+    "frames_in_part": 1696,
+    "frames_with_car": 1667,
+    "near": 1517,
+    "far": 1524,
+    "both": 1374,
+    "near_only": 143,
+    "far_only": 150,
+    "no_car_detection": 29,
+    "car_detections_near": 6854,
+    "car_detections_far": 6373
+   },
+   "eval": {
+    "frames_in_part": 1696,
+    "frames_with_car": 1671,
+    "near": 1527,
+    "far": 1557,
+    "both": 1413,
+    "near_only": 114,
+    "far_only": 144,
+    "no_car_detection": 25,
+    "car_detections_near": 6806,
+    "car_detections_far": 6569
+   }
+  },
+  "KITTI_rule": {
+   "cut_m": 34.805719918803426,
+   "grid": {
+    "frames_in_part": 377,
+    "frames_with_car": 366,
+    "near": 318,
+    "far": 338,
+    "both": 290,
+    "near_only": 28,
+    "far_only": 48,
+    "no_car_detection": 11,
+    "car_detections_near": 1401,
+    "car_detections_far": 1401
+   },
+   "select": {
+    "frames_in_part": 1696,
+    "frames_with_car": 1663,
+    "near": 1484,
+    "far": 1514,
+    "both": 1335,
+    "near_only": 149,
+    "far_only": 179,
+    "no_car_detection": 33,
+    "car_detections_near": 6320,
+    "car_detections_far": 5786
+   },
+   "eval": {
+    "frames_in_part": 1696,
+    "frames_with_car": 1667,
+    "near": 1500,
+    "far": 1545,
+    "both": 1378,
+    "near_only": 122,
+    "far_only": 167,
+    "no_car_detection": 29,
+    "car_detections_near": 6310,
+    "car_detections_far": 5957
+   }
+  },
+  "nuScenes": {
+   "cut_m": 21.402237246013453,
+   "grid": {
+    "frames_in_part": 602,
+    "frames_with_car": 569,
+    "near": 495,
+    "far": 514,
+    "both": 440,
+    "near_only": 55,
+    "far_only": 74,
+    "no_car_detection": 33,
+    "car_detections_near": 2014,
+    "car_detections_far": 2013
+   },
+   "select": {
+    "frames_in_part": 2709,
+    "frames_with_car": 2559,
+    "near": 2207,
+    "far": 2270,
+    "both": 1918,
+    "near_only": 289,
+    "far_only": 352,
+    "no_car_detection": 150,
+    "car_detections_near": 9114,
+    "car_detections_far": 8806
+   },
+   "eval": {
+    "frames_in_part": 2708,
+    "frames_with_car": 2571,
+    "near": 2209,
+    "far": 2276,
+    "both": 1914,
+    "near_only": 295,
+    "far_only": 362,
+    "no_car_detection": 137,
+    "car_detections_near": 9099,
+    "car_detections_far": 8990
+   }
+  }
+ },
+ "a_dataset": {
+  "KITTI_as_run": {
+   "select": {
+    "frames_in_part": 1884,
+    "frames_with_car": 1848,
+    "no_car_detection": 36
+   },
+   "eval": {
+    "frames_in_part": 1885,
+    "frames_with_car": 1857,
+    "no_car_detection": 28
+   }
+  },
+  "KITTI_rule": {
+   "select": {
+    "frames_in_part": 1884,
+    "frames_with_car": 1844,
+    "no_car_detection": 40
+   },
+   "eval": {
+    "frames_in_part": 1885,
+    "frames_with_car": 1852,
+    "no_car_detection": 33
+   }
+  },
+  "nuScenes": {
+   "select": {
+    "frames_in_part": 3010,
+    "frames_with_car": 2849,
+    "no_car_detection": 161
+   },
+   "eval": {
+    "frames_in_part": 3009,
+    "frames_with_car": 2850,
+    "no_car_detection": 159
+   }
+  }
+ },
+ "a_rain_m6_seed0": {
+  "clear->clear": {
+   "frames_select(established)": 1917,
+   "frames_eval(applied)": 1900
+  },
+  "clear->rain": {
+   "frames_select(established)": 1917,
+   "frames_eval(applied)": 414
+  },
+  "rain->clear": {
+   "frames_select(established)": 392,
+   "frames_eval(applied)": 1900
+  },
+  "rain->rain": {
+   "frames_select(established)": 392,
+   "frames_eval(applied)": 414
+  }
+ },
+ "b": [
+  {
+   "protocol": "as_run",
+   "source": "kitti",
+   "target": "kitti",
+   "tau": "0.08",
+   "A_hat": "0.007539041464728056",
+   "hb_L": "0.0036202685334163487",
+   "hb_U": "0.013752000477686894",
+   "R_hat": "0.0542053086024944",
+   "outcome": "not determined"
+  },
+  {
+   "protocol": "as_run",
+   "source": "kitti",
+   "target": "nuscenes",
+   "tau": "0.08",
+   "A_hat": "0.0",
+   "hb_L": "0.0",
+   "hb_U": "0.0012935063666357606",
+   "R_hat": "0.00015382248884786957",
+   "outcome": "applies"
+  },
+  {
+   "protocol": "kitti_ignore",
+   "source": "kitti",
+   "target": "kitti",
+   "tau": "0.08",
+   "A_hat": "0.005399568034557235",
+   "hb_L": "0.0022041842529354483",
+   "hb_U": "0.010930123521906726",
+   "R_hat": "0.0542053086024944",
+   "outcome": "not determined"
+  },
+  {
+   "protocol": "kitti_ignore",
+   "source": "kitti",
+   "target": "nuscenes",
+   "tau": "0.08",
+   "A_hat": "0.0",
+   "hb_L": "0.0",
+   "hb_U": "0.0012935063666357606",
+   "R_hat": "0.00015382248884786957",
+   "outcome": "applies"
+  }
+ ],
+ "b_m4_header": [
+  "indicator",
+  "source",
+  "target",
+  "alpha",
+  "frozen",
+  "tau",
+  "A_hat",
+  "hb_L",
+  "hb_U",
+  "boot_lo",
+  "boot_hi",
+  "outcome",
+  "R_hat",
+  "n_eval_frames"
+ ],
+ "b_m4": [
+  {
+   "indicator": "u_s",
+   "source": "kitti",
+   "target": "kitti",
+   "alpha": "0.01",
+   "frozen": "True",
+   "tau": "0.08",
+   "A_hat": "0.007539041464728056",
+   "hb_L": "0.0036202685334163487",
+   "hb_U": "0.013752000477686894",
+   "boot_lo": "0.004038772213247173",
+   "boot_hi": "0.011577813677975229",
+   "outcome": "not determined",
+   "R_hat": "0.0542053086024944",
+   "n_eval_frames": "1857"
+  },
+  {
+   "indicator": "u_s",
+   "source": "kitti",
+   "target": "nuscenes",
+   "alpha": "0.01",
+   "frozen": "True",
+   "tau": "0.08",
+   "A_hat": "0.0",
+   "hb_L": "0.0",
+   "hb_U": "0.0012935063666357606",
+   "boot_lo": "0.0",
+   "boot_hi": "0.0",
+   "outcome": "applies",
+   "R_hat": "0.00015382248884786957",
+   "n_eval_frames": "2850"
+  }
+ ],
+ "c": {
+  "nuScenes_eval_split0": {
+   "near": 0.1887020551708979,
+   "far": 0.5157953281423804,
+   "n_near": 9099,
+   "n_far": 8990
+  },
+  "nuScenes_all_frames_same_cut": {
+   "near": 0.18702724081673017,
+   "far": 0.51385733757383,
+   "n_near": 20227,
+   "n_far": 19809
+  },
+  "KITTI_as_run_eval_split0": {
+   "near": 0.3709961798413165,
+   "far": 0.7987517125894352,
+   "n_near": 6806,
+   "n_far": 6569
+  },
+  "KITTI_rule_eval_split0": {
+   "near": 0.33581616481774956,
+   "far": 0.7629679368809803,
+   "n_near": 6310,
+   "n_far": 5957
+  }
+ },
+ "d": [
+  {
+   "pair": "KITTI distance",
+   "protocol": "kitti_ignore",
+   "indicator": "u_s",
+   "direction": "near->far",
+   "A": 0.24011866235167206,
+   "L": 0.21427586251210262,
+   "U": 0.2667413644877671,
+   "R": 0.6317280453257791,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "as_run",
+   "indicator": "u_s",
+   "direction": "near->far",
+   "A": 0.19471205309355596,
+   "L": 0.17145373956375876,
+   "U": 0.2200378495722565,
+   "R": 0.46671709531013617,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "nuScenes distance",
+   "protocol": "-",
+   "indicator": "u_s",
+   "direction": "near->far",
+   "A": 0.1281833207799816,
+   "L": 0.11181064383351846,
+   "U": 0.14570726389153482,
+   "R": 0.231794164943717,
+   "outcome": "does not apply",
+   "file": "results/m3_range_nuscenes/matrix_all_variants.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "kitti_ignore",
+   "indicator": "u_s",
+   "direction": "far->near",
+   "A": 0.023334920634920632,
+   "L": 0.01511325019541987,
+   "U": 0.03502917572245354,
+   "R": 0.6043903602958721,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "as_run",
+   "indicator": "u_s",
+   "direction": "far->near",
+   "A": 0.041672123990395105,
+   "L": 0.030165272570884416,
+   "U": 0.05560405756601043,
+   "R": 0.5557112824106517,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "nuScenes distance",
+   "protocol": "-",
+   "indicator": "u_s",
+   "direction": "far->near",
+   "A": 0.06910368314849981,
+   "L": 0.0566881427447794,
+   "U": 0.08303417421283446,
+   "R": 0.5467353020861555,
+   "outcome": "applies",
+   "file": "results/m3_range_nuscenes/matrix_all_variants.csv"
+  },
+  {
+   "pair": "nuScenes weather",
+   "protocol": "-",
+   "indicator": "u_s",
+   "direction": "clear->rain",
+   "A": 0.1400851161720727,
+   "L": 0.10028860832479392,
+   "U": 0.18507166692319627,
+   "R": 0.38461538461538464,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/C_weather_nuscenes.csv"
+  },
+  {
+   "pair": "nuScenes weather",
+   "protocol": "-",
+   "indicator": "u_s",
+   "direction": "rain->clear",
+   "A": 0.04426754385964912,
+   "L": 0.03381367808578606,
+   "U": 0.057192031843752655,
+   "R": 0.15930839495432797,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/C_weather_nuscenes.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "kitti_ignore",
+   "indicator": "u_s",
+   "direction": "nuscenes->kitti",
+   "A": 0.2437958116521037,
+   "L": 0.22032226036696823,
+   "U": 0.26841008412597445,
+   "R": 0.8941477454429165,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "as_run",
+   "indicator": "u_s",
+   "direction": "nuscenes->kitti",
+   "A": 0.2877257974901232,
+   "L": 0.26301681249227093,
+   "U": 0.313592217984005,
+   "R": 0.8941477454429165,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "kitti_ignore",
+   "indicator": "u_s",
+   "direction": "kitti->nuscenes",
+   "A": 0.009824561403508772,
+   "L": 0.0059951744094131065,
+   "U": 0.015115163011185198,
+   "R": 0.03684048607906476,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "as_run",
+   "indicator": "u_s",
+   "direction": "kitti->nuscenes",
+   "A": 0.002631578947368421,
+   "L": 0.0008047153288176512,
+   "U": 0.006146613525602465,
+   "R": 0.008075680664513151,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "kitti_ignore",
+   "indicator": "u_e",
+   "direction": "near->far",
+   "A": 0.1691801510248112,
+   "L": 0.14703089999664476,
+   "U": 0.193275293086735,
+   "R": 0.8172804532577904,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "as_run",
+   "indicator": "u_e",
+   "direction": "near->far",
+   "A": 0.12774566473988438,
+   "L": 0.10793611231514488,
+   "U": 0.14905634996893147,
+   "R": 0.6792738275340393,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "nuScenes distance",
+   "protocol": "-",
+   "indicator": "u_e",
+   "direction": "near->far",
+   "A": 0.1718491126264459,
+   "L": 0.15353243120396343,
+   "U": 0.1916926829874831,
+   "R": 0.6783827245577763,
+   "outcome": "does not apply",
+   "file": "results/m3_range_nuscenes/matrix_all_variants.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "kitti_ignore",
+   "indicator": "u_e",
+   "direction": "far->near",
+   "A": 0.037646705146705144,
+   "L": 0.026726852853375505,
+   "U": 0.051285875338308785,
+   "R": 0.9059890240992603,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "KITTI distance",
+   "protocol": "as_run",
+   "indicator": "u_e",
+   "direction": "far->near",
+   "A": 0.05812520630791751,
+   "L": 0.04443513043575331,
+   "U": 0.0739608131436765,
+   "R": 0.8948843728100911,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
+  },
+  {
+   "pair": "nuScenes distance",
+   "protocol": "-",
+   "indicator": "u_e",
+   "direction": "far->near",
+   "A": 0.061154825485693995,
+   "L": 0.04968773439826968,
+   "U": 0.07467680436045301,
+   "R": 0.822947710647521,
+   "outcome": "applies",
+   "file": "results/m3_range_nuscenes/matrix_all_variants.csv"
+  },
+  {
+   "pair": "nuScenes weather",
+   "protocol": "-",
+   "indicator": "u_e",
+   "direction": "clear->rain",
+   "A": 0.1699128300577576,
+   "L": 0.12789093171699417,
+   "U": 0.2195714001001169,
+   "R": 0.721850613154961,
+   "outcome": "does not apply",
+   "file": "results/m6_protocol_seeds_weather/C_weather_nuscenes.csv"
+  },
+  {
+   "pair": "nuScenes weather",
+   "protocol": "-",
+   "indicator": "u_e",
+   "direction": "rain->clear",
+   "A": 0.039821846282372605,
+   "L": 0.029672985116120265,
+   "U": 0.05188721536875037,
+   "R": 0.3817964332318399,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/C_weather_nuscenes.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "kitti_ignore",
+   "indicator": "u_e",
+   "direction": "nuscenes->kitti",
+   "A": 0.07754845496476165,
+   "L": 0.06326138496188893,
+   "U": 0.09363943322398856,
+   "R": 0.8773584905660378,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "as_run",
+   "indicator": "u_e",
+   "direction": "nuscenes->kitti",
+   "A": 0.10920634442443812,
+   "L": 0.09234563068131096,
+   "U": 0.12751999180295853,
+   "R": 0.8773584905660378,
+   "outcome": "not determined",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "kitti_ignore",
+   "indicator": "u_e",
+   "direction": "kitti->nuscenes",
+   "A": 0.09842720022490978,
+   "L": 0.08550559996680518,
+   "U": 0.11251532739529421,
+   "R": 0.7137363482541148,
+   "outcome": "not determined",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  },
+  {
+   "pair": "change of dataset",
+   "protocol": "as_run",
+   "indicator": "u_e",
+   "direction": "kitti->nuscenes",
+   "A": 0.0712602249318886,
+   "L": 0.060311377182443615,
+   "U": 0.08376062405617304,
+   "R": 0.5674511613597908,
+   "outcome": "applies",
+   "file": "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
+  }
+ ],
+ "d_m2_as_run": [
+  {
+   "indicator": "u_s",
+   "dir": "near->far",
+   "A": "0.19471205309355596",
+   "L": "0.17145373956375876",
+   "U": "0.2200378495722565",
+   "R": "0.46671709531013617"
+  },
+  {
+   "indicator": "u_s",
+   "dir": "far->near",
+   "A": "0.041672123990395105",
+   "L": "0.030165272570884416",
+   "U": "0.05560405756601043",
+   "R": "0.5557112824106517"
+  },
+  {
+   "indicator": "u_e",
+   "dir": "near->far",
+   "A": "0.12774566473988438",
+   "L": "0.10793611231514488",
+   "U": "0.14905634996893147",
+   "R": "0.6792738275340393"
+  },
+  {
+   "indicator": "u_e",
+   "dir": "far->near",
+   "A": "0.05812520630791751",
+   "L": "0.04443513043575331",
+   "U": "0.0739608131436765",
+   "R": "0.8948843728100911"
+  }
+ ]
+}

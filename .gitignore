@@ -1,0 +1,11 @@
+# local cache, exports and reruns (see docs/reproduce.md)
+work/
+__pycache__/
+*.pyc
+# dataset files must never be committed
+*.pkl
+*.bin
+*.pcd
+*.npz
+*.npy
+*.zip

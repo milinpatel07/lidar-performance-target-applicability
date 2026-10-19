@@ -1,0 +1,45 @@
+tau* (common threshold, chain over both distance classes at delta/2) is computed only in m1.analyse (distance settings).
+Recorded uses: m1 primary (KITTI, labels as run) and m3 primary (nuScenes) summary.txt, as tau values and the retention gap
+G = R(tau_c) - R(tau*) on the evaluation part of class c. No experiment run computed A_c(tau*), its HB interval or an outcome
+(common_threshold_and_recall.py computes them: common_threshold_outcomes.csv);
+m6 (KITTI rule, rain, dataset) and m7 write no tau* at all.
+
+m1_range_kitti/summary.txt: M1 SUMMARY  (indicator = saved RUM u, not yet the paper's u_s / u_e)
+m1_range_kitti/summary.txt: alpha = 0.01  [frozen]   tau near/far/star = 0.01820 / 0.01704 / 0.01704
+m1_range_kitti/summary.txt: retention gap near: 0.0652 [0.0571, 0.0735]
+m1_range_kitti/summary.txt: retention gap far: 0.0000 [0.0000, 0.0000]
+m1_range_kitti/summary.txt: alpha = 0.001  [frozen]   tau near/far/star = NA / NA / NA
+m1_range_kitti/summary.txt: alpha = 0.0001  [frozen]   tau near/far/star = NA / NA / NA
+m1_range_kitti/summary.txt: alpha = 0.05  [EXPLORATORY (outside frozen sweep)]   tau near/far/star = 0.02921 / 0.02231 / 0.02231
+m1_range_kitti/summary.txt: retention gap near: 0.2228 [0.2108, 0.2350]
+m1_range_kitti/summary.txt: retention gap far: 0.0000 [0.0000, 0.0000]
+m1_range_kitti/summary.txt: alpha = 0.1  [EXPLORATORY (outside frozen sweep)]   tau near/far/star = 0.03707 / 0.02499 / 0.02499
+m1_range_kitti/summary.txt: retention gap near: 0.2661 [0.2520, 0.2803]
+m1_range_kitti/summary.txt: retention gap far: 0.0000 [0.0000, 0.0000]
+m3_range_nuscenes/summary.txt: M2 SUMMARY  indicators from VEHITS (ref 7): u_s = geometric disagreement (Eq. 3, rotated IoU), u_e = 1 - mean confidence (Eq. 1)
+m3_range_nuscenes/summary.txt: ======================================================================
+m3_range_nuscenes/summary.txt: INDICATOR u_s    primary variant: iou=A_iou0.5 objects=car cut_q=0.5 seed=0   range cut (m): 21.40
+m3_range_nuscenes/summary.txt: alpha=0.01 [frozen]  tau near/far/star = 0.12654 / 0.14069 / 0.12654
+m3_range_nuscenes/summary.txt: retention gap near: 0.0000 [0.0000, 0.0000]
+m3_range_nuscenes/summary.txt: retention gap far: 0.0062 [0.0040, 0.0086]
+m3_range_nuscenes/summary.txt: alpha=0.001 [frozen]  tau near/far/star = NA / NA / NA
+m3_range_nuscenes/summary.txt: alpha=0.0001 [frozen]  tau near/far/star = NA / NA / NA
+m3_range_nuscenes/summary.txt: alpha=0.05 [EXPLORATORY]  tau near/far/star = 0.18148 / 0.18612 / 0.18148
+m3_range_nuscenes/summary.txt: retention gap near: 0.0000 [0.0000, 0.0000]
+m3_range_nuscenes/summary.txt: retention gap far: 0.0126 [0.0094, 0.0161]
+m3_range_nuscenes/summary.txt: alpha=0.1 [EXPLORATORY]  tau near/far/star = 0.22789 / 0.21290 / 0.21037
+m3_range_nuscenes/summary.txt: retention gap near: 0.1172 [0.1102, 0.1239]
+m3_range_nuscenes/summary.txt: retention gap far: 0.0119 [0.0089, 0.0152]
+m3_range_nuscenes/summary.txt: ======================================================================
+m3_range_nuscenes/summary.txt: INDICATOR u_e    primary variant: iou=A_iou0.5 objects=car cut_q=0.5 seed=0   range cut (m): 21.40
+m3_range_nuscenes/summary.txt: alpha=0.01 [frozen]  tau near/far/star = 0.09253 / 0.18230 / 0.09253
+m3_range_nuscenes/summary.txt: retention gap near: 0.0000 [0.0000, 0.0000]
+m3_range_nuscenes/summary.txt: retention gap far: 0.0345 [0.0289, 0.0401]
+m3_range_nuscenes/summary.txt: alpha=0.001 [frozen]  tau near/far/star = NA / NA / NA
+m3_range_nuscenes/summary.txt: alpha=0.0001 [frozen]  tau near/far/star = NA / NA / NA
+m3_range_nuscenes/summary.txt: alpha=0.05 [EXPLORATORY]  tau near/far/star = 0.26925 / 0.31326 / 0.26163
+m3_range_nuscenes/summary.txt: retention gap near: 0.0171 [0.0142, 0.0201]
+m3_range_nuscenes/summary.txt: retention gap far: 0.0772 [0.0696, 0.0851]
+m3_range_nuscenes/summary.txt: alpha=0.1 [EXPLORATORY]  tau near/far/star = 0.57197 / 0.43052 / 0.42103
+m3_range_nuscenes/summary.txt: retention gap near: 0.1164 [0.1089, 0.1237]
+m3_range_nuscenes/summary.txt: retention gap far: 0.0193 [0.0151, 0.0235]

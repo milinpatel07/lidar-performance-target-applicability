@@ -1,0 +1,41 @@
+setting,seed,condition,frames_select,frames_eval
+KITTI distance (KITTI rule),0,near,1484,1500
+KITTI distance (KITTI rule),0,far,1514,1545
+nuScenes distance,0,near,2207,2209
+nuScenes distance,0,far,2270,2276
+nuScenes rain,0,clear,1917,1900
+nuScenes rain,0,rain,392,414
+change of dataset,0,KITTI (KITTI rule),1844,1852
+change of dataset,0,nuScenes,2849,2850
+KITTI distance (KITTI rule),1,near,1467,1461
+KITTI distance (KITTI rule),1,far,1540,1539
+nuScenes distance,1,near,2214,2198
+nuScenes distance,1,far,2289,2270
+nuScenes rain,1,clear,1900,1915
+nuScenes rain,1,rain,417,403
+change of dataset,1,KITTI (KITTI rule),1844,1852
+change of dataset,1,nuScenes,2859,2840
+KITTI distance (KITTI rule),2,near,1482,1495
+KITTI distance (KITTI rule),2,far,1523,1527
+nuScenes distance,2,near,2195,2175
+nuScenes distance,2,far,2311,2289
+nuScenes rain,2,clear,1900,1898
+nuScenes rain,2,rain,422,403
+change of dataset,2,KITTI (KITTI rule),1848,1848
+change of dataset,2,nuScenes,2863,2836
+KITTI distance (KITTI rule),3,near,1466,1473
+KITTI distance (KITTI rule),3,far,1525,1551
+nuScenes distance,3,near,2183,2172
+nuScenes distance,3,far,2310,2304
+nuScenes rain,3,clear,1917,1902
+nuScenes rain,3,rain,409,404
+change of dataset,3,KITTI (KITTI rule),1844,1852
+change of dataset,3,nuScenes,2847,2852
+KITTI distance (KITTI rule),4,near,1471,1474
+KITTI distance (KITTI rule),4,far,1560,1536
+nuScenes distance,4,near,2199,2205
+nuScenes distance,4,far,2300,2265
+nuScenes rain,4,clear,1932,1896
+nuScenes rain,4,rain,399,398
+change of dataset,4,KITTI (KITTI rule),1847,1849
+change of dataset,4,nuScenes,2861,2838

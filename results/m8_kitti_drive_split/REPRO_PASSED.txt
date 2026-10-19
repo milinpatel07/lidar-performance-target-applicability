@@ -1,0 +1,1 @@
+REPRODUCTION frame split: m6 A EQUAL, m6 B EQUAL, input hashes EQUAL

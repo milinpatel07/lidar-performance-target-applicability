@@ -1,0 +1,224 @@
+{
+  "script_version": "m6-0.3",
+  "split": "scene",
+  "started": "2026-10-19 08:45:53",
+  "python": "3.10.13",
+  "numpy": "1.26.3",
+  "C": {
+    "frame_counts": {
+      "clear_day": 4449,
+      "rain_day": 968,
+      "night": 482,
+      "rain_night": 120,
+      "unknown": 0
+    },
+    "meta_dir": "/heinrich_nuscenes/v1.0-trainval",
+    "n_scenes": 150,
+    "parts": {
+      "seed0": {
+        "grid": {
+          "clear": {
+            "scenes": 10,
+            "frames": 396,
+            "frames_with_car": 379
+          },
+          "rain": {
+            "scenes": 5,
+            "frames": 201,
+            "frames_with_car": 174
+          }
+        },
+        "select": {
+          "clear": {
+            "scenes": 52,
+            "frames": 2088,
+            "frames_with_car": 1948
+          },
+          "rain": {
+            "scenes": 9,
+            "frames": 365,
+            "frames_with_car": 337
+          }
+        },
+        "eval": {
+          "clear": {
+            "scenes": 49,
+            "frames": 1965,
+            "frames_with_car": 1908
+          },
+          "rain": {
+            "scenes": 10,
+            "frames": 402,
+            "frames_with_car": 399
+          }
+        }
+      },
+      "seed1": {
+        "grid": {
+          "clear": {
+            "scenes": 13,
+            "frames": 522,
+            "frames_with_car": 515
+          },
+          "rain": {
+            "scenes": 2,
+            "frames": 81,
+            "frames_with_car": 79
+          }
+        },
+        "select": {
+          "clear": {
+            "scenes": 48,
+            "frames": 1924,
+            "frames_with_car": 1768
+          },
+          "rain": {
+            "scenes": 11,
+            "frames": 444,
+            "frames_with_car": 421
+          }
+        },
+        "eval": {
+          "clear": {
+            "scenes": 50,
+            "frames": 2003,
+            "frames_with_car": 1952
+          },
+          "rain": {
+            "scenes": 11,
+            "frames": 443,
+            "frames_with_car": 410
+          }
+        }
+      },
+      "seed2": {
+        "grid": {
+          "clear": {
+            "scenes": 10,
+            "frames": 398,
+            "frames_with_car": 381
+          },
+          "rain": {
+            "scenes": 4,
+            "frames": 160,
+            "frames_with_car": 159
+          }
+        },
+        "select": {
+          "clear": {
+            "scenes": 49,
+            "frames": 1964,
+            "frames_with_car": 1890
+          },
+          "rain": {
+            "scenes": 11,
+            "frames": 446,
+            "frames_with_car": 394
+          }
+        },
+        "eval": {
+          "clear": {
+            "scenes": 52,
+            "frames": 2087,
+            "frames_with_car": 1964
+          },
+          "rain": {
+            "scenes": 9,
+            "frames": 362,
+            "frames_with_car": 357
+          }
+        }
+      },
+      "seed3": {
+        "grid": {
+          "clear": {
+            "scenes": 12,
+            "frames": 479,
+            "frames_with_car": 461
+          },
+          "rain": {
+            "scenes": 2,
+            "frames": 81,
+            "frames_with_car": 77
+          }
+        },
+        "select": {
+          "clear": {
+            "scenes": 52,
+            "frames": 2082,
+            "frames_with_car": 2028
+          },
+          "rain": {
+            "scenes": 10,
+            "frames": 403,
+            "frames_with_car": 375
+          }
+        },
+        "eval": {
+          "clear": {
+            "scenes": 47,
+            "frames": 1888,
+            "frames_with_car": 1746
+          },
+          "rain": {
+            "scenes": 12,
+            "frames": 484,
+            "frames_with_car": 458
+          }
+        }
+      },
+      "seed4": {
+        "grid": {
+          "clear": {
+            "scenes": 9,
+            "frames": 365,
+            "frames_with_car": 298
+          },
+          "rain": {
+            "scenes": 5,
+            "frames": 202,
+            "frames_with_car": 195
+          }
+        },
+        "select": {
+          "clear": {
+            "scenes": 51,
+            "frames": 2044,
+            "frames_with_car": 1957
+          },
+          "rain": {
+            "scenes": 9,
+            "frames": 364,
+            "frames_with_car": 343
+          }
+        },
+        "eval": {
+          "clear": {
+            "scenes": 51,
+            "frames": 2040,
+            "frames_with_car": 1980
+          },
+          "rain": {
+            "scenes": 10,
+            "frames": 402,
+            "frames_with_car": 372
+          }
+        }
+      }
+    }
+  },
+  "nusc_meta_sha256": {
+    "scene.json": "bdc3211bfbfda652d5e9dab73c45c7132925ca84f869bf45e8e14edeafb1d20b",
+    "sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d"
+  },
+  "inputs_sha256": {
+    "/rum/detections/nuscenes/scored_val.pkl": "fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf",
+    "/rum/detections/nuscenes/frame_errors_cache.pkl": "93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0",
+    "/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl": "ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566",
+    "/rum/detections/nuscenes/seed1_val.pkl": "ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7",
+    "/rum/detections/nuscenes/seed2_val.pkl": "50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7",
+    "/rum/detections/nuscenes/seed3_val.pkl": "4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3",
+    "/rum/detections/nuscenes/seed4_val.pkl": "57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d"
+  },
+  "script_sha256": "161775194e1d38ff70a4901721d8cbbbeb27ae6395924cff0dfafde568f436d9"
+}

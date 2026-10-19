@@ -1,0 +1,32 @@
+(1) unannotated boxes (no annotation of any class at IoU > 0 besides cars below 0.1): 1536; of these with an annotated car at 0 < IoU < 0.1: 20. Far, >= 3 accepted correct, >= 1 rejected, <= 2 accepted wrong: 457 boxes in 400 frames; ranked by pixel distance of the projected box from the image border
+    1 000323  59.03 m u_s 0.13012 border 177.7 px; accepted correct/wrong 4/2, rejected 6 (eval)
+    2 002486  54.18 m u_s 0.13734 border 177.4 px; accepted correct/wrong 6/1, rejected 8 (grid)
+    3 005707  61.47 m u_s 0.16418 border 177.3 px; accepted correct/wrong 5/1, rejected 2 (eval)
+    4 001306  55.19 m u_s 0.14721 border 177.1 px; accepted correct/wrong 6/1, rejected 7 (eval)
+    5 005893  63.76 m u_s 0.13771 border 176.9 px; accepted correct/wrong 3/2, rejected 5 (eval)
+    6 005052  59.43 m u_s 0.13792 border 176.8 px; accepted correct/wrong 4/1, rejected 3 (select)
+    7 001625  52.12 m u_s 0.16127 border 176.8 px; accepted correct/wrong 8/1, rejected 6 (grid)
+    8 005687  54.97 m u_s 0.15547 border 176.8 px; accepted correct/wrong 4/1, rejected 6 (grid)
+    9 004324  62.90 m u_s 0.15938 border 176.8 px; accepted correct/wrong 4/1, rejected 3 (select)
+   10 001054  59.96 m u_s 0.16253 border 176.7 px; accepted correct/wrong 7/2, rejected 6 (eval)
+   11 004652  68.30 m u_s 0.14344 border 176.7 px; accepted correct/wrong 7/1, rejected 4 (eval)
+   12 000345  54.12 m u_s 0.15385 border 176.7 px; accepted correct/wrong 3/1, rejected 3 (eval)
+   13 007000  63.91 m u_s 0.10245 border 176.6 px; accepted correct/wrong 6/1, rejected 2 (select)
+   14 006391  58.49 m u_s 0.12599 border 176.5 px; accepted correct/wrong 5/1, rejected 5 (select)
+   15 004814  61.06 m u_s 0.11563 border 176.5 px; accepted correct/wrong 5/1, rejected 4 (grid)
+   16 004715  67.42 m u_s 0.14896 border 176.4 px; accepted correct/wrong 5/2, rejected 8 (select)
+   17 005345  55.22 m u_s 0.14537 border 176.4 px; accepted correct/wrong 5/1, rejected 1 (select)
+   18 000583  54.74 m u_s 0.16533 border 176.4 px; accepted correct/wrong 3/1, rejected 4 (select)
+   19 005366  50.97 m u_s 0.12974 border 176.4 px; accepted correct/wrong 6/1, rejected 4 (select)
+   20 003053  58.83 m u_s 0.16925 border 176.2 px; accepted correct/wrong 4/1, rejected 15 (select)
+   21 007059  50.64 m u_s 0.16324 border 176.2 px; accepted correct/wrong 3/1, rejected 4 (eval)
+   22 001565  52.85 m u_s 0.13377 border 176.2 px; accepted correct/wrong 5/2, rejected 7 (select)
+   23 001214  56.04 m u_s 0.14726 border 175.9 px; accepted correct/wrong 4/2, rejected 1 (select)
+   24 004190  66.09 m u_s 0.16001 border 175.9 px; accepted correct/wrong 3/1, rejected 6 (select)
+   wrote frame_candidates_top24.png
+(3) nuScenes 703ac7e5 accepted wrong box at 11.68 m, u_e 0.2501 (tau_clear 0.46385): max 3D IoU 0.406 (car); nearest annotation centre 0.13 m (car); inside CAM_FRONT: True
+   wrote blind_sample_50.png
+(4) blind sample: 25 near and 25 far of the 1536 unannotated boxes, numpy default_rng(0), order shuffled; key in blind_sample_50.csv
+(5) applicable cells at 1e-2: 145 (108 frame split); maximum R 0.4659: {'setting': 'KITTI distance (KITTI rule)', 'variant': 'frame', 'threshold': 'tau*', 'indicator': 'u_e', 'seed': 2, 'established': 'near+far', 'applied': 'near'}
+   maximum R per threshold type (frame split): own tau_c 0.4659 (KITTI distance, u_e, near->near, split 2); tau* 0.4659 (KITTI distance (KITTI rule), u_e, near+far->near, split 2); transferred tau_c 0.2851 (change of dataset, u_e, nuScenes->KITTI, split 4)
+   KITTI u_e near tau*, applicable: split 2: R(tau*) 0.4659, A 0.0014 [0.0001, 0.0059]

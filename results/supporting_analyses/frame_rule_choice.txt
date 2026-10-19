@@ -1,0 +1,15 @@
+KITTI frame for the frame figure: fixed frame rule (below) with the figure settings (KITTI rule, split-0 tau_near(u_s) 0.16931 at alpha 0.1, boundary 34.806 m), plus: every accepted wrong detection lies inside the annotated image region (all eight box corners in front of the camera and inside the image).
+   frames with >= 5 scored car detections: 2568; mean far-zone false acceptance over frames with far acceptances: 0.4116
+   near retention threshold used: 0.6; frames meeting the rule: 210; 004289 meets it: True
+   004289: accepted wrong 2, of these inside the image 2
+   frames meeting the rule with every accepted wrong detection inside the image: 208
+   004289 (eval): scored cars 9, near correct 3 kept 1.00, far accepted 5 of which wrong 2, |far FAP - mean| 0.0116
+   000192 (grid): scored cars 14, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   000362 (eval): scored cars 9, near correct 4 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   000795 (select): scored cars 12, near correct 6 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001336 (eval): scored cars 6, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001552 (eval): scored cars 11, near correct 5 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001820 (eval): scored cars 8, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001979 (eval): scored cars 7, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   CHOSEN (all frames, closest to the mean, ties by frame id): 004289 (eval part of split 0)
+   closest frame of the evaluation part of split 0: 004289

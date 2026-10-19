@@ -1,0 +1,90 @@
+retention-and-causes-1.0 (2026-10-19); tables: export-v13.1 (2026-10-12); KITTI frames 3769, nuScenes frames 6019; KITTI rule removes 2454; weather frames {'clear_day': 4449, 'rain_day': 968, 'night': 482, 'rain_night': 120, 'unknown': 0}
+GATE PASSED: split-0 cells recomputed from the cache equal the recorded rows (KITTI distance with the KITTI rule, nuScenes distance, rain: tau, A, [L,U], R, outcome; dataset: tau), both indicators, all five alphas
+wrote retention_applicable_cells.csv (395 rows; 116 in Fig. outcomes, 8 in Fig. pairs)
+retention R of the applicable transfer cells of the outcome figure (frame split, 5 splits):
+                                                        count    min  median    max
+setting           indicator alpha established applied                              
+KITTI distance    u_e       0.01  near        far           5 0.0355  0.0570 0.1113
+                            0.05  far         near          5 0.8186  0.8420 0.8452
+                            0.10  far         near          5 0.9026  0.9108 0.9214
+                  u_s       0.01  far         near          4 0.0417  0.0797 0.1498
+                                  near        far           1 0.0185  0.0185 0.0185
+                            0.05  far         near          5 0.3935  0.4338 0.4380
+                            0.10  far         near          5 0.5758  0.6053 0.6495
+change of dataset u_e       0.01  nuScenes    KITTI         5 0.2316  0.2361 0.2851
+                            0.05  nuScenes    KITTI         5 0.6723  0.6859 0.6968
+                            0.10  nuScenes    KITTI         5 0.8673  0.8767 0.8815
+                  u_s       0.01  KITTI       nuScenes      5 0.0000  0.0001 0.0002
+                            0.05  KITTI       nuScenes      5 0.0025  0.0032 0.0079
+                            0.10  KITTI       nuScenes      5 0.0368  0.0381 0.0390
+nuScenes distance u_e       0.01  near        far           5 0.0021  0.0038 0.0107
+                            0.05  near        far           5 0.1006  0.1100 0.1407
+                            0.10  far         near          5 0.8015  0.8088 0.8229
+                  u_s       0.01  near        far           5 0.0030  0.0046 0.0059
+                            0.05  far         near          2 0.3087  0.3097 0.3107
+                                  near        far           4 0.0521  0.0654 0.0696
+                            0.10  far         near          5 0.5179  0.5255 0.5541
+nuScenes rain     u_e       0.01  rain        clear         5 0.0116  0.0257 0.0578
+                            0.05  rain        clear         5 0.1916  0.2025 0.2452
+                            0.10  rain        clear         5 0.3106  0.3384 0.3818
+                  u_s       0.05  rain        clear         5 0.0387  0.0407 0.0493
+                            0.10  rain        clear         5 0.1004  0.1277 0.1593
+same for the scene split (m7):
+                                                                             count    min  median    max
+setting           variant               indicator alpha established applied                             
+nuScenes distance scene (i) frame unit  u_e       0.01  near        far          5 0.0024  0.0044 0.0150
+                                                  0.05  far         near         1 0.5813  0.5813 0.5813
+                                                        near        far          3 0.0938  0.1333 0.1724
+                                                  0.10  far         near         5 0.7983  0.8094 0.8332
+                                        u_s       0.01  far         near         2 0.0252  0.0282 0.0312
+                                                        near        far          5 0.0037  0.0055 0.0075
+                                                  0.05  far         near         3 0.2214  0.2352 0.2770
+                                                        near        far          2 0.0585  0.0627 0.0668
+                                                  0.10  far         near         5 0.4947  0.5316 0.5813
+                  scene (ii) scene unit u_e       0.10  near        far          2 0.0445  0.0537 0.0629
+                                        u_s       0.10  far         near         1 0.1448  0.1448 0.1448
+                                                        near        far          2 0.0181  0.0277 0.0373
+nuScenes rain     scene (i) frame unit  u_e       0.01  clear       rain         2 0.0393  0.0701 0.1009
+                                                        rain        clear        3 0.0048  0.0210 0.0575
+                                                  0.05  rain        clear        5 0.1713  0.2018 0.2314
+                                                  0.10  rain        clear        5 0.2945  0.3169 0.4327
+                                        u_s       0.01  clear       rain         1 0.0214  0.0214 0.0214
+                                                  0.05  rain        clear        5 0.0162  0.0344 0.0443
+                                                  0.10  rain        clear        5 0.0576  0.1004 0.1975
+wrote wrong_share_and_median_split0.csv (36 rows)
+   distance boundaries, split 0: KITTI (rule) 34.8057 m, nuScenes 21.4022 m
+wrote intervals_clear_to_rain.csv (150 rows)
+wrote frames_per_condition.csv (40 rows)
+   split 0 KITTI distance (KITTI rule)  near                 select  1484  eval  1500 (Table 3: 1500, equal)
+   split 0 KITTI distance (KITTI rule)  far                  select  1514  eval  1545 (Table 3: 1545, equal)
+   split 0 nuScenes distance            near                 select  2207  eval  2209 (Table 3: 2209, equal)
+   split 0 nuScenes distance            far                  select  2270  eval  2276 (Table 3: 2276, equal)
+   split 0 nuScenes rain                clear                select  1917  eval  1900 (Table 3: 1900, equal)
+   split 0 nuScenes rain                rain                 select   392  eval   414 (Table 3: 414, equal)
+   split 0 change of dataset            KITTI (KITTI rule)   select  1844  eval  1852 (Table 3: 1852, equal)
+   split 0 change of dataset            nuScenes             select  2849  eval  2850 (Table 3: 2850, equal)
+wrote common_threshold_recorded.txt
+wrote merge_recall.csv (2 rows)
+   KITTI: annotated cars 14385, correct car detections 12345, recall 0.8582; K 4, consensus 3, IoU 0.5, member min confidence 0.1
+   nuScenes: annotated cars 65465, correct car detections 26074, recall 0.3983; K 4, consensus 3, IoU 0.5, member min confidence 0.1
+wrote roc_clear_rain_points.csv (4 rows)
+ROC points: clear alpha 0.01 tau 0.09272: correct rejected 0.937, wrong rejected 0.997; clear alpha 0.1 tau 0.46385: correct rejected 0.297, wrong rejected 0.808; rain alpha 0.01 tau 0.09272: correct rejected 0.913, wrong rejected 0.999; rain alpha 0.1 tau 0.46385: correct rejected 0.278, wrong rejected 0.802
+wrote retention_vs_false_acceptance_curve.csv (802 rows)
+wrote retention_vs_false_acceptance_selected.csv (3 rows)
+retention vs false acceptance (evaluation part, split 0, near, u_e): alpha 0.01: tau 0.09253, A 0.0043, R 0.1015, applies; alpha 0.05: tau 0.26925, A 0.0413, R 0.5638, not determined; alpha 0.1: tau 0.57197, A 0.0822, R 0.9296, applies
+wrote frame_rule_candidates.csv (210 rows)
+KITTI frame for the frame figure: fixed frame rule (below) with the figure settings (KITTI rule, split-0 tau_near(u_s) 0.16931 at alpha 0.1, boundary 34.806 m), plus: every accepted wrong detection lies inside the annotated image region (all eight box corners in front of the camera and inside the image).
+   frames with >= 5 scored car detections: 2568; mean far-zone false acceptance over frames with far acceptances: 0.4116
+   near retention threshold used: 0.6; frames meeting the rule: 210; 004289 meets it: True
+   004289: accepted wrong 2, of these inside the image 2
+   frames meeting the rule with every accepted wrong detection inside the image: 208
+   004289 (eval): scored cars 9, near correct 3 kept 1.00, far accepted 5 of which wrong 2, |far FAP - mean| 0.0116
+   000192 (grid): scored cars 14, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   000362 (eval): scored cars 9, near correct 4 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   000795 (select): scored cars 12, near correct 6 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001336 (eval): scored cars 6, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001552 (eval): scored cars 11, near correct 5 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001820 (eval): scored cars 8, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   001979 (eval): scored cars 7, near correct 3 kept 1.00, far accepted 3 of which wrong 1, |far FAP - mean| 0.0783
+   CHOSEN (all frames, closest to the mean, ties by frame id): 004289 (eval part of split 0)
+   closest frame of the evaluation part of split 0: 004289

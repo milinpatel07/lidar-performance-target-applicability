@@ -1,0 +1,67 @@
+M4 SUMMARY  dataset-shift applicability (car only, threshold carried raw)
+A threshold established on the SOURCE dataset, evaluated on the TARGET dataset.
+within-dataset cells (source == target) are the baseline; cross cells are the shift.
+
+indicator-value quantiles for car (shows the scale difference between datasets):
+  u_s:
+    kitti     5/25/50/75/95% = 0.0884 / 0.1278 / 0.1867 / 0.2701 / 0.3651
+    nuscenes  5/25/50/75/95% = 0.1506 / 0.2010 / 0.2557 / 0.3223 / 0.3970
+  u_e:
+    kitti     5/25/50/75/95% = 0.0755 / 0.1985 / 0.5732 / 0.8181 / 0.8969
+    nuscenes  5/25/50/75/95% = 0.0959 / 0.2488 / 0.4393 / 0.6751 / 0.8621
+
+======================================================================
+INDICATOR u_s
+  alpha = 0.01  [frozen]
+    kitti -> kitti         [within]: not determined | tau=0.08000 A=0.0075 HB[0.0036, 0.0138] | R=0.0542 | n_eval=1857
+    kitti -> nuscenes      [SHIFT]: applies | tau=0.08000 A=0.0000 HB[0.0000, 0.0013] | R=0.0002 | n_eval=2850
+    nuscenes -> kitti      [SHIFT]: does not apply | tau=0.12000 A=0.0627 HB[0.0499, 0.0775] | R=0.4578 | n_eval=1857
+    nuscenes -> nuscenes   [within]: applies | tau=0.12000 A=0.0026 HB[0.0008, 0.0061] | R=0.0081 | n_eval=2850
+  alpha = 0.001  [frozen]
+    kitti -> kitti        : no threshold established
+    kitti -> nuscenes     : no threshold established
+    nuscenes -> kitti     : no threshold established
+    nuscenes -> nuscenes  : no threshold established
+  alpha = 0.0001  [frozen]
+    kitti -> kitti        : no threshold established
+    kitti -> nuscenes     : no threshold established
+    nuscenes -> kitti     : no threshold established
+    nuscenes -> nuscenes  : no threshold established
+  alpha = 0.05  [EXPLORATORY]
+    kitti -> kitti         [within]: applies | tau=0.10000 A=0.0284 HB[0.0197, 0.0390] | R=0.2255 | n_eval=1857
+    kitti -> nuscenes      [SHIFT]: applies | tau=0.10000 A=0.0004 HB[0.0000, 0.0023] | R=0.0012 | n_eval=2850
+    nuscenes -> kitti      [SHIFT]: does not apply | tau=0.17000 A=0.2019 HB[0.1799, 0.2248] | R=0.8118 | n_eval=1857
+    nuscenes -> nuscenes   [within]: not determined | tau=0.17000 A=0.0445 HB[0.0356, 0.0545] | R=0.1534 | n_eval=2850
+  alpha = 0.1  [EXPLORATORY]
+    kitti -> kitti         [within]: applies | tau=0.12000 A=0.0627 HB[0.0499, 0.0775] | R=0.4578 | n_eval=1857
+    kitti -> nuscenes      [SHIFT]: applies | tau=0.12000 A=0.0026 HB[0.0008, 0.0061] | R=0.0081 | n_eval=2850
+    nuscenes -> kitti      [SHIFT]: does not apply | tau=0.20000 A=0.2877 HB[0.2630, 0.3136] | R=0.8941 | n_eval=1857
+    nuscenes -> nuscenes   [within]: applies | tau=0.20000 A=0.0779 HB[0.0662, 0.0905] | R=0.3303 | n_eval=2850
+
+======================================================================
+INDICATOR u_e
+  alpha = 0.01  [frozen]
+    kitti -> kitti         [within]: not determined | tau=0.11000 A=0.0079 HB[0.0036, 0.0144] | R=0.2848 | n_eval=1857
+    kitti -> nuscenes      [SHIFT]: not determined | tau=0.11000 A=0.0059 HB[0.0028, 0.0103] | R=0.0970 | n_eval=2850
+    nuscenes -> kitti      [SHIFT]: applies | tau=0.10000 A=0.0044 HB[0.0015, 0.0100] | R=0.2347 | n_eval=1857
+    nuscenes -> nuscenes   [within]: applies | tau=0.10000 A=0.0039 HB[0.0017, 0.0080] | R=0.0788 | n_eval=2850
+  alpha = 0.001  [frozen]
+    kitti -> kitti        : no threshold established
+    kitti -> nuscenes     : no threshold established
+    nuscenes -> kitti     : no threshold established
+    nuscenes -> nuscenes  : no threshold established
+  alpha = 0.0001  [frozen]
+    kitti -> kitti        : no threshold established
+    kitti -> nuscenes     : no threshold established
+    nuscenes -> kitti     : no threshold established
+    nuscenes -> nuscenes  : no threshold established
+  alpha = 0.05  [EXPLORATORY]
+    kitti -> kitti         [within]: applies | tau=0.22000 A=0.0327 HB[0.0234, 0.0439] | R=0.6247 | n_eval=1857
+    kitti -> nuscenes      [SHIFT]: applies | tau=0.22000 A=0.0303 HB[0.0231, 0.0390] | R=0.3031 | n_eval=2850
+    nuscenes -> kitti      [SHIFT]: not determined | tau=0.26000 A=0.0439 HB[0.0332, 0.0567] | R=0.6968 | n_eval=1857
+    nuscenes -> nuscenes   [within]: not determined | tau=0.26000 A=0.0424 HB[0.0337, 0.0522] | R=0.3787 | n_eval=2850
+  alpha = 0.1  [EXPLORATORY]
+    kitti -> kitti         [within]: applies | tau=0.37000 A=0.0777 HB[0.0636, 0.0940] | R=0.8228 | n_eval=1857
+    kitti -> nuscenes      [SHIFT]: applies | tau=0.37000 A=0.0713 HB[0.0603, 0.0838] | R=0.5675 | n_eval=2850
+    nuscenes -> kitti      [SHIFT]: not determined | tau=0.44000 A=0.1092 HB[0.0923, 0.1275] | R=0.8774 | n_eval=1857
+    nuscenes -> nuscenes   [within]: not determined | tau=0.44000 A=0.0876 HB[0.0753, 0.1010] | R=0.6750 | n_eval=2850
