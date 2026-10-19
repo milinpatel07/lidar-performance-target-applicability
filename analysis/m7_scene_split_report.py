@@ -115,7 +115,7 @@ def collect(run):
         L.append(f"{s} | {a['grid']['scenes']} / {a['select']['scenes']} / {a['eval']['scenes']} | {a['cut_m']:.3f} m | "
                  f"{a['select']['near']} / {a['eval']['near']} | {a['select']['far']} / {a['eval']['far']} | "
                  f"{f6('clear', 'select')} / {f6('clear', 'eval')} | {f6('rain', 'select')} / {f6('rain', 'eval')}")
-    (run / "m7_scene_split_summary.txt").write_text("\n".join(L) + "\n")
+    (run / "m7_scene_split_summary.txt").write_bytes(("\n".join(L) + "\n").encode())
     print("\n".join(L))
 
 
