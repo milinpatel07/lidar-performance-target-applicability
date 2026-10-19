@@ -1,0 +1,2 @@
+# keep every file byte for byte, so the SHA-256 checks (MANIFEST.sha256, provenance.json) hold after checkout
+* -text
