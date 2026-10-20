@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite them as below, together with the paper."
-title: "Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis for Determining the Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection (code and results)"
+message: "If you use this code or these results, please cite them as below."
+title: "Code and results: Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection"
 type: software
-version: 1.0.0
+version: 1.0.1
 date-released: "2026-10-20"
 repository-code: "https://github.com/milinpatel07/lidar-performance-target-applicability"
+license: MIT
 authors:
   - family-names: Patel
     given-names: Milin
@@ -14,35 +15,3 @@ authors:
     given-names: Rolf
     orcid: "https://orcid.org/0000-0002-0366-4844"
     affiliation: "Kempten University of Applied Sciences"
-license:
-  - MIT
-  - CC-BY-NC-SA-4.0
-preferred-citation:
-  type: article
-  title: "Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis for Determining the Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection"
-  authors:
-    - family-names: Patel
-      given-names: Milin
-      orcid: "https://orcid.org/0000-0002-8357-6018"
-      affiliation: "Kempten University of Applied Sciences"
-    - family-names: Jung
-      given-names: Rolf
-      orcid: "https://orcid.org/0000-0002-0366-4844"
-      affiliation: "Kempten University of Applied Sciences"
-  year: 2026
-  notes: "Under review."
-references:
-  - type: conference-paper
-    title: "Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis for Identifying Performance Insufficiencies in ML-Based LiDAR Object Detection"
-    authors:
-      - family-names: Patel
-        given-names: Milin
-      - family-names: Jung
-        given-names: Rolf
-    collection-title: "Proceedings of the 12th International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS)"
-    publisher:
-      name: SciTePress
-    start: 154
-    end: 167
-    year: 2026
-    doi: 10.5220/0014967200004030
