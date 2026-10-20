@@ -124,4 +124,4 @@ See [`CITATION.cff`](CITATION.cff). The entry will be completed with the venue o
 ## Licence
 
 Code (`analysis/`, `tools/`): MIT, see [`LICENSE`](LICENSE). Results and documentation (`results/`, `configs/`,
-`docs/`): CC BY 4.0, see [`LICENSE-results`](LICENSE-results).
+`docs/`): CC BY-NC-SA 4.0, see [`LICENSE-results`](LICENSE-results).

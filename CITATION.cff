@@ -7,7 +7,9 @@ authors:
     given-names: Milin
   - family-names: Jung
     given-names: Rolf
-license: MIT
+license:
+  - MIT
+  - CC-BY-NC-SA-4.0
 date-released: "2026-10-19"
 preferred-citation:
   type: article
