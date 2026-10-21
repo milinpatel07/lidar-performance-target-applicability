@@ -1,0 +1,1 @@
+GATE PASSED: 1600 recomputed rows compared with the recorded rows (frame division with N_s = 1 against m6 A/B and m7 frame rows; sequence division with frame units against m7 scene_frame_unit and m8 frame-unit rows); 0 differ

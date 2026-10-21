@@ -1,0 +1,321 @@
+method,pair,direction,own_condition,indicator,alpha,limit,applicable,not applicable,not determined,no threshold selected
+A,KITTI distance,far->far,True,u_e,0.0001,target,0,0,0,5
+A,KITTI distance,far->far,True,u_e,0.001,target,0,0,0,5
+A,KITTI distance,far->far,True,u_e,0.01,target,0,0,0,5
+A,KITTI distance,far->far,True,u_e,0.05,exploratory,0,0,0,5
+A,KITTI distance,far->far,True,u_e,0.1,exploratory,0,0,0,5
+A,KITTI distance,far->far,True,u_s,0.0001,target,0,0,0,5
+A,KITTI distance,far->far,True,u_s,0.001,target,0,0,0,5
+A,KITTI distance,far->far,True,u_s,0.01,target,0,0,0,5
+A,KITTI distance,far->far,True,u_s,0.05,exploratory,0,0,0,5
+A,KITTI distance,far->far,True,u_s,0.1,exploratory,0,0,0,5
+A,KITTI distance,far->near,False,u_e,0.0001,target,0,0,0,5
+A,KITTI distance,far->near,False,u_e,0.001,target,0,0,0,5
+A,KITTI distance,far->near,False,u_e,0.01,target,0,0,0,5
+A,KITTI distance,far->near,False,u_e,0.05,exploratory,0,0,0,5
+A,KITTI distance,far->near,False,u_e,0.1,exploratory,0,0,0,5
+A,KITTI distance,far->near,False,u_s,0.0001,target,0,0,0,5
+A,KITTI distance,far->near,False,u_s,0.001,target,0,0,0,5
+A,KITTI distance,far->near,False,u_s,0.01,target,0,0,0,5
+A,KITTI distance,far->near,False,u_s,0.05,exploratory,0,0,0,5
+A,KITTI distance,far->near,False,u_s,0.1,exploratory,0,0,0,5
+A,KITTI distance,near->far,False,u_e,0.0001,target,0,0,0,5
+A,KITTI distance,near->far,False,u_e,0.001,target,0,0,0,5
+A,KITTI distance,near->far,False,u_e,0.01,target,0,0,0,5
+A,KITTI distance,near->far,False,u_e,0.05,exploratory,0,0,0,5
+A,KITTI distance,near->far,False,u_e,0.1,exploratory,0,0,0,5
+A,KITTI distance,near->far,False,u_s,0.0001,target,0,0,0,5
+A,KITTI distance,near->far,False,u_s,0.001,target,0,0,0,5
+A,KITTI distance,near->far,False,u_s,0.01,target,0,0,0,5
+A,KITTI distance,near->far,False,u_s,0.05,exploratory,0,0,0,5
+A,KITTI distance,near->far,False,u_s,0.1,exploratory,0,0,0,5
+A,KITTI distance,near->near,True,u_e,0.0001,target,0,0,0,5
+A,KITTI distance,near->near,True,u_e,0.001,target,0,0,0,5
+A,KITTI distance,near->near,True,u_e,0.01,target,0,0,0,5
+A,KITTI distance,near->near,True,u_e,0.05,exploratory,0,0,0,5
+A,KITTI distance,near->near,True,u_e,0.1,exploratory,0,0,0,5
+A,KITTI distance,near->near,True,u_s,0.0001,target,0,0,0,5
+A,KITTI distance,near->near,True,u_s,0.001,target,0,0,0,5
+A,KITTI distance,near->near,True,u_s,0.01,target,0,0,0,5
+A,KITTI distance,near->near,True,u_s,0.05,exploratory,0,0,0,5
+A,KITTI distance,near->near,True,u_s,0.1,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_e,0.0001,target,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_e,0.001,target,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_e,0.01,target,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_e,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_e,0.1,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_s,0.0001,target,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_s,0.001,target,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_s,0.01,target,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_s,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->KITTI,True,u_s,0.1,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_e,0.0001,target,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_e,0.001,target,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_e,0.01,target,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_e,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_e,0.1,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_s,0.0001,target,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_s,0.001,target,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_s,0.01,target,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_s,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,KITTI->nuScenes,False,u_s,0.1,exploratory,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_e,0.0001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_e,0.001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_e,0.01,target,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_e,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_e,0.1,exploratory,0,0,5,0
+A,change of dataset and detector,nuScenes->KITTI,False,u_s,0.0001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_s,0.001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_s,0.01,target,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_s,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,nuScenes->KITTI,False,u_s,0.1,exploratory,0,0,5,0
+A,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.0001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.01,target,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.1,exploratory,2,0,3,0
+A,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.0001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.001,target,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.01,target,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.05,exploratory,0,0,0,5
+A,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.1,exploratory,2,0,3,0
+A,nuScenes distance,far->far,True,u_e,0.0001,target,0,0,0,5
+A,nuScenes distance,far->far,True,u_e,0.001,target,0,0,0,5
+A,nuScenes distance,far->far,True,u_e,0.01,target,0,0,0,5
+A,nuScenes distance,far->far,True,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes distance,far->far,True,u_e,0.1,exploratory,2,0,3,0
+A,nuScenes distance,far->far,True,u_s,0.0001,target,0,0,0,5
+A,nuScenes distance,far->far,True,u_s,0.001,target,0,0,0,5
+A,nuScenes distance,far->far,True,u_s,0.01,target,0,0,0,5
+A,nuScenes distance,far->far,True,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes distance,far->far,True,u_s,0.1,exploratory,1,0,4,0
+A,nuScenes distance,far->near,False,u_e,0.0001,target,0,0,0,5
+A,nuScenes distance,far->near,False,u_e,0.001,target,0,0,0,5
+A,nuScenes distance,far->near,False,u_e,0.01,target,0,0,0,5
+A,nuScenes distance,far->near,False,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes distance,far->near,False,u_e,0.1,exploratory,0,0,5,0
+A,nuScenes distance,far->near,False,u_s,0.0001,target,0,0,0,5
+A,nuScenes distance,far->near,False,u_s,0.001,target,0,0,0,5
+A,nuScenes distance,far->near,False,u_s,0.01,target,0,0,0,5
+A,nuScenes distance,far->near,False,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes distance,far->near,False,u_s,0.1,exploratory,0,0,5,0
+A,nuScenes distance,near->far,False,u_e,0.0001,target,0,0,0,5
+A,nuScenes distance,near->far,False,u_e,0.001,target,0,0,0,5
+A,nuScenes distance,near->far,False,u_e,0.01,target,0,0,0,5
+A,nuScenes distance,near->far,False,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes distance,near->far,False,u_e,0.1,exploratory,3,0,1,1
+A,nuScenes distance,near->far,False,u_s,0.0001,target,0,0,0,5
+A,nuScenes distance,near->far,False,u_s,0.001,target,0,0,0,5
+A,nuScenes distance,near->far,False,u_s,0.01,target,0,0,0,5
+A,nuScenes distance,near->far,False,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes distance,near->far,False,u_s,0.1,exploratory,2,0,0,3
+A,nuScenes distance,near->near,True,u_e,0.0001,target,0,0,0,5
+A,nuScenes distance,near->near,True,u_e,0.001,target,0,0,0,5
+A,nuScenes distance,near->near,True,u_e,0.01,target,0,0,0,5
+A,nuScenes distance,near->near,True,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes distance,near->near,True,u_e,0.1,exploratory,0,0,4,1
+A,nuScenes distance,near->near,True,u_s,0.0001,target,0,0,0,5
+A,nuScenes distance,near->near,True,u_s,0.001,target,0,0,0,5
+A,nuScenes distance,near->near,True,u_s,0.01,target,0,0,0,5
+A,nuScenes distance,near->near,True,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes distance,near->near,True,u_s,0.1,exploratory,0,0,2,3
+A,nuScenes weather,clear->clear,True,u_e,0.0001,target,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_e,0.001,target,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_e,0.01,target,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_e,0.1,exploratory,2,0,3,0
+A,nuScenes weather,clear->clear,True,u_s,0.0001,target,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_s,0.001,target,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_s,0.01,target,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes weather,clear->clear,True,u_s,0.1,exploratory,0,0,5,0
+A,nuScenes weather,clear->rain,False,u_e,0.0001,target,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_e,0.001,target,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_e,0.01,target,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_e,0.1,exploratory,0,0,5,0
+A,nuScenes weather,clear->rain,False,u_s,0.0001,target,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_s,0.001,target,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_s,0.01,target,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes weather,clear->rain,False,u_s,0.1,exploratory,0,0,5,0
+A,nuScenes weather,rain->clear,False,u_e,0.0001,target,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_e,0.001,target,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_e,0.01,target,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_e,0.1,exploratory,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_s,0.0001,target,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_s,0.001,target,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_s,0.01,target,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes weather,rain->clear,False,u_s,0.1,exploratory,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_e,0.0001,target,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_e,0.001,target,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_e,0.01,target,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_e,0.05,exploratory,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_e,0.1,exploratory,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_s,0.0001,target,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_s,0.001,target,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_s,0.01,target,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_s,0.05,exploratory,0,0,0,5
+A,nuScenes weather,rain->rain,True,u_s,0.1,exploratory,0,0,0,5
+B,KITTI distance,far->far,True,u_e,0.0001,target,0,0,0,5
+B,KITTI distance,far->far,True,u_e,0.001,target,0,0,0,5
+B,KITTI distance,far->far,True,u_e,0.01,target,0,0,0,5
+B,KITTI distance,far->far,True,u_e,0.05,exploratory,0,0,0,5
+B,KITTI distance,far->far,True,u_e,0.1,exploratory,0,0,0,5
+B,KITTI distance,far->far,True,u_s,0.0001,target,0,0,0,5
+B,KITTI distance,far->far,True,u_s,0.001,target,0,0,0,5
+B,KITTI distance,far->far,True,u_s,0.01,target,0,0,0,5
+B,KITTI distance,far->far,True,u_s,0.05,exploratory,0,0,0,5
+B,KITTI distance,far->far,True,u_s,0.1,exploratory,0,0,0,5
+B,KITTI distance,far->near,False,u_e,0.0001,target,0,0,0,5
+B,KITTI distance,far->near,False,u_e,0.001,target,0,0,0,5
+B,KITTI distance,far->near,False,u_e,0.01,target,0,0,0,5
+B,KITTI distance,far->near,False,u_e,0.05,exploratory,0,0,0,5
+B,KITTI distance,far->near,False,u_e,0.1,exploratory,0,0,0,5
+B,KITTI distance,far->near,False,u_s,0.0001,target,0,0,0,5
+B,KITTI distance,far->near,False,u_s,0.001,target,0,0,0,5
+B,KITTI distance,far->near,False,u_s,0.01,target,0,0,0,5
+B,KITTI distance,far->near,False,u_s,0.05,exploratory,0,0,0,5
+B,KITTI distance,far->near,False,u_s,0.1,exploratory,0,0,0,5
+B,KITTI distance,near->far,False,u_e,0.0001,target,0,0,0,5
+B,KITTI distance,near->far,False,u_e,0.001,target,0,0,0,5
+B,KITTI distance,near->far,False,u_e,0.01,target,0,0,0,5
+B,KITTI distance,near->far,False,u_e,0.05,exploratory,0,0,0,5
+B,KITTI distance,near->far,False,u_e,0.1,exploratory,0,0,0,5
+B,KITTI distance,near->far,False,u_s,0.0001,target,0,0,0,5
+B,KITTI distance,near->far,False,u_s,0.001,target,0,0,0,5
+B,KITTI distance,near->far,False,u_s,0.01,target,0,0,0,5
+B,KITTI distance,near->far,False,u_s,0.05,exploratory,0,0,0,5
+B,KITTI distance,near->far,False,u_s,0.1,exploratory,0,0,0,5
+B,KITTI distance,near->near,True,u_e,0.0001,target,0,0,0,5
+B,KITTI distance,near->near,True,u_e,0.001,target,0,0,0,5
+B,KITTI distance,near->near,True,u_e,0.01,target,0,0,0,5
+B,KITTI distance,near->near,True,u_e,0.05,exploratory,0,0,0,5
+B,KITTI distance,near->near,True,u_e,0.1,exploratory,0,0,0,5
+B,KITTI distance,near->near,True,u_s,0.0001,target,0,0,0,5
+B,KITTI distance,near->near,True,u_s,0.001,target,0,0,0,5
+B,KITTI distance,near->near,True,u_s,0.01,target,0,0,0,5
+B,KITTI distance,near->near,True,u_s,0.05,exploratory,0,0,0,5
+B,KITTI distance,near->near,True,u_s,0.1,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_e,0.0001,target,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_e,0.001,target,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_e,0.01,target,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_e,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_e,0.1,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_s,0.0001,target,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_s,0.001,target,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_s,0.01,target,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_s,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->KITTI,True,u_s,0.1,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_e,0.0001,target,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_e,0.001,target,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_e,0.01,target,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_e,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_e,0.1,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_s,0.0001,target,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_s,0.001,target,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_s,0.01,target,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_s,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,KITTI->nuScenes,False,u_s,0.1,exploratory,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_e,0.0001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_e,0.001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_e,0.01,target,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_e,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_e,0.1,exploratory,0,0,5,0
+B,change of dataset and detector,nuScenes->KITTI,False,u_s,0.0001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_s,0.001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_s,0.01,target,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_s,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,nuScenes->KITTI,False,u_s,0.1,exploratory,0,0,5,0
+B,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.0001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.01,target,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_e,0.1,exploratory,5,0,0,0
+B,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.0001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.001,target,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.01,target,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.05,exploratory,0,0,0,5
+B,change of dataset and detector,nuScenes->nuScenes,True,u_s,0.1,exploratory,5,0,0,0
+B,nuScenes distance,far->far,True,u_e,0.0001,target,0,0,0,5
+B,nuScenes distance,far->far,True,u_e,0.001,target,0,0,0,5
+B,nuScenes distance,far->far,True,u_e,0.01,target,0,0,0,5
+B,nuScenes distance,far->far,True,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes distance,far->far,True,u_e,0.1,exploratory,5,0,0,0
+B,nuScenes distance,far->far,True,u_s,0.0001,target,0,0,0,5
+B,nuScenes distance,far->far,True,u_s,0.001,target,0,0,0,5
+B,nuScenes distance,far->far,True,u_s,0.01,target,0,0,0,5
+B,nuScenes distance,far->far,True,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes distance,far->far,True,u_s,0.1,exploratory,5,0,0,0
+B,nuScenes distance,far->near,False,u_e,0.0001,target,0,0,0,5
+B,nuScenes distance,far->near,False,u_e,0.001,target,0,0,0,5
+B,nuScenes distance,far->near,False,u_e,0.01,target,0,0,0,5
+B,nuScenes distance,far->near,False,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes distance,far->near,False,u_e,0.1,exploratory,5,0,0,0
+B,nuScenes distance,far->near,False,u_s,0.0001,target,0,0,0,5
+B,nuScenes distance,far->near,False,u_s,0.001,target,0,0,0,5
+B,nuScenes distance,far->near,False,u_s,0.01,target,0,0,0,5
+B,nuScenes distance,far->near,False,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes distance,far->near,False,u_s,0.1,exploratory,5,0,0,0
+B,nuScenes distance,near->far,False,u_e,0.0001,target,0,0,0,5
+B,nuScenes distance,near->far,False,u_e,0.001,target,0,0,0,5
+B,nuScenes distance,near->far,False,u_e,0.01,target,0,0,0,5
+B,nuScenes distance,near->far,False,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes distance,near->far,False,u_e,0.1,exploratory,4,0,0,1
+B,nuScenes distance,near->far,False,u_s,0.0001,target,0,0,0,5
+B,nuScenes distance,near->far,False,u_s,0.001,target,0,0,0,5
+B,nuScenes distance,near->far,False,u_s,0.01,target,0,0,0,5
+B,nuScenes distance,near->far,False,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes distance,near->far,False,u_s,0.1,exploratory,2,0,0,3
+B,nuScenes distance,near->near,True,u_e,0.0001,target,0,0,0,5
+B,nuScenes distance,near->near,True,u_e,0.001,target,0,0,0,5
+B,nuScenes distance,near->near,True,u_e,0.01,target,0,0,0,5
+B,nuScenes distance,near->near,True,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes distance,near->near,True,u_e,0.1,exploratory,4,0,0,1
+B,nuScenes distance,near->near,True,u_s,0.0001,target,0,0,0,5
+B,nuScenes distance,near->near,True,u_s,0.001,target,0,0,0,5
+B,nuScenes distance,near->near,True,u_s,0.01,target,0,0,0,5
+B,nuScenes distance,near->near,True,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes distance,near->near,True,u_s,0.1,exploratory,2,0,0,3
+B,nuScenes weather,clear->clear,True,u_e,0.0001,target,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_e,0.001,target,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_e,0.01,target,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_e,0.1,exploratory,3,0,2,0
+B,nuScenes weather,clear->clear,True,u_s,0.0001,target,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_s,0.001,target,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_s,0.01,target,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes weather,clear->clear,True,u_s,0.1,exploratory,5,0,0,0
+B,nuScenes weather,clear->rain,False,u_e,0.0001,target,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_e,0.001,target,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_e,0.01,target,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_e,0.1,exploratory,0,0,5,0
+B,nuScenes weather,clear->rain,False,u_s,0.0001,target,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_s,0.001,target,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_s,0.01,target,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes weather,clear->rain,False,u_s,0.1,exploratory,0,0,5,0
+B,nuScenes weather,rain->clear,False,u_e,0.0001,target,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_e,0.001,target,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_e,0.01,target,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_e,0.1,exploratory,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_s,0.0001,target,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_s,0.001,target,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_s,0.01,target,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes weather,rain->clear,False,u_s,0.1,exploratory,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_e,0.0001,target,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_e,0.001,target,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_e,0.01,target,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_e,0.05,exploratory,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_e,0.1,exploratory,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_s,0.0001,target,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_s,0.001,target,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_s,0.01,target,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_s,0.05,exploratory,0,0,0,5
+B,nuScenes weather,rain->rain,True,u_s,0.1,exploratory,0,0,0,5

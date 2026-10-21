@@ -87,6 +87,7 @@ MANIFEST.sha256  SHA-256 of every file
 | m7 | nuScenes distance and rain with the parts drawn by recorded scene | [`results/m7_scene_split`](results/m7_scene_split/) |
 | m8 | KITTI distance and change of dataset with the KITTI parts drawn by recorded drive | [`results/m8_kitti_drive_split`](results/m8_kitti_drive_split/) |
 | supporting | retention per applicable cell, causes, common threshold, recall, annotation checks | [`results/supporting_analyses`](results/supporting_analyses/) |
+| post hoc | added after the parameters were fixed: sequence-level test of the per-frame FAP (Method A), betting interval (Method B), sequence-bootstrap AUROC intervals, epoch check | [`results/post_hoc`](results/post_hoc/) |
 
 ## Quick start
 
@@ -123,5 +124,5 @@ See [`CITATION.cff`](CITATION.cff). The entry will be completed with the venue o
 
 ## Licence
 
-Code (`analysis/`, `tools/`): MIT, see [`LICENSE`](LICENSE). Results and documentation (`results/`, `configs/`,
+Code (`analysis/`, `tools/`, `results/post_hoc/code/`): MIT, see [`LICENSE`](LICENSE). Results and documentation (`results/`, `configs/`,
 `docs/`): CC BY-NC-SA 4.0, see [`LICENSE-results`](LICENSE-results).

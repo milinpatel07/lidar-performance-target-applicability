@@ -44,7 +44,9 @@ reproduces a recorded run only if its inputs have these hashes.
 
 ## Where the detector outputs come from
 
-The ensembles were trained with OpenPCDet (four seeds per dataset, score cut-off 0.1) and their outputs merged as
+The ensembles were trained with OpenPCDet (four seeds per dataset, score cut-off 0.1). The nuScenes members were trained
+for about 10 epochs: their configurations set 20 epochs, but training ended after epoch 10, and the checkpoints used for
+inference hold about 10 epochs ([`results/post_hoc/epoch_check.txt`](../results/post_hoc/epoch_check.txt)). The outputs were merged as
 described in [`method.md`](method.md#1-detector-detections-and-indicators). The two indicators and the merge follow
 the conference paper that introduced them:
 

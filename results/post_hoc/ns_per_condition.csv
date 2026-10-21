@@ -1,0 +1,41 @@
+pair,condition,split,sequences,N_s_min,N_s_median,N_s_max,frames,cut_m
+KITTI distance,near,0,44,1,8.0,380,3322,35.25634391817661
+KITTI distance,far,0,26,1,80.0,557,3382,35.25634391817661
+KITTI distance,near,1,44,1,8.0,369,3301,34.78686892825248
+KITTI distance,far,1,26,1,80.0,557,3397,34.78686892825248
+KITTI distance,near,2,35,1,6.0,284,2823,26.589161979842096
+KITTI distance,far,2,44,1,9.0,569,3595,26.589161979842096
+KITTI distance,near,3,43,1,9.0,343,3247,33.473318346228496
+KITTI distance,far,3,26,1,80.5,565,3424,33.473318346228496
+KITTI distance,near,4,44,1,8.0,374,3310,34.9952517673736
+KITTI distance,far,4,26,1,80.0,557,3391,34.9952517673736
+nuScenes distance,near,0,149,3,37.0,41,4754,19.888035891343545
+nuScenes distance,far,0,150,4,38.0,41,5172,19.888035891343545
+nuScenes distance,near,1,149,3,37.0,41,4766,19.97535262559952
+nuScenes distance,far,1,150,4,38.0,41,5165,19.97535262559952
+nuScenes distance,near,2,149,6,38.0,41,4892,21.210827150534072
+nuScenes distance,far,2,150,4,37.0,41,5074,21.210827150534072
+nuScenes distance,near,3,149,2,35.0,41,4508,18.15440840995343
+nuScenes distance,far,3,150,4,39.0,41,5291,18.15440840995343
+nuScenes distance,near,4,149,3,37.0,41,4728,19.69407680023256
+nuScenes distance,far,4,150,4,38.0,41,5185,19.69407680023256
+nuScenes weather,clear,0,111,12,40.0,41,4235,
+nuScenes weather,rain,0,24,19,40.0,41,910,
+nuScenes weather,clear,1,111,12,40.0,41,4235,
+nuScenes weather,rain,1,24,19,40.0,41,910,
+nuScenes weather,clear,2,111,12,40.0,41,4235,
+nuScenes weather,rain,2,24,19,40.0,41,910,
+nuScenes weather,clear,3,111,12,40.0,41,4235,
+nuScenes weather,rain,3,24,19,40.0,41,910,
+nuScenes weather,clear,4,111,12,40.0,41,4235,
+nuScenes weather,rain,4,24,19,40.0,41,910,
+change of dataset and detector,KITTI,0,45,1,9.0,571,3696,
+change of dataset and detector,nuScenes,0,150,12,40.0,41,5699,
+change of dataset and detector,KITTI,1,45,1,9.0,571,3696,
+change of dataset and detector,nuScenes,1,150,12,40.0,41,5699,
+change of dataset and detector,KITTI,2,45,1,9.0,571,3696,
+change of dataset and detector,nuScenes,2,150,12,40.0,41,5699,
+change of dataset and detector,KITTI,3,45,1,9.0,571,3696,
+change of dataset and detector,nuScenes,3,150,12,40.0,41,5699,
+change of dataset and detector,KITTI,4,45,1,9.0,571,3696,
+change of dataset and detector,nuScenes,4,150,12,40.0,41,5699,
