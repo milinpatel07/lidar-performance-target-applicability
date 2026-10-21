@@ -1,0 +1,161 @@
+setting,division,unit,indicator,alpha,direction,applicable,not_applicable,not_determined,no_threshold
+KITTI distance,by drive,drive,u_e,0.0001,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.0001,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.0001,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.0001,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.001,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.001,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.001,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.001,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.01,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.01,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.01,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.01,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.05,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.05,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.05,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.05,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.1,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.1,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.1,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_e,0.1,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.0001,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.0001,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.0001,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.0001,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.001,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.001,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.001,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.001,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.01,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.01,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.01,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.01,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.05,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.05,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.05,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.05,near -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.1,far -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.1,far -> near,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.1,near -> far,0,0,0,5
+KITTI distance,by drive,drive,u_s,0.1,near -> near,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.0001,far -> far,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.0001,far -> near,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.0001,near -> far,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.0001,near -> near,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.001,far -> far,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.001,far -> near,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.001,near -> far,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.001,near -> near,0,0,0,5
+KITTI distance,by drive,frame,u_e,0.01,far -> far,2,0,2,1
+KITTI distance,by drive,frame,u_e,0.01,far -> near,0,0,4,1
+KITTI distance,by drive,frame,u_e,0.01,near -> far,2,0,2,1
+KITTI distance,by drive,frame,u_e,0.01,near -> near,2,0,2,1
+KITTI distance,by drive,frame,u_e,0.05,far -> far,2,0,2,1
+KITTI distance,by drive,frame,u_e,0.05,far -> near,4,0,0,1
+KITTI distance,by drive,frame,u_e,0.05,near -> far,0,3,2,0
+KITTI distance,by drive,frame,u_e,0.05,near -> near,3,0,2,0
+KITTI distance,by drive,frame,u_e,0.1,far -> far,3,1,1,0
+KITTI distance,by drive,frame,u_e,0.1,far -> near,5,0,0,0
+KITTI distance,by drive,frame,u_e,0.1,near -> far,0,5,0,0
+KITTI distance,by drive,frame,u_e,0.1,near -> near,3,0,2,0
+KITTI distance,by drive,frame,u_s,0.0001,far -> far,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.0001,far -> near,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.0001,near -> far,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.0001,near -> near,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.001,far -> far,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.001,far -> near,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.001,near -> far,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.001,near -> near,0,0,0,5
+KITTI distance,by drive,frame,u_s,0.01,far -> far,2,0,2,1
+KITTI distance,by drive,frame,u_s,0.01,far -> near,3,0,1,1
+KITTI distance,by drive,frame,u_s,0.01,near -> far,1,1,2,1
+KITTI distance,by drive,frame,u_s,0.01,near -> near,2,0,2,1
+KITTI distance,by drive,frame,u_s,0.05,far -> far,0,0,4,1
+KITTI distance,by drive,frame,u_s,0.05,far -> near,4,0,0,1
+KITTI distance,by drive,frame,u_s,0.05,near -> far,0,5,0,0
+KITTI distance,by drive,frame,u_s,0.05,near -> near,3,0,2,0
+KITTI distance,by drive,frame,u_s,0.1,far -> far,2,0,3,0
+KITTI distance,by drive,frame,u_s,0.1,far -> near,5,0,0,0
+KITTI distance,by drive,frame,u_s,0.1,near -> far,0,5,0,0
+KITTI distance,by drive,frame,u_s,0.1,near -> near,3,0,2,0
+change of dataset,by drive,drive,u_e,0.0001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.0001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.0001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.0001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.01,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.01,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.01,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.01,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.05,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.05,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.05,nuscenes -> kitti,0,0,5,0
+change of dataset,by drive,drive,u_e,0.05,nuscenes -> nuscenes,1,0,4,0
+change of dataset,by drive,drive,u_e,0.1,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_e,0.1,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_e,0.1,nuscenes -> kitti,0,0,5,0
+change of dataset,by drive,drive,u_e,0.1,nuscenes -> nuscenes,2,0,3,0
+change of dataset,by drive,drive,u_s,0.0001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.0001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.0001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.0001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.01,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.01,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.01,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.01,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.05,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.05,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.05,nuscenes -> kitti,0,0,5,0
+change of dataset,by drive,drive,u_s,0.05,nuscenes -> nuscenes,0,0,5,0
+change of dataset,by drive,drive,u_s,0.1,kitti -> kitti,0,0,0,5
+change of dataset,by drive,drive,u_s,0.1,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,drive,u_s,0.1,nuscenes -> kitti,0,0,5,0
+change of dataset,by drive,drive,u_s,0.1,nuscenes -> nuscenes,3,0,2,0
+change of dataset,by drive,frame,u_e,0.0001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_e,0.0001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_e,0.0001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_e,0.0001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_e,0.001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_e,0.001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_e,0.001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_e,0.001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_e,0.01,kitti -> kitti,3,0,2,0
+change of dataset,by drive,frame,u_e,0.01,kitti -> nuscenes,2,0,3,0
+change of dataset,by drive,frame,u_e,0.01,nuscenes -> kitti,4,0,1,0
+change of dataset,by drive,frame,u_e,0.01,nuscenes -> nuscenes,4,1,0,0
+change of dataset,by drive,frame,u_e,0.05,kitti -> kitti,3,0,2,0
+change of dataset,by drive,frame,u_e,0.05,kitti -> nuscenes,2,2,1,0
+change of dataset,by drive,frame,u_e,0.05,nuscenes -> kitti,5,0,0,0
+change of dataset,by drive,frame,u_e,0.05,nuscenes -> nuscenes,3,1,1,0
+change of dataset,by drive,frame,u_e,0.1,kitti -> kitti,3,1,1,0
+change of dataset,by drive,frame,u_e,0.1,kitti -> nuscenes,2,1,2,0
+change of dataset,by drive,frame,u_e,0.1,nuscenes -> kitti,4,0,1,0
+change of dataset,by drive,frame,u_e,0.1,nuscenes -> nuscenes,2,1,2,0
+change of dataset,by drive,frame,u_s,0.0001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_s,0.0001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_s,0.0001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_s,0.0001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_s,0.001,kitti -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_s,0.001,kitti -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_s,0.001,nuscenes -> kitti,0,0,0,5
+change of dataset,by drive,frame,u_s,0.001,nuscenes -> nuscenes,0,0,0,5
+change of dataset,by drive,frame,u_s,0.01,kitti -> kitti,4,0,1,0
+change of dataset,by drive,frame,u_s,0.01,kitti -> nuscenes,5,0,0,0
+change of dataset,by drive,frame,u_s,0.01,nuscenes -> kitti,0,5,0,0
+change of dataset,by drive,frame,u_s,0.01,nuscenes -> nuscenes,1,0,4,0
+change of dataset,by drive,frame,u_s,0.05,kitti -> kitti,3,0,2,0
+change of dataset,by drive,frame,u_s,0.05,kitti -> nuscenes,5,0,0,0
+change of dataset,by drive,frame,u_s,0.05,nuscenes -> kitti,0,5,0,0
+change of dataset,by drive,frame,u_s,0.05,nuscenes -> nuscenes,3,1,1,0
+change of dataset,by drive,frame,u_s,0.1,kitti -> kitti,4,0,1,0
+change of dataset,by drive,frame,u_s,0.1,kitti -> nuscenes,5,0,0,0
+change of dataset,by drive,frame,u_s,0.1,nuscenes -> kitti,0,5,0,0
+change of dataset,by drive,frame,u_s,0.1,nuscenes -> nuscenes,4,0,1,0

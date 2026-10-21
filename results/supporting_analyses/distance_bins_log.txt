@@ -1,0 +1,49 @@
+==========
+==========
+==== causes KITTI
+AUROC near: 0.915
+AUROC far: 0.845
+share wrong: near 0.336, far 0.763
+bin    0-5    m: accepted correct    77, wrong    14, share wrong 0.154
+bin    5-10   m: accepted correct   467, wrong    31, share wrong 0.062
+bin   10-15   m: accepted correct   718, wrong    18, share wrong 0.024
+bin   15-20   m: accepted correct   689, wrong    41, share wrong 0.056
+bin   20-25   m: accepted correct   653, wrong    51, share wrong 0.072
+bin   25-30   m: accepted correct   576, wrong   104, share wrong 0.153
+bin   30-35   m: accepted correct   476, wrong   137, share wrong 0.223
+bin   35-40   m: accepted correct   318, wrong   154, share wrong 0.326
+bin   40-45   m: accepted correct   238, wrong   134, share wrong 0.360
+bin   45-50   m: accepted correct   167, wrong   104, share wrong 0.384
+bin   50-55   m: accepted correct    67, wrong    85, share wrong 0.559
+bin   55-60   m: accepted correct    42, wrong    54, share wrong 0.562
+bin   60-65   m: accepted correct    24, wrong    31, share wrong 0.564
+bin   65-70   m: accepted correct     9, wrong    16, share wrong (0.640, not printed: < 30)
+bin   70-75   m: accepted correct     0, wrong     3, share wrong (1.000, not printed: < 30)
+make_figures v13.4 (2026-10-12) wrote release/figures/fig_causes_kitti.pdf
+==== causes nuScenes
+AUROC near: 0.729
+AUROC far: 0.655
+share wrong: near 0.189, far 0.516
+bin    0-5    m: accepted correct   325, wrong     6, share wrong 0.018
+bin    5-10   m: accepted correct  1619, wrong   107, share wrong 0.062
+bin   10-15   m: accepted correct  1494, wrong   169, share wrong 0.102
+bin   15-20   m: accepted correct  1134, wrong   200, share wrong 0.150
+bin   20-25   m: accepted correct   663, wrong   172, share wrong 0.206
+bin   25-30   m: accepted correct   358, wrong   150, share wrong 0.295
+bin   30-35   m: accepted correct   132, wrong    90, share wrong 0.405
+bin   35-40   m: accepted correct    42, wrong    55, share wrong 0.567
+bin   40-45   m: accepted correct    19, wrong    33, share wrong 0.635
+bin   45-50   m: accepted correct     6, wrong    22, share wrong (0.786, not printed: < 30)
+bin   50-55   m: accepted correct     0, wrong    10, share wrong (1.000, not printed: < 30)
+bin   55-60   m: accepted correct     0, wrong     1, share wrong (1.000, not printed: < 30)
+bin   60-65   m: accepted correct     0, wrong     2, share wrong (1.000, not printed: < 30)
+make_figures v13.4 (2026-10-12) wrote release/figures/fig_causes_nuscenes.pdf
+==== retention gap
+GAP as_run u_s alpha 0.01 cut 35.685 tau {'near': 0.08801, 'far': 0.08801, 'star': 0.08161} {'near': '0.0596 [0.0526, 0.0665]', 'far': '0.0174 [0.0107, 0.0248]'} R near->near 0.1381 far->far 0.0272
+GAP as_run u_s alpha 0.1 cut 35.685 tau {'near': 0.1478, 'far': 0.12275, 'star': 0.12275} {'near': '0.2130 [0.2005, 0.2257]', 'far': '0.0000 [0.0000, 0.0000]'} R near->near 0.7687 far->far 0.2534
+GAP as_run u_e alpha 0.01 cut 35.685 tau {'near': 0.10188, 'far': 0.15923, 'star': 0.10188} {'near': '0.0000 [0.0000, 0.0000]', 'far': '0.0756 [0.0620, 0.0898]'} R near->near 0.3160 far->far 0.0817
+GAP as_run u_e alpha 0.1 cut 35.685 tau {'near': 0.44104, 'far': 0.35915, 'star': 0.35915} {'near': '0.0423 [0.0363, 0.0489]', 'far': '0.0000 [0.0000, 0.0000]'} R near->near 0.9372 far->far 0.5393
+GAP kitti_rule u_s alpha 0.01 cut 34.806 tau {'near': 0.09323, 'far': 0.08901, 'star': 0.08901} {'near': '0.0496 [0.0432, 0.0564]', 'far': '0.0000 [0.0000, 0.0000]'} R near->near 0.1995 far->far 0.0297
+GAP kitti_rule u_s alpha 0.1 cut 34.806 tau {'near': 0.16931, 'far': 0.12695, 'star': 0.12695} {'near': '0.2615 [0.2478, 0.2752]', 'far': '0.0000 [0.0000, 0.0000]'} R near->near 0.8659 far->far 0.3017
+GAP kitti_rule u_e alpha 0.01 cut 34.806 tau {'near': 0.13538, 'far': 0.17494, 'star': 0.13538} {'near': '0.0000 [0.0000, 0.0000]', 'far': '0.0722 [0.0596, 0.0860]'} R near->near 0.5204 far->far 0.1211
+GAP kitti_rule u_e alpha 0.1 cut 34.806 tau {'near': 0.54977, 'far': 0.37836, 'star': 0.37836} {'near': '0.0682 [0.0604, 0.0763]', 'far': '0.0000 [0.0000, 0.0000]'} R near->near 0.9742 far->far 0.5907

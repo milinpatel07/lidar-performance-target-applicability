@@ -1,0 +1,17 @@
+v25_fig1_two_panel.py (v25f1tp-0.5); figure release/figures/v25/fig_scenes.pdf, 122 x 95 mm
+
+(a) KITTI frame 005345 (drive 2011_09_26_drive_0022, raw frame 521); indicator u_s; split 0; limit 0.1 (exploratory)
+    threshold selected at near distance, transferred, decides acceptance: 0.16931
+    threshold selected at far distance: 0.12695
+    car detections: accepted correct 5, accepted wrong 1, rejected 1, not scored (KITTI rule) 0
+    near/far boundary 34.806 m
+    accepted wrong detection (numbered 2): distance 55.22 m, u_s 0.1454, nearest annotated car (centre distance 30.18 m): 3D IoU 0.000; member yaw spread 3.1 deg
+    numbered 1: accepted correct, distance 8.16 m, u_s 0.1012
+
+(b) nuScenes frame f0f7fec4524045f4a2f44866d410ec84 (scene-0626); indicator u_e; split 0; limit 0.1 (exploratory)
+    threshold selected in clear weather, transferred, decides acceptance: 0.46385
+    threshold selected in rain: 0.26474
+    car detections: accepted correct 5, accepted wrong 1, rejected 2, not scored (KITTI rule) 0
+    accepted wrong detection (numbered 2): distance 25.06 m, u_e 0.4281, nearest annotated car (centre distance 0.26 m): 3D IoU 0.265; largest 3D IoU with any annotation (all classes) 0.265; member yaw spread 2.1 deg
+    numbered 1: accepted correct, distance 13.98 m, u_e 0.1701
+    selected from release/results/v25/fig1b_candidates.csv (rank 2 of 2)

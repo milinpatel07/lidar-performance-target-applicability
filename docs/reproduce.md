@@ -1,9 +1,26 @@
 # Reproducing the results
 
+Three levels, from the cheapest to the most complete ([`pipeline.md`](pipeline.md) shows which script reads and writes
+what): (1) the checks, which need only this repository (sections 0, 1 and 6); (2) tables and figures from the recorded
+results, which need only this repository and pdflatex (section 5); (3) the experiment runs, which need the datasets and the
+detector outputs ([`data.md`](data.md); sections 2 to 4 and 7).
+
+## 0. Checks without data
+
+```bash
+pip install -r requirements.txt
+sha256sum -c MANIFEST.sha256
+python3 tools/check_paper_numbers.py                      # numbers of the paper against results/
+python3 tools/supplementary/make_supplementary.py --check  # numbers of the supplementary against results/
+python3 tools/build_explorer_data.py --check              # data of the results browser against results/
+```
+
+These run in GitHub Actions on every push ([`../.github/workflows/checks.yml`](../.github/workflows/checks.yml)).
+
 ## Environment
 
-The recorded runs used Python 3.10.13, NumPy 1.26.3, pandas 2.2.3 and Matplotlib 3.10.0 (`provenance.json` of each
-run records the Python and NumPy versions). The rotated box overlap uses the polygon clipping backend of m1
+The recorded runs used a container based on the NVIDIA CUDA 12.1.1 image (no GPU used) with Python 3.10.13, NumPy 1.26.3,
+pandas 2.2.3 and Matplotlib 3.10.0 (`provenance.json` of each run records the Python and NumPy versions). The rotated box overlap uses the polygon clipping backend of m1
 (`--bev auto` selects it when Shapely is not installed, as in the recorded runs). The [`Dockerfile`](../Dockerfile)
 builds this environment:
 
@@ -41,7 +58,7 @@ python3 m4_dataset_shift.py    --rum /rum --out ../work/m4
 python3 m6_protocol_seeds_weather.py --rum /rum --out ../work/m6 --nusc-meta /nuscenes/v1.0-trainval
 ```
 
-Split by recorded nuScenes scene (m7): the frame split must first reproduce the recorded results.
+Division by recorded nuScenes scene (m7): the division by frame must first reproduce the recorded results.
 
 ```bash
 python3 m3_range_nuscenes.py --rum /rum --out ../work/m7/m3_frame --split frame
@@ -53,7 +70,7 @@ python3 m7_scene_split_report.py collect --run ../work/m7
 ```
 
 Split by recorded KITTI drive (m8). The devkit folder holds `mapping/train_rand.txt` and `mapping/train_mapping.txt`
-from `devkit_object.zip` of the KITTI object benchmark. The script reruns the frame split first and stops unless it
+from `devkit_object.zip` of the KITTI object benchmark. The script reruns the division by frame first and stops unless it
 equals the recorded m6 results byte for byte with equal input hashes.
 
 ```bash
@@ -78,7 +95,7 @@ python3 tools/supporting/annotation_checks.py
 python3 tools/supporting/frame_candidates.py                 # needs the three before it
 python3 tools/figures/frame_figure.py
 cd work/data && python3 ../../tools/figures/make_figures.py causes --csv kitti_distance_split0.csv \
-    --tau tau_kitti_distance_split0.json --indicator u_s --out ../figures/fig_causes_kitti.pdf
+    --tau tau_kitti_distance_split0.json --indicator u_s --out ../figures/fig_causes_kitti.pdf && cd ../..
 ```
 
 Each supporting script first recomputes the split-0 cells of every setting from the cache and compares them with
@@ -94,4 +111,34 @@ diff work/m3/matrix_all_variants.csv results/m3_range_nuscenes/matrix_all_varian
 diff -r work/supporting_analyses results/supporting_analyses
 ```
 
-[`analysis/SCRIPT_VERSIONS.md`](../analysis/SCRIPT_VERSIONS.md) names the script file behind each recorded run.
+[`analysis/SCRIPT_VERSIONS.md`](../analysis/SCRIPT_VERSIONS.md) names the script file behind each recorded run. Files
+written by a rerun differ from the recorded ones in their time stamps (`provenance.json` fields `started`, `finished`)
+and, for the `*_log.txt` files, in run times; compare the CSV and JSON result files.
+
+## 5. Figures and supplementary material from the recorded results (no data)
+
+```bash
+mkdir -p work/figures
+python3 tools/figures/paper/make_fig_outcomes.py results/supporting_analyses/retention_applicable_cells.csv work/figures/fig_outcomes.tex
+python3 tools/figures/paper/make_fig_separation.py results/supporting_analyses/fig_separation_curves.csv work/figures/fig_separation.pdf
+python3 tools/figures/supplementary/supplementary_figures.py      # rewrites docs/supplementary/figures/
+python3 tools/supplementary/make_supplementary.py && cd docs/supplementary && pdflatex supplementary.tex && pdflatex supplementary.tex
+```
+
+`tools/figures/paper/README.md` describes every figure of the paper and its inputs. The TikZ figures need pdflatex with
+TikZ, pgfplots and the newtx fonts.
+
+## 6. Results browser and notebook (no data)
+
+```bash
+python3 tools/build_explorer_data.py          # explorer/data/outcomes.json
+python3 -m http.server 8000                   # then open http://localhost:8000/explorer/
+python3 -m nbconvert --to notebook --execute --inplace notebooks/explore_results.ipynb
+```
+
+## 7. Post-hoc analyses (data needed)
+
+The scripts in [`../results/post_hoc/code/`](../results/post_hoc/code/) need the per-detection cache, the nuScenes
+metadata and the KITTI devkit mapping files, and `pip install -r requirements-posthoc.txt`. They are published as they
+ran; [`../results/post_hoc/README.md`](../results/post_hoc/README.md) maps their path constants to this repository.
+Before computing a new number, `seq_ratio.py` recomputes 1,600 recorded rows and stops if one differs.

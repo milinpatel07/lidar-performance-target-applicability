@@ -1,0 +1,3 @@
+rank,token,where,dist,u_e,yaw_spread_deg,iou_all,iou_nearest_car,acc_correct,rejected,box_h_px
+1,8b3831ab4468477693c8c93a09aec53d,scene-0909,37.4419,0.4631,6.0676,0.0000,0.0000,6,3,72.3139
+2,f0f7fec4524045f4a2f44866d410ec84,scene-0626,25.0575,0.4281,2.1403,0.2647,0.2647,5,2,102.0659

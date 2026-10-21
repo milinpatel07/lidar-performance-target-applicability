@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outcome explorer</title>
+<meta name="description" content="Outcomes of performance targets transferred between conditions in LiDAR object detection, read from the recorded result files.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Outcome explorer</h1>
+  <p>Each cell of the grid is one threshold τ selected in the <strong>condition of selection</strong> so that the
+  false acceptance proportion (FAP) stays at or below the limit α, then tested on the <strong>test part</strong> of
+  the <strong>condition of use</strong>. The Hoeffding-Bentkus interval [L, U] of the FAP at 95 % confidence decides
+  the outcome: <strong>applicable</strong> if U ≤ α, <strong>not applicable</strong> if L &gt; α,
+  <strong>not determined</strong> otherwise, and <strong>no threshold selected</strong> if no candidate passed in the
+  condition of selection. Each cell shows the five splits 0 to 4.</p>
+  <p>Terms: <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/glossary.md">glossary</a>. Study, data and method:
+  <a href="https://github.com/milinpatel07/lidar-performance-target-applicability">repository README</a>.</p>
+</header>
+
+<main>
+<section aria-label="Filters" class="filters">
+  <label>Division and unit
+    <select id="f-view">
+      <option value="frame">division by frame, unit frame</option>
+      <option value="seq_frame">division by recorded sequence, unit frame</option>
+      <option value="seq_seq">division by recorded sequence, unit recorded sequence</option>
+      <option value="postA">post-hoc Method A (unit recorded sequence)</option>
+      <option value="postB">post-hoc Method B (unit recorded sequence)</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="f-rule" checked> KITTI rule</label>
+  <label>Indicator
+    <select id="f-ind">
+      <option value="both">u_s (spatial) and u_e (existence)</option>
+      <option value="u_s">u_s (spatial)</option>
+      <option value="u_e">u_e (existence)</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="f-own"> include own condition</label>
+  <p id="f-note" class="note" aria-live="polite"></p>
+</section>
+
+<section aria-label="Legend" class="legend" id="legend"></section>
+
+<section aria-label="Outcome grid">
+  <p id="status" role="status">Loading data/outcomes.json ...</p>
+  <div class="scroll"><table id="grid" class="grid"></table></div>
+</section>
+
+<section id="detail" aria-live="polite" hidden>
+  <h2 id="detail-title" tabindex="-1"></h2>
+  <div class="scroll"><table id="detail-table" class="detail"></table></div>
+  <p id="detail-note" class="note"></p>
+</section>
+</main>
+
+<footer>
+  <h2>About these data</h2>
+  <ul>
+    <li>All values are read from <a href="data/outcomes.json">data/outcomes.json</a>, which
+    <code>tools/build_explorer_data.py</code> writes from these result files (each detail row links its file and line):
+      <ul>
+        <li>division by frame: <code>results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv</code> (KITTI
+        distance), <code>results/m7_scene_split/m7_scene_split.csv</code> (variant <code>frame</code>: nuScenes
+        distance and weather), <code>results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv</code> (change of
+        dataset and detector);</li>
+        <li>division by recorded sequence: <code>results/m7_scene_split/m7_scene_split.csv</code> (variants
+        <code>scene_frame_unit</code>, <code>scene_scene_unit</code>),
+        <code>results/m8_kitti_drive_split/A_kitti_distance_drive.csv</code> and
+        <code>B_dataset_drive.csv</code> (<code>hb_unit</code> frame or drive);</li>
+        <li>post-hoc: <code>results/post_hoc/outcomes.csv</code> (method A or B).</li>
+      </ul></li>
+    <li>Target limits are 10⁻², 10⁻³ and 10⁻⁴, fixed before the first run. The exploratory limits 0.05† and 0.1†
+    were fixed at the same time to show which outcomes the data can decide; they are not safety targets.</li>
+    <li>Frames of one recorded sequence (KITTI drive, nuScenes scene) are not independent of each other. The division
+    by recorded sequence with the recorded sequence as unit treats the sequence as the independent unit.</li>
+    <li>Post-hoc entries (Methods A and B) were added after the parameters of the study were fixed and the outcomes
+    were known; they are not part of the predictions fixed in advance. For them, the estimate and [L, U] refer to the
+    transformed sequence loss Y, compared with α (see <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/results/post_hoc/README.md">results/post_hoc</a>).
+    They use the KITTI rule.</li>
+    <li>KITTI rule: wrong KITTI detections inside a DontCare region or matching a van are excluded. Without it, the
+    KITTI rows show the files' <code>as_run</code> rows. The nuScenes rows are the same with or without it.</li>
+    <li>Near distance and clear weather are not triggering conditions; they are the conditions with which the
+    thresholds are compared.</li>
+  </ul>
+  <p id="meta" class="note"></p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

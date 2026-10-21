@@ -9,7 +9,7 @@
 
 The KITTI object frames are mapped to their recorded drives with `mapping/train_rand.txt` and
 `mapping/train_mapping.txt` of the public KITTI object development kit (`devkit_object.zip`); the validation frames
-come from 45 drives, none of which appears in the training half.
+come from 45 drives.
 
 ## What is not included, and why
 
@@ -35,9 +35,9 @@ variable `RUM` for the tools). It holds the outputs of the detector ensembles an
   configs/*.yaml                                          detector configurations (score cut-off, tools only)
 ```
 
-The rain setting and the scene split also read `scene.json` and `sample.json` of nuScenes v1.0-trainval (option
+The weather conditions and the division by recorded scene also read `scene.json` and `sample.json` of nuScenes v1.0-trainval (option
 `--nusc-meta`, or `NUSC_META` for the tools); the frame figure also reads `sample_data.json`, `ego_pose.json` and
-`calibrated_sensor.json`. The KITTI drive split reads the two devkit mapping files (option `--devkit`).
+`calibrated_sensor.json`. The division by recorded KITTI drive reads the two devkit mapping files (option `--devkit`).
 
 [`results/INPUT_HASHES.md`](../results/INPUT_HASHES.md) lists the SHA-256 of every input file of every run. A rerun
 reproduces a recorded run only if its inputs have these hashes.
@@ -55,4 +55,5 @@ the conference paper that introduced them:
 > on Vehicle Technology and Intelligent Transport Systems (VEHITS), pp. 154-167. SciTePress, 2026.
 > [doi:10.5220/0014967200004030](https://doi.org/10.5220/0014967200004030)
 
-The detector outputs are not distributed; to request them for a reproduction, contact the authors.
+The detector outputs are not distributed; to request them for a reproduction, contact the authors
+(milin.patel@hs-kempten.de, rolf.jung@hs-kempten.de).

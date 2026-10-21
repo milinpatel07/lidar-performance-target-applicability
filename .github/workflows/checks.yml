@@ -1,0 +1,30 @@
+# Checks that need no dataset: manifest, every number of the paper and of the supplementary against results/,
+# the data of the results browser, and the self-tests of the statistics.
+name: checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10.13"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Manifest
+        run: sha256sum -c --quiet MANIFEST.sha256
+      - name: Numbers of the paper
+        run: python3 tools/check_paper_numbers.py
+      - name: Numbers of the supplementary material
+        run: python3 tools/supplementary/make_supplementary.py --check
+      - name: Data of the results browser
+        run: python3 tools/build_explorer_data.py --check
+      - name: Self-tests of the statistics
+        working-directory: analysis
+        run: |
+          python3 m1_range_kitti.py --selftest
+          python3 m3_range_nuscenes.py --selftest

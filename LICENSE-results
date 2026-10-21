@@ -1,5 +1,6 @@
 The recorded results, configurations and documentation in this repository (the folders results/, configs/ and
-docs/, and the Markdown files at the top level) are licensed under the Creative Commons
+docs/, and the Markdown files at the top level), except the code in results/post_hoc/code/, which is licensed under the
+MIT licence in LICENSE, are licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
 
 Copyright (c) 2026 Milin Patel and Rolf Jung

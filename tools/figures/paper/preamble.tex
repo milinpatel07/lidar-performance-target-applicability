@@ -1,0 +1,27 @@
+\documentclass[border=1pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,patterns,decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17, scaled ticks=false}
+\usepgfplotslibrary{fillbetween}
+\newcommand{\us}{u_{\mathrm{s}}}
+\newcommand{\ue}{u_{\mathrm{e}}}
+\newcommand{\tc}{\tau_c}
+\newcommand{\tstar}{\tau^{*}}
+\newcommand{\expl}{$^{\dagger}$}
+% text and lines
+\definecolor{ink}{HTML}{1F2937}
+\definecolor{boxfill}{HTML}{F3F4F6}
+% detections (Okabe-Ito): correct blue, wrong vermilion
+\definecolor{corr}{HTML}{0072B2}
+\definecolor{wrng}{HTML}{D55E00}
+% outcomes (colour-blind and greyscale safe)
+\definecolor{appc}{HTML}{009E73}  % applicable
+\definecolor{ndc}{HTML}{F0E442}   % not determined
+\definecolor{nac}{HTML}{882255}   % not applicable
+\definecolor{ntc}{HTML}{FFFFFF}   % no threshold selected
+\definecolor{edge}{HTML}{7F7F7F}
+\definecolor{expfill}{HTML}{EFEFEF}

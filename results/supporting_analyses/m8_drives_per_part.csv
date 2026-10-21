@@ -1,0 +1,41 @@
+setting,seed,part,condition,cut_m,drives,frames
+KITTI distance,0,grid,near,35.256,4,543
+KITTI distance,0,grid,far,35.256,3,537
+KITTI distance,0,select,near,35.256,19,714
+KITTI distance,0,select,far,35.256,11,645
+KITTI distance,0,eval,near,35.256,21,2065
+KITTI distance,0,eval,far,35.256,12,2200
+change of dataset (KITTI side),0,select,KITTI,,22,1144
+change of dataset (KITTI side),0,eval,KITTI,,23,2552
+KITTI distance,1,grid,near,34.787,4,295
+KITTI distance,1,grid,far,34.787,3,291
+KITTI distance,1,select,near,34.787,19,1057
+KITTI distance,1,select,far,34.787,11,1009
+KITTI distance,1,eval,near,34.787,21,1949
+KITTI distance,1,eval,far,34.787,12,2097
+change of dataset (KITTI side),1,select,KITTI,,22,1155
+change of dataset (KITTI side),1,eval,KITTI,,23,2541
+KITTI distance,2,grid,near,26.589,2,260
+KITTI distance,2,grid,far,26.589,4,272
+KITTI distance,2,select,near,26.589,16,1737
+KITTI distance,2,select,far,26.589,20,2336
+KITTI distance,2,eval,near,26.589,17,826
+KITTI distance,2,eval,far,26.589,20,987
+change of dataset (KITTI side),2,select,KITTI,,22,2323
+change of dataset (KITTI side),2,eval,KITTI,,23,1373
+KITTI distance,3,grid,near,33.473,4,297
+KITTI distance,3,grid,far,33.473,2,317
+KITTI distance,3,select,near,33.473,19,1091
+KITTI distance,3,select,far,33.473,12,1021
+KITTI distance,3,eval,near,33.473,20,1859
+KITTI distance,3,eval,far,33.473,12,2086
+change of dataset (KITTI side),3,select,KITTI,,22,1456
+change of dataset (KITTI side),3,eval,KITTI,,23,2240
+KITTI distance,4,grid,near,34.995,4,34
+KITTI distance,4,grid,far,34.995,2,31
+KITTI distance,4,select,near,34.995,20,1303
+KITTI distance,4,select,far,34.995,11,1232
+KITTI distance,4,eval,near,34.995,20,1973
+KITTI distance,4,eval,far,34.995,13,2128
+change of dataset (KITTI side),4,select,KITTI,,22,1412
+change of dataset (KITTI side),4,eval,KITTI,,23,2284
