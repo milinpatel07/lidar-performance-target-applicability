@@ -1,5 +1,8 @@
 # Study protocol
 
+What the case study fixed before any outcome was computed, and how the study departed from it. For readers who check
+whether the outcomes were predicted or found afterwards.
+
 | file | content |
 |---|---|
 | [`predictions_frozen_2026-10-01.md`](predictions_frozen_2026-10-01.md) | the predictions P1 to P5 and the parameters, fixed and recorded with a date in version control on 1 October 2026, before any outcome was computed (paper Sect. 4.4) |

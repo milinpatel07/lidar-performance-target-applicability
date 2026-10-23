@@ -1,26 +1,60 @@
 # Changelog
 
 The recorded results of version 1.0.0 are unchanged in every later version: each result file of `results/` that existed
-in 1.0.0 has the same SHA-256 in every later `MANIFEST.sha256` (only `results/README.md`, a description, was extended).
-Later versions add files and documentation.
+in 1.0.0 has the same SHA-256 in every later version. Up to version 1.2.0 each file also kept its path. Since the layout
+of version 2.0, seven run folders carry names that describe their content; the files in them are byte
+for byte the same, and `tests/check_recorded_results.py` checks every result file of 1.0.0 at its current path against
+the SHA-256 in the manifest of 1.0.0 (kept as `tests/recorded_results_v1.0.0.sha256`). Not checked: `results/README.md`, a
+description that was extended, and `results/INPUT_HASHES.md`, a list that the build writes from the `provenance.json`
+files and whose headings name the run folders. Later versions add files and documentation.
 
-## Unreleased (after 1.2.0; not archived on Zenodo)
+## 2.0 (unreleased; not yet archived on Zenodo)
 
-Aligned with the submitted paper, detector provenance and interactive pages; no recorded result changed.
+Terms of the submitted paper, detector provenance, interactive pages, a Python package, guides and a new folder layout;
+no recorded result changed.
+
+### Layout
+
+| new path | path up to 1.2.0 | content |
+|---|---|---|
+| `site/index.html`, `site/interactive/`, `site/explorer/` | `index.html`, `interactive/`, `explorer/` | everything GitHub Pages serves; published by `.github/workflows/pages.yml`, the public URLs are unchanged |
+| `experiments/` | `analysis/` | experiment scripts m1 to m8, `recorded_versions/`, `SCRIPT_VERSIONS.md` (file names unchanged) |
+| `results/m1_kitti_distance_pilot/` | `results/m1_range_kitti/` | recorded files, byte for byte |
+| `results/m2_kitti_distance/` | `results/m2_indicators_kitti/` | recorded files, byte for byte |
+| `results/m3_nuscenes_distance/` | `results/m3_range_nuscenes/` | recorded files, byte for byte |
+| `results/m4_dataset_change/` | `results/m4_dataset_shift/` | recorded files, byte for byte |
+| `results/m6_five_splits/` | `results/m6_protocol_seeds_weather/` | recorded files, byte for byte |
+| `results/m7_nuscenes_by_scene/` | `results/m7_scene_split/` | recorded files, byte for byte |
+| `results/m8_kitti_by_drive/` | `results/m8_kitti_drive_split/` | recorded files, byte for byte |
+| `tests/` | `tools/check_paper_numbers.py`, `tools/check_export.py`, `tools/test_stats_js.py`, `tools/test_own_data_js.py`, `tools/test_explorer.mjs` | checks and tests; new: `check_recorded_results.py`, `check_links.py` |
+| `tools/build_interactive_data.py` | `interactive/build_data.py` | writes `site/interactive/data/` |
+| `environment/` | `Dockerfile`, `requirements.txt`, `requirements-posthoc.txt` | build the image from the repository root with `docker build -f environment/Dockerfile .` |
+| `docs/README.md` | (new) | the documentation pages in reading order |
+
+Every generator, check, page, notebook path and document refers to the new paths. The data files of the pages and the
+supplementary sources table name the new paths of their source files. Files written by the runs keep the folder names of
+the time they were written.
+
+### Content
 
 - `docs/concept.md`: one explanation of the idea (target chain, statistics, the four changes in the detections, frame and
-  sequence as independent unit, outcome and the measure that follows) and an index from paper sections to files.
+  sequence as independent unit, outcome and the measure that follows); `docs/results.md`: an index from paper sections
+  to files.
 - `docs/provenance.md` and `configs/detectors/`: OpenPCDet version and local changes, the eight member configurations,
   training runs, the checkpoint each member's inference loaded with its SHA-256, and the software environment.
-- `interactive/`: browser pages for the applicability test (calculator that reproduces recorded intervals of the
-  sequence-level evaluation), the independent units, separation and FAP along the recorded curves, and a schematic of
-  the four changes in the detections; `tools/test_stats_js.py` checks the browser statistics against the Python code.
+- `site/interactive/`: browser pages for the applicability test (walk-through, calculator that reproduces recorded
+  intervals of the sequence-level evaluation, the test on own detections), the independent units, separation and FAP
+  along the recorded curves, and a schematic of the four changes in the detections; `tests/test_stats_js.py` and
+  `tests/test_own_data_js.py` check the browser statistics against the Python code.
 - Terms of the submitted paper throughout (frame-level evaluation, sequence-level evaluation, third run, no threshold
   selected when the lowest candidate fails); equation, table and section numbers of the submitted paper in
   `docs/paper_map.md`, which a check now also compares with a fresh generation.
 - Results browser: paper terms, a notice on frame-unit views, the interval against the limit, links to source rows,
   shareable view state and CSV export.
 - Licence scope stated for the data of the pages, the notebook outputs and the detector configurations.
+- `package/`: the applicability test as a Python package (`applicability_test`), tested against
+  `experiments/m1_range_kitti.py`; `docs/guides/`: applying the test to another detector, planning a recording, outcomes
+  in a safety argument.
 
 ## 1.2.0 (2026-10-21)
 

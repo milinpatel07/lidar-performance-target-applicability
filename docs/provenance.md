@@ -64,9 +64,9 @@ earlier record of this is
 | Python and libraries | Python 3.10.13, PyTorch 2.2.1 (CUDA 12.1, cuDNN 8.9.2), torchvision 0.17.1, spconv-cu120 2.3.6, NumPy 1.26.3, SciPy 1.15.2, pandas 2.2.3, Matplotlib 3.10.0, scikit-learn 1.6.1, numba 0.61.0, kornia 0.8.0 |
 | full package list | [`configs/detectors/environment/pip_freeze.txt`](../configs/detectors/environment/pip_freeze.txt) |
 | OpenPCDet | not installed as a package; used from its source tree through `PYTHONPATH` |
-| added for the post-hoc analyses | confseq 0.0.11, dill 0.4.1, multiprocess 0.70.19, pytest 9.1.1 ([`requirements-posthoc.txt`](../requirements-posthoc.txt)) |
+| added for the post-hoc analyses | confseq 0.0.11, dill 0.4.1, multiprocess 0.70.19, pytest 9.1.1 ([`environment/requirements-posthoc.txt`](../environment/requirements-posthoc.txt)) |
 
 The analysis scripts and tools of this repository need only the CPU packages in
-[`requirements.txt`](../requirements.txt) (and the [`Dockerfile`](../Dockerfile)); they read the detector outputs, not
+[`environment/requirements.txt`](../environment/requirements.txt) (and the [`environment/Dockerfile`](../environment/Dockerfile)); they read the detector outputs, not
 the networks. That the training ran in the same image is stated in the project notes but could not be confirmed from
 the machine, because the training container no longer exists.

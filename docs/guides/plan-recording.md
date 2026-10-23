@@ -1,22 +1,21 @@
 # Guide: how much data to record per condition
 
-Before a recording campaign, the number of independent units each condition needs can be computed from two numbers:
-the limit α of the performance target and the error probability δ chosen in the SOTIF analysis. This guide shows the
+This guide is for engineers who plan the recording of data for a SOTIF analysis. Before a recording campaign, the
+number of independent units each condition needs can be computed from two numbers:
+the limit α of the performance target and the error probability δ chosen in the SOTIF analysis. It shows the
 calculation, what counts as an independent unit, and how the KITTI and nuScenes validation sets compare.
 
 ## 1. The zero-failure bound
 
-Units without any false acceptance are the data most favourable to showing that a limit is met. If every per-unit value
-is 0 or 1 and the true false acceptance proportion lies just above α, all of n independent units are free of false
-acceptances with a probability close to (1 − α)ⁿ. Showing that the limit is met at error probability δ′ therefore
-needs at least
+Showing that a limit α on the false acceptance proportion is met at error probability δ′ needs at least
 
 ```
 n ≥ ln δ′ / ln(1 − α)
 ```
 
 independent units per condition and per part (Eq. 5 of the paper), with δ′ = δ for selecting a threshold and
-δ′ = δ/2 for testing it. At δ′ = 0.05 this is about 3/α (the rule of three).
+δ′ = δ/2 for testing it. At δ′ = 0.05 this is about 3/α (the rule of three). The derivation is in
+[`concept.md`, section 5](../concept.md#5-the-independent-unit-frame-or-recorded-sequence).
 
 | limit α | units to select a threshold (δ′ = 0.05) | units to test it (δ′ = 0.025) |
 |---|---|---|
@@ -28,7 +27,7 @@ independent units per condition and per part (Eq. 5 of the paper), with δ′ = 
 
 Selecting and testing in one condition therefore needs at least 667 independent units at 10⁻² (299 + 368), with δ = 0.05.
 
-Three properties matter for planning:
+Three properties of the bound affect the plan:
 
 - The bound is **necessary, not sufficient**. Every unit with a false acceptance raises the number further, so the
   bound is the minimum for a detector that makes no false acceptance at all in the recorded data.
@@ -53,7 +52,7 @@ the sequence-level evaluation, each sequence contributes one value, the mean of 
 the condition. Sequences cut from one continuous log (same vehicle, day and weather) may not be independent either, so
 the number of effectively independent units can lie below the number of sequences.
 
-Practical consequences:
+Consequences for the recording plan:
 
 1. Plan the number of **sequences**, not frames, per condition.
 2. Record each condition in **separate drives**, spread over days, routes and vehicles, so that sequences are not cut from
@@ -71,7 +70,7 @@ limits:
 |---|---|---|
 | nuScenes validation set | 150 scenes in total, 67 or 68 per distance condition in a selection or test part, 9 to 12 rain scenes | 150 scenes: 0.020 when selecting (δ′ = 0.05) |
 | KITTI validation set | 45 drives in total; 20 in a selection part, 21 in a test part | 20 drives: 0.139 when selecting |
-| KITTI as condition of use in the change of dataset | 23 test drives | 0.148 when testing (δ′ = 0.025) |
+| KITTI as condition of use in the change of dataset and detector | 23 test drives | 0.148 when testing (δ′ = 0.025) |
 
 The last column is 1 − δ′^(1/n), the inverse of the bound. With the recorded sequence as the unit, neither dataset can
 show a target limit of 10⁻² to be met in any condition. Counted in frames, every condition reaches the minimum at 10⁻²

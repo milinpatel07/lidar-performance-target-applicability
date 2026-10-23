@@ -14,7 +14,7 @@ retention_and_causes.py - descriptive tables from the recorded results and the c
 Inputs, read-only: results/ (m3, m6, m7 and the m1/m3 summaries), work/cache/tables.pkl and
 work/data/tau_kitti_distance_split0.json (tools/export_tables.py), RUM (detector outputs, info files,
 KITTI calibration and images, detector configs), NUSC_META (scene.json, sample.json).
-Statistics come from m1 in analysis/. Before anything is written, the split-0 cells of every setting are
+Statistics come from m1 in experiments/. Before anything is written, the split-0 cells of every setting are
 recomputed from the cache and compared with the recorded rows; the script stops on any difference.
 Writes only below work/supporting_analyses and work/figures.
 
@@ -60,11 +60,11 @@ C = pickle.load(open(layout.CACHE, "rb"))
 ktab, why, ntab = C["ktab"], C["why"], C["ntab"]
 kign = m6.subset(ktab, why == "")
 wcls, wcounts = m6.nusc_weather_classes(META, ntab["fids"])
-A_rec = pd.read_csv(W / "m6_protocol_seeds_weather/A_kitti_range_protocol.csv")
-B_rec = pd.read_csv(W / "m6_protocol_seeds_weather/B_shift_seeds_protocol.csv")
-C_rec = pd.read_csv(W / "m6_protocol_seeds_weather/C_weather_nuscenes.csv")
-M7 = pd.read_csv(W / "m7_scene_split/m7_scene_split.csv")
-M3 = pd.read_csv(W / "m3_range_nuscenes/matrix_all_variants.csv")
+A_rec = pd.read_csv(W / "m6_five_splits/A_kitti_range_protocol.csv")
+B_rec = pd.read_csv(W / "m6_five_splits/B_shift_seeds_protocol.csv")
+C_rec = pd.read_csv(W / "m6_five_splits/C_weather_nuscenes.csv")
+M7 = pd.read_csv(W / "m7_nuscenes_by_scene/m7_scene_split.csv")
+M3 = pd.read_csv(W / "m3_nuscenes_distance/matrix_all_variants.csv")
 M3 = M3[(M3.iou == "A_iou0.5") & (M3.objects == "car") & (M3.cut_q == 0.5)]
 ALPHAS = m6.ALPHAS
 OUT.mkdir(parents=True, exist_ok=True); FIG.mkdir(parents=True, exist_ok=True)
@@ -212,7 +212,7 @@ for r in rows:
 
 # ------------------------------------------------------------------ common threshold tau*
 lines = []
-for f in (W / "m1_range_kitti/summary.txt", W / "m3_range_nuscenes/summary.txt"):
+for f in (W / "m1_kitti_distance_pilot/summary.txt", W / "m3_nuscenes_distance/summary.txt"):
     lines += [f"{f.relative_to(W)}: {l.strip()}" for l in open(f) if "star" in l or "retention gap" in l or l.startswith("===") or "indicator" in l.lower()]
 (OUT / "common_threshold_recorded.txt").write_text(
     "tau* (common threshold, chain over both distance classes at delta/2) is computed only in m1.analyse (distance settings).\n"

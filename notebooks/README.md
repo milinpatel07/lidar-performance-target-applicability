@@ -1,5 +1,6 @@
 # Notebooks
 
+A notebook for readers who want to work with the recorded results of the case study in Python.
 `explore_results.ipynb` reads only the CSV files in `../results/` and `../docs/results.md`, and needs pandas and
 matplotlib. It (a) rebuilds the outcome table of the frame-level evaluation in `docs/results.md` from the run files and
 asserts that every entry is equal, (b) builds the same table for the third run, the sequence-level evaluation and the

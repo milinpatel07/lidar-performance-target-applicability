@@ -1,8 +1,8 @@
 # Guide: using an outcome in a safety argument
 
-The applicability test gives, for a threshold selected in one condition and used in another, one of four outcomes. This
-guide states what each outcome supports in a SOTIF analysis according to ISO 21448, what it does not support, and the
-measure that follows. It follows Sect. 6.1 and Table 5 of the paper.
+This guide is for safety engineers and assessors who use outcomes of the applicability test as evidence in a SOTIF
+analysis according to ISO 21448. It states the scope of an outcome, what it supports and what it does not, and how to
+report it. It follows Sect. 6.1 and Table 5 of the paper.
 
 ## Scope of an outcome
 
@@ -14,12 +14,14 @@ the limit α derived from the risk allocated to the detector.
 
 ## The four outcomes
 
-| outcome | rule | what it supports | measure that follows |
-|---|---|---|---|
-| **applicable** | U ≤ α | evidence that the target is met in the condition of use with the transferred threshold, at error probability at most δ/2 if the units are independent | use the threshold in the condition of use, provided the share of annotated objects that reach the motion planner meets a second target on missed objects |
-| **not applicable** | L > α | evidence that the target is not met in the condition of use with the transferred threshold, at error probability at most δ/2 if the units are independent | detector supplier: select a threshold in the condition of use with a run-time signal for it, or a common threshold for several conditions; vehicle manufacturer: restrict the operational design domain or the functionality, or add a measure in tracking, fusion or motion planning |
-| **not determined** | L ≤ α < U | no statement: the data do not suffice or the FAP lies close to α | record further independent units (the zero-failure bound gives the minimum) and treat the condition as not verified |
-| **no threshold selected** | the lowest candidate threshold fails in the condition of selection | the target cannot be shown to be met even where the threshold would be selected | record further independent units in the condition of selection, or request a reallocation of α at vehicle level |
+The test gives one of four outcomes: **applicable** (U ≤ α), **not applicable** (L > α), **not determined**
+(L ≤ α < U) and **no threshold selected** (the lowest candidate threshold fails in the condition of selection). What
+each outcome means for the performance target and which measure follows (paper Table 5) is listed in
+[`concept.md`, section 1](../concept.md#1-from-the-acceptance-criterion-to-a-measure). In short: an applicable outcome
+supports using the transferred threshold in the condition of use, together with a second target on missed objects; a
+not applicable outcome calls for a measure by the detector supplier or the vehicle manufacturer; a not determined
+outcome calls for further independent units in the condition of use, and no threshold selected for further units
+in the condition of selection or a reallocation of α at vehicle level.
 
 ## Reading an outcome correctly
 
@@ -38,7 +40,7 @@ the limit α derived from the risk allocated to the detector.
 6. **AUROC is not a substitute for the test.** AUROC measures how well the indicator separates correct from wrong
    detections. It does not change when wrong detections become more frequent, when they are spread differently over
    frames, or when the indicator values shift, and each of these can make a transferred threshold exceed the limit
-   (see [`docs/concept.md`](../concept.md)).
+   (see [`concept.md`, section 4](../concept.md#4-four-changes-in-the-detections-and-which-one-auroc-shows)).
 
 ## Threshold per condition or common threshold
 

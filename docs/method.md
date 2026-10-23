@@ -1,6 +1,7 @@
 # Method: what the scripts compute
 
-This page describes what the scripts in `analysis/` compute and where. The idea behind the test (performance target,
+This page describes what the scripts in `experiments/` compute and where, for readers who check or rerun the case
+study. The idea behind the test (performance target,
 outcomes, the four changes in the detections, the independent unit) is explained once in [`concept.md`](concept.md);
 single terms are in [`glossary.md`](glossary.md). Section numbers, equations and tables refer to the submitted paper.
 
@@ -43,7 +44,7 @@ far detections contributes to both distance conditions.
 
 ## 3. Per-frame share, FAP and retention (paper Sect. 3.1, Eq. 2)
 
-`Cell` in `analysis/m1_range_kitti.py` holds the detections of one condition in one part. With f_c the car detections
+`Cell` in `experiments/m1_range_kitti.py` holds the detections of one condition in one part. With f_c the car detections
 of condition c in frame f:
 
     a_f(τ) = |{d in f_c : u(d) ≤ τ, y(d) = 0}| / |{d in f_c : u(d) ≤ τ}|      (0 if nothing is accepted)
@@ -85,16 +86,16 @@ Different spread over frames can change the FAP at an unchanged pooled share; in
 
 ## 6. Division by recorded sequence and the unit of the test (paper Sect. 3.5, 4.3)
 
-The frame-level evaluation uses `split_frames` and `Cell` as above. The two other evaluations replace them at run time
-(the statistics in m1 are never edited):
+The frame-level evaluation uses `split_frames` and `Cell` as above. The third run and the sequence-level evaluation
+replace them at run time (the statistics in m1 are never edited):
 
 - **third run**: recorded sequences (nuScenes scenes in m3 and m6 with `--split scene`, KITTI drives in m8) are
   permuted with the original fractions, every frame takes its sequence's part, and the frame stays the unit;
 - **sequence-level evaluation**: the same parts with the sequence as unit; the value of a sequence is the mean of a_f
   over its frames in the condition, a sequence without accepted detections contributes 0, and n counts sequences.
 
-The file labels of the three evaluations are listed in [`concept.md`, section 5](concept.md#5-the-independent-unit-frame-or-recorded-sequence),
-together with the zero-failure bound of Eq. 5 (`n_required` in `analysis/m1_range_kitti.py`). A post-hoc test that
+The file labels of the frame-level evaluation, the sequence-level evaluation and the third run are listed in [`concept.md`, section 5](concept.md#5-the-independent-unit-frame-or-recorded-sequence),
+together with the zero-failure bound of Eq. 5 (`n_required` in `experiments/m1_range_kitti.py`). A post-hoc test that
 keeps the per-frame target with the sequence as unit is described in
 [`results/post_hoc/README.md`](../results/post_hoc/README.md).
 

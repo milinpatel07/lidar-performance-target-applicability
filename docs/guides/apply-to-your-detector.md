@@ -1,7 +1,8 @@
 # Guide: applying the test to your own detector
 
-The applicability test needs no access to the detector itself. It works on a table of detections in which each
-detection has a frame, a condition, an uncertainty value and a label correct or wrong. This guide goes from that table
+This guide is for perception developers and safety engineers who want to apply the applicability test to detections
+of their own detector. The test needs no access to the detector itself. It works on a table of detections in which each
+detection has a frame, a condition, an uncertainty value and a label correct or wrong. The guide goes from that table
 to an outcome, with the Python package in [`package/`](../../package/) or, without installing anything, in the browser.
 
 ## 1. Prepare the table
@@ -18,7 +19,7 @@ a score cut-off):
 | `u` | uncertainty indicator value; higher means more uncertain, and a detection is accepted if `u ≤ τ` |
 | `correct` | 1 if the detection matches an annotated object under your matching rule, 0 otherwise |
 
-Decisions that change the result and should be recorded: the matching rule (for example IoU ≥ 0.5), which object
+Choices that change the result and are to be recorded with it: the matching rule (for example IoU ≥ 0.5), which object
 classes count, how unannotated regions are treated, and the indicator.
 
 ## 2. Divide the data into parts
@@ -88,4 +89,4 @@ outcome supports and which measure follows is in
 - [ ] Compare the frame-level and the sequence-level evaluation. If outcomes appear only with frames counted as units,
       the evidence rests on dependent frames.
 - [ ] Look at the four changes in the detections between the two conditions (share of wrong detections, separation,
-      shift of the indicator values, spread over frames), not only at AUROC; see [`docs/concept.md`](../concept.md).
+      shift of the indicator values, spread over frames), not only at AUROC; see [`concept.md`, section 4](../concept.md#4-four-changes-in-the-detections-and-which-one-auroc-shows).

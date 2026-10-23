@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Independent units needed</title>
+<meta name="description" content="Lowest limit that n independent units without a false acceptance can show to be met, with the recorded units of each condition of KITTI and nuScenes.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="top" aria-label="Site"><a href="./">Interactive pages</a><a href="../explorer/">Results browser</a><a href="../">Start page</a></nav>
+  <h1>Independent units needed</h1>
+  <p>Showing that the false acceptance proportion meets a limit α at error probability δ′ requires at least
+  n ≥ ln δ′ / ln(1 − α) independent units per condition and part (Eq. 5 of the paper, the zero-failure bound), with
+  δ′ = δ for selecting and δ′ = δ/2 for testing a threshold. The curves show its inverse, the lowest limit
+  1 − δ′<sup>1/n</sup> that n units without a false acceptance can show to be met. The markers place the recorded
+  units of each condition on these curves. <strong>Marker heights are computed from n, not measured:</strong> they
+  show the best case, in which no unit holds a false acceptance; any unit with a false acceptance raises the lowest
+  limit that the data can show.</p>
+</header>
+
+<main>
+<section aria-label="Settings" class="filters">
+  <label>error probability δ
+    <input type="number" id="in-delta" min="0.000001" max="0.999" step="any" value="0.05">
+  </label>
+  <label>own limit α (optional)
+    <input type="number" id="in-alpha" min="0" max="0.999" step="any" placeholder="for example 0.02">
+  </label>
+  <label>split
+    <select id="in-split"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+  </label>
+  <label>part
+    <select id="in-part">
+      <option value="test">test part (curve δ/2)</option>
+      <option value="selection">selection part (curve δ)</option>
+      <option value="all">all recorded sequences of a condition (curve δ)</option>
+    </select>
+  </label>
+  <label class="check"><input type="checkbox" id="u-nf" checked> nuScenes frames</label>
+  <label class="check"><input type="checkbox" id="u-ns" checked> nuScenes scenes</label>
+  <label class="check"><input type="checkbox" id="u-kf" checked> KITTI frames</label>
+  <label class="check"><input type="checkbox" id="u-kd" checked> KITTI drives</label>
+  <p class="note" id="in-note" aria-live="polite"></p>
+</section>
+
+<section aria-label="Chart">
+  <div class="legend" id="legend"></div>
+  <svg id="chart" class="chart" viewBox="0 0 760 420" role="img" aria-labelledby="ch-title ch-desc">
+    <title id="ch-title">Lowest limit that n independent units can show to be met</title>
+    <desc id="ch-desc">Log-log plot of the lowest limit against n for selecting and testing a threshold, horizontal lines at the target and exploratory limits, and markers for the recorded units of each condition.</desc>
+  </svg>
+  <p id="status" class="note" role="status">Loading data/units.json ...</p>
+</section>
+
+<section aria-labelledby="need-h">
+  <h2 id="need-h">Units needed per limit</h2>
+  <div class="scroll"><table class="detail" id="need"></table></div>
+</section>
+
+<section aria-labelledby="tab-h">
+  <h2 id="tab-h">Recorded units in the chart</h2>
+  <div class="scroll"><table class="detail" id="units"></table></div>
+</section>
+</main>
+
+<footer>
+  <ul>
+    <li>Units per condition, part and split are read from <a href="data/units.json">data/units.json</a>, which
+    <code>tools/build_interactive_data.py</code> writes from <code>results/supporting_analyses/frames_per_condition.csv</code>
+    (frames), <code>results/m7_nuscenes_by_scene/m7_scene_split.csv</code> (nuScenes scenes of the distance and weather
+    conditions, variant <code>scene_scene_unit</code>), <code>results/m8_kitti_by_drive/B_dataset_drive.csv</code>
+    (nuScenes scenes of the change of dataset and detector), <code>results/supporting_analyses/m8_drives_per_part.csv</code>
+    (KITTI drives) and <code>results/post_hoc/ns_per_condition.csv</code> (all recorded sequences of a condition).
+    The table above names the file and line of every marker.</li>
+    <li>In the frame-level evaluation each frame counts as one unit, although frames of one recorded sequence are
+    not independent; in the sequence-level evaluation each recorded sequence (nuScenes scene, KITTI drive) counts
+    as one unit.</li>
+    <li>Distance is assigned per detection, so near and far share frames and recorded sequences. Target limits:
+    10⁻², 10⁻³, 10⁻⁴; exploratory limits 0.05† and 0.1† define no performance target.</li>
+  </ul>
+</footer>
+<script src="stats.js"></script>
+<script src="common.js"></script>
+<script src="units.js"></script>
+</body>
+</html>

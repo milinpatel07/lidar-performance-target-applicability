@@ -2,7 +2,7 @@
 
 SHA-256 of every input file, from each run's `provenance.json`. The inputs are detector outputs and dataset annotations (see `docs/data.md`); they are not part of this repository. A rerun is a reproduction only if its input hashes equal these.
 
-## m1_range_kitti (m1-0.2)
+## m1_kitti_distance_pilot (m1-0.2)
 
 | input | SHA-256 |
 |---|---|
@@ -10,7 +10,7 @@ SHA-256 of every input file, from each run's `provenance.json`. The inputs are d
 | `/rum/detections/kitti_v2/frame_errors_cache.pkl` | `4693a30330184aa3f2d10f7695a6ea4dd97850c72dc01290bb3dc510cb33e2e5` |
 | `/rum/third_party/OpenPCDet/data/kitti/kitti_infos_val.pkl` | `1efeceb2ef91fa2f02b3377176e5f5b82b6ec633578d185ee67e544f160c151a` |
 
-## m2_indicators_kitti (m2-0.1)
+## m2_kitti_distance (m2-0.1)
 
 | input | SHA-256 |
 |---|---|
@@ -22,7 +22,7 @@ SHA-256 of every input file, from each run's `provenance.json`. The inputs are d
 | `/rum/detections/kitti_v2/seed3_val.pkl` | `05b208d271a8df035f66c48b3d93066da760ddce1936e4678ef6706eef2378de` |
 | `/rum/detections/kitti_v2/seed4_val.pkl` | `8ebbe2f25840e6bf2fe9779c46f10e8ddfb01f87ed4ae5d5a3ee719b1f65b37b` |
 
-## m3_range_nuscenes (m3-0.2)
+## m3_nuscenes_distance (m3-0.2)
 
 | input | SHA-256 |
 |---|---|
@@ -34,26 +34,7 @@ SHA-256 of every input file, from each run's `provenance.json`. The inputs are d
 | `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
 | `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
 
-## m4_dataset_shift (m4-0.1)
-
-| input | SHA-256 |
-|---|---|
-| `/rum/detections/kitti_v2/scored_val.pkl` | `d3503186e3cc9afa468989c7c6274bcc7334792b019139e34f134255e888aca7` |
-| `/rum/detections/kitti_v2/frame_errors_cache.pkl` | `4693a30330184aa3f2d10f7695a6ea4dd97850c72dc01290bb3dc510cb33e2e5` |
-| `/rum/third_party/OpenPCDet/data/kitti/kitti_infos_val.pkl` | `1efeceb2ef91fa2f02b3377176e5f5b82b6ec633578d185ee67e544f160c151a` |
-| `/rum/detections/kitti_v2/seed1_val.pkl` | `6232a2f76bc73f37f4eee9e2af4466f197cb6c5e0048825236033e3bf980de97` |
-| `/rum/detections/kitti_v2/seed2_val.pkl` | `661f34f9d30ba62089f07c8f64be58dd0788e6f72e55483bacffe5516e1f78eb` |
-| `/rum/detections/kitti_v2/seed3_val.pkl` | `05b208d271a8df035f66c48b3d93066da760ddce1936e4678ef6706eef2378de` |
-| `/rum/detections/kitti_v2/seed4_val.pkl` | `8ebbe2f25840e6bf2fe9779c46f10e8ddfb01f87ed4ae5d5a3ee719b1f65b37b` |
-| `/rum/detections/nuscenes/scored_val.pkl` | `fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf` |
-| `/rum/detections/nuscenes/frame_errors_cache.pkl` | `93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0` |
-| `/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl` | `ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566` |
-| `/rum/detections/nuscenes/seed1_val.pkl` | `ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7` |
-| `/rum/detections/nuscenes/seed2_val.pkl` | `50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7` |
-| `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
-| `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
-
-## m6_protocol_seeds_weather (m6-0.1)
+## m4_dataset_change (m4-0.1)
 
 | input | SHA-256 |
 |---|---|
@@ -72,31 +53,7 @@ SHA-256 of every input file, from each run's `provenance.json`. The inputs are d
 | `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
 | `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
 
-## m7_scene_split/m3_frame (m3-0.3)
-
-| input | SHA-256 |
-|---|---|
-| `/rum/detections/nuscenes/scored_val.pkl` | `fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf` |
-| `/rum/detections/nuscenes/frame_errors_cache.pkl` | `93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0` |
-| `/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl` | `ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566` |
-| `/rum/detections/nuscenes/seed1_val.pkl` | `ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7` |
-| `/rum/detections/nuscenes/seed2_val.pkl` | `50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7` |
-| `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
-| `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
-
-## m7_scene_split/m3_scene (m3-0.4)
-
-| input | SHA-256 |
-|---|---|
-| `/rum/detections/nuscenes/scored_val.pkl` | `fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf` |
-| `/rum/detections/nuscenes/frame_errors_cache.pkl` | `93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0` |
-| `/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl` | `ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566` |
-| `/rum/detections/nuscenes/seed1_val.pkl` | `ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7` |
-| `/rum/detections/nuscenes/seed2_val.pkl` | `50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7` |
-| `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
-| `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
-
-## m7_scene_split/m6_frame (m6-0.2)
+## m6_five_splits (m6-0.1)
 
 | input | SHA-256 |
 |---|---|
@@ -115,7 +72,7 @@ SHA-256 of every input file, from each run's `provenance.json`. The inputs are d
 | `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
 | `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
 
-## m7_scene_split/m6_scene (m6-0.3)
+## m7_nuscenes_by_scene/m3_frame (m3-0.3)
 
 | input | SHA-256 |
 |---|---|
@@ -127,7 +84,50 @@ SHA-256 of every input file, from each run's `provenance.json`. The inputs are d
 | `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
 | `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
 
-## m8_kitti_drive_split (m8-0.1)
+## m7_nuscenes_by_scene/m3_scene (m3-0.4)
+
+| input | SHA-256 |
+|---|---|
+| `/rum/detections/nuscenes/scored_val.pkl` | `fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf` |
+| `/rum/detections/nuscenes/frame_errors_cache.pkl` | `93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0` |
+| `/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl` | `ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566` |
+| `/rum/detections/nuscenes/seed1_val.pkl` | `ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7` |
+| `/rum/detections/nuscenes/seed2_val.pkl` | `50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7` |
+| `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
+| `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
+
+## m7_nuscenes_by_scene/m6_frame (m6-0.2)
+
+| input | SHA-256 |
+|---|---|
+| `/rum/detections/kitti_v2/scored_val.pkl` | `d3503186e3cc9afa468989c7c6274bcc7334792b019139e34f134255e888aca7` |
+| `/rum/detections/kitti_v2/frame_errors_cache.pkl` | `4693a30330184aa3f2d10f7695a6ea4dd97850c72dc01290bb3dc510cb33e2e5` |
+| `/rum/third_party/OpenPCDet/data/kitti/kitti_infos_val.pkl` | `1efeceb2ef91fa2f02b3377176e5f5b82b6ec633578d185ee67e544f160c151a` |
+| `/rum/detections/kitti_v2/seed1_val.pkl` | `6232a2f76bc73f37f4eee9e2af4466f197cb6c5e0048825236033e3bf980de97` |
+| `/rum/detections/kitti_v2/seed2_val.pkl` | `661f34f9d30ba62089f07c8f64be58dd0788e6f72e55483bacffe5516e1f78eb` |
+| `/rum/detections/kitti_v2/seed3_val.pkl` | `05b208d271a8df035f66c48b3d93066da760ddce1936e4678ef6706eef2378de` |
+| `/rum/detections/kitti_v2/seed4_val.pkl` | `8ebbe2f25840e6bf2fe9779c46f10e8ddfb01f87ed4ae5d5a3ee719b1f65b37b` |
+| `/rum/detections/nuscenes/scored_val.pkl` | `fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf` |
+| `/rum/detections/nuscenes/frame_errors_cache.pkl` | `93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0` |
+| `/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl` | `ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566` |
+| `/rum/detections/nuscenes/seed1_val.pkl` | `ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7` |
+| `/rum/detections/nuscenes/seed2_val.pkl` | `50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7` |
+| `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
+| `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
+
+## m7_nuscenes_by_scene/m6_scene (m6-0.3)
+
+| input | SHA-256 |
+|---|---|
+| `/rum/detections/nuscenes/scored_val.pkl` | `fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf` |
+| `/rum/detections/nuscenes/frame_errors_cache.pkl` | `93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0` |
+| `/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl` | `ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566` |
+| `/rum/detections/nuscenes/seed1_val.pkl` | `ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7` |
+| `/rum/detections/nuscenes/seed2_val.pkl` | `50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7` |
+| `/rum/detections/nuscenes/seed3_val.pkl` | `4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3` |
+| `/rum/detections/nuscenes/seed4_val.pkl` | `57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d` |
+
+## m8_kitti_by_drive (m8-0.1)
 
 | input | SHA-256 |
 |---|---|

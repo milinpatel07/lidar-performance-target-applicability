@@ -3,7 +3,7 @@
 recorded KITTI drive (m8), KITTI rule.
 
   counts  -> work/supporting_analyses/m8_outcome_counts.csv: outcome counts over the five splits per cell, from
-             results/m8_kitti_drive_split/A_kitti_distance_drive.csv and B_dataset_drive.csv only (no data needed).
+             results/m8_kitti_by_drive/A_kitti_distance_drive.csv and B_dataset_drive.csv only (no data needed).
   drives  -> work/supporting_analyses/m8_drives_per_part.csv: drives and frames with a car detection per part and
              condition; needs work/cache/tables.pkl and the KITTI devkit mapping files (option --devkit).
 Compare the outputs with results/supporting_analyses/.
@@ -25,7 +25,7 @@ OUT = layout.WORK / "supporting_analyses"
 
 
 def counts():
-    M8 = layout.RESULTS / "m8_kitti_drive_split"
+    M8 = layout.RESULTS / "m8_kitti_by_drive"
     rows = []
     for f, key in (("A_kitti_distance_drive.csv", ("established", "applied")), ("B_dataset_drive.csv", ("source", "target"))):
         d = pd.read_csv(M8 / f)

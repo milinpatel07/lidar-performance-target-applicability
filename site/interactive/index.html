@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive pages</title>
+<meta name="description" content="Interactive pages on the applicability test of performance targets across triggering conditions in LiDAR object detection.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="top" aria-label="Site"><a href="../">Start page</a><a href="../explorer/">Results browser</a></nav>
+  <h1>Interactive pages</h1>
+  <p>These pages compute the statistics of the applicability test in the browser and show recorded results of the
+  study. The calculations use <code>stats.js</code>, a port of the statistics in
+  <code>experiments/m1_range_kitti.py</code> that <code>tests/test_stats_js.py</code> checks against the Python code and
+  the recorded rows. Recorded numbers are read from files that <code>tools/build_interactive_data.py</code> writes from
+  <code>results/</code>.</p>
+</header>
+<main>
+  <ul class="pages">
+    <li><a href="walkthrough.html"><strong>Walk-through</strong></a> <span class="badge">start
+    here</span>: seven short steps with one interactive figure each, from what the detector passes on to the measure that
+    follows from each outcome.</li>
+    <li><a href="test.html"><strong>Applicability test calculator</strong></a>: HB p-value, interval [L, U] and
+    outcome for given n, Â, α and δ, the minimum number of units of Eq. 5, and the recomputation of recorded rows of
+    the sequence-level evaluation.</li>
+    <li><a href="units.html"><strong>Independent units needed</strong></a>: the lowest limit that n units without
+    a false acceptance can show to be met (Fig. 6), with the recorded frames, scenes and drives of each condition and
+    split.</li>
+    <li><a href="separation.html"><strong>Separation and FAP</strong></a>: ROC curves and the
+    estimated FAP against τ for three transfers (Fig. 5), with the recorded transferred thresholds and intervals.</li>
+    <li><a href="own-data.html"><strong>Run the test on your own detections</strong></a>: loads a CSV file of
+    detections (or a synthetic example), selects a threshold in the condition of selection, tests it in the condition
+    of use and shows the outcome matrix of all pairs of conditions. Computed in the browser; no data leave the
+    computer.</li>
+    <li><a href="concept.html"><strong>Four changes in the detections</strong></a> <span class="badge">schematic, not
+    data</span>: how separation, share of wrong detections, shift of values and spread over frames act on AUROC and
+    on the FAP at a transferred threshold.</li>
+  </ul>
+  <p class="note">The pages read their data with <code>fetch</code>, so they need to be opened over HTTP (for example
+  on GitHub Pages, or with <code>python3 -m http.server -d site</code> in the repository root), not as local files.</p>
+</main>
+<footer>
+  <ul>
+    <li>Terms as in the paper and the <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/glossary.md">glossary</a>.
+    Target limits: 10⁻², 10⁻³, 10⁻⁴. Exploratory limits 0.05† and 0.1† define no performance target.</li>
+    <li>Data provenance and rebuild: <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/site/interactive/README.md">interactive/README.md</a>.</li>
+  </ul>
+</footer>
+</body>
+</html>

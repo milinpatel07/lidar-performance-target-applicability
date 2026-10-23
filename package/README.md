@@ -1,13 +1,14 @@
 # applicability-test
 
-This package implements the applicability test of the paper: a threshold on an uncertainty indicator is selected
+This package implements the applicability test for anyone who wants to run it on the detections of their own
+detector, in scripts or pipelines: a threshold on an uncertainty indicator is selected
 with a finite-sample guarantee that the false acceptance proportion (FAP) stays at or below a limit alpha in the
 condition of selection, and the same threshold is then tested on independent data of the condition of use. The
 outcome is applicable, not applicable, not determined or no threshold selected, and it applies to the outputs of
 any detector that gives each detection an indicator value and a correct/wrong label.
 
 The concept is explained in [`../docs/concept.md`](../docs/concept.md). The statistics are those of
-[`../analysis/m1_range_kitti.py`](../analysis/m1_range_kitti.py), and the tests check that both give the same numbers.
+[`../experiments/m1_range_kitti.py`](../experiments/m1_range_kitti.py), and the tests check that both give the same numbers.
 
 ## Install
 
@@ -40,10 +41,10 @@ def condition(share_wrong, n_frames=3000):
     u = np.where(correct == 1, rng.beta(2, 20, frame.size), rng.beta(2, 4, frame.size))
     return {"frame": frame, "u": u, "correct": correct}
 
-selection_c = condition(0.01)                                     # selection part of condition c
-test_c2 = condition(0.10)                                         # test part of condition c'
-r = at.applicability_test(selection_c, test_c2, candidates=np.linspace(0.01, 1, 100), alpha=0.05, delta=0.05)
-print(r.outcome, r.tau, r.L, r.U, r.retention)                    # not applicable ...
+selection_c = condition(0.05)                                     # selection part of condition c
+test_c2 = condition(0.20)                                         # test part of condition c'
+r = at.applicability_test(selection_c, test_c2, candidates=np.linspace(0.01, 1, 100), alpha=0.02, delta=0.05)
+print(r.outcome, r.tau, r.L, r.U, r.retention)                    # not applicable 0.17 0.043 0.063 0.895
 ```
 
 `examples/synthetic_example.py` runs the test with two conditions, a grid part for the candidate thresholds and
@@ -120,7 +121,7 @@ With `--candidates quantiles` (default) the candidates are the quantiles of u at
 ## Assumptions
 
 - The units (frames or sequences) of each part are independent and identically distributed draws from their
-  condition. Frames of one recorded sequence are usually dependent; then use the sequence-level evaluation.
+  condition. Frames of one recorded sequence are not independent; then use the sequence-level evaluation.
 - The test units are independent of the selection units, for example by dividing whole sequences into the parts.
 - The candidates are fixed before the selection data are used, for example from a separate grid part.
 - The error probability holds for each outcome on its own. A safety argument that relies on several outcomes at

@@ -14,9 +14,9 @@ from collections import Counter
 HERE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "results")
 OUT = os.environ.get("WORK_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "work"))
 RUNS = {
-    "m2_kitti_range": "m2_indicators_kitti/matrix_all_variants.csv",
-    "m3_nuscenes_range": "m3_range_nuscenes/matrix_all_variants.csv",
-    "m4_dataset_shift": "m4_dataset_shift/shift_matrix.csv",
+    "m2_kitti_range": "m2_kitti_distance/matrix_all_variants.csv",
+    "m3_nuscenes_range": "m3_nuscenes_distance/matrix_all_variants.csv",
+    "m4_dataset_shift": "m4_dataset_change/shift_matrix.csv",
 }
 OUTCOMES = ["applies", "does not apply", "not determined", "no threshold established"]
 FROZEN = {0.01: "frozen 1e-2", 0.001: "frozen <=1e-3", 0.0001: "frozen <=1e-3"}

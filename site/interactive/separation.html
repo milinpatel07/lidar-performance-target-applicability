@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Separation and FAP</title>
+<meta name="description" content="ROC curves and estimated false acceptance proportion against the threshold for three transfers, with the recorded transferred thresholds and intervals.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="top" aria-label="Site"><a href="./">Interactive pages</a><a href="../explorer/">Results browser</a><a href="../">Start page</a></nav>
+  <h1>Separation and FAP</h1>
+  <p>Interactive version of Fig. 5 of the paper, on the test part of split 0. Left: the ROC curve of the condition of
+  selection (solid) and of the condition of use (dashed), with wrong detections rejected against correct detections
+  withheld. Right: the estimated false acceptance proportion (FAP) against the threshold τ. The area under the ROC
+  curve (AUROC) measures only how well the indicator separates correct from wrong detections. It does not depend
+  on the share of wrong detections, on how they are spread over frames, or on where the values lie on the scale of
+  the indicator. The FAP at a transferred threshold depends on all of these.</p>
+</header>
+
+<main>
+<section aria-label="Settings" class="filters">
+  <label>transfer
+    <select id="in-panel"></select>
+  </label>
+  <label>threshold τ <span id="tau-val"></span>
+    <input type="range" id="in-tau" min="0" max="1" step="any" value="0" aria-describedby="tau-help">
+  </label>
+  <button type="button" id="go-01">τ selected at 0.1†</button>
+  <button type="button" id="go-001">τ selected at 10⁻²</button>
+  <p class="note" id="tau-help">The slider moves the markers along both FAP curves (nearest recorded curve point). The
+  recorded ROC points carry no threshold value, so the ROC panel marks only the operating points recorded for the
+  two transferred thresholds; the buttons set τ to one of them and highlight its operating points.</p>
+</section>
+
+<div class="legend" id="legend"></div>
+<div class="panels">
+  <section class="panel" aria-labelledby="roc-h">
+    <h3 id="roc-h">ROC curves</h3>
+    <svg id="roc" class="chart" viewBox="0 0 400 380" role="img" aria-labelledby="roc-h roc-desc"><desc id="roc-desc">ROC curves of both conditions with the recorded operating points of the transferred thresholds.</desc></svg>
+  </section>
+  <section class="panel" aria-labelledby="fap-h">
+    <h3 id="fap-h">Estimated FAP against τ</h3>
+    <svg id="fap" class="chart" viewBox="0 0 400 380" role="img" aria-labelledby="fap-h fap-desc"><desc id="fap-desc">Estimated FAP of both conditions against the threshold on a logarithmic axis, with the limits 0.1 and 0.01, the recorded transferred threshold and its interval in each condition.</desc></svg>
+  </section>
+</div>
+<p id="status" class="note" role="status">Loading data/separation.json ...</p>
+
+<section aria-labelledby="read-h">
+  <h2 id="read-h">Values at the chosen threshold</h2>
+  <div class="scroll"><table class="detail" id="readout"></table></div>
+  <h2>Recorded operating points and interval</h2>
+  <div class="scroll"><table class="detail" id="ops"></table></div>
+  <p id="explain"></p>
+</section>
+</main>
+
+<footer>
+  <ul>
+    <li>Data: <a href="data/separation.json">data/separation.json</a>, which <code>tools/build_interactive_data.py</code>
+    writes from <code>results/supporting_analyses/fig_separation_curves.csv</code>. The curves are thinned as
+    recorded (at most about 400 points per curve). AUROC is computed here from the recorded ROC points by the
+    trapezoidal rule, as in <code>tools/figures/paper/make_fig_separation.py</code>.</li>
+    <li>The interval [L, U] is recorded only for the threshold selected at the exploratory limit 0.1†, which
+    defines no performance target. Frames are the units here (frame-level evaluation); frames of one recorded
+    sequence are not independent, so the stated error probability is not guaranteed.</li>
+    <li>In the change of dataset and detector, the threshold selected with the nuScenes detector on nuScenes is used
+    with the KITTI detector on KITTI (KITTI rule).</li>
+  </ul>
+</footer>
+<script src="common.js"></script>
+<script src="separation.js"></script>
+</body>
+</html>

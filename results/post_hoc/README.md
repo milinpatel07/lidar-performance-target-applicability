@@ -39,10 +39,10 @@ sequence, and [`provenance.json`](provenance.json) the script version, seeds and
 
 ## Code
 
-[`code/`](code/) holds the scripts that produced these files (MIT licence, as `analysis/`):
+[`code/`](code/) holds the scripts that produced these files (MIT licence, as `experiments/`):
 
 - `seq_ratio.py`: Methods A and B and the AUROC intervals. It imports the statistics (Hoeffding-Bentkus p-value and
-  bounds, fixed-sequence selection, division into parts) unchanged from the scripts in [`../../analysis/`](../../analysis/README.md);
+  bounds, fixed-sequence selection, division into parts) unchanged from the scripts in [`../../experiments/`](../../experiments/README.md);
   the path constant `CODE` names the folder that holds them.
 - `tests/test_seq_ratio.py`: sanity tests (N_s = 1 reproduces the frame-level outcomes; the transform keeps the
   condition E[S]/E[N] ≤ α; zero false acceptances give the implied p-value; coverage of the betting interval).
@@ -54,7 +54,7 @@ the reproduction check fails.
 
 The scripts read the per-detection tables, the nuScenes metadata and the KITTI devkit mapping files described in
 [`../../docs/data.md`](../../docs/data.md); `confseq` 0.0.11 is needed for Method B
-([`../../requirements-posthoc.txt`](../../requirements-posthoc.txt)).
+([`../../environment/requirements-posthoc.txt`](../../environment/requirements-posthoc.txt)).
 
 **Paths.** The scripts are published as they ran, so that the SHA-256 in [`provenance.json`](provenance.json) matches
 `code/seq_ratio.py`. Their path constants refer to the layout of the machine that ran them (`/work` mounted as the
@@ -62,11 +62,11 @@ working folder). The corresponding locations in this repository:
 
 | constant in the scripts | in this repository |
 |---|---|
-| `/work/release/code/m7v2/` (`CODE`), the analysis scripts loaded through m6 | [`analysis/`](../../analysis/README.md) (same files; m3 and m6 at versions m3-0.4 and m6-0.3) |
+| `/work/release/code/m7v2/` (`CODE`), the analysis scripts loaded through m6 | [`experiments/`](../../experiments/README.md) (same files; m3 and m6 at versions m3-0.4 and m6-0.3) |
 | `/work/release/cache/tables.pkl` | `work/cache/tables.pkl`, written by `tools/export_tables.py build` |
-| `/work/m6/results/*.csv` | [`results/m6_protocol_seeds_weather/`](../m6_protocol_seeds_weather/) |
-| `/work/release/results/m7_scene_split.csv` | [`results/m7_scene_split/m7_scene_split.csv`](../m7_scene_split/m7_scene_split.csv) |
-| `/work/release/results/m8/*.csv` | [`results/m8_kitti_drive_split/`](../m8_kitti_drive_split/) |
+| `/work/m6/results/*.csv` | [`results/m6_five_splits/`](../m6_five_splits/) |
+| `/work/release/results/m7_scene_split.csv` | [`results/m7_nuscenes_by_scene/m7_scene_split.csv`](../m7_nuscenes_by_scene/m7_scene_split.csv) |
+| `/work/release/results/m8/*.csv` | [`results/m8_kitti_by_drive/`](../m8_kitti_by_drive/) |
 | `/work/release/ext/kitti_devkit` (`--devkit`) | KITTI devkit mapping files, see `docs/data.md` |
 | default of `--nusc-meta` | nuScenes v1.0-trainval metadata folder (`NUSC_META` in `tools/layout.py`) |
 | `/rum` (in `check_epochs.sh`) | detector outputs, training logs and checkpoints (`RUM`) |

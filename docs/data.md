@@ -1,5 +1,8 @@
 # Data
 
+Which datasets the case study uses, what of them this repository does not contain, and which input files the scripts
+read.
+
 ## Datasets
 
 | dataset | split used | frames | licence |
@@ -49,8 +52,8 @@ epochs on the 3,712 training frames, the nuScenes members on the 700 training sc
 epochs (training ended after epoch 10; [`results/post_hoc/epoch_check.txt`](../results/post_hoc/epoch_check.txt)).
 Configurations, training runs, the checkpoint each member's inference loaded (with SHA-256) and the software
 environment are in [`provenance.md`](provenance.md). The outputs were merged as
-described in [`method.md`](method.md#1-detector-detections-and-indicators). The two indicators and the merge follow
-the conference paper that introduced them:
+described in [`method.md`](method.md#1-detector-detections-and-indicators). The two indicators are taken from the
+conference paper that introduced them (the spatial indicator, Eq. 1 of the paper, is adapted from it):
 
 > M. Patel, R. Jung. Uncertainty evaluation to support safety of the intended functionality analysis for identifying
 > performance insufficiencies in ML-based LiDAR object detection. In: Proceedings of the 12th International Conference

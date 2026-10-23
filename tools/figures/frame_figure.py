@@ -119,7 +119,7 @@ def kitti_bundle(C, log):
 def nusc_bundle(C, log):
     ntab = C["ntab"]
     wcls, wcounts = m6.nusc_weather_classes(META, ntab["fids"])
-    rowsC = [r for r in csv.DictReader(open(W / "m6_protocol_seeds_weather/C_weather_nuscenes.csv"))
+    rowsC = [r for r in csv.DictReader(open(W / "m6_five_splits/C_weather_nuscenes.csv"))
              if r["indicator"] == "u_e" and r["seed"] == "0" and r["alpha"] == "0.1" and r["established"] == "clear" and r["applied"] == "rain"]
     tau = float(rowsC[0]["tau"])
     det_class = wcls[ntab["fpos"]]

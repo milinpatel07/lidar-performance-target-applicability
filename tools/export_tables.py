@@ -2,7 +2,7 @@
 """
 export_tables.py - per-detection tables of both datasets, cached once and exported for split 0.
 
-Uses the analysis code in analysis/ unchanged; no statistic is re-implemented here.
+Uses the analysis code in experiments/ unchanged; no statistic is re-implemented here.
 Read-only on the inputs and on results/; writes only below --work (default work/).
 
   build   rebuild the KITTI and nuScenes per-detection tables (m6.build_kitti, m6.kitti_ignore,
@@ -107,7 +107,7 @@ def cmd_export(a):
             fails.append(name)
 
     # --- check 1: verification and frame counts (the build stage exits on a per-frame mismatch)
-    m6prov = json.load(open(layout.RESULTS / "m6_protocol_seeds_weather/provenance.json"))
+    m6prov = json.load(open(layout.RESULTS / "m6_five_splits/provenance.json"))
     log.append(f"PASS  KITTI per-frame FN/FP: {C['prov']['kitti_verification']}")
     log.append(f"PASS  nuScenes per-frame FN/FP: {C['prov']['nuscenes_verification']}")
     check("KITTI frames", ktab["n_frames"], 3769, 0); check("nuScenes frames", ntab["n_frames"], 6019, 0)

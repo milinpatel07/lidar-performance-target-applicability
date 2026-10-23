@@ -1,6 +1,0 @@
-# additional packages for results/post_hoc/code (Method B and the tests), as installed for the recorded run;
-# confseq was installed with --no-deps next to the NumPy of requirements.txt, so its dependencies are listed here
-confseq==0.0.11
-multiprocess==0.70.19
-dill==0.4.1
-pytest==9.1.1

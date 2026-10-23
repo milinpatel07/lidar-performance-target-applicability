@@ -1,6 +1,6 @@
 # Glossary
 
-One vocabulary for the whole repository. The left column is the term of the paper and of this documentation; the
+One vocabulary for the whole repository, for looking up a term or the name of a column. The left column is the term of the paper and of this documentation; the
 right column gives the name the term has in the result files and scripts, which were written before the final wording
 was fixed and keep their original names so that their SHA-256 hashes stay valid. How the terms fit together:
 [`concept.md`](concept.md).
@@ -62,10 +62,10 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 | split | one of five random assignments of the same frames to the parts, drawn with seeds 0 to 4 | `seed` |
 | recorded sequence | a continuous recording: a nuScenes scene (150 in the validation set) or a KITTI drive (45 in the validation frames) | `scene`, `drive` |
 | unit | what the test treats as one independent draw: a frame or a recorded sequence | `hb_unit`; `n_select_units`, `n_eval_units` |
-| frame-level evaluation | division by frame, each frame one unit; shown in Fig. 4 of the paper | run files of m1 to m6 (no `split` column); m7 `variant` = `frame`; `m8_kitti_drive_split/frame/` |
-| sequence-level evaluation | division by recorded sequence, each sequence one unit; the value of a sequence is the mean of a_f over its frames in the condition | m7 `variant` = `scene_scene_unit` (printed "(ii)" in `m7_scene_split_summary.txt`); `hb_unit` = `scene` (m3, m6 under `m7_scene_split/`) or `drive` (m8) |
+| frame-level evaluation | division by frame, each frame one unit; shown in Fig. 4 of the paper | run files of m1 to m6 (no `split` column); m7 `variant` = `frame`; `m8_kitti_by_drive/frame/` |
+| sequence-level evaluation | division by recorded sequence, each sequence one unit; the value of a sequence is the mean of a_f over its frames in the condition | m7 `variant` = `scene_scene_unit` (printed "(ii)" in `m7_scene_split_summary.txt`); `hb_unit` = `scene` (m3, m6 under `m7_nuscenes_by_scene/`) or `drive` (m8) |
 | third run | division by recorded sequence, frame as unit; separates the effect of the division from that of the unit | m7 `variant` = `scene_frame_unit` (printed "(i)"); `split` = `scene` or `drive` with `hb_unit` = `frame` |
-| zero-failure bound (rule of three) | n ≥ ln δ′ / ln(1 − α): independent units without any false acceptance needed to show a limit met at error probability δ′ (Eq. 5 of the paper); δ′ = δ for selecting, δ/2 for testing; about 3/α at δ′ = 0.05 | `n_required` in `analysis/m1_range_kitti.py` |
+| zero-failure bound (rule of three) | n ≥ ln δ′ / ln(1 − α): independent units without any false acceptance needed to show a limit met at error probability δ′ (Eq. 5 of the paper); δ′ = δ for selecting, δ/2 for testing; about 3/α at δ′ = 0.05 | `n_required` in `experiments/m1_range_kitti.py` |
 
 ## Statistics and outcomes
 
@@ -97,7 +97,7 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 |---|---|
 | m1 … m8 | the experiment runs in the order they were made: m1 KITTI distance with the blended score (precursor); m2 KITTI distance with u_s, u_e; m3 nuScenes distance; m4 change of dataset and detector, one split; m6 KITTI rule, five splits of the control, nuScenes weather; m7 third run and sequence-level evaluation on nuScenes scenes; m8 the same on KITTI drives. **m5** was the frame figure and has no result folder |
 | `seq_ratio` | the post-hoc sequence test (Methods A and B) and the post-hoc AUROC intervals |
-| `SCRIPT_VERSION` (e.g. `m3-0.4`) | version label inside each script, recorded in each run's `provenance.json`; [`analysis/SCRIPT_VERSIONS.md`](../analysis/SCRIPT_VERSIONS.md) maps runs to shipped files |
+| `SCRIPT_VERSION` (e.g. `m3-0.4`) | version label inside each script, recorded in each run's `provenance.json`; [`experiments/SCRIPT_VERSIONS.md`](../experiments/SCRIPT_VERSIONS.md) maps runs to shipped files |
 | `export-v13.1`, `export-1.1` | version labels of the per-detection table cache: `export-v13.1` on the recorded cache from which the supporting analyses, the figure data and the post-hoc analysis were computed; `export-1.1` on `tools/export_tables.py`, the repository version of the same builder. Each tool checks its split-0 values against `results/` before it writes anything |
 | v24, v25 | labels of internal analysis rounds that appear in some script headers and logs (for example `v25f5-0.2`); they carry no meaning beyond the date order |
 | `RUM`, `/rum` | folder of the detector outputs and dataset files that the scripts read (named after the runtime-monitoring project that produced the detector outputs) |

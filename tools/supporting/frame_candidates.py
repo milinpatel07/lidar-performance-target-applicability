@@ -132,7 +132,7 @@ sheet(top, FIG / "frame_candidates_top24.png", [f"{i}. {r.frame}, {r.distance_m:
 
 # ------------------------------------------------------------------ (3) nuScenes frame of the frame figure
 tok = "703ac7e5928a41c7a3138afa74e157ad"
-C_rec = pd.read_csv(W / "m6_protocol_seeds_weather/C_weather_nuscenes.csv")
+C_rec = pd.read_csv(W / "m6_five_splits/C_weather_nuscenes.csv")
 tauN = float(C_rec[(C_rec.indicator == "u_e") & (C_rec.seed == 0) & (C_rec.alpha == 0.1) & (C_rec.established == "clear") & (C_rec.applied == "rain")].tau.iloc[0])
 NUS = RUM / "data/nuscenes/v1.0-trainval"
 infos = {e["token"]: e for e in pickle.load(open(NUS / "nuscenes_infos_10sweeps_val.pkl", "rb"))}

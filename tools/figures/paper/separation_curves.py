@@ -7,7 +7,7 @@ positive class. Row 2: false acceptance proportion A_c(tau) (per-frame mean, fra
 against tau. Thresholds selected in the condition of selection at 0.1 (exploratory) and 1e-2; the HB interval of each
 condition at the 0.1 threshold. Every threshold and interval is recomputed with the analysis code and checked against the
 recorded run files before anything is written; the script stops on a difference.
-Inputs: work/cache/tables.pkl (tools/export_tables.py build), results/m6_protocol_seeds_weather, NUSC_META.
+Inputs: work/cache/tables.pkl (tools/export_tables.py build), results/m6_five_splits, NUSC_META.
 Outputs: work/supporting_analyses/fig_separation_curves.csv (compare with results/supporting_analyses/) and a draft
 plot work/figures/fig_separation_draft.pdf. The paper's figure is drawn from the CSV by make_fig_separation.py."""
 import csv, importlib.util, json, pickle, sys
@@ -31,7 +31,7 @@ plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral"], "mat
                      "xtick.major.width": 0.6, "ytick.major.width": 0.6})
 C = pickle.load(open(layout.CACHE, "rb")); ktab, why, ntab = C["ktab"], C["why"], C["ntab"]
 kign = m6.subset(ktab, why == "")
-M6 = layout.RESULTS / "m6_protocol_seeds_weather"
+M6 = layout.RESULTS / "m6_five_splits"
 A6 = pd.read_csv(M6 / "A_kitti_range_protocol.csv"); B6 = pd.read_csv(M6 / "B_shift_seeds_protocol.csv")
 C6 = pd.read_csv(M6 / "C_weather_nuscenes.csv")
 D = m1.CFG["delta"]

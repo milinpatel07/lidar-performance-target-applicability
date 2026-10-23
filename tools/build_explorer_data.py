@@ -1,10 +1,10 @@
-"""Write explorer/data/outcomes.json, the data of the results explorer, from the recorded result files.
+"""Write site/explorer/data/outcomes.json, the data of the results explorer, from the recorded result files.
 
 Every record is one cell (pair of conditions, condition of selection, condition of use, indicator, limit α, split) of
 one division of the data, with the file and line it was read from. Before writing, the frame-division counts are
 compared with the table "Outcomes over the five splits" of docs/results.md; the script stops if they differ.
 
-    python tools/build_explorer_data.py              # write explorer/data/outcomes.json
+    python tools/build_explorer_data.py              # write site/explorer/data/outcomes.json
     python tools/build_explorer_data.py --check      # exit 1 if the committed file differs from a fresh build
     python tools/build_explorer_data.py --root PATH  # read results/ and docs/ of another copy of the repository
 
@@ -24,13 +24,13 @@ import pandas as pd
 GENERATOR_VERSION = "explorer-data-1.0"
 DATA_DATE = "2026-10-21"  # constant so that a rebuild gives the same bytes
 SCRIPT_ROOT = Path(__file__).resolve().parents[1]
-OUT_DEFAULT = SCRIPT_ROOT / "explorer" / "data" / "outcomes.json"
+OUT_DEFAULT = SCRIPT_ROOT / "site" / "explorer" / "data" / "outcomes.json"
 
-M6A = "results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv"
-M6B = "results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv"
-M7 = "results/m7_scene_split/m7_scene_split.csv"
-M8A = "results/m8_kitti_drive_split/A_kitti_distance_drive.csv"
-M8B = "results/m8_kitti_drive_split/B_dataset_drive.csv"
+M6A = "results/m6_five_splits/A_kitti_range_protocol.csv"
+M6B = "results/m6_five_splits/B_shift_seeds_protocol.csv"
+M7 = "results/m7_nuscenes_by_scene/m7_scene_split.csv"
+M8A = "results/m8_kitti_by_drive/A_kitti_distance_drive.csv"
+M8B = "results/m8_kitti_by_drive/B_dataset_drive.csv"
 POST = "results/post_hoc/outcomes.csv"
 SOURCES = [M6A, M6B, M7, M8A, M8B, POST]
 

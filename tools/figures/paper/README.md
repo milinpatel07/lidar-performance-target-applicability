@@ -18,7 +18,7 @@ these sources produce in the label wording listed below. The paper itself is not
 | Fig. 3 | division of the frames into parts, schematic | [`fig_parts.tex`](fig_parts.tex) | none | no |
 | Fig. 4 | outcome of every transfer on the five splits, and retention at 10⁻² | [`make_fig_outcomes.py`](make_fig_outcomes.py) writes `fig_outcomes.tex` | `results/supporting_analyses/retention_applicable_cells.csv` | no |
 | Fig. 5 | ROC curves and FAP against the threshold, split 0 | [`make_fig_separation.py`](make_fig_separation.py) | `results/supporting_analyses/fig_separation_curves.csv` (written by [`separation_curves.py`](separation_curves.py) from the per-detection cache) | no for the plot, yes for the curves |
-| Fig. 6 | lowest limit that n independent units can show to be met | [`fig_units.tex`](fig_units.tex) | Eq. 5 of the paper, and the units per condition of split 0 from `results/supporting_analyses/frames_per_condition.csv`, `results/m7_scene_split/m7_scene_split_summary.txt` and `results/supporting_analyses/m8_drives_per_part.csv` | no |
+| Fig. 6 | lowest limit that n independent units can show to be met | [`fig_units.tex`](fig_units.tex) | Eq. 5 of the paper, and the units per condition of split 0 from `results/supporting_analyses/frames_per_condition.csv`, `results/m7_nuscenes_by_scene/m7_scene_split_summary.txt` and `results/supporting_analyses/m8_drives_per_part.csv` | no |
 
 Compile a TikZ figure with `pdflatex fig_concept.tex` in this folder (`preamble.tex` holds the shared packages and
 colours). Run the Python scripts from the repository root:
@@ -31,7 +31,7 @@ python3 tools/figures/paper/separation_curves.py      # needs work/cache/tables.
 ```
 
 **Values written into the sources.** `make_fig_outcomes.py` holds the outcome counts of Fig. 4 as literals (list
-`rows`), and `fig_units.tex` holds the curve of Eq. 5 and the marker positions as coordinates. `tools/check_paper_numbers.py`
+`rows`), and `fig_units.tex` holds the curve of Eq. 5 and the marker positions as coordinates. `tests/check_paper_numbers.py`
 compares every count of `make_fig_outcomes.py` with the result files on every push.
 
 **Fig. 1 scripts.** The three scripts in `frame_figure/` are published as they ran. Their paths refer to the layout of

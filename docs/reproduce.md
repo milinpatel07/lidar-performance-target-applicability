@@ -1,31 +1,40 @@
 # Reproducing the results
 
-Three levels, from the cheapest to the most complete ([`pipeline.md`](pipeline.md) shows which script reads and writes
-what): (1) the checks, which need only this repository (sections 0, 1 and 6); (2) tables and figures from the recorded
-results, which need only this repository and pdflatex (section 5); (3) the experiment runs, which need the datasets and the
-detector outputs ([`data.md`](data.md); sections 2 to 4 and 7).
+This page gives the commands to check and rerun the KITTI and nuScenes case study. There are three levels, from the
+cheapest to the most complete ([`pipeline.md`](pipeline.md) shows which script reads and writes what): (1) the checks,
+which need only this repository (sections 0, 1 and 6); (2) tables and figures from the recorded results, which need only
+this repository and pdflatex (section 5); (3) the experiment runs, which need the datasets and the detector outputs
+([`data.md`](data.md); sections 2 to 4 and 7).
 
 ## 0. Checks without data
 
 ```bash
-pip install -r requirements.txt
-sha256sum -c MANIFEST.sha256
-python3 tools/check_paper_numbers.py                      # numbers of the paper against results/
-python3 tools/supplementary/make_supplementary.py --check  # numbers of the supplementary against results/
+pip install -r environment/requirements.txt
+sha256sum -c MANIFEST.sha256                              # every file against the manifest
+python3 tests/check_recorded_results.py                   # every recorded file of version 1.0.0 unchanged at its path
+python3 tests/check_paper_numbers.py --check-fresh        # numbers of the paper against results/; docs/paper_map.md fresh
+python3 tools/supplementary/make_supplementary.py --check # numbers of the supplementary against results/
 python3 tools/build_explorer_data.py --check              # data of the results browser against results/
+python3 tools/build_interactive_data.py --check           # data of the interactive pages against results/
+python3 tests/test_stats_js.py                            # page statistics against the Python implementation (needs node)
+python3 tests/test_own_data_js.py                         # own-data page against the Python implementation (needs node)
+node --test tests/test_explorer.mjs                       # functions of the results browser
+PYTHONPATH=package/src python3 -m pytest package/tests    # the package against experiments/m1_range_kitti.py
+python3 tests/check_links.py                              # every relative link and every link into the pages
 ```
 
-These run in GitHub Actions on every push ([`../.github/workflows/checks.yml`](../.github/workflows/checks.yml)).
+These checks and the self-tests of section 1 run in GitHub Actions on every push
+([`../.github/workflows/checks.yml`](../.github/workflows/checks.yml)).
 
 ## Environment
 
 The recorded runs used a container based on the NVIDIA CUDA 12.1.1 image (no GPU used) with Python 3.10.13, NumPy 1.26.3,
 pandas 2.2.3 and Matplotlib 3.10.0 (`provenance.json` of each run records the Python and NumPy versions). The rotated box overlap uses the polygon clipping backend of m1
-(`--bev auto` selects it when Shapely is not installed, as in the recorded runs). The [`Dockerfile`](../Dockerfile)
+(`--bev auto` selects it when Shapely is not installed, as in the recorded runs). The [`environment/Dockerfile`](../environment/Dockerfile)
 builds this environment:
 
 ```bash
-docker build -t pt-applicability .
+docker build -f environment/Dockerfile -t pt-applicability .     # from the repository root
 ```
 
 All commands below run inside the container with the repository mounted at `/repo`, the inputs at `/rum` and the
@@ -39,18 +48,18 @@ docker run --rm -it -v "$PWD:/repo" -v /path/to/inputs:/rum:ro -v /path/to/nusce
 ## 1. Self-tests (no data needed)
 
 ```bash
-cd analysis && python3 m1_range_kitti.py --selftest && python3 m3_range_nuscenes.py --selftest && cd ..
+cd experiments && python3 m1_range_kitti.py --selftest && python3 m3_range_nuscenes.py --selftest && cd ..
 ```
 
 ## 2. Experiment runs
 
 Every run first rebuilds the merged detections and compares the per-frame missed and false detections with the
 detection pipeline; it stops if one frame differs. It then writes its result files and a `provenance.json` with the
-script version, the SHA-256 of every input and the configuration. Run the scripts from `analysis/`, because they load
+script version, the SHA-256 of every input and the configuration. Run the scripts from `experiments/`, because they load
 each other by file name. A run on the nuScenes table takes about 20 minutes on 4 CPU cores.
 
 ```bash
-cd analysis
+cd experiments
 python3 m1_range_kitti.py      --rum /rum --out ../work/m1
 python3 m2_indicators_kitti.py --rum /rum --out ../work/m2
 python3 m3_range_nuscenes.py   --rum /rum --out ../work/m3
@@ -75,7 +84,7 @@ evaluation first and stops unless it equals the recorded m6 results byte for byt
 
 ```bash
 python3 m8_kitti_drive_split.py --rum /rum --out ../work/m8 --devkit /path/to/kitti_devkit \
-    --nusc-meta /nuscenes/v1.0-trainval --recorded ../results/m6_protocol_seeds_weather
+    --nusc-meta /nuscenes/v1.0-trainval --recorded ../results/m6_five_splits
 cd ..
 ```
 
@@ -86,7 +95,7 @@ The tools build one cache of the per-detection tables and read it afterwards (`w
 ```bash
 python3 tools/export_tables.py build --rum /rum --nusc-meta /nuscenes/v1.0-trainval   # about 20 minutes
 python3 tools/export_tables.py export --kitti-cut m6rule      # work/data: split-0 exports and thresholds
-python3 tools/check_export.py                                # AUROC, A and R recomputed independently
+python3 tests/check_export.py                                # AUROC, A and R recomputed independently
 python3 tools/table_and_figure_values.py                     # frame counts and split-0 values
 python3 tools/outcome_counts.py                              # outcome counts over all cells
 python3 tools/supporting/retention_and_causes.py
@@ -107,11 +116,11 @@ A rerun reproduces a recorded run if its result files equal those in `results/` 
 [`results/INPUT_HASHES.md`](../results/INPUT_HASHES.md):
 
 ```bash
-diff work/m3/matrix_all_variants.csv results/m3_range_nuscenes/matrix_all_variants.csv
+diff work/m3/matrix_all_variants.csv results/m3_nuscenes_distance/matrix_all_variants.csv
 diff -r work/supporting_analyses results/supporting_analyses
 ```
 
-[`analysis/SCRIPT_VERSIONS.md`](../analysis/SCRIPT_VERSIONS.md) names the script file behind each recorded run. Files
+[`experiments/SCRIPT_VERSIONS.md`](../experiments/SCRIPT_VERSIONS.md) names the script file behind each recorded run. Files
 written by a rerun differ from the recorded ones in their time stamps (`provenance.json` fields `started`, `finished`)
 and, for the `*_log.txt` files, in run times; compare the CSV and JSON result files.
 
@@ -132,8 +141,8 @@ figures need pdflatex with TikZ, pgfplots and the newtx fonts.
 ## 6. Results browser and notebook (no data)
 
 ```bash
-python3 tools/build_explorer_data.py          # explorer/data/outcomes.json
-python3 -m http.server 8000                   # then open http://localhost:8000/explorer/
+python3 tools/build_explorer_data.py          # site/explorer/data/outcomes.json
+python3 -m http.server -d site 8000           # then open http://localhost:8000/explorer/
 python3 -m nbconvert --to notebook --execute --inplace notebooks/explore_results.ipynb
 ```
 
@@ -141,6 +150,6 @@ python3 -m nbconvert --to notebook --execute --inplace notebooks/explore_results
 
 The post-hoc sequence test (Methods A and B) and the AUROC bootstrap intervals were added after the outcomes were
 known and are not reported in the paper; the epoch check supports the number of epochs stated in paper Sect. 4.1. The scripts in [`../results/post_hoc/code/`](../results/post_hoc/code/) need the per-detection cache, the nuScenes
-metadata and the KITTI devkit mapping files, and `pip install -r requirements-posthoc.txt`. They are published as they
+metadata and the KITTI devkit mapping files, and `pip install -r environment/requirements-posthoc.txt`. They are published as they
 ran; [`../results/post_hoc/README.md`](../results/post_hoc/README.md) maps their path constants to this repository.
 Before computing a new number, `seq_ratio.py` recomputes 1,600 recorded rows and stops if one differs.

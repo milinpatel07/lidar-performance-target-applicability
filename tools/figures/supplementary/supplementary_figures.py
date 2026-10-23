@@ -92,7 +92,7 @@ def build(name, blocks, groups, d):
 
 
 # ---------------------------------------------------------------- nuScenes, division by recorded scene
-m7 = rows(RES / "m7_scene_split/m7_scene_split.csv")
+m7 = rows(RES / "m7_nuscenes_by_scene/m7_scene_split.csv")
 blk = {"frame": 0, "scene_frame_unit": 1, "scene_scene_unit": 2}
 d7 = counts(m7, lambda r: (blk[r["variant"]], r["setting"], r["indicator"], r["established"], r["applied"], float(r["alpha"])))
 groups = []
@@ -104,10 +104,10 @@ for setting, lab, pairs in (("distance", "nuScenes distance", (("near", "far"), 
 build("fig_scenesplit", ["division by frame", "by recorded scene,\\\\frame as unit", "by recorded scene,\\\\scene as unit"], groups, d7)
 
 # ---------------------------------------------------------------- KITTI, division by recorded drive
-A6 = [r for r in rows(RES / "m6_protocol_seeds_weather/A_kitti_range_protocol.csv") if r["protocol"] == "kitti_ignore"]
-B6 = [r for r in rows(RES / "m6_protocol_seeds_weather/B_shift_seeds_protocol.csv") if r["protocol"] == "kitti_ignore"]
-A8 = [r for r in rows(RES / "m8_kitti_drive_split/A_kitti_distance_drive.csv") if r["protocol"] == "kitti_ignore"]
-B8 = [r for r in rows(RES / "m8_kitti_drive_split/B_dataset_drive.csv") if r["protocol"] == "kitti_ignore"]
+A6 = [r for r in rows(RES / "m6_five_splits/A_kitti_range_protocol.csv") if r["protocol"] == "kitti_ignore"]
+B6 = [r for r in rows(RES / "m6_five_splits/B_shift_seeds_protocol.csv") if r["protocol"] == "kitti_ignore"]
+A8 = [r for r in rows(RES / "m8_kitti_by_drive/A_kitti_distance_drive.csv") if r["protocol"] == "kitti_ignore"]
+B8 = [r for r in rows(RES / "m8_kitti_by_drive/B_dataset_drive.csv") if r["protocol"] == "kitti_ignore"]
 d8 = defaultdict(Counter)
 for rs, b in ((A6, None), (A8, "unit")):
     for r in rs:

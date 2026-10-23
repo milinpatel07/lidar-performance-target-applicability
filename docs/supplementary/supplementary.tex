@@ -20,7 +20,7 @@ This document lists the recorded results behind the paper in full: the outcome o
 
 \paragraph{Limits.} The target limits $10^{-2}$, $10^{-3}$ and $10^{-4}$ were fixed before the first run. The limits 0.05 and 0.1 were fixed at the same time as exploratory limits, to show which outcomes the data can decide; they are not safety targets. No threshold could be selected at $10^{-3}$ or $10^{-4}$ in any condition.
 
-\paragraph{Terms and files.} The repository's \path{docs/glossary.md} defines every term and maps it to the column names of the files, which keep the names they were written with (for example \texttt{applies} for applicable, \texttt{eval} for the test part). Run names m1 to m8 identify the scripts in \path{analysis/} and the folders in \path{results/}. Distance conditions are assigned per detection (boundary: median distance of the car detections in the grid part); weather and dataset are assigned per frame. KITTI results apply the KITTI rule unless stated otherwise.
+\paragraph{Terms and files.} The repository's \path{docs/glossary.md} defines every term and maps it to the column names of the files, which keep the names they were written with (for example \texttt{applies} for applicable, \texttt{eval} for the test part). Run names m1 to m8 identify the scripts in \path{experiments/} and the folders in \path{results/}. Distance conditions are assigned per detection (boundary: median distance of the car detections in the grid part); weather and dataset are assigned per frame. KITTI results apply the KITTI rule unless stated otherwise.
 
 \section{Condition classes}\label{sec:classes}
 Each condition is represented by a class of frames or detections in which one process acts on the point cloud. Neither dataset labels classes C3 and C4, and they are not measured.
@@ -50,7 +50,7 @@ C5 & distance & fewer returns per object & both datasets \\
 Each line is one cell of an applicability matrix: the threshold selected in one condition (\emph{sel.}, condition of selection) tested in the condition of use (\emph{use}) at limit $\alpha$. The code string gives the outcome per split, seeds 0 to 4 from left to right: \texttt{A} applicable, \texttt{N} not applicable, \texttt{?} not determined, \texttt{-} no threshold selected. The detailed tables give, per split with a threshold, the threshold $\tau$, the false acceptance proportion $\hat A$ with its two-sided HB interval ($\delta=0.05$) and the retention $\hat R$, as recorded. Limits $10^{-2}$, $10^{-3}$, $10^{-4}$ are the target limits; 0.05 and 0.1 are exploratory limits.
 
 \subsection{nuScenes, distance (m3)}
-Source: \path{results/m3_range_nuscenes/matrix_all_variants.csv}. Variants: overlap setting (IoU 0.5), object set (car; vehicles), cut quantile of car range in the grid part (0.25, 0.5, 0.75). The primary variant is car, cut quantile 0.5.
+Source: \path{results/m3_nuscenes_distance/matrix_all_variants.csv}. Variants: overlap setting (IoU 0.5), object set (car; vehicles), cut quantile of car range in the grid part (0.25, 0.5, 0.75). The primary variant is car, cut quantile 0.5.
 
 {\scriptsize
 \begin{longtable}{lllllll}
@@ -445,7 +445,7 @@ u\_s & 0.1 & near & near & 4 & 0.2298 & 0.0847 & [0.0709, 0.0998] & 0.668 & A \\
 }
 
 \subsection{KITTI, distance, labels as run and with the KITTI rule (m6 part A)}
-Source: \path{results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv}. Car detections, median cut of the grid part. Protocol \texttt{as\_run}: labels of the detection pipeline; \texttt{kitti\_ignore}: wrong detections in DontCare regions or on a Van removed (Section~\ref{sec:rule}).
+Source: \path{results/m6_five_splits/A_kitti_range_protocol.csv}. Car detections, median cut of the grid part. Protocol \texttt{as\_run}: labels of the detection pipeline; \texttt{kitti\_ignore}: wrong detections in DontCare regions or on a Van removed (Section~\ref{sec:rule}).
 
 {\scriptsize
 \begin{longtable}{llllll}
@@ -800,7 +800,7 @@ kitti\_ignore & u\_s & 0.1 & near & near & 4 & 0.0642 & [0.0496, 0.0811] & 0.852
 }
 
 \subsection{Change of dataset and detector, KITTI and nuScenes (m4, one split; m6 part B, five splits)}
-Sources: \path{results/m4_dataset_shift/shift_matrix.csv} (one split by frame, 50\,\% selection, 50\,\% test part; listed as seed 0) and \path{results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv} (seeds 0 to 4, labels as run and with the KITTI rule).
+Sources: \path{results/m4_dataset_change/shift_matrix.csv} (one split by frame, 50\,\% selection, 50\,\% test part; listed as seed 0) and \path{results/m6_five_splits/B_shift_seeds_protocol.csv} (seeds 0 to 4, labels as run and with the KITTI rule).
 
 {\scriptsize
 \begin{longtable}{lllll}
@@ -1251,7 +1251,7 @@ kitti\_ignore & u\_s & 0.1 & nuscenes & nuscenes & 4 & 0.2000 & 0.0753 & [0.0638
 }
 
 \subsection{nuScenes, recorded rain against clear daytime (m6 part C)}
-Source: \path{results/m6_protocol_seeds_weather/C_weather_nuscenes.csv}. A frame's condition comes from its scene description; night and rain-at-night frames are excluded. Rain frames hold airborne scatterers and a wet road together, so the condition is recorded rain, not one physical process.
+Source: \path{results/m6_five_splits/C_weather_nuscenes.csv}. A frame's condition comes from its scene description; night and rain-at-night frames are excluded. Rain frames hold airborne scatterers and a wet road together, so the condition is recorded rain, not one physical process.
 
 {\scriptsize
 \begin{longtable}{lllll}
@@ -1465,7 +1465,7 @@ dataset and detector & u\_s & nuscenes $\to$ kitti & 0.244\,N & 0.245\,N & 0.239
 }
 
 \section{KITTI rule: counts}\label{sec:rule}
-The labels of the detection pipeline count a car detection as wrong when it lies in a KITTI DontCare region or on a Van. The KITTI rule removes such wrong detections (neither correct nor wrong): a wrong car detection is removed if its 3D overlap with a Van is at least 0.5, or if its projected 2D box overlaps a DontCare box by more than half of the detection's own area. Only detections labelled wrong can be removed. Sources: \path{results/m6_protocol_seeds_weather/provenance.json} (key \texttt{A}) and \path{results/m6_protocol_seeds_weather/summary.txt}.
+The labels of the detection pipeline count a car detection as wrong when it lies in a KITTI DontCare region or on a Van. The KITTI rule removes such wrong detections (neither correct nor wrong): a wrong car detection is removed if its 3D overlap with a Van is at least 0.5, or if its projected 2D box overlaps a DontCare box by more than half of the detection's own area. Only detections labelled wrong can be removed. Sources: \path{results/m6_five_splits/provenance.json} (key \texttt{A}) and \path{results/m6_five_splits/summary.txt}.
 
 \begin{table}[H]\centering\small
 \caption{Wrong car detections and the detections the KITTI rule removes, by distance class (cut: median car range over all frames).}
@@ -1527,7 +1527,7 @@ Frames of one recorded sequence share objects, weather and road, so they are not
 
 \paragraph{Variants.} \emph{Frame}: division by frame, as recorded. \emph{Variant (i)}: division by recorded sequence, the frame stays the unit of the selection test and of the HB bounds. \emph{Variant (ii)}: the same division with the sequence as the unit. The loss of sequence $s$ in condition $c$ is $\ell_s(\tau)=\frac{1}{|F_{s,c}|}\sum_{f\in F_{s,c}}a_f(\tau)$, where $F_{s,c}$ are the frames of $s$ that hold a car detection of $c$; a sequence without accepted detections has loss 0, and each sequence has equal weight. Retention is a sum over detections and is the same for both units. The post-hoc Method A (Section~\ref{sec:posthoc}) keeps the per-frame target exactly with the sequence as the unit.
 
-\paragraph{Reproduction check.} Before the division by scene, the division by frame was rerun with the scripts of the scene runs and compared with the recorded results in every row and column: ``REPRODUCTION frame split: m3 1200 rows, m6 A/B/C all rows, input hashes: EQUAL'' (\path{results/m7_scene_split/REPRO_PASSED.txt}).
+\paragraph{Reproduction check.} Before the division by scene, the division by frame was rerun with the scripts of the scene runs and compared with the recorded results in every row and column: ``REPRODUCTION frame split: m3 1200 rows, m6 A/B/C all rows, input hashes: EQUAL'' (\path{results/m7_nuscenes_by_scene/REPRO_PASSED.txt}).
 
 {\scriptsize
 \begin{longtable}{lllllllp{3.6cm}}
@@ -1592,7 +1592,7 @@ weather & u\_s & 0.1 & rain$\to$rain & \texttt{AAAAA} & \texttt{A?AA?} & \texttt
 }
 
 \begin{table}[H]\centering\scriptsize
-\caption{nuScenes scenes per condition and part under the division by scene, per split; in brackets the frames with a car detection (\texttt{results/m7\_scene\_split/m7\_scene\_split\_summary.txt}, l.~94--98). A scene counts for near or far if it holds a car detection of that condition; most scenes count for both.}
+\caption{nuScenes scenes per condition and part under the division by scene, per split; in brackets the frames with a car detection (\texttt{results/m7\_nuscenes\_by\_scene/m7\_scene\_split\_summary.txt}, l.~94--98). A scene counts for near or far if it holds a car detection of that condition; most scenes count for both.}
 \begin{tabular}{lllllll}\toprule split & grid / sel. / test & boundary & near sel. / test & far sel. / test & clear sel. / test & rain sel. / test \\ \midrule
 0 & 15\,/\,68\,/\,67 & 19.888 m & 67\,/\,67 & 68\,/\,67 & 52 (1948)\,/\,49 (1908) & 9 (337)\,/\,10 (399) \\
 1 & 15\,/\,68\,/\,67 & 19.975 m & 67\,/\,67 & 68\,/\,67 & 48 (1768)\,/\,50 (1952) & 11 (421)\,/\,11 (410) \\
@@ -2284,7 +2284,7 @@ prediction & outcome & reason & evidence \\ \midrule
 P1. Indicator response by mechanism. (l.~33) & not tested & classes C1 and C2 were measured only together as recorded rain, and C3 was not measured, so the comparison the prediction names cannot be made & -- \\
 P2. Discrimination is more stable than the operating point. (l.~48) & not tested & how to compare the spread of AUROC with the spread of the FAP in units of interval width was not fixed in advance; the comparison was not computed & -- \\
 P3. The maximum retention gap is not zero and not total. (l.~57) & held & the retention gap $G$ of the common threshold lies above zero and below the retention at the threshold of the condition (KITTI, $u_{\mathrm{s}}$, split 0) & \path{results/supporting_analyses/common_threshold_outcomes.csv} \\
-P4. Applicability is not symmetric. (l.~71) & held & nuScenes$\to$KITTI is not applicable on all splits for $u_{\mathrm{s}}$ at every limit with a threshold, KITTI$\to$nuScenes is applicable; near$\to$far and far$\to$near differ in the same way at 0.1 & \path{results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv} \\
+P4. Applicability is not symmetric. (l.~71) & held & nuScenes$\to$KITTI is not applicable on all splits for $u_{\mathrm{s}}$ at every limit with a threshold, KITTI$\to$nuScenes is applicable; near$\to$far and far$\to$near differ in the same way at 0.1 & \path{results/m6_five_splits/B_shift_seeds_protocol.csv} \\
 P5. Some cells return ''not determined''. (l.~79) & held & cells with the outcome not determined occur in every pair of conditions & \path{docs/results.md} (outcome table) and its source files \\
 \bottomrule\end{tabular}\end{table}
 
@@ -2330,17 +2330,17 @@ Every number in this document is read by \path{tools/supplementary/make_suppleme
 
 {\scriptsize\begin{longtable}{p{7.6cm}p{7.6cm}}\toprule file & SHA-256 \\ \midrule
 \path{docs/study_protocol/predictions_frozen_2026-10-01.md} & {\tiny\texttt{374cd6f2b8481c26c8e5e5283da108037b83e8c8969adf0279dadd560927d387}} \\
-\path{results/m3_range_nuscenes/matrix_all_variants.csv} & {\tiny\texttt{12e386948dab180cedaf02d17ea09cc756ffc189ec0afd186f643be27c34b74e}} \\
-\path{results/m4_dataset_shift/shift_matrix.csv} & {\tiny\texttt{fbd1c2ded0f9eb58eb052095d033af7657263db050c519f0dc912b6d0e542554}} \\
-\path{results/m6_protocol_seeds_weather/A_kitti_range_protocol.csv} & {\tiny\texttt{56a3721febba396f78880f1ed9f0af0c288da1f5f49f64017d365119ffb464c8}} \\
-\path{results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv} & {\tiny\texttt{7bc64acb59d6e7b14b96f16272f4a643bb54dbff2d38885cfb294a63b9b49930}} \\
-\path{results/m6_protocol_seeds_weather/C_weather_nuscenes.csv} & {\tiny\texttt{e0cf1586b2b2f3fa5fa14f6d69df020fb8be00f91a7fe99e00454ebb72c03af0}} \\
-\path{results/m6_protocol_seeds_weather/provenance.json} & {\tiny\texttt{180a69d5fd714702df9c4673e5ae1fde1bc77867a92b0c0e5e57dfe5b72e1dea}} \\
-\path{results/m6_protocol_seeds_weather/summary.txt} & {\tiny\texttt{79f649f444cadee0dd60dd31da1fac00b1cf6b76964f00d3dfae8b0640bd18cb}} \\
-\path{results/m7_scene_split/REPRO_PASSED.txt} & {\tiny\texttt{cae93f90717884984c296e34a6eb5485b5d756c9c2fc4a68e94b29ec66abe478}} \\
-\path{results/m7_scene_split/m7_scene_split.csv} & {\tiny\texttt{75452edfe3893c706305f816279bf263ff483c1135331e14f05d2d1638a7a3ca}} \\
-\path{results/m7_scene_split/m7_scene_split_summary.txt} & {\tiny\texttt{c60ecabafdb0966413ba067c8088e61f1ff36eaa88f4aa762f6789f1b219dfe6}} \\
-\path{results/m8_kitti_drive_split/REPRO_PASSED.txt} & {\tiny\texttt{8aa86eb948c468156748f370c5cf576596451addf6bc3b2d8f92486f64cf3a41}} \\
+\path{results/m3_nuscenes_distance/matrix_all_variants.csv} & {\tiny\texttt{12e386948dab180cedaf02d17ea09cc756ffc189ec0afd186f643be27c34b74e}} \\
+\path{results/m4_dataset_change/shift_matrix.csv} & {\tiny\texttt{fbd1c2ded0f9eb58eb052095d033af7657263db050c519f0dc912b6d0e542554}} \\
+\path{results/m6_five_splits/A_kitti_range_protocol.csv} & {\tiny\texttt{56a3721febba396f78880f1ed9f0af0c288da1f5f49f64017d365119ffb464c8}} \\
+\path{results/m6_five_splits/B_shift_seeds_protocol.csv} & {\tiny\texttt{7bc64acb59d6e7b14b96f16272f4a643bb54dbff2d38885cfb294a63b9b49930}} \\
+\path{results/m6_five_splits/C_weather_nuscenes.csv} & {\tiny\texttt{e0cf1586b2b2f3fa5fa14f6d69df020fb8be00f91a7fe99e00454ebb72c03af0}} \\
+\path{results/m6_five_splits/provenance.json} & {\tiny\texttt{180a69d5fd714702df9c4673e5ae1fde1bc77867a92b0c0e5e57dfe5b72e1dea}} \\
+\path{results/m6_five_splits/summary.txt} & {\tiny\texttt{79f649f444cadee0dd60dd31da1fac00b1cf6b76964f00d3dfae8b0640bd18cb}} \\
+\path{results/m7_nuscenes_by_scene/REPRO_PASSED.txt} & {\tiny\texttt{cae93f90717884984c296e34a6eb5485b5d756c9c2fc4a68e94b29ec66abe478}} \\
+\path{results/m7_nuscenes_by_scene/m7_scene_split.csv} & {\tiny\texttt{75452edfe3893c706305f816279bf263ff483c1135331e14f05d2d1638a7a3ca}} \\
+\path{results/m7_nuscenes_by_scene/m7_scene_split_summary.txt} & {\tiny\texttt{c60ecabafdb0966413ba067c8088e61f1ff36eaa88f4aa762f6789f1b219dfe6}} \\
+\path{results/m8_kitti_by_drive/REPRO_PASSED.txt} & {\tiny\texttt{8aa86eb948c468156748f370c5cf576596451addf6bc3b2d8f92486f64cf3a41}} \\
 \path{results/post_hoc/GATE_PASSED.txt} & {\tiny\texttt{c2bbbc20f5f9473b714a71800068b59dbe16120226274fa5ab53718b6c259313}} \\
 \path{results/post_hoc/auroc_bootstrap.csv} & {\tiny\texttt{bd9a4dd02c255fe2f447c584f6625b657c695b27e46a9b235c4399730d94eaac}} \\
 \path{results/post_hoc/epoch_check.txt} & {\tiny\texttt{521f21656408971bcdcd813e08c9b1b80b304535a4ae4cb03c40e55893fc6028}} \\

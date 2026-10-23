@@ -21,18 +21,18 @@ OUT = ROOT / "docs/supplementary"
 NAME = "supplementary"
 R, SA = "results", "results/supporting_analyses"
 F = {
-    "m3": f"{R}/m3_range_nuscenes/matrix_all_variants.csv",
-    "m4": f"{R}/m4_dataset_shift/shift_matrix.csv",
-    "m6A": f"{R}/m6_protocol_seeds_weather/A_kitti_range_protocol.csv",
-    "m6Ar": f"{R}/m6_protocol_seeds_weather/A_kitti_range_protocol.csv",
-    "m6B": f"{R}/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv",
-    "m6C": f"{R}/m6_protocol_seeds_weather/C_weather_nuscenes.csv",
-    "m6p": f"{R}/m6_protocol_seeds_weather/provenance.json",
-    "m6s": f"{R}/m6_protocol_seeds_weather/summary.txt",
-    "m7": f"{R}/m7_scene_split/m7_scene_split.csv",
-    "m7summ": f"{R}/m7_scene_split/m7_scene_split_summary.txt",
-    "m7repro": f"{R}/m7_scene_split/REPRO_PASSED.txt",
-    "m8rep": f"{R}/m8_kitti_drive_split/REPRO_PASSED.txt",
+    "m3": f"{R}/m3_nuscenes_distance/matrix_all_variants.csv",
+    "m4": f"{R}/m4_dataset_change/shift_matrix.csv",
+    "m6A": f"{R}/m6_five_splits/A_kitti_range_protocol.csv",
+    "m6Ar": f"{R}/m6_five_splits/A_kitti_range_protocol.csv",
+    "m6B": f"{R}/m6_five_splits/B_shift_seeds_protocol.csv",
+    "m6C": f"{R}/m6_five_splits/C_weather_nuscenes.csv",
+    "m6p": f"{R}/m6_five_splits/provenance.json",
+    "m6s": f"{R}/m6_five_splits/summary.txt",
+    "m7": f"{R}/m7_nuscenes_by_scene/m7_scene_split.csv",
+    "m7summ": f"{R}/m7_nuscenes_by_scene/m7_scene_split_summary.txt",
+    "m7repro": f"{R}/m7_nuscenes_by_scene/REPRO_PASSED.txt",
+    "m8rep": f"{R}/m8_kitti_by_drive/REPRO_PASSED.txt",
     "m8cnt": f"{SA}/m8_outcome_counts.csv",
     "m8drv": f"{SA}/m8_drives_per_part.csv",
     "bins": f"{SA}/distance_bins_log.txt",
@@ -484,7 +484,7 @@ def sec_intro():
             "not safety targets. No threshold could be selected at $10^{-3}$ or $10^{-4}$ in any condition.", "",
             "\\paragraph{Terms and files.} The repository's \\path{docs/glossary.md} defines every term and maps it to the column "
             "names of the files, which keep the names they were written with (for example \\texttt{applies} for applicable, "
-            "\\texttt{eval} for the test part). Run names m1 to m8 identify the scripts in \\path{analysis/} and the folders in "
+            "\\texttt{eval} for the test part). Run names m1 to m8 identify the scripts in \\path{experiments/} and the folders in "
             "\\path{results/}. Distance conditions are assigned per detection (boundary: median distance of the car detections in the "
             "grid part); weather and dataset are assigned per frame. KITTI results apply the KITTI rule unless stated otherwise.", ""]
 
@@ -616,7 +616,7 @@ def sec_predictions():
                   "of the condition (KITTI, $u_{\\mathrm{s}}$, split 0)", "\\path{results/supporting_analyses/common_threshold_outcomes.csv}"),
            "P4": ("held", "nuScenes$\\to$KITTI is not applicable on all splits for $u_{\\mathrm{s}}$ at every limit with a threshold, "
                   "KITTI$\\to$nuScenes is applicable; near$\\to$far and far$\\to$near differ in the same way at 0.1",
-                  "\\path{results/m6_protocol_seeds_weather/B_shift_seeds_protocol.csv}"),
+                  "\\path{results/m6_five_splits/B_shift_seeds_protocol.csv}"),
            "P5": ("held", "cells with the outcome not determined occur in every pair of conditions",
                   "\\path{docs/results.md} (outcome table) and its source files")}
     L = ["\\section{Predictions fixed in advance and their outcomes}\\label{sec:predictions}",

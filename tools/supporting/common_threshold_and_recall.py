@@ -7,7 +7,7 @@ common_threshold_and_recall.py - from the cached per-detection tables, no experi
   (2) recall_denominators.json: annotated nuScenes cars counted by the correctness matching, and for comparison
       under a benchmark-style filter; detector score cut-offs from the configs;
   (3) the accepted wrong boxes of KITTI frame 004289 (frame figure) against the annotations.
-Statistics from m1 in analysis/. Writes only below work/supporting_analyses.
+Statistics from m1 in experiments/. Writes only below work/supporting_analyses.
 
 Usage: python3 tools/supporting/common_threshold_and_recall.py
 """
