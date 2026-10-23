@@ -44,9 +44,11 @@ reproduces a recorded run only if its inputs have these hashes.
 
 ## Where the detector outputs come from
 
-The ensembles were trained with OpenPCDet (four seeds per dataset, score cut-off 0.1). The nuScenes members were trained
-for about 10 epochs: their configurations set 20 epochs, but training ended after epoch 10, and the checkpoints used for
-inference hold about 10 epochs ([`results/post_hoc/epoch_check.txt`](../results/post_hoc/epoch_check.txt)). The outputs were merged as
+The ensembles were trained with OpenPCDet 0.6.0 (four seeds per dataset, score cut-off 0.1): the KITTI members for 10
+epochs on the 3,712 training frames, the nuScenes members on the 700 training scenes for about 10 of the 20 configured
+epochs (training ended after epoch 10; [`results/post_hoc/epoch_check.txt`](../results/post_hoc/epoch_check.txt)).
+Configurations, training runs, the checkpoint each member's inference loaded (with SHA-256) and the software
+environment are in [`provenance.md`](provenance.md). The outputs were merged as
 described in [`method.md`](method.md#1-detector-detections-and-indicators). The two indicators and the merge follow
 the conference paper that introduced them:
 

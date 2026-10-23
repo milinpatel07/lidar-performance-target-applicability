@@ -6,6 +6,19 @@ version: 1.2.0
 date-released: "2026-10-21"
 repository-code: "https://github.com/milinpatel07/lidar-performance-target-applicability"
 license: MIT
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23495356"
+    description: "Concept DOI of all archived versions"
+keywords:
+  - "safety of the intended functionality"
+  - "ISO 21448"
+  - "performance targets"
+  - "triggering conditions"
+  - "uncertainty thresholds"
+  - "Learn then Test"
+  - "LiDAR object detection"
+abstract: "Code, recorded results and detector provenance of an applicability test that decides, at a stated error probability, whether a performance target met with an uncertainty threshold under one condition is applicable, not applicable or not determined under another, evaluated with PointPillars ensembles on KITTI and nuScenes."
 authors:
   - family-names: Patel
     given-names: Milin

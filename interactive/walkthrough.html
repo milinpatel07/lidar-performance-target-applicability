@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Applicability step by step</title>
+<meta name="description" content="A guided walk-through in seven steps: from a performance target on false acceptances to the applicability test of an uncertainty threshold under a triggering condition. Schematic data, not measured.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="walkthrough.css">
+</head>
+<body class="wt">
+<header class="wt-head">
+  <nav class="top" aria-label="Site"><a href="./">Interactive pages</a><a href="../explorer/">Results browser</a><a href="../">Repository start page</a></nav>
+  <h1>Applicability step by step <span class="badge">schematic, not measured</span></h1>
+  <p class="wt-lead">An object detector in an automated vehicle passes its detections to the motion planner. This
+  walk-through follows one question in seven steps: does an uncertainty threshold that meets its performance target
+  under one condition still meet it under a triggering condition? Each step has one small widget. All detections,
+  frames and values on this page come from a seeded random number generator in the page; none of them is measured.</p>
+</header>
+
+<nav class="wt-progress" aria-label="Steps">
+  <div class="wt-bar" aria-hidden="true"><div class="wt-fill" id="wt-fill"></div></div>
+  <div class="wt-row">
+    <button type="button" class="act wt-pn" id="wt-prev" aria-label="Previous step">&larr;<span class="wt-pn-t"> Previous</span></button>
+    <ol class="wt-steps" id="wt-steps"></ol>
+    <button type="button" class="act wt-pn" id="wt-next" aria-label="Next step"><span class="wt-pn-t">Next </span>&rarr;</button>
+  </div>
+  <p class="sr-only" id="wt-live" aria-live="polite"></p>
+</nav>
+
+<main>
+
+<section class="wt-ch" id="ch1" aria-labelledby="ch1-h" data-short="Detections">
+  <div class="wt-text">
+    <p class="wt-num">Step 1 of 7</p>
+    <h2 id="ch1-h">What the detector passes on</h2>
+    <p>Each box is a detection in one frame, seen from above, with its uncertainty value <i>u</i>. The detector
+    passes a detection on (<em>accepts</em> it) if <i>u</i> does not exceed the threshold τ, and rejects it otherwise.</p>
+    <p>The annotation of the recording tells which detections are correct. An accepted wrong detection is a
+    <em>false acceptance</em>; a rejected correct detection is <em>withheld</em> and does not reach the motion planner.</p>
+    <p class="note">Move τ and watch which boxes change state.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-ctl"><label for="t1">threshold τ <output id="o-t1"></output></label>
+      <input type="range" id="t1" min="0" max="1" step="0.01" value="0.45"></div>
+    <svg id="svg1" class="chart wt-svg" viewBox="0 0 380 330" role="img" aria-labelledby="svg1-d"><desc id="svg1-d">Top view of one schematic frame with detections and their uncertainty values, and an axis of the values with the threshold.</desc></svg>
+    <div class="wt-counts" id="c1" aria-live="polite"></div>
+    <figcaption class="note">Schematic, not measured.</figcaption>
+  </figure>
+</section>
+
+<section class="wt-ch" id="ch2" aria-labelledby="ch2-h" data-short="Target">
+  <div class="wt-text">
+    <p class="wt-num">Step 2 of 7</p>
+    <h2 id="ch2-h">A target on false acceptances</h2>
+    <p>A vehicle-level acceptance criterion of ISO 21448 is allocated to the detector as a performance target. Here
+    it bounds the <em>false acceptance proportion</em> (FAP): the per-frame share <i>a<sub>f</sub></i> of false
+    acceptances among the accepted detections, averaged over frames, must not exceed the limit α.</p>
+    <p>A frame without accepted detections contributes <i>a<sub>f</sub></i> = 0. Rejecting every detection therefore
+    meets any limit, and no detection reaches the motion planner. For this reason every result is reported with the
+    <em>retention</em>, the share of correct detections that the threshold accepts.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-ctl"><label for="t2">threshold τ <output id="o-t2"></output></label>
+      <input type="range" id="t2" min="0" max="1" step="0.01" value="0.55">
+      <button type="button" class="act" id="b2">Reject every detection</button></div>
+    <svg id="svg2" class="chart wt-svg" viewBox="0 0 380 260" role="img" aria-labelledby="svg2-d"><desc id="svg2-d">Per-frame share of false acceptances for twenty schematic frames, their mean (the FAP) and the limit, with the accepted detections of each frame below.</desc></svg>
+    <div class="wt-counts" id="c2" aria-live="polite"></div>
+    <figcaption class="note">Twenty schematic frames, limit α = 0.05. Schematic, not measured.</figcaption>
+  </figure>
+</section>
+
+<section class="wt-ch" id="ch3" aria-labelledby="ch3-h" data-short="Selection">
+  <div class="wt-text">
+    <p class="wt-num">Step 3 of 7</p>
+    <h2 id="ch3-h">Selecting a threshold with a guarantee</h2>
+    <p>Learn then Test checks candidate thresholds on the selection data of one condition <i>c</i>, from the lowest
+    upwards. A candidate passes if the Hoeffding-Bentkus (HB) <i>p</i>-value for "FAP above α" is at most δ.</p>
+    <p>The selected threshold τ<sub><i>c</i></sub> is the last candidate that passes before the first one that fails.
+    With probability at least 1&minus;δ its FAP is at most α, but only for data distributed like the selection data.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-ctl"><label for="d3">error probability δ <output id="o-d3"></output></label>
+      <input type="range" id="d3" min="0" max="6" step="1" value="4"></div>
+    <svg id="svg3" class="chart wt-svg" viewBox="0 0 380 250" role="img" aria-labelledby="svg3-d"><desc id="svg3-d">HB p-value of each candidate threshold on a logarithmic axis, the line at delta, and the selected threshold.</desc></svg>
+    <div class="wt-legend" id="l3"></div>
+    <div class="wt-counts" id="c3" aria-live="polite"></div>
+    <figcaption class="note">400 schematic selection frames of condition <i>c</i>, α = 0.05. Schematic, not measured.</figcaption>
+  </figure>
+</section>
+
+<section class="wt-ch" id="ch4" aria-labelledby="ch4-h" data-short="Condition">
+  <div class="wt-text">
+    <p class="wt-num">Step 4 of 7</p>
+    <h2 id="ch4-h">A triggering condition changes the data</h2>
+    <p>Far distance, rain or another dataset change the detections. The threshold τ<sub><i>c</i></sub> from
+    step 3 is used unchanged in the condition of use <i>c</i>&prime;.</p>
+    <p>Four changes can raise the FAP in <i>c</i>&prime;: weaker separation, more wrong detections, shifted values
+    and a different spread of wrong detections over frames. AUROC measures separation only, so it changes with the
+    first of them and not with the other three.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-ctl wt-grid">
+      <label for="s-sep">separation <output id="o-sep"></output><input type="range" id="s-sep" min="0" max="4" step="0.05"></label>
+      <label for="s-share">share of wrong detections <output id="o-share"></output><input type="range" id="s-share" min="0.05" max="0.8" step="0.01"></label>
+      <label for="s-shift">shift of values <output id="o-shift"></output><input type="range" id="s-shift" min="-0.15" max="0.15" step="0.005"></label>
+      <label for="s-conc">spread over frames <output id="o-conc"></output><input type="range" id="s-conc" min="0" max="1" step="0.02"></label>
+      <button type="button" class="act" id="b4">Same as <i>c</i></button>
+    </div>
+    <svg id="svg4" class="chart wt-svg" viewBox="0 0 380 210" role="img" aria-labelledby="svg4-d"><desc id="svg4-d">Distributions of the uncertainty value of correct and wrong detections in condition c and in condition c-prime, with the transferred threshold.</desc></svg>
+    <div class="wt-legend" id="l4"></div>
+    <div class="scroll"><table class="detail wt-table" id="tab4"></table></div>
+    <p class="wt-msg" id="m4" aria-live="polite"></p>
+    <figcaption class="note">FAP and retention on 20,000 schematic frames per condition. Spread over frames: wrong
+    detections concentrated in frames with few detections, at the same expected share. Schematic, not measured.</figcaption>
+  </figure>
+</section>
+
+<section class="wt-ch" id="ch5" aria-labelledby="ch5-h" data-short="Test">
+  <div class="wt-text">
+    <p class="wt-num">Step 5 of 7</p>
+    <h2 id="ch5-h">Test, do not assume</h2>
+    <p>The guarantee of step 3 does not cover <i>c</i>&prime;, so τ<sub><i>c</i></sub> is tested on <i>n</i> units of
+    <i>c</i>&prime;. The HB bounds give an interval [<i>L</i>, <i>U</i>] of the FAP at confidence 1&minus;δ.</p>
+    <p>The target is <em>applicable</em> if <i>U</i> &le; α, <em>not applicable</em> if <i>L</i> &gt; α, and
+    <em>not determined</em> otherwise. With few units the interval is wide and the outcome is not determined.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-ctl wt-grid">
+      <label for="n5">test units <i>n</i> <output id="o-n5"></output><input type="range" id="n5" min="0" max="1000" step="1" value="300"></label>
+      <label for="s5">share of wrong detections in <i>c</i>&prime; <output id="o-s5"></output><input type="range" id="s5" min="0.05" max="0.8" step="0.01"></label>
+    </div>
+    <svg id="svg5" class="chart wt-svg" viewBox="0 0 380 120" role="img" aria-labelledby="svg5-d"><desc id="svg5-d">Interval of the FAP in condition c-prime on a logarithmic axis against the limit.</desc></svg>
+    <p class="result">Outcome: <span id="out5" class="outcome" aria-live="polite"></span></p>
+    <div class="wt-chips" id="chips5" aria-label="Outcome for growing n"></div>
+    <figcaption class="note">The other settings of <i>c</i>&prime; are those of step 4. Schematic, not measured.</figcaption>
+  </figure>
+</section>
+
+<section class="wt-ch" id="ch6" aria-labelledby="ch6-h" data-short="Units">
+  <div class="wt-text">
+    <p class="wt-num">Step 6 of 7</p>
+    <h2 id="ch6-h">Count independent units</h2>
+    <p>The HB test treats every unit as an independent draw. Frames of one recorded sequence share the place, the
+    weather and the traffic, so they are not independent; unless their independence is shown, the unit is the
+    recorded sequence.</p>
+    <p>Even if no unit holds a false acceptance, showing that the limit is met at error probability δ&prime; needs
+    at least <i>n</i> &ge; ln δ&prime; / ln(1&minus;α) units per condition and part (δ&prime; = δ to select, δ/2 to
+    test). This number can be computed before recording.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-ctl wt-grid">
+      <fieldset class="wt-seg"><legend>unit</legend>
+        <label><input type="radio" name="unit6" value="frame" checked> frames</label>
+        <label><input type="radio" name="unit6" value="recorded sequence"> recorded sequences</label></fieldset>
+      <label for="a6">limit α <output id="o-a6"></output><input type="range" id="a6" min="0" max="300" step="1" value="200"></label>
+    </div>
+    <svg id="svg6a" class="chart wt-svg" viewBox="0 0 380 92" role="img" aria-labelledby="svg6a-d"><desc id="svg6a-d">Five schematic recorded sequences of ten frames each, outlined by the chosen unit.</desc></svg>
+    <svg id="svg6" class="chart wt-svg" viewBox="0 0 380 250" role="img" aria-labelledby="svg6-d"><desc id="svg6-d">Minimum number of independent units against the limit, for selecting and for testing, with the test units of the case study.</desc></svg>
+    <div class="wt-legend" id="l6"></div>
+    <p class="wt-msg" id="m6" aria-live="polite"></p>
+    <details class="wt-det"><summary>Case study: test units per condition (split 0)</summary>
+      <div class="scroll"><table class="detail wt-table" id="tab6"></table></div>
+      <p class="note" id="st6">Read from <code>data/units.json</code>.</p></details>
+    <figcaption class="note">The sequence grid is schematic. Case study values are recorded numbers of test units of
+    KITTI and nuScenes (paper, Sect. 4 and 5), read from <code>data/units.json</code>.</figcaption>
+  </figure>
+</section>
+
+<section class="wt-ch" id="ch7" aria-labelledby="ch7-h" data-short="Measures">
+  <div class="wt-text">
+    <p class="wt-num">Step 7 of 7</p>
+    <h2 id="ch7-h">What follows from each outcome</h2>
+    <p>Each outcome enters the SOTIF analysis with its own measure (paper, Table 5). Choose an outcome.</p>
+  </div>
+  <figure class="wt-fig">
+    <div class="wt-tabs" role="tablist" aria-label="Outcomes" id="tabs7"></div>
+    <div class="wt-panel" id="panel7" role="tabpanel" tabindex="0"></div>
+  </figure>
+</section>
+
+<section class="wt-end" aria-labelledby="end-h">
+  <h2 id="end-h">Continue with</h2>
+  <ul class="pages">
+    <li><a href="own-data.html"><strong>Your own data</strong></a>: run the test on per-unit values of your detector.</li>
+    <li><a href="test.html"><strong>Applicability test calculator</strong></a>: <i>p</i>-value, interval, outcome and
+    minimum number of units for given <i>n</i>, Â, α and δ.</li>
+    <li><a href="../explorer/"><strong>Results browser</strong></a>: every recorded outcome of the case study per split.</li>
+    <li><a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/concept.md"><strong>The applicability test in one page</strong></a> (docs/concept.md), with references to the paper.</li>
+  </ul>
+</section>
+</main>
+
+<footer>
+  <ul>
+    <li>Schematic model: uncertainty value of a correct detection normally distributed with standard deviation 0.1
+    around 0.3 plus the shift, that of a wrong detection shifted further by separation &times; 0.1; 1 to 8 detections per
+    frame; random numbers from a seeded 32-bit generator (mulberry32). Statistics: <code>stats.js</code>, the port of
+    the HB test used by the other pages. Code: <code>interactive/walkthrough.js</code>.</li>
+    <li>Keys: arrow right or left (outside a slider) moves to the next or previous step.</li>
+  </ul>
+</footer>
+<script src="common.js"></script>
+<script src="stats.js"></script>
+<script src="walkthrough.js"></script>
+</body>
+</html>

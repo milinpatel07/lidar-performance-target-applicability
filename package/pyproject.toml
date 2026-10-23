@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "applicability-test"
+version = "0.1.0"
+description = "Test whether a threshold on an uncertainty indicator, selected with a guarantee on the false acceptance proportion in one condition, applies in another condition."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Milin Patel"}, {name = "Rolf Jung"}]
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+pandas = ["pandas"]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/milinpatel07/lidar-performance-target-applicability"
+
+[project.scripts]
+applicability-test = "applicability_test.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

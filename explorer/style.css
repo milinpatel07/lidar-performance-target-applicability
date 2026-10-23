@@ -56,3 +56,16 @@ footer li { margin: .3rem 0; }
   .filters { padding: .5rem; }
   .sq { width: 13px; height: 13px; line-height: 13px; font-size: 9px; }
 }
+.btn { font: inherit; font-size: .9rem; padding: .3rem .6rem; background: var(--bg); color: var(--fg);
+  border: 1px solid var(--line); border-radius: 4px; cursor: pointer; }
+.btn:hover { border-color: var(--focus); }
+.btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.banner { margin: 0 0 .75rem; padding: .5rem .75rem; border: 1px solid var(--c-N); border-left-width: 4px;
+  border-radius: 4px; background: var(--shade); }
+.strip { display: block; }
+.strip .axis { stroke: var(--line); stroke-width: 1; }
+.strip .limit { stroke: var(--fg); stroke-width: 1.5; }
+.strip .iv { stroke-width: 5; stroke-linecap: butt; }
+.strip .ok { stroke: var(--c-A); fill: var(--c-A); }
+.strip .bad { stroke: var(--c-N); fill: var(--c-N); }
+.strip .mid { stroke: var(--muted); }

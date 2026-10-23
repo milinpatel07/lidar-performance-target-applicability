@@ -1,6 +1,8 @@
 The recorded results, configurations and documentation in this repository (the folders results/, configs/ and
-docs/, and the Markdown files at the top level), except the code in results/post_hoc/code/, which is licensed under the
-MIT licence in LICENSE, are licensed under the Creative Commons
+docs/, the data files explorer/data/ and interactive/data/, the stored outputs of the notebooks, and the Markdown files
+at the top level), except the code in results/post_hoc/code/, which is licensed under the MIT licence in LICENSE, and
+the detector configurations in configs/detectors/, which are derived from OpenPCDet and remain under the Apache License
+2.0, are licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
 
 Copyright (c) 2026 Milin Patel and Rolf Jung
@@ -15,4 +17,5 @@ Why this licence: the results are derived from KITTI (CC BY-NC-SA 3.0, which all
 a later version with the same licence elements) and nuScenes (non-commercial terms of use). The datasets themselves
 are not part of this repository and remain under their own licences.
 
-The code in analysis/ and tools/ is licensed under the MIT License (see LICENSE).
+The code in analysis/, tools/, explorer/ and interactive/ (HTML, CSS and JavaScript) and the code cells of the
+notebooks are licensed under the MIT License (see LICENSE).

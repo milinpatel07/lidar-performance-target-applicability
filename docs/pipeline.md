@@ -5,7 +5,7 @@ Three levels of reproduction, from the cheapest to the most complete:
 | level | needs | reproduces |
 |---|---|---|
 | 1. checks | this repository only | every number of the paper and of the supplementary against `results/`; the browser data; the manifest; the self-tests of the statistics |
-| 2. tables and figures from recorded results | this repository only, plus pdflatex for the TikZ figures | Fig. 4 and Fig. 5 of the paper (from the recorded CSVs), the supplementary figures and document, the m8 outcome counts |
+| 2. tables and figures from recorded results | this repository only, plus pdflatex for the TikZ figures | Fig. 4 and Fig. 5 of the paper from the recorded CSVs, with the figure sources of 21 October 2026, whose label wording differs from the submitted figures ([`tools/figures/paper/README.md`](../tools/figures/paper/README.md)); the supplementary figures and document; the m8 outcome counts |
 | 3. experiment runs | KITTI and nuScenes validation data, the detector outputs, the KITTI devkit mapping files | every folder of `results/` (see [`reproduce.md`](reproduce.md)) |
 
 ## Data flow
@@ -23,8 +23,8 @@ flowchart TD
   META --> RUNS
   DEV --> M8
   RUNS["analysis/ m1, m2, m3, m4, m6<br/>merge, label, select, test"] --> RES["results/m1 ... m6"]
-  RES --> M7["analysis/m7_scene_split_report.py<br/>division by recorded scene"]
-  RES --> M8["analysis/m8_kitti_drive_split.py<br/>division by recorded drive"]
+  RES --> M7["analysis/m7_scene_split_report.py<br/>third run and sequence-level evaluation,<br/>nuScenes scenes"]
+  RES --> M8["analysis/m8_kitti_drive_split.py<br/>third run and sequence-level evaluation,<br/>KITTI drives"]
   M7 --> RES7["results/m7_scene_split"]
   M8 --> RES8["results/m8_kitti_drive_split"]
   DET --> EXP["tools/export_tables.py build<br/>work/cache/tables.pkl"]
@@ -41,7 +41,7 @@ flowchart TD
 
 Every run and every supporting script first recomputes recorded values and stops if one differs: each run rebuilds the
 merged detections and compares the per-frame missed and false detections with the detection pipeline; m7 and m8 rerun
-the division by frame and compare it with m3 and m6 byte for byte before the division by recorded sequence; each
+the frame-level evaluation and compare it with m3 and m6 byte for byte before the division by recorded sequence; each
 supporting script compares the split-0 cells with `results/`; the post-hoc script compares 1,600 rows with the recorded
 rows before it computes a new number.
 
@@ -76,4 +76,4 @@ time; the statistics in m1 are never edited.
 | `docs/paper_map.md` | `tools/check_paper_numbers.py --write` | `results/` |
 | `docs/supplementary/*` | `tools/supplementary/make_supplementary.py`, `tools/figures/supplementary/supplementary_figures.py` | `results/`, `docs/study_protocol/` |
 | `explorer/data/outcomes.json` | `tools/build_explorer_data.py` | `results/` |
-| paper figures 2 to 6 | `tools/figures/paper/` | `results/` (Fig. 2, 3 schematic) |
+| paper figures 2 to 6 | `tools/figures/paper/` (figure sources as of 21 October 2026; the submitted figures differ in label wording, listed in [`tools/figures/paper/README.md`](../tools/figures/paper/README.md)) | `results/` (Fig. 2, 3 schematic) |

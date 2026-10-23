@@ -1,5 +1,6 @@
-# Checks that need no dataset: manifest, every number of the paper and of the supplementary against results/,
-# the data of the results browser, and the self-tests of the statistics.
+# Checks that need no dataset and no network access beyond installing the pinned packages: manifest, the numbers of
+# the paper (and that docs/paper_map.md is fresh), the numbers of the supplementary material, the data and the
+# JavaScript of the results browser and of the interactive pages, relative links, and the self-tests of the statistics.
 name: checks
 on:
   push:
@@ -13,18 +14,54 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
       - name: Install
         run: pip install -r requirements.txt
       - name: Manifest
         run: sha256sum -c --quiet MANIFEST.sha256
-      - name: Numbers of the paper
-        run: python3 tools/check_paper_numbers.py
+      - name: Numbers of the paper (and docs/paper_map.md fresh)
+        run: python3 tools/check_paper_numbers.py --check-fresh
       - name: Numbers of the supplementary material
         run: python3 tools/supplementary/make_supplementary.py --check
       - name: Data of the results browser
         run: python3 tools/build_explorer_data.py --check
+      - name: Functions of the results browser (Node)
+        run: node --test tools/test_explorer.mjs
+      - name: Data of the interactive pages
+        run: |
+          if [ -f interactive/build_data.py ]; then python3 interactive/build_data.py --check; else echo "no interactive/build_data.py"; fi
+      - name: Statistics of the interactive pages against the analysis scripts
+        run: |
+          if [ -f tools/test_stats_js.py ]; then python3 tools/test_stats_js.py; else echo "no tools/test_stats_js.py"; fi
+          if [ -f tools/test_own_data_js.py ]; then python3 tools/test_own_data_js.py; fi
+      - name: Relative links in Markdown files and HTML pages
+        shell: python3 {0}
+        run: |
+          import re, sys
+          from pathlib import Path
+          bad = []
+          for p in sorted(Path(".").rglob("*")):
+              if ".git" in p.parts or p.suffix not in (".md", ".html") or not p.is_file():
+                  continue
+              text = p.read_text(encoding="utf-8", errors="ignore")
+              pat = r"\]\(([^)\s]+)" if p.suffix == ".md" else r"(?:href|src)\s*=\s*[\"']([^\"']+)[\"']"
+              for link in re.findall(pat, text):
+                  link = re.split(r"[?#]", link, maxsplit=1)[0]
+                  if not link or re.match(r"[a-zA-Z][a-zA-Z0-9+.-]*:", link) or link.startswith("//"):
+                      continue
+                  t = (p.parent / link).resolve()
+                  if not t.exists() or (p.suffix == ".html" and t.is_dir() and not (t / "index.html").exists()):
+                      bad.append(f"{p}: {link}")
+          print("\n".join(bad) if bad else "all relative links resolve")
+          sys.exit(1 if bad else 0)
       - name: Self-tests of the statistics
         working-directory: analysis
         run: |
           python3 m1_range_kitti.py --selftest
           python3 m3_range_nuscenes.py --selftest
+      - name: Package applicability_test (install and tests against the analysis scripts)
+        run: |
+          pip install "./package[test]"
+          pytest -q package/tests

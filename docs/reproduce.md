@@ -58,7 +58,7 @@ python3 m4_dataset_shift.py    --rum /rum --out ../work/m4
 python3 m6_protocol_seeds_weather.py --rum /rum --out ../work/m6 --nusc-meta /nuscenes/v1.0-trainval
 ```
 
-Division by recorded nuScenes scene (m7): the division by frame must first reproduce the recorded results.
+Third run and sequence-level evaluation on nuScenes scenes (m7; terms in [`concept.md`, section 5](concept.md#5-the-independent-unit-frame-or-recorded-sequence)). The frame-level evaluation must first reproduce the recorded results.
 
 ```bash
 python3 m3_range_nuscenes.py --rum /rum --out ../work/m7/m3_frame --split frame
@@ -69,9 +69,9 @@ python3 m6_protocol_seeds_weather.py --rum /rum --out ../work/m7/m6_scene --nusc
 python3 m7_scene_split_report.py collect --run ../work/m7
 ```
 
-Split by recorded KITTI drive (m8). The devkit folder holds `mapping/train_rand.txt` and `mapping/train_mapping.txt`
-from `devkit_object.zip` of the KITTI object benchmark. The script reruns the division by frame first and stops unless it
-equals the recorded m6 results byte for byte with equal input hashes.
+Third run and sequence-level evaluation on KITTI drives (m8). The devkit folder holds `mapping/train_rand.txt` and
+`mapping/train_mapping.txt` from `devkit_object.zip` of the KITTI object benchmark. The script reruns the frame-level
+evaluation first and stops unless it equals the recorded m6 results byte for byte with equal input hashes.
 
 ```bash
 python3 m8_kitti_drive_split.py --rum /rum --out ../work/m8 --devkit /path/to/kitti_devkit \
@@ -98,7 +98,7 @@ cd work/data && python3 ../../tools/figures/make_figures.py causes --csv kitti_d
     --tau tau_kitti_distance_split0.json --indicator u_s --out ../figures/fig_causes_kitti.pdf && cd ../..
 ```
 
-Each supporting script first recomputes the split-0 cells of every setting from the cache and compares them with
+Each supporting script first recomputes the split-0 cells of every pair of conditions from the cache and compares them with
 `results/`; it stops on any difference.
 
 ## 4. Comparing a rerun with the recorded results
@@ -125,8 +125,9 @@ python3 tools/figures/supplementary/supplementary_figures.py      # rewrites doc
 python3 tools/supplementary/make_supplementary.py && cd docs/supplementary && pdflatex supplementary.tex && pdflatex supplementary.tex
 ```
 
-`tools/figures/paper/README.md` describes every figure of the paper and its inputs. The TikZ figures need pdflatex with
-TikZ, pgfplots and the newtx fonts.
+[`tools/figures/paper/README.md`](../tools/figures/paper/README.md) describes every figure of the paper and its inputs;
+the figure sources are those of 21 October 2026 and differ from the submitted figures in label wording. The TikZ
+figures need pdflatex with TikZ, pgfplots and the newtx fonts.
 
 ## 6. Results browser and notebook (no data)
 
@@ -138,7 +139,8 @@ python3 -m nbconvert --to notebook --execute --inplace notebooks/explore_results
 
 ## 7. Post-hoc analyses (data needed)
 
-The scripts in [`../results/post_hoc/code/`](../results/post_hoc/code/) need the per-detection cache, the nuScenes
+The post-hoc sequence test (Methods A and B) and the AUROC bootstrap intervals were added after the outcomes were
+known and are not reported in the paper; the epoch check supports the number of epochs stated in paper Sect. 4.1. The scripts in [`../results/post_hoc/code/`](../results/post_hoc/code/) need the per-detection cache, the nuScenes
 metadata and the KITTI devkit mapping files, and `pip install -r requirements-posthoc.txt`. They are published as they
 ran; [`../results/post_hoc/README.md`](../results/post_hoc/README.md) maps their path constants to this repository.
 Before computing a new number, `seq_ratio.py` recomputes 1,600 recorded rows and stops if one differs.
