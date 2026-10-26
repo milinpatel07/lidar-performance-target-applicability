@@ -6,7 +6,6 @@ Tests that need it are skipped if it is absent.
 """
 import importlib.util
 import json
-import math
 import os
 from pathlib import Path
 

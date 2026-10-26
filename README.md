@@ -65,12 +65,16 @@ python package/examples/synthetic_example.py
 ```
 
 The example generates detections of two conditions (no dataset involved) and prints one outcome per limit and
-condition of use, for example `0.01   rain   0.3700   0.1072   [0.0933, 0.1220]   0.999   not applicable`. On your
-own detections, one row per detection in a CSV file:
+condition of use, for example `0.01   rain   0.3700   0.1072   [0.0933, 0.1220]   0.999   not applicable`. The same
+test from the command line, on a CSV file with one row per detection (columns `frame`, `condition`, `part`, `u`,
+`correct`; a synthetic sample is in `package/examples/`):
 
 ```bash
-python -m applicability_test detections.csv --selection-condition near --use-condition far --alpha 0.01
+python -m applicability_test package/examples/detections_example.csv --selection-condition clear --use-condition rain --alpha 0.05
 ```
+
+It prints the selected threshold, the interval [L, U], the retention and `outcome: not applicable`. Replace the file
+by a table of your own detections.
 
 The input format, the Python API and the assumptions are in [`package/README.md`](package/README.md); the steps from a
 detector to an outcome are in [`docs/guides/apply-to-your-detector.md`](docs/guides/apply-to-your-detector.md).

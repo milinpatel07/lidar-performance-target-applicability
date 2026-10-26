@@ -7,7 +7,14 @@ ones. Each frame holds detections of one condition. Frames are divided at random
 into a grid part (10 %), a selection part (45 %) and a test part (45 %).
 
 Run: python examples/synthetic_example.py
+     python examples/synthetic_example.py --csv detections_example.csv   # also write a smaller sample as CSV
+
+The CSV (1,000 frames per condition, seed 1) has the columns that the command line reads:
+python -m applicability_test detections_example.csv --selection-condition clear --use-condition rain --alpha 0.05
 """
+import argparse
+import csv
+
 import numpy as np
 
 import applicability_test as at
@@ -30,6 +37,23 @@ def parts(data, rng):
     which = np.array([code[f] for f in data["frame"]])
     return {p: {k: v[which == p] for k, v in data.items()} for p in ("grid", "selection", "test")}
 
+
+def write_csv(path):
+    rng = np.random.default_rng(1)
+    with open(path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh, lineterminator=chr(10))
+        w.writerow(["frame", "condition", "part", "u", "correct"])
+        for name, share_wrong, wrong_mean in (("clear", 0.02, 0.5), ("rain", 0.15, 0.3)):
+            for part, d in parts(detections(name, 1000, share_wrong, wrong_mean, rng), rng).items():
+                for f, u, y in zip(d["frame"], d["u"], d["correct"]):
+                    w.writerow([f, name, part, f"{u:.5f}", int(y)])
+
+
+ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+ap.add_argument("--csv", help="also write a sample of synthetic detections to this CSV file")
+args = ap.parse_args()
+if args.csv:
+    write_csv(args.csv)
 
 rng = np.random.default_rng(0)
 clear = parts(detections("clear", 6000, 0.02, 0.5, rng), rng)

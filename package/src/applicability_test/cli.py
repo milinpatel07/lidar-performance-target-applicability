@@ -33,20 +33,38 @@ def _values(text):
 
 
 def _read(path):
-    with open(path, newline="", encoding="utf-8") as fh:
-        rows = list(csv.DictReader(fh))
+    try:
+        with open(path, newline="", encoding="utf-8") as fh:
+            rows = list(csv.DictReader(fh))
+    except OSError as e:
+        raise SystemExit(f"cannot read {path}: {e.strerror}")
+    except UnicodeDecodeError:
+        raise SystemExit(f"cannot read {path}: not a UTF-8 text file")
+    if not rows:
+        raise SystemExit(f"{path} holds no detections")
     need = {"frame", "condition", "part", "u", "correct"}
-    missing = need - set(rows[0] if rows else ())
+    missing = need - set(rows[0])
     if missing:
         raise SystemExit(f"missing columns: {', '.join(sorted(missing))}")
     return rows
 
 
+def _number(row, column, kind=float):
+    try:
+        return kind(row[column])
+    except (TypeError, ValueError):
+        raise SystemExit(f"column {column}: {row[column]!r} is not a number (frame {row.get('frame')!r})")
+
+
 def _select(rows, condition, part):
     r = [x for x in rows if x["condition"] == condition and x["part"] == part]
+    if not r:   # a misspelt condition would otherwise give an empty part and a misleading outcome
+        conditions = sorted({x["condition"] for x in rows})
+        raise SystemExit(f"no rows with condition '{condition}' and part '{part}'; "
+                         f"conditions in the file: {', '.join(conditions)}")
     data = {"frame": np.array([x["frame"] for x in r]),
-            "u": np.array([float(x["u"]) for x in r]),
-            "correct": np.array([int(x["correct"]) for x in r])}
+            "u": np.array([_number(x, "u") for x in r]),
+            "correct": np.array([_number(x, "correct", int) for x in r])}
     if r and "sequence" in r[0]:
         data["sequence"] = np.array([x["sequence"] for x in r])
     return data
@@ -75,17 +93,23 @@ def main(argv=None):
     if args.unit == "sequence" and "sequence" not in rows[0]:
         raise SystemExit("--unit sequence needs a 'sequence' column")
     if args.candidates == "quantiles":
-        g = [float(x["u"]) for x in rows
+        g = [_number(x, "u") for x in rows
              if x["part"] == "grid" and x["condition"] in (args.selection_condition, args.use_condition)]
         if not g:
             raise SystemExit("--candidates quantiles needs rows with part 'grid' in the two conditions")
         candidates = quantile_candidates(g)
     else:
-        candidates = _values(args.values)
+        try:
+            candidates = _values(args.values)
+        except ValueError:
+            raise SystemExit(f"--values: {args.values!r} is not a list of numbers or start:stop:step")
 
-    res = applicability_test(_select(rows, args.selection_condition, "selection"),
-                             _select(rows, args.use_condition, "test"),
-                             candidates, args.alpha, args.delta, args.unit)
+    try:
+        res = applicability_test(_select(rows, args.selection_condition, "selection"),
+                                 _select(rows, args.use_condition, "test"),
+                                 candidates, args.alpha, args.delta, args.unit)
+    except ValueError as e:
+        raise SystemExit(str(e))
     if args.json:
         out = asdict(res)
         out["condition_of_selection"], out["condition_of_use"] = args.selection_condition, args.use_condition

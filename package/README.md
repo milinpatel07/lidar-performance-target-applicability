@@ -48,7 +48,14 @@ print(r.outcome, r.tau, r.L, r.U, r.retention)                    # not applicab
 ```
 
 `examples/synthetic_example.py` runs the test with two conditions, a grid part for the candidate thresholds and
-two limits.
+two limits. `examples/detections_example.csv` holds a smaller sample of such synthetic detections in the format of the
+command line (written by `python examples/synthetic_example.py --csv examples/detections_example.csv`):
+
+```
+python -m applicability_test examples/detections_example.csv --selection-condition clear --use-condition rain --alpha 0.05
+```
+
+prints, among other lines, `outcome: not applicable`; with `--use-condition clear` the outcome is applicable.
 
 ## API
 
@@ -67,7 +74,10 @@ two limits.
 | `zero_failure_bound(alpha, delta)` | smallest n with n >= ln(delta) / ln(1 - alpha) (Eq. 5 of the paper) |
 | `lowest_limit(n, delta)` | 1 - delta^(1/n), the lowest limit that n units without false acceptance can show |
 
-The outcome strings are the constants `APPLICABLE`, `NOT_APPLICABLE`, `NOT_DETERMINED` and `NO_THRESHOLD`.
+The outcome strings are the constants `APPLICABLE`, `NOT_APPLICABLE`, `NOT_DETERMINED` and `NO_THRESHOLD`. The
+functions raise `ValueError` if alpha or delta lie outside (0, 1), if the list of candidates is empty, if u holds NaN,
+or if correct holds values other than 0 and 1. An empty selection part gives no threshold selected; an empty test part
+gives [0, 1] and not determined.
 
 ## Input format
 
@@ -92,7 +102,8 @@ python -m applicability_test detections.csv --selection-condition near --use-con
 ```
 
 With `--candidates quantiles` (default) the candidates are the quantiles of u at levels 0.01 to 1.00 over the
-`grid` rows of both conditions.
+`grid` rows of both conditions. The command stops with a message if the file cannot be read, a column is missing, a
+condition has no rows in the needed part (for example a misspelt condition), or alpha or delta lie outside (0, 1).
 
 ## What is computed
 

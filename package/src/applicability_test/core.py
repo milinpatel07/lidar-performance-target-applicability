@@ -158,6 +158,11 @@ class ApplicabilityResult:
     selection: SelectionResult = field(repr=False)
 
 
+def _check_limits(alpha, delta):
+    if not (0 < alpha < 1 and 0 < delta < 1):
+        raise ValueError(f"alpha and delta must lie in (0, 1), got alpha={alpha!r}, delta={delta!r}")
+
+
 def select_threshold(frame_ids, u, correct, candidates, alpha, delta, unit_ids=None):
     """Select a threshold on the selection part of the condition of selection.
 
@@ -166,8 +171,11 @@ def select_threshold(frame_ids, u, correct, candidates, alpha, delta, unit_ids=N
     threshold is the last candidate that passes before the first candidate that
     fails. If the lowest candidate fails, no threshold is selected (tau None).
     """
+    _check_limits(alpha, delta)
     units = _Units(frame_ids, u, correct, unit_ids)
     cand = np.unique(np.asarray(candidates, dtype=float))
+    if not len(cand) or np.isnan(cand).any():
+        raise ValueError("candidates must be a non-empty list of numbers")
     p = [hb_pvalue(units.shares(t).sum(), units.m, alpha) for t in cand]
     last = -1
     for j, pj in enumerate(p):
@@ -189,8 +197,9 @@ def test_threshold(frame_ids, u, correct, tau, alpha, delta, unit_ids=None):
 
     [L, U] is the HB interval of the FAP at confidence level 1 - delta (each bound
     at delta/2). Outcome: applicable if U <= alpha, not applicable if L > alpha,
-    not determined otherwise.
+    not determined otherwise. An empty test part gives [0, 1] and not determined.
     """
+    _check_limits(alpha, delta)
     units = _Units(frame_ids, u, correct, unit_ids)
     a = units.shares(tau)
     S, n = a.sum(), units.m
