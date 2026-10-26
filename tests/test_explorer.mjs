@@ -73,8 +73,8 @@ test("visibleRecords applies indicator, limit and own-condition filters", () => 
 });
 
 test("sourceUrl shows numbered lines (?plain=1#L<n>)", () => {
-  assert.equal(X.sourceUrl("results/m7_nuscenes_by_scene/m7_scene_split.csv", 12),
-    "https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/results/m7_nuscenes_by_scene/m7_scene_split.csv?plain=1#L12");
+  assert.equal(X.sourceUrl("case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv", 12),
+    "https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv?plain=1#L12");
 });
 
 test("hash state round trip and defaults", () => {

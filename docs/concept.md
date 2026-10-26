@@ -3,9 +3,9 @@
 This page explains the applicability test for two readers who have not read the paper: a safety engineer who works
 with ISO 21448 (SOTIF) and a machine learning researcher who works with uncertainty and object detection. It
 paraphrases the paper and points to its sections, equations, tables and figures; it does not replace them. Single terms
-are defined in [`glossary.md`](glossary.md), the scripts are described in [`method.md`](method.md), and the files that
+are defined in [`glossary.md`](glossary.md), the scripts are described in [`../case_study/docs/method.md`](../case_study/docs/method.md), and the files that
 hold the values of each section of the paper are listed in the
-[index in `results.md`](results.md#paper-section-to-repository-index).
+[index in `results.md`](../case_study/docs/results.md#paper-section-to-repository-index).
 
 Interactive pages: [walk-through](https://milinpatel07.github.io/lidar-performance-target-applicability/interactive/walkthrough.html)
 (all sections), [applicability test calculator](https://milinpatel07.github.io/lidar-performance-target-applicability/interactive/test.html)
@@ -88,7 +88,7 @@ that almost no frame keeps a detection meets any limit, even if every accepted d
 reports every applicable outcome with the **retention**, the share of the correct detections of the condition that the
 threshold accepts (Sect. 3.1). In the frame-level evaluation, transferred thresholds with an applicable outcome at
 10⁻² had a retention of at most 29 % on every split (Sect. 5.1; file
-[`retention_applicable_cells.csv`](../results/supporting_analyses/retention_applicable_cells.csv)).
+[`../case_study/results/supporting_analyses/retention_applicable_cells.csv`](../case_study/results/supporting_analyses/retention_applicable_cells.csv)).
 
 **Why a bound over all frames refers to the recording mix (Eq. 4).** If every frame belongs to exactly one condition,
 the FAP over all frames is the mean of the per-condition FAPs weighted with the share π_c of frames in each condition.
@@ -110,21 +110,21 @@ p=\min\Bigl\{\exp\bigl(-n\,h(\min(\hat{A},\alpha),\alpha)\bigr),\; e\,P\bigl(\ma
 
 It holds for any distribution of the per-unit values in [0, 1] and requires independent and identically distributed
 units. The count n includes units without accepted detections. Code: `hb_pvalue` in
-[`experiments/m1_range_kitti.py`](../experiments/m1_range_kitti.py).
+[`../case_study/experiments/m1_range_kitti.py`](../case_study/experiments/m1_range_kitti.py).
 
 **Fixed-sequence selection** (Sect. 3.2). The candidate thresholds are fixed in advance and taken in order from the
 lowest upwards. A candidate **passes** if its HB p-value on the selection part of c is at most δ, and **fails**
 otherwise. The selected threshold τ_c is the last candidate that passes before the first candidate that fails. If the
 lowest candidate fails, no threshold is selected in c. A candidate above the first failure can pass (the FAP need not
 rise monotonically with τ), but it is not selected. With independent selection units, this order bounds by δ the
-probability that any selected candidate has an FAP above α. Code: `chain_index` in `experiments/m1_range_kitti.py`.
+probability that any selected candidate has an FAP above α. Code: `chain_index` in `case_study/experiments/m1_range_kitti.py`.
 
 **The interval and the decision** (Sect. 3.3). On the test part of c′, the upper bound U inverts the HB p-value at
 δ/2, and the lower bound L is one minus the same bound computed from the values 1 − a_f, so [L, U] is an interval at
 confidence 1 − δ. For a given true FAP only one of the two erroneous outcomes is possible, so an applicable or not
 applicable outcome is erroneous with probability at most δ/2 if the test units are independent draws from c′ and
 independent of the selection units. This holds for each outcome on its own; a safety argument that relies on several
-outcomes at once divides δ by their number. Code: `hb_upper` and `hb_lower` in `experiments/m1_range_kitti.py`.
+outcomes at once divides δ by their number. Code: `hb_upper` and `hb_lower` in `case_study/experiments/m1_range_kitti.py`.
 
 ## 4. Four changes in the detections, and which one AUROC shows
 
@@ -155,9 +155,9 @@ test part of split 0, thresholds selected at the exploratory limit 0.1†):
 In rain both the pooled share and the FAP rose, the FAP more, so the spread of wrong detections over frames added to
 the effect of more wrong detections (Sect. 5.2). Between the datasets u_s separated better on KITTI, yet the nuScenes
 threshold lay high on the KITTI scale and the outcome was not applicable. The paper reports AUROC as point estimates;
-the bootstrap intervals in [`results/post_hoc/auroc_bootstrap.csv`](../results/post_hoc/auroc_bootstrap.csv) were added
+the bootstrap intervals in [`../case_study/results/post_hoc/auroc_bootstrap.csv`](../case_study/results/post_hoc/auroc_bootstrap.csv) were added
 post hoc. The source file of every value in this table is listed in the
-[index](results.md#paper-section-to-repository-index).
+[index](../case_study/docs/results.md#paper-section-to-repository-index).
 
 ## 5. The independent unit: frame or recorded sequence
 
@@ -168,9 +168,9 @@ and limits:
 
 | evaluation (paper term) | division into parts | independent unit | labels in the result files |
 |---|---|---|---|
-| frame-level evaluation | by frame | frame | the run files of m1 to m6 (no `split` column); m7 `variant` = `frame`; `split` = `frame`, `hb_unit` = `frame` in `m7_nuscenes_by_scene/m3_frame/`; folder `m8_kitti_by_drive/frame/` |
-| sequence-level evaluation | by recorded sequence | recorded sequence; its value is the mean of a_f over its frames in the condition | m7 `variant` = `scene_scene_unit`, printed as "(ii)" in `m7_scene_split_summary.txt`; m3/m6 under `m7_nuscenes_by_scene/*_scene/` `hb_unit` = `scene`; m8 `split` = `drive`, `hb_unit` = `drive` |
-| third run | by recorded sequence | frame | m7 `variant` = `scene_frame_unit`, printed as "(i)"; m3/m6 under `m7_nuscenes_by_scene/*_scene/` `hb_unit` = `frame`; m8 `split` = `drive`, `hb_unit` = `frame` |
+| frame-level evaluation | by frame | frame | the run files of m1 to m6 (no `split` column); m7 `variant` = `frame`; `split` = `frame`, `hb_unit` = `frame` in `division_by_sequence/nuscenes_by_scene/m3_frame/`; folder `division_by_sequence/kitti_by_drive/frame/` |
+| sequence-level evaluation | by recorded sequence | recorded sequence; its value is the mean of a_f over its frames in the condition | m7 `variant` = `scene_scene_unit`, printed as "(ii)" in `m7_scene_split_summary.txt`; m3/m6 under `division_by_sequence/nuscenes_by_scene/*_scene/` `hb_unit` = `scene`; m8 `split` = `drive`, `hb_unit` = `drive` |
+| third run | by recorded sequence | frame | m7 `variant` = `scene_frame_unit`, printed as "(i)"; m3/m6 under `division_by_sequence/nuscenes_by_scene/*_scene/` `hb_unit` = `frame`; m8 `split` = `drive`, `hb_unit` = `frame` |
 
 The third run separates the effect of the division from the effect of the unit. Fig. 4 of the paper shows the
 frame-level evaluation; the answers to the research questions state the sequence-level evaluation first, because
@@ -184,7 +184,7 @@ to (1 − α)ⁿ. Showing that α is met at error probability δ′ therefore ne
 independent units per condition and part, with δ′ = δ = 0.05 for selecting and δ′ = δ/2 = 0.025 for testing. At
 δ′ = 0.05 this is about 3/α (the rule of three). The bound is necessary, not sufficient: any unit with a false
 acceptance raises the number. It does not apply to the outcome not applicable, which a few units with many false
-acceptances can show. Code: `n_required` in `experiments/m1_range_kitti.py` (zero false acceptances in the HB p-value;
+acceptances can show. Code: `n_required` in `case_study/experiments/m1_range_kitti.py` (zero false acceptances in the HB p-value;
 it returns the same values as Eq. 5 for the limits below).
 
 | limit α | selecting (δ′ = 0.05) | testing (δ′ = 0.025) |
@@ -195,11 +195,11 @@ it returns the same values as Eq. 5 for the limits below).
 | 0.1† | 29 | 36 |
 
 Values from Eq. 5, rounded up; the paper states 299, 368 and 2,995 (Sect. 5.3), and section (d) of
-[`notebooks/explore_results.ipynb`](../notebooks/explore_results.ipynb) prints the table. The 150 nuScenes validation
+[`../case_study/notebooks/explore_results.ipynb`](../case_study/notebooks/explore_results.ipynb) prints the table. The 150 nuScenes validation
 scenes are fewer than the 299 that selection alone needs at 10⁻², and a selection part of 20 to 22 KITTI drives is
 too small for any limit used here (Sect. 5.3; units per part in
-[`m8_drives_per_part.csv`](../results/supporting_analyses/m8_drives_per_part.csv) and
-[`m7_scene_split_summary.txt`](../results/m7_nuscenes_by_scene/m7_scene_split_summary.txt)).
+[`../case_study/results/supporting_analyses/m8_drives_per_part.csv`](../case_study/results/supporting_analyses/m8_drives_per_part.csv) and
+[`../case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split_summary.txt`](../case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split_summary.txt)).
 
 ## 6. The own-condition check
 
@@ -208,7 +208,7 @@ only after an erroneous selection (probability at most δ) or an erroneous inter
 therefore at most δ + δ/2 = 7.5 % and serves as a check of the selection (Sect. 3.3). For the nuScenes distance and
 weather conditions, the outcome was not applicable in 0 of 112 own-condition outcomes with a selected threshold in the
 frame-level evaluation and in 5 of 113 in the third run (Sect. 5.1; file
-[`m7_scene_split.csv`](../results/m7_nuscenes_by_scene/m7_scene_split.csv), `established` = `applied`). In the frame-level
+[`../case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv`](../case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv), `established` = `applied`). In the frame-level
 evaluation, frames of one sequence lie in both parts, so the first frequency is weak evidence.
 
 ## 7. What the study does not show
@@ -231,4 +231,4 @@ evaluation, frames of one sequence lie in both parts, so the first frequency is 
   one object class (cars); the nuScenes members were trained for about 10 of 20 configured epochs, and after the vote
   they match fewer than half of the annotated nuScenes cars. The measured FAPs and retentions are specific to these
   detectors, and evidence for a product requires the test on data from its ODD (Sect. 4.1, 6.2;
-  [`epoch_check.txt`](../results/post_hoc/epoch_check.txt)).
+  [`../case_study/results/post_hoc/epoch_check.txt`](../case_study/results/post_hoc/epoch_check.txt)).

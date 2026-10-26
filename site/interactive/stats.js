@@ -1,5 +1,5 @@
 // Hoeffding-Bentkus p-value, confidence bounds and zero-failure bound.
-// Port of hb_pvalue, hb_upper, hb_lower and n_required in experiments/m1_range_kitti.py;
+// Port of hb_pvalue, hb_upper, hb_lower and n_required in case_study/experiments/m1_range_kitti.py;
 // the HB test depends on the per-unit values only through their sum S and count n.
 (function (root) {
   "use strict";

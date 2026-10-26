@@ -3,7 +3,7 @@
 This guide is for perception developers and safety engineers who want to apply the applicability test to detections
 of their own detector. The test needs no access to the detector itself. It works on a table of detections in which each
 detection has a frame, a condition, an uncertainty value and a label correct or wrong. The guide goes from that table
-to an outcome, with the Python package in [`package/`](../../package/) or, without installing anything, in the browser.
+to an outcome, with the Python package in [`../../package/`](../../package/) or, without installing anything, in the browser.
 
 ## 1. Prepare the table
 

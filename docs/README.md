@@ -23,21 +23,21 @@ their sources are in [`../site/`](../site/).
 
 ## Case study: KITTI and nuScenes
 
-- [`method.md`](method.md): what the experiment scripts in `experiments/` compute, step by step.
-- [`results.md`](results.md): every folder and column of `results/`, the outcome table, and an index from each section,
+- [`../case_study/docs/method.md`](../case_study/docs/method.md): what the experiment scripts in `case_study/experiments/` compute, step by step.
+- [`../case_study/docs/results.md`](../case_study/docs/results.md): every folder and column of `case_study/results/`, the outcome table, and an index from each section,
   table and figure of the paper to the files that hold its values.
-- [`data.md`](data.md): datasets, splits, detector outputs and their licences.
-- [`provenance.md`](provenance.md): toolbox version, detector configurations, training runs and the checkpoints that
+- [`../case_study/docs/data.md`](../case_study/docs/data.md): datasets, splits, detector outputs and their licences.
+- [`../case_study/docs/provenance.md`](../case_study/docs/provenance.md): toolbox version, detector configurations, training runs and the checkpoints that
   inference loaded.
-- [`paper_map.md`](paper_map.md): every checked number of the paper with its source file and the result of the check
-  (written by `tests/check_paper_numbers.py`).
-- [`supplementary/`](supplementary/supplementary.pdf): the supplementary material, generated from the repository files
+- [`../case_study/docs/paper_map.md`](../case_study/docs/paper_map.md): every checked number of the paper with its source file and the result of the check
+  (written by `case_study/checks/check_paper_numbers.py`).
+- [`supplementary/`](../case_study/docs/supplementary/supplementary.pdf): the supplementary material, generated from the repository files
   only, with a sources table of every printed value.
-- [`study_protocol/`](study_protocol/README.md): the predictions fixed before any outcome was computed, their outcomes
+- [`study_protocol/`](../case_study/docs/study_protocol/README.md): the predictions fixed before any outcome was computed, their outcomes
   and every deviation from the protocol.
 
 ## Reproduce
 
-- [`reproduce.md`](reproduce.md): the checks, the tables and figures from the recorded results, and the experiment
+- [`../case_study/docs/reproduce.md`](../case_study/docs/reproduce.md): the checks, the tables and figures from the recorded results, and the experiment
   runs, with the commands.
-- [`pipeline.md`](pipeline.md): which script reads which file and writes which file.
+- [`../case_study/docs/pipeline.md`](../case_study/docs/pipeline.md): which script reads which file and writes which file.

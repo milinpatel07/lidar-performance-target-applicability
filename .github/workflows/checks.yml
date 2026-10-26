@@ -1,5 +1,5 @@
 # Checks that need no dataset and no network access beyond installing the pinned packages: manifest, recorded results
-# of version 1.0.0 at their current paths, the numbers of the paper (and that docs/paper_map.md is fresh), the numbers
+# of version 1.0.0 at their current paths, the numbers of the paper (and that case_study/docs/paper_map.md is fresh), the numbers
 # of the supplementary material, the data and the JavaScript of the results browser and of the interactive pages,
 # links, the tests of the package and the self-tests of the statistics.
 name: checks
@@ -19,19 +19,19 @@ jobs:
         with:
           node-version: "20"
       - name: Install
-        run: pip install -r environment/requirements.txt pytest
+        run: pip install -r case_study/environment/requirements.txt pytest
       - name: Manifest
         run: sha256sum -c --quiet MANIFEST.sha256
       - name: Recorded results of version 1.0.0, unchanged at their current paths
-        run: python3 tests/check_recorded_results.py
-      - name: Numbers of the paper (and docs/paper_map.md fresh)
-        run: python3 tests/check_paper_numbers.py --check-fresh
+        run: python3 case_study/checks/check_recorded_results.py
+      - name: Numbers of the paper (and case_study/docs/paper_map.md fresh)
+        run: python3 case_study/checks/check_paper_numbers.py --check-fresh
       - name: Numbers of the supplementary material
-        run: python3 tools/supplementary/make_supplementary.py --check
+        run: python3 case_study/tools/supplementary/make_supplementary.py --check
       - name: Data of the results browser
-        run: python3 tools/build_explorer_data.py --check
+        run: python3 case_study/tools/build_explorer_data.py --check
       - name: Data of the interactive pages
-        run: python3 tools/build_interactive_data.py --check
+        run: python3 case_study/tools/build_interactive_data.py --check
       - name: Functions of the results browser (Node)
         run: node --test tests/test_explorer.mjs
       - name: Statistics of the interactive pages against the experiment scripts
@@ -45,7 +45,7 @@ jobs:
       - name: Links (relative, into this repository and into its GitHub Pages site)
         run: python3 tests/check_links.py
       - name: Self-tests of the statistics
-        working-directory: experiments
+        working-directory: case_study/experiments
         run: |
           python3 m1_range_kitti.py --selftest
           python3 m3_range_nuscenes.py --selftest

@@ -49,7 +49,7 @@ in the condition of selection or a reallocation of α at vehicle level.
 - A **common threshold** for several conditions, which has to pass the selection in each of them at error probability
   δ divided by their number, needs no run-time signal. In the case study, a common threshold for near and far distance
   always gave an applicable or not determined outcome, with a lower retention at near distance than the threshold
-  selected there (supplementary material, [`docs/supplementary/`](../supplementary/)).
+  selected there (supplementary material, [`../../case_study/docs/supplementary/`](../../case_study/docs/supplementary/)).
 
 ## A second performance target on missed objects
 

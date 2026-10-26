@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""check_recorded_results.py - every recorded result file of version 1.0.0 is unchanged, at its current path.
+
+checks/recorded_results_v1.0.0.sha256 holds the results/ lines of MANIFEST.sha256 of the tag v1.0.0; for the files whose
+dataset or container mount paths were normalised in version 2.0 (the provenance.json files) it holds the SHA-256 of the
+normalised file. Since version 2.0 the results are in case_study/results/, grouped by how the frames were divided and
+named by content; RENAMED and MOVED map the paths of 1.0.0 to the current ones. For every listed file the check computes the SHA-256 of the file at its current path and compares it with the
+recorded one. Two files are not recorded results and are skipped: results/README.md (a description, extended since)
+and results/INPUT_HASHES.md (a list that the build writes from the provenance.json files, whose headings name the run
+folders; the provenance.json files themselves are checked).
+
+    python3 checks/check_recorded_results.py     # from case_study/; exit 1 on a missing or changed file
+"""
+import hashlib
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+LIST = Path(__file__).resolve().parent / "recorded_results_v1.0.0.sha256"
+# folder of results/ in version 1.0.0 -> folder in case_study/results/ since version 2.0
+RENAMED = {"m1_range_kitti": "division_by_frame/kitti_distance_pilot",
+           "m2_indicators_kitti": "division_by_frame/kitti_distance",
+           "m3_range_nuscenes": "division_by_frame/nuscenes_distance",
+           "m4_dataset_shift": "division_by_frame/dataset_change_one_split",
+           "m6_protocol_seeds_weather": "division_by_frame/kitti_rule_dataset_change_weather",
+           "m7_scene_split": "division_by_sequence/nuscenes_by_scene",
+           "m8_kitti_drive_split": "division_by_sequence/kitti_by_drive"}
+MOVED = {"results/outcome_counts.csv": "results/earlier_summaries/outcome_counts.csv",
+         "results/failing_cells_primary.csv": "results/earlier_summaries/failing_cells_primary.csv"}
+NOT_RECORDED = {"results/README.md", "results/INPUT_HASHES.md"}
+
+
+def current_path(old):
+    """path of version 1.0.0 (repository root) -> path relative to case_study/"""
+    if old in MOVED:
+        return MOVED[old]
+    parts = old.split("/")
+    if len(parts) > 2 and parts[1] in RENAMED:
+        parts[1] = RENAMED[parts[1]]
+    return "/".join(parts)
+
+
+def main():
+    rows = [line.split("  ", 1) for line in LIST.read_text(encoding="utf-8").splitlines() if line.strip()]
+    bad, n = [], 0
+    for want, old in rows:
+        if old in NOT_RECORDED:
+            continue
+        new = current_path(old)
+        p = ROOT / new
+        n += 1
+        if not p.is_file():
+            bad.append(f"MISSING  {new} (1.0.0: {old})")
+        elif hashlib.sha256(p.read_bytes()).hexdigest() != want:
+            bad.append(f"CHANGED  {new} (1.0.0: {old})")
+    for b in bad:
+        print(b)
+    print(f"{n} recorded result files of version 1.0.0 checked at their current paths, {len(bad)} missing or changed")
+    sys.exit(1 if bad else 0)
+
+
+if __name__ == "__main__":
+    main()

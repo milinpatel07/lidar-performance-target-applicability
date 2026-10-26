@@ -25,7 +25,7 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 |---|---|---|
 | ensemble member | one of four PointPillars networks of one dataset, trained with a different random seed | `seed1` … `seed4` in configuration names |
 | detection | merged box: the car boxes of the first member, in descending order of confidence, each joined by the unused car box of every other member with the highest IoU, if that IoU is at least 0.5 | one row of the per-detection table |
-| vote | the rule that a detection is formed only if at least three of the four members contribute a box; itself a rejection rule applied before any uncertainty threshold | `consensus_threshold` = 3 of `members_K` = 4 in `results/supporting_analyses/merge_recall.csv` |
+| vote | the rule that a detection is formed only if at least three of the four members contribute a box; itself a rejection rule applied before any uncertainty threshold | `consensus_threshold` = 3 of `members_K` = 4 in `case_study/results/supporting_analyses/merge_recall.csv` |
 | recall after the vote | share of all annotated cars (no distance or visibility filter) that a detection after the vote matches; 0.858 on KITTI, 0.398 on nuScenes (paper, Table 3) | `recall` in `merge_recall.csv` |
 | correct / wrong detection | assigned one-to-one to an annotated car at 3D IoU ≥ 0.5 / not assigned | `y` = 1 / 0 (`y_A_iou0.5`) |
 | spatial indicator u_s | 1 − mean pairwise rotated 3D IoU of the contributing member boxes (Eq. 1 of the paper) | `u_s` |
@@ -46,7 +46,7 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 | pooled share | share of wrong detections among all accepted detections of a condition taken together; every accepted detection has equal weight, whereas the FAP gives every frame equal weight | |
 | share of wrong detections | wrong detections / all car detections of a condition, before any threshold | `share_wrong` |
 | retention R_c(τ) | share of the correct detections of condition c that τ accepts; reported with every applicable outcome because of Eq. 3 ([concept](concept.md#2-what-is-measured-per-frame-share-fap-and-pooled-share)) | `R_hat` |
-| separation, AUROC | how well the indicator orders wrong above correct detections; area under the ROC curve with wrong detections as the positive class. The paper reports point estimates; the intervals in `results/post_hoc/auroc_bootstrap.csv` are post hoc | `auroc` |
+| separation, AUROC | how well the indicator orders wrong above correct detections; area under the ROC curve with wrong detections as the positive class. The paper reports point estimates; the intervals in `case_study/results/post_hoc/auroc_bootstrap.csv` are post hoc | `auroc` |
 | operating point | the pair (share of correct detections withheld, share of wrong detections rejected) that a threshold marks on the ROC curve | `correct_rejected`, `wrong_rejected` |
 | common threshold τ* | one threshold that passes the selection in both distance conditions, each at δ/2 | `star`, `tau_star` |
 | retention gap G | R_c(τ_c) − R_c(τ*): correct detections that knowing the condition at run time would keep | `G` |
@@ -62,10 +62,10 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 | split | one of five random assignments of the same frames to the parts, drawn with seeds 0 to 4 | `seed` |
 | recorded sequence | a continuous recording: a nuScenes scene (150 in the validation set) or a KITTI drive (45 in the validation frames) | `scene`, `drive` |
 | unit | what the test treats as one independent draw: a frame or a recorded sequence | `hb_unit`; `n_select_units`, `n_eval_units` |
-| frame-level evaluation | division by frame, each frame one unit; shown in Fig. 4 of the paper | run files of m1 to m6 (no `split` column); m7 `variant` = `frame`; `m8_kitti_by_drive/frame/` |
-| sequence-level evaluation | division by recorded sequence, each sequence one unit; the value of a sequence is the mean of a_f over its frames in the condition | m7 `variant` = `scene_scene_unit` (printed "(ii)" in `m7_scene_split_summary.txt`); `hb_unit` = `scene` (m3, m6 under `m7_nuscenes_by_scene/`) or `drive` (m8) |
+| frame-level evaluation | division by frame, each frame one unit; shown in Fig. 4 of the paper | run files of m1 to m6 (no `split` column); m7 `variant` = `frame`; `division_by_sequence/kitti_by_drive/frame/` |
+| sequence-level evaluation | division by recorded sequence, each sequence one unit; the value of a sequence is the mean of a_f over its frames in the condition | m7 `variant` = `scene_scene_unit` (printed "(ii)" in `m7_scene_split_summary.txt`); `hb_unit` = `scene` (m3, m6 under `division_by_sequence/nuscenes_by_scene/`) or `drive` (m8) |
 | third run | division by recorded sequence, frame as unit; separates the effect of the division from that of the unit | m7 `variant` = `scene_frame_unit` (printed "(i)"); `split` = `scene` or `drive` with `hb_unit` = `frame` |
-| zero-failure bound (rule of three) | n ≥ ln δ′ / ln(1 − α): independent units without any false acceptance needed to show a limit met at error probability δ′ (Eq. 5 of the paper); δ′ = δ for selecting, δ/2 for testing; about 3/α at δ′ = 0.05 | `n_required` in `experiments/m1_range_kitti.py` |
+| zero-failure bound (rule of three) | n ≥ ln δ′ / ln(1 − α): independent units without any false acceptance needed to show a limit met at error probability δ′ (Eq. 5 of the paper); δ′ = δ for selecting, δ/2 for testing; about 3/α at δ′ = 0.05 | `n_required` in `case_study/experiments/m1_range_kitti.py` |
 
 ## Statistics and outcomes
 
@@ -87,7 +87,7 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 | **not determined** | L ≤ α < U; makes no claim, and an exceeded limit can lie behind it | `not determined` |
 | **no threshold selected** | the lowest candidate fails in the condition of selection | `no threshold established`, `no threshold selected` |
 | outcome codes | **A** applicable, **N** not applicable, **?** not determined, **-** no threshold selected; counts over the five splits, e.g. `?2 N3` = not determined on 2 and not applicable on 3 splits | `A`, `N`, `?`, `-` |
-| post hoc | added after the parameters were fixed and the outcomes known; not in the paper unless stated. See [`results/post_hoc/`](../results/post_hoc/README.md) | |
+| post hoc | added after the parameters were fixed and the outcomes known; not in the paper unless stated. See [`case_study/results/post_hoc/`](../case_study/results/post_hoc/README.md) | |
 | post-hoc sequence test (Method A) | post-hoc test with the recorded sequence as unit that keeps the per-frame target through a transformed per-sequence value; not the sequence-level evaluation of the paper | `seq_ratio`, `method` = `A`; REPORT.md calls it "sequence-level test" |
 | Method B | post-hoc check of the test step of Method A with a betting confidence interval | `method` = `B` |
 
@@ -97,7 +97,7 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 |---|---|
 | m1 … m8 | the experiment runs in the order they were made: m1 KITTI distance with the blended score (precursor); m2 KITTI distance with u_s, u_e; m3 nuScenes distance; m4 change of dataset and detector, one split; m6 KITTI rule, five splits of the control, nuScenes weather; m7 third run and sequence-level evaluation on nuScenes scenes; m8 the same on KITTI drives. **m5** was the frame figure and has no result folder |
 | `seq_ratio` | the post-hoc sequence test (Methods A and B) and the post-hoc AUROC intervals |
-| `SCRIPT_VERSION` (e.g. `m3-0.4`) | version label inside each script, recorded in each run's `provenance.json`; [`experiments/SCRIPT_VERSIONS.md`](../experiments/SCRIPT_VERSIONS.md) maps runs to shipped files |
-| `export-v13.1`, `export-1.1` | version labels of the per-detection table cache: `export-v13.1` on the recorded cache from which the supporting analyses, the figure data and the post-hoc analysis were computed; `export-1.1` on `tools/export_tables.py`, the repository version of the same builder. Each tool checks its split-0 values against `results/` before it writes anything |
+| `SCRIPT_VERSION` (e.g. `m3-0.4`) | version label inside each script, recorded in each run's `provenance.json`; [`../case_study/experiments/SCRIPT_VERSIONS.md`](../case_study/experiments/SCRIPT_VERSIONS.md) maps runs to shipped files |
+| `export-v13.1`, `export-1.1` | version labels of the per-detection table cache: `export-v13.1` on the recorded cache from which the supporting analyses, the figure data and the post-hoc analysis were computed; `export-1.1` on `case_study/tools/export_tables.py`, the repository version of the same builder. Each tool checks its split-0 values against `case_study/results/` before it writes anything |
 | v24, v25 | labels of internal analysis rounds that appear in some script headers and logs (for example `v25f5-0.2`); they carry no meaning beyond the date order |
 | `RUM`, `/data/inputs` | folder of the detector outputs and dataset files that the scripts read (option `--rum`, environment variable `RUM`) |

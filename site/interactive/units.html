@@ -68,11 +68,11 @@
 <footer>
   <ul>
     <li>Units per condition, part and split are read from <a href="data/units.json">data/units.json</a>, which
-    <code>tools/build_interactive_data.py</code> writes from <code>results/supporting_analyses/frames_per_condition.csv</code>
-    (frames), <code>results/m7_nuscenes_by_scene/m7_scene_split.csv</code> (nuScenes scenes of the distance and weather
-    conditions, variant <code>scene_scene_unit</code>), <code>results/m8_kitti_by_drive/B_dataset_drive.csv</code>
-    (nuScenes scenes of the change of dataset and detector), <code>results/supporting_analyses/m8_drives_per_part.csv</code>
-    (KITTI drives) and <code>results/post_hoc/ns_per_condition.csv</code> (all recorded sequences of a condition).
+    <code>case_study/tools/build_interactive_data.py</code> writes from <code>case_study/results/supporting_analyses/frames_per_condition.csv</code>
+    (frames), <code>case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv</code> (nuScenes scenes of the distance and weather
+    conditions, variant <code>scene_scene_unit</code>), <code>case_study/results/division_by_sequence/kitti_by_drive/B_dataset_drive.csv</code>
+    (nuScenes scenes of the change of dataset and detector), <code>case_study/results/supporting_analyses/m8_drives_per_part.csv</code>
+    (KITTI drives) and <code>case_study/results/post_hoc/ns_per_condition.csv</code> (all recorded sequences of a condition).
     The table above names the file and line of every marker.</li>
     <li>In the frame-level evaluation each frame counts as one unit, although frames of one recorded sequence are
     not independent; in the sequence-level evaluation each recorded sequence (nuScenes scene, KITTI drive) counts

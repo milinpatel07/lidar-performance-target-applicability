@@ -74,7 +74,7 @@ limits:
 
 The last column is 1 − δ′^(1/n), the inverse of the bound. With the recorded sequence as the unit, neither dataset can
 show a target limit of 10⁻² to be met in any condition. Counted in frames, every condition reaches the minimum at 10⁻²
-and none at 10⁻³, but the frames are not independent (case study results: [`docs/results.md`](../results.md)).
+and none at 10⁻³, but the frames are not independent (case study results: [`../../case_study/docs/results.md`](../../case_study/docs/results.md)).
 
 ## 4. Checklist before recording
 

@@ -80,17 +80,17 @@
   <h2>About these data</h2>
   <ul>
     <li>All values are read from <a href="data/outcomes.json">data/outcomes.json</a>, which
-    <code>tools/build_explorer_data.py</code> writes from these result files (each detail row links its file and line):
+    <code>case_study/tools/build_explorer_data.py</code> writes from these result files (each detail row links its file and line):
       <ul>
-        <li>division by frame: <code>results/m6_five_splits/A_kitti_range_protocol.csv</code> (KITTI
-        distance), <code>results/m7_nuscenes_by_scene/m7_scene_split.csv</code> (variant <code>frame</code>: nuScenes
-        distance and weather), <code>results/m6_five_splits/B_shift_seeds_protocol.csv</code> (change of
+        <li>division by frame: <code>case_study/results/division_by_frame/kitti_rule_dataset_change_weather/A_kitti_range_protocol.csv</code> (KITTI
+        distance), <code>case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv</code> (variant <code>frame</code>: nuScenes
+        distance and weather), <code>case_study/results/division_by_frame/kitti_rule_dataset_change_weather/B_shift_seeds_protocol.csv</code> (change of
         dataset and detector);</li>
-        <li>division by recorded sequence: <code>results/m7_nuscenes_by_scene/m7_scene_split.csv</code> (variants
+        <li>division by recorded sequence: <code>case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv</code> (variants
         <code>scene_frame_unit</code>, <code>scene_scene_unit</code>),
-        <code>results/m8_kitti_by_drive/A_kitti_distance_drive.csv</code> and
+        <code>case_study/results/division_by_sequence/kitti_by_drive/A_kitti_distance_drive.csv</code> and
         <code>B_dataset_drive.csv</code> (<code>hb_unit</code> frame or drive);</li>
-        <li>post-hoc: <code>results/post_hoc/outcomes.csv</code> (method A or B).</li>
+        <li>post-hoc: <code>case_study/results/post_hoc/outcomes.csv</code> (method A or B).</li>
       </ul></li>
     <li>The views use the terms of the paper (Sect. 4.3): the frame-level evaluation divides frames at random and counts
     frames as units; the sequence-level evaluation divides and counts recorded sequences; the third run divides by
@@ -104,7 +104,7 @@
     evaluation treats the recorded sequence as the independent unit.</li>
     <li>Post-hoc entries (Methods A and B) were added after the parameters of the study were fixed and the outcomes
     were known; they are not part of the predictions fixed in advance. For them, the estimate and [L, U] refer to the
-    transformed sequence loss Y, compared with α (see <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/results/post_hoc/README.md">results/post_hoc</a>).
+    transformed sequence loss Y, compared with α (see <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/case_study/results/post_hoc/README.md">case_study/results/post_hoc</a>).
     They use the KITTI rule.</li>
     <li>KITTI rule: wrong KITTI detections inside a DontCare region or matching a van are excluded. Without it, the
     KITTI rows show the files' <code>as_run</code> rows. The nuScenes rows are the same with or without it.</li>

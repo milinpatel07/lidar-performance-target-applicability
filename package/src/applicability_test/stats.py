@@ -1,7 +1,7 @@
 """Hoeffding-Bentkus (HB) p-value, confidence bounds and the zero-failure bound.
 
 The functions ``hb_pvalue``, ``hb_upper``, ``hb_lower`` and ``n_required`` are the
-statistics of ``experiments/m1_range_kitti.py`` with unchanged arithmetic, so that the
+statistics of ``case_study/experiments/m1_range_kitti.py`` with unchanged arithmetic, so that the
 package gives the same numbers as the recorded runs. The losses are per-unit
 values in [0, 1] (per-frame shares or per-sequence means), assumed independent and
 identically distributed.

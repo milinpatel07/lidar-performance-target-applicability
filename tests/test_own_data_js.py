@@ -10,7 +10,7 @@ conditions, both units (frame, recorded sequence) and alpha in {0.1, 0.05, 0.01}
 (candidates, per-candidate p-values, selected threshold, A_hat, L, U, retention, n, outcome, own-condition check)
 are compared with
   1. an independent Python implementation written here from Sect. 3 of the paper, using hb_pvalue, hb_upper and
-     hb_lower of experiments/m1_range_kitti.py (and, for the frame unit, its class Cell and chain_index);
+     hb_lower of case_study/experiments/m1_range_kitti.py (and, for the frame unit, its class Cell and chain_index);
   2. the package in package/src/applicability_test (applicability_test), if it is present.
 Needs node; without it the check is skipped with a message (exit 0). No network access.
 """
@@ -208,7 +208,7 @@ def run(root, apptest_js):
     if node is None:
         print("SKIPPED: node is not installed; apptest.js was not checked.")
         return 0
-    m1 = load(root / "experiments" / "m1_range_kitti.py", "m1_range_kitti")
+    m1 = load(root / "case_study" / "experiments" / "m1_range_kitti.py", "m1_range_kitti")
     pkg_src = root / "package" / "src"
     package = None
     if (pkg_src / "applicability_test" / "core.py").exists():
@@ -262,7 +262,7 @@ def test_own_data_js():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--root", type=Path, default=ROOT, help="repository root with experiments/ (and package/)")
+    ap.add_argument("--root", type=Path, default=ROOT, help="repository root with case_study/experiments/ (and package/)")
     ap.add_argument("--apptest-js", type=Path, default=None, help="default: <root>/interactive/apptest.js")
     a = ap.parse_args()
     sys.exit(run(a.root.resolve(), a.apptest_js or a.root / "site" / "interactive" / "apptest.js"))

@@ -1,4 +1,4 @@
-# local cache, exports and reruns (see docs/reproduce.md)
+# local cache, exports and reruns (see case_study/docs/reproduce.md)
 work/
 __pycache__/
 *.pyc

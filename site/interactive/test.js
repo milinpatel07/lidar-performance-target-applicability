@@ -1,4 +1,4 @@
-// Applicability test calculator. Statistics: stats.js (port of experiments/m1_range_kitti.py).
+// Applicability test calculator. Statistics: stats.js (port of case_study/experiments/m1_range_kitti.py).
 (function () {
   "use strict";
   const $ = id => document.getElementById(id);

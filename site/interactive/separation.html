@@ -58,10 +58,10 @@
 
 <footer>
   <ul>
-    <li>Data: <a href="data/separation.json">data/separation.json</a>, which <code>tools/build_interactive_data.py</code>
-    writes from <code>results/supporting_analyses/fig_separation_curves.csv</code>. The curves are thinned as
+    <li>Data: <a href="data/separation.json">data/separation.json</a>, which <code>case_study/tools/build_interactive_data.py</code>
+    writes from <code>case_study/results/supporting_analyses/fig_separation_curves.csv</code>. The curves are thinned as
     recorded (at most about 400 points per curve). AUROC is computed here from the recorded ROC points by the
-    trapezoidal rule, as in <code>tools/figures/paper/make_fig_separation.py</code>.</li>
+    trapezoidal rule, as in <code>case_study/tools/figures/paper/make_fig_separation.py</code>.</li>
     <li>The interval [L, U] is recorded only for the threshold selected at the exploratory limit 0.1†, which
     defines no performance target. Frames are the units here (frame-level evaluation); frames of one recorded
     sequence are not independent, so the stated error probability is not guaranteed.</li>

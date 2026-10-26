@@ -8,7 +8,7 @@ outcome is applicable, not applicable, not determined or no threshold selected, 
 any detector that gives each detection an indicator value and a correct/wrong label.
 
 The concept is explained in [`../docs/concept.md`](../docs/concept.md). The statistics are those of
-[`../experiments/m1_range_kitti.py`](../experiments/m1_range_kitti.py), and the tests check that both give the same numbers.
+[`../case_study/experiments/m1_range_kitti.py`](../case_study/experiments/m1_range_kitti.py), and the tests check that both give the same numbers.
 
 ## Install
 

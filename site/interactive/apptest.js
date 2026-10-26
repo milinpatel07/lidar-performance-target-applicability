@@ -1,5 +1,5 @@
 // Applicability test on a table of detections: the computation behind own-data.html.
-// Mirrors analyse() and the class Cell in experiments/m1_range_kitti.py and package/src/applicability_test/core.py:
+// Mirrors analyse() and the class Cell in case_study/experiments/m1_range_kitti.py and package/src/applicability_test/core.py:
 // a detection is accepted if u <= tau; a frame belongs to a condition if it holds a detection of the condition;
 // a_f is the share of wrong detections among the accepted detections of the condition in frame f, and 0 for a
 // frame without accepted detections; in the sequence-level evaluation the value of a sequence is the mean of a_f

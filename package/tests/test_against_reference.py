@@ -1,4 +1,4 @@
-"""Checks of the package against the reference implementation experiments/m1_range_kitti.py.
+"""Checks of the package against the reference implementation case_study/experiments/m1_range_kitti.py.
 
 The reference is loaded by file path from ../experiments/m1_range_kitti.py relative to the
 package folder, or from the path in the environment variable APPLICABILITY_TEST_M1.
@@ -17,7 +17,7 @@ import applicability_test as at
 from applicability_test.cli import main as cli_main
 
 M1_PATH = Path(os.environ.get("APPLICABILITY_TEST_M1",
-                              Path(__file__).resolve().parents[2] / "experiments" / "m1_range_kitti.py"))
+                              Path(__file__).resolve().parents[2] / "case_study" / "experiments" / "m1_range_kitti.py"))
 
 
 @pytest.fixture(scope="module")

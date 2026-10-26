@@ -1,4 +1,4 @@
-/* Results browser: reads data/outcomes.json (written by tools/build_explorer_data.py) and draws the outcome grid.
+/* Results browser: reads data/outcomes.json (written by case_study/tools/build_explorer_data.py) and draws the outcome grid.
    Plain JavaScript without libraries, so that the page works offline. The pure functions at the top are also
    loaded by Node for testing (module.exports below; test: tests/test_explorer.mjs). */
 "use strict";
@@ -76,7 +76,7 @@ function cellRecords(recs, pair, sel, use, ind, alpha) {
   }).sort(function (a, b) { return a.split - b.split; });
 }
 
-/* Counts in the order A, ?, N, - as in docs/results.md, e.g. "A1 ?3 N1". */
+/* Counts in the order A, ?, N, - as in case_study/docs/results.md, e.g. "A1 ?3 N1". */
 function codeSummary(cell) {
   var n = {};
   cell.forEach(function (r) { n[r.code] = (n[r.code] || 0) + 1; });

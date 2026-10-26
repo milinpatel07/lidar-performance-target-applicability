@@ -16,9 +16,9 @@ as CSV" saves the records shown, with the term of the view in the first column.
 - Online: https://milinpatel07.github.io/lidar-performance-target-applicability/explorer/
 - Locally: run `python3 -m http.server -d site` in the repository root and open http://localhost:8000/explorer/ (opening
   `index.html` as a file does not work, because the browser blocks reading `data/outcomes.json` from disk).
-- Data: `data/outcomes.json` is written by `python tools/build_explorer_data.py` from the CSV files in `results/`;
-  the script stops if the frame-level counts differ from the table in `docs/results.md`.
-  `python tools/build_explorer_data.py --check` exits with 1 if the committed file differs from a fresh build.
+- Data: `data/outcomes.json` is written by `python case_study/tools/build_explorer_data.py` from the CSV files in `case_study/results/`;
+  the script stops if the frame-level counts differ from the table in `case_study/docs/results.md`.
+  `python case_study/tools/build_explorer_data.py --check` exits with 1 if the committed file differs from a fresh build.
 - Test: `node --test tests/test_explorer.mjs` tests the functions of `app.js` that do not touch the page (selection of
   records, counts, Eq. 5, link and address formats, CSV export) and compares the counts of the frame-level and
   sequence-level evaluations with the paper (168 of 240 and 5 of 240 transfer outcomes applicable or not applicable).

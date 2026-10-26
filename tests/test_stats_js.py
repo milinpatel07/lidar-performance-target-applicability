@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Check site/interactive/stats.js against experiments/m1_range_kitti.py and against the recorded sequence-unit rows.
+"""Check site/interactive/stats.js against case_study/experiments/m1_range_kitti.py and against the recorded sequence-unit rows.
 
     python3 tests/test_stats_js.py            # from the repository root; exit 0 on success, 1 on a difference
     pytest tests/test_stats_js.py             # the same as a pytest test
 
 1. 300 seeded random cases (S, n, alpha, delta): hb_pvalue, hb_upper, hb_lower agree to 1e-9; n_required agrees
    exactly on the cases with alpha >= 1e-3.
-2. Every recorded row of the sequence-level evaluation with an interval, in results/m7_nuscenes_by_scene/m7_scene_split.csv
-   (variant scene_scene_unit) and results/m8_kitti_by_drive/*.csv (hb_unit == 'drive'): hb_L and hb_U are
+2. Every recorded row of the sequence-level evaluation with an interval, in case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv
+   (variant scene_scene_unit) and case_study/results/division_by_sequence/kitti_by_drive/*.csv (hb_unit == 'drive'): hb_L and hb_U are
    recomputed by stats.js from A_hat * n_eval_units and n_eval_units at delta/2 = 0.025 and agree to 1e-6, and the
    outcome rule gives the recorded outcome.
 
@@ -46,7 +46,7 @@ process.stdout.write(JSON.stringify(out));
 
 
 def load_m1(root):
-    spec = importlib.util.spec_from_file_location("m1_range_kitti", root / "experiments" / "m1_range_kitti.py")
+    spec = importlib.util.spec_from_file_location("m1_range_kitti", root / "case_study" / "experiments" / "m1_range_kitti.py")
     m1 = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m1)
     return m1
@@ -72,8 +72,8 @@ def random_cases(seed=20261023, count=300):
 
 def recorded_rows(root):
     rows = []
-    sources = [(root / "results/m7_nuscenes_by_scene/m7_scene_split.csv", lambda r: r["variant"] == "scene_scene_unit")]
-    sources += [(p, lambda r: r["hb_unit"] == "drive") for p in sorted((root / "results/m8_kitti_by_drive").glob("*.csv"))]
+    sources = [(root / "case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv", lambda r: r["variant"] == "scene_scene_unit")]
+    sources += [(p, lambda r: r["hb_unit"] == "drive") for p in sorted((root / "case_study/results/division_by_sequence/kitti_by_drive").glob("*.csv"))]
     for path, keep in sources:
         with open(path, newline="", encoding="utf-8") as fh:
             for line, r in enumerate(csv.DictReader(fh), start=2):
@@ -139,7 +139,7 @@ def test_stats_js():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--root", type=Path, default=ROOT, help="repository root with experiments/ and results/")
+    ap.add_argument("--root", type=Path, default=ROOT, help="repository root with case_study/experiments/ and case_study/results/")
     ap.add_argument("--stats-js", type=Path, default=None, help="default: <root>/interactive/stats.js")
     a = ap.parse_args()
     sys.exit(run(a.root.resolve(), a.stats_js or a.root / "site" / "interactive" / "stats.js"))
