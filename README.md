@@ -8,7 +8,14 @@
 under one condition, still meet its performance target under a triggering condition? The applicability test answers
 this with recorded data.**
 
-![How the applicability test works: choose a threshold in one condition, keep it unchanged in another, decide with an interval against the limit](site/images/how_the_test_works.svg)
+![How the applicability test works in three steps: choose a threshold in the condition of selection; keep it unchanged in the condition of use, where more wrong detections fall below it; decide with an interval against the limit](site/images/how_the_test_works_animated.svg)
+
+| you are | start here |
+|---|---|
+| new to the topic (student, teacher, anyone curious) | [the idea in two minutes](https://milinpatel07.github.io/lidar-performance-target-applicability/story.html): eight scenes, no formulas |
+| building a perception system | [Try it](#try-it), then the [step-by-step guide](docs/guides/apply-to-your-detector.md) |
+| writing or reviewing a safety argument | [outcomes in a safety argument](docs/guides/outcomes-in-a-safety-argument.md) and [how much data a condition needs](docs/guides/plan-recording.md) |
+| a researcher | [the test in one page](docs/concept.md) and [the case study](case_study/README.md) |
 
 ## The problem
 
@@ -19,10 +26,12 @@ averaged over frames, stays at or below a limit, for example 1 %. The threshold 
 condition, the **condition of selection** (for example clear weather), and its statistical guarantee holds only for
 data distributed like those. The condition in which it is then used is the **condition of use**.
 
-A safety analysis according to ISO 21448 (safety of the intended functionality, SOTIF) has to know whether the target
-still holds under each **potential triggering condition** the analysis identifies, for example rain or far distance.
+A safety analysis according to ISO 21448 (safety of the intended functionality, SOTIF) asks whether the target still
+holds under each **potential triggering condition** the analysis identifies, for example rain or far distance.
 An unchanged AUROC does not answer this: the AUROC measures how well the uncertainty separates correct from wrong
 outputs over all thresholds, not the FAP at one fixed threshold.
+
+![Where the test fits in a SOTIF analysis: vehicle acceptance criterion, detector performance target, threshold chosen in the condition of selection, applicability test in each potential triggering condition, outcome in the safety argument](site/images/where_the_test_fits.svg)
 
 ## What the test does
 
@@ -40,6 +49,14 @@ default), provided the units of the data are independent: frames only if they do
 recorded sequences. The test also gives the minimum number of independent units a condition needs for an applicable
 outcome, so that a recording can be planned. Each applicable outcome comes with its **retention**, the share of
 correct outputs the threshold passes on, because a threshold that passes on almost nothing meets any target.
+
+![Thirty frames from three drives count as three independent units, because frames of one drive share road, weather and traffic](site/images/independent_units.svg)
+
+More independent units shorten the interval until it lies wholly on one side of the limit. In the sketch below the
+estimate lies below the limit, so the decision is applicable; it can equally end above the limit (not applicable).
+
+![The same estimate measured on few, more and many independent units: the interval shortens until it lies entirely below the limit](site/images/more_data_shorter_bar.svg)
+
 [`docs/concept.md`](docs/concept.md) explains the test in one page, with the statistics.
 
 **Intended for:** safety engineers who build the argument for each triggering condition, perception developers who

@@ -1,0 +1,19 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 300' width='960' height='300' role='img' aria-labelledby='t d'><title id='t'>More independent data make the decision possible</title><desc id='d'>Three intervals of the share of wrong passed-on detections around the same estimate, from few, more and many independent units. Only the shortest interval lies entirely below the limit: not determined, not determined, applicable.</desc>
+<rect width='960' height='300' fill='white'/>
+<text x='20' y='28' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#1a1a1a' text-anchor='start'>More independent data shorten the bar until it can decide</text>
+<line x1='20' y1='110' x2='940' y2='110' stroke='#1a1a1a' stroke-width='2' stroke-dasharray='6 4'/>
+<text x='940' y='102' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#1a1a1a' text-anchor='end'>limit of the target</text>
+<line x1='170' y1='80' x2='170' y2='220' stroke='#e6c700' stroke-width='12' stroke-linecap='round'/>
+<circle cx='170' cy='150' r='4' fill='#1a1a1a'/>
+<text x='170' y='254' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>few units</text>
+<text x='170' y='272' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#7a6a00' text-anchor='middle'>not determined</text>
+<line x1='470' y1='105' x2='470' y2='195' stroke='#e6c700' stroke-width='12' stroke-linecap='round'/>
+<circle cx='470' cy='150' r='4' fill='#1a1a1a'/>
+<text x='470' y='254' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>more units</text>
+<text x='470' y='272' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#7a6a00' text-anchor='middle'>not determined</text>
+<line x1='770' y1='128' x2='770' y2='172' stroke='#009e73' stroke-width='12' stroke-linecap='round'/>
+<circle cx='770' cy='150' r='4' fill='#1a1a1a'/>
+<text x='770' y='254' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>many units</text>
+<text x='770' y='272' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#009e73' text-anchor='middle'>applicable</text>
+<text x='20' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>Schematic: the same estimate (dot), measured on few, more and many independent units. Here the estimate lies below the limit; it can equally lie above it.</text>
+</svg>

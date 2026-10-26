@@ -88,6 +88,10 @@ the time they were written.
 - Continuous integration on Ubuntu 24.04 with pinned packages, including the post-hoc tests (`scipy` added to
   `requirements-posthoc.txt` at the version of the analysis container), and the package on Linux, Windows and macOS
   with Python 3.9, 3.11 and 3.13.
+- Site: a start page with three entry points and paths per audience, a navigation bar on every page, and
+  `story.html`, the idea in eight scenes without formulas. Diagrams in `site/images/` (written by
+  `make_diagrams.py`): the test in three steps (also animated), where the test fits in a SOTIF analysis, independent
+  units, and how more data shorten the interval; the README shows them. A link preview image for the site.
 - `CITATION.cff` with the paper as preferred citation, the three licences and the affiliations of the paper;
   `CONTRIBUTING.md` and issue templates.
 

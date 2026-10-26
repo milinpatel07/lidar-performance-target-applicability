@@ -1,122 +1,123 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 400' width='960' height='400' role='img' aria-labelledby='t d'><title id='t'>How the applicability test works</title><desc id='d'>Schematic in three steps, no data: a threshold on the uncertainty is chosen in one condition, kept unchanged in another condition where more wrong detections fall below it, and an interval of the share of wrong detections passed on is compared with the limit, giving applicable, not determined or not applicable.</desc>
 <rect width='960' height='400' fill='white'/>
-<defs><marker id='a' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#6e7781'/></marker></defs>
-<text x='30' y='34' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#6e7781' text-anchor='start'>STEP 1</text>
-<text x='30' y='58' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='17' font-weight='bold' fill='#1f2328' text-anchor='start'>Choose a threshold</text>
-<text x='30' y='80' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#6e7781' text-anchor='start'>condition of selection, e.g. near distance</text>
+<defs><marker id='a' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5a5a5a'/></marker></defs>
+<text x='30' y='34' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#5a5a5a' text-anchor='start'>STEP 1</text>
+<text x='30' y='58' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='17' font-weight='bold' fill='#1a1a1a' text-anchor='start'>Choose a threshold</text>
+<text x='30' y='80' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#5a5a5a' text-anchor='start'>condition of selection, e.g. clear weather</text>
 <rect x='30' y='130' width='140' height='120' fill='#eef2f7'/>
-<text x='36' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='start'>passed on</text>
-<circle cx='80.5' cy='195.5' r='5' fill='#1f5fbf'/>
-<circle cx='91.2' cy='186.9' r='5' fill='#1f5fbf'/>
-<circle cx='61.9' cy='160.5' r='5' fill='#1f5fbf'/>
-<circle cx='82.3' cy='154.0' r='5' fill='#1f5fbf'/>
-<circle cx='76.7' cy='165.4' r='5' fill='#1f5fbf'/>
-<circle cx='122.4' cy='155.3' r='5' fill='#1f5fbf'/>
-<circle cx='55.1' cy='176.7' r='5' fill='#1f5fbf'/>
-<circle cx='128.5' cy='209.4' r='5' fill='#1f5fbf'/>
-<circle cx='78.9' cy='212.0' r='5' fill='#1f5fbf'/>
-<circle cx='111.7' cy='214.4' r='5' fill='#1f5fbf'/>
-<circle cx='108.2' cy='215.0' r='5' fill='#1f5fbf'/>
-<circle cx='125.8' cy='200.5' r='5' fill='#1f5fbf'/>
-<circle cx='89.8' cy='190.3' r='5' fill='#1f5fbf'/>
-<circle cx='145.6' cy='206.8' r='5' fill='#1f5fbf'/>
-<circle cx='57.8' cy='155.0' r='5' fill='#1f5fbf'/>
-<circle cx='82.5' cy='225.1' r='5' fill='#1f5fbf'/>
-<circle cx='167.0' cy='180.5' r='5' fill='#1f5fbf'/>
-<circle cx='195.3' cy='169.7' r='5' fill='#1f5fbf'/>
-<circle cx='75.3' cy='150.3' r='5' fill='#1f5fbf'/>
-<circle cx='93.2' cy='208.7' r='5' fill='#1f5fbf'/>
-<circle cx='95.9' cy='226.5' r='5' fill='#1f5fbf'/>
-<circle cx='117.8' cy='183.9' r='5' fill='#1f5fbf'/>
-<circle cx='75.5' cy='178.9' r='5' fill='#1f5fbf'/>
-<circle cx='75.3' cy='224.3' r='5' fill='#1f5fbf'/>
-<circle cx='136.4' cy='181.0' r='5' fill='#1f5fbf'/>
-<circle cx='67.5' cy='158.7' r='5' fill='#1f5fbf'/>
-<path d='M163.7,189.9 L173.7,199.9 M163.7,199.9 L173.7,189.9' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M248.4,228.2 L258.4,238.2 M248.4,238.2 L258.4,228.2' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M241.5,159.2 L251.5,169.2 M241.5,169.2 L251.5,159.2' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M240.8,228.7 L250.8,238.7 M240.8,238.7 L250.8,228.7' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M190.5,164.3 L200.5,174.3 M190.5,174.3 L200.5,164.3' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M230.4,203.9 L240.4,213.9 M230.4,213.9 L240.4,203.9' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M246.4,161.7 L256.4,171.7 M246.4,171.7 L256.4,161.7' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<line x1='30' y1='256' x2='285' y2='256' stroke='#1f2328' stroke-width='1.5'/>
-<text x='30' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='start'>low</text>
-<text x='285' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='end'>high uncertainty</text>
-<line x1='170' y1='104' x2='170' y2='262' stroke='#1f2328' stroke-width='2.2' stroke-dasharray='6 4'/>
-<text x='175' y='116' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#1f2328' text-anchor='start'>threshold</text>
-<text x='30' y='310' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1f2328' text-anchor='start'>Few wrong detections pass:</text>
-<text x='30' y='330' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1f2328' text-anchor='start'>the target is met here.</text>
-<path d='M300,190 L330,190' stroke='#6e7781' stroke-width='2.5' marker-end='url(#a)'/>
-<text x='345' y='34' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#6e7781' text-anchor='start'>STEP 2</text>
-<text x='345' y='58' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='17' font-weight='bold' fill='#1f2328' text-anchor='start'>Keep it unchanged</text>
-<text x='345' y='80' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#6e7781' text-anchor='start'>condition of use, e.g. rain</text>
+<text x='36' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>passed on</text>
+<circle cx='128.5' cy='209.4' r='5' fill='#0072b2' />
+<circle cx='78.9' cy='212.0' r='5' fill='#0072b2' />
+<circle cx='111.7' cy='214.4' r='5' fill='#0072b2' />
+<circle cx='108.2' cy='215.0' r='5' fill='#0072b2' />
+<circle cx='125.8' cy='200.5' r='5' fill='#0072b2' />
+<circle cx='89.8' cy='190.3' r='5' fill='#0072b2' />
+<circle cx='145.6' cy='206.8' r='5' fill='#0072b2' />
+<circle cx='57.8' cy='155.0' r='5' fill='#0072b2' />
+<circle cx='82.5' cy='225.1' r='5' fill='#0072b2' />
+<circle cx='167.0' cy='180.5' r='5' fill='#0072b2' />
+<circle cx='195.3' cy='169.7' r='5' fill='#0072b2' />
+<circle cx='75.3' cy='150.3' r='5' fill='#0072b2' />
+<circle cx='93.2' cy='208.7' r='5' fill='#0072b2' />
+<circle cx='95.9' cy='226.5' r='5' fill='#0072b2' />
+<circle cx='117.8' cy='183.9' r='5' fill='#0072b2' />
+<circle cx='75.5' cy='178.9' r='5' fill='#0072b2' />
+<circle cx='75.3' cy='224.3' r='5' fill='#0072b2' />
+<circle cx='136.4' cy='181.0' r='5' fill='#0072b2' />
+<circle cx='67.5' cy='158.7' r='5' fill='#0072b2' />
+<circle cx='149.6' cy='194.9' r='5' fill='#0072b2' />
+<circle cx='113.1' cy='233.2' r='5' fill='#0072b2' />
+<circle cx='178.7' cy='164.2' r='5' fill='#0072b2' />
+<circle cx='118.3' cy='169.0' r='5' fill='#0072b2' />
+<circle cx='117.0' cy='219.6' r='5' fill='#0072b2' />
+<circle cx='133.7' cy='152.5' r='5' fill='#0072b2' />
+<circle cx='57.0' cy='231.3' r='5' fill='#0072b2' />
+<path d='M183.0,190.5 L193.0,200.5 M183.0,200.5 L193.0,190.5' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M203.5,181.9 L213.5,191.9 M203.5,191.9 L213.5,181.9' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M186.2,155.5 L196.2,165.5 M186.2,165.5 L196.2,155.5' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M207.2,149.0 L217.2,159.0 M207.2,159.0 L217.2,149.0' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M211.0,160.4 L221.0,170.4 M211.0,170.4 L221.0,160.4' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M225.1,150.3 L235.1,160.3 M225.1,160.3 L235.1,150.3' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M145.9,171.7 L155.9,181.7 M145.9,181.7 L155.9,171.7' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<line x1='30' y1='256' x2='285' y2='256' stroke='#1a1a1a' stroke-width='1.5'/>
+<text x='30' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>low</text>
+<text x='285' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='end'>high uncertainty</text>
+<line x1='170' y1='104' x2='170' y2='262' stroke='#6a3d9a' stroke-width='2.4' stroke-dasharray='6 4'/>
+<text x='175' y='116' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#6a3d9a' text-anchor='start'>threshold</text>
+<text x='30' y='310' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='start'>Few wrong detections pass:</text>
+<text x='30' y='330' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='start'>the target is met here.</text>
+<path d='M300,190 L330,190' stroke='#5a5a5a' stroke-width='2.5' marker-end='url(#a)'/>
+<text x='345' y='34' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#5a5a5a' text-anchor='start'>STEP 2</text>
+<text x='345' y='58' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='17' font-weight='bold' fill='#1a1a1a' text-anchor='start'>Keep it unchanged</text>
+<text x='345' y='80' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#5a5a5a' text-anchor='start'>condition of use, e.g. rain</text>
 <rect x='345' y='130' width='140' height='120' fill='#eef2f7'/>
-<text x='351' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='start'>passed on</text>
-<circle cx='374.7' cy='190.8' r='5' fill='#1f5fbf'/>
-<circle cx='480.2' cy='227.3' r='5' fill='#1f5fbf'/>
-<circle cx='458.8' cy='217.1' r='5' fill='#1f5fbf'/>
-<circle cx='408.5' cy='211.6' r='5' fill='#1f5fbf'/>
-<circle cx='405.7' cy='218.6' r='5' fill='#1f5fbf'/>
-<circle cx='390.1' cy='161.1' r='5' fill='#1f5fbf'/>
-<circle cx='363.0' cy='229.4' r='5' fill='#1f5fbf'/>
-<circle cx='429.7' cy='170.4' r='5' fill='#1f5fbf'/>
-<circle cx='434.7' cy='227.4' r='5' fill='#1f5fbf'/>
-<circle cx='401.4' cy='185.8' r='5' fill='#1f5fbf'/>
-<circle cx='492.8' cy='165.6' r='5' fill='#1f5fbf'/>
-<circle cx='362.9' cy='211.6' r='5' fill='#1f5fbf'/>
-<circle cx='424.7' cy='216.7' r='5' fill='#1f5fbf'/>
-<circle cx='388.8' cy='215.6' r='5' fill='#1f5fbf'/>
-<circle cx='404.8' cy='187.7' r='5' fill='#1f5fbf'/>
-<circle cx='431.6' cy='188.4' r='5' fill='#1f5fbf'/>
-<circle cx='397.4' cy='172.1' r='5' fill='#1f5fbf'/>
-<circle cx='460.5' cy='156.2' r='5' fill='#1f5fbf'/>
-<circle cx='387.8' cy='226.2' r='5' fill='#1f5fbf'/>
-<circle cx='380.6' cy='225.0' r='5' fill='#1f5fbf'/>
-<circle cx='422.7' cy='178.8' r='5' fill='#1f5fbf'/>
-<circle cx='388.1' cy='151.5' r='5' fill='#1f5fbf'/>
-<path d='M400.0,228.7 L410.0,238.7 M400.0,238.7 L410.0,228.7' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M511.9,148.4 L521.9,158.4 M511.9,158.4 L521.9,148.4' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M362.2,167.0 L372.2,177.0 M362.2,177.0 L372.2,167.0' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M376.6,152.6 L386.6,162.6 M376.6,162.6 L386.6,152.6' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M368.0,224.8 L378.0,234.8 M368.0,234.8 L378.0,224.8' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M562.5,150.7 L572.5,160.7 M562.5,160.7 L572.5,150.7' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M552.4,223.8 L562.4,233.8 M552.4,233.8 L562.4,223.8' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M510.5,154.3 L520.5,164.3 M510.5,164.3 L520.5,154.3' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M539.5,170.9 L549.5,180.9 M539.5,180.9 L549.5,170.9' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M537.1,174.5 L547.1,184.5 M537.1,184.5 L547.1,174.5' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M458.1,185.4 L468.1,195.4 M458.1,195.4 L468.1,185.4' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M540.5,178.4 L550.5,188.4 M540.5,188.4 L550.5,178.4' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M475.7,199.1 L485.7,209.1 M475.7,209.1 L485.7,199.1' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<path d='M562.8,151.0 L572.8,161.0 M562.8,161.0 L572.8,151.0' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<line x1='345' y1='256' x2='600' y2='256' stroke='#1f2328' stroke-width='1.5'/>
-<text x='345' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='start'>low</text>
-<text x='600' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='end'>high uncertainty</text>
-<line x1='485' y1='104' x2='485' y2='262' stroke='#1f2328' stroke-width='2.2' stroke-dasharray='6 4'/>
-<text x='490' y='116' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#1f2328' text-anchor='start'>threshold</text>
-<text x='345' y='310' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1f2328' text-anchor='start'>More wrong detections pass:</text>
-<text x='345' y='330' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1f2328' text-anchor='start'>is the target still met?</text>
-<path d='M615,190 L645,190' stroke='#6e7781' stroke-width='2.5' marker-end='url(#a)'/>
-<text x='665' y='34' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#6e7781' text-anchor='start'>STEP 3</text>
-<text x='665' y='58' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='17' font-weight='bold' fill='#1f2328' text-anchor='start'>Decide with the data</text>
-<text x='665' y='80' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#6e7781' text-anchor='start'>share of passed detections that are wrong</text>
-<line x1='673' y1='112' x2='673' y2='262' stroke='#1f2328' stroke-width='1.5'/>
-<text x='667' y='108' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='start'>more</text>
-<text x='667' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#6e7781' text-anchor='start'>less</text>
-<line x1='673' y1='190' x2='945' y2='190' stroke='#d95f02' stroke-width='2' stroke-dasharray='6 4'/>
-<text x='945' y='182' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#d95f02' text-anchor='end'>limit of the target</text>
-<line x1='720' y1='222' x2='720' y2='252' stroke='#1f5fbf' stroke-width='9' stroke-linecap='round'/>
-<text x='720' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#1f5fbf' text-anchor='middle'>applicable</text>
-<line x1='810' y1='160' x2='810' y2='230' stroke='#6e7781' stroke-width='9' stroke-linecap='round'/>
-<text x='810' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#6e7781' text-anchor='middle'>not</text>
-<text x='810' y='308' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#6e7781' text-anchor='middle'>determined</text>
-<line x1='900' y1='122' x2='900' y2='168' stroke='#d95f02' stroke-width='9' stroke-linecap='round'/>
-<text x='900' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#d95f02' text-anchor='middle'>not</text>
-<text x='900' y='308' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#d95f02' text-anchor='middle'>applicable</text>
-<text x='665' y='340' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1f2328' text-anchor='start'>The bar is the range in which the share</text>
-<text x='665' y='360' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1f2328' text-anchor='start'>lies; more independent data shorten it.</text>
-<circle cx='35.0' cy='380.0' r='5' fill='#1f5fbf'/>
-<text x='46' y='384' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#6e7781' text-anchor='start'>correct detection</text>
-<path d='M175.0,375.0 L185.0,385.0 M175.0,385.0 L185.0,375.0' stroke='#d95f02' stroke-width='2.6' stroke-linecap='round'/>
-<text x='191' y='384' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#6e7781' text-anchor='start'>wrong detection</text>
-<text x='345' y='384' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#6e7781' text-anchor='start'>Schematic, not data.</text>
+<text x='351' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>passed on</text>
+<circle cx='404.8' cy='187.7' r='5' fill='#0072b2' />
+<circle cx='431.6' cy='188.4' r='5' fill='#0072b2' />
+<circle cx='397.4' cy='172.1' r='5' fill='#0072b2' />
+<circle cx='460.5' cy='156.2' r='5' fill='#0072b2' />
+<circle cx='387.8' cy='226.2' r='5' fill='#0072b2' />
+<circle cx='380.6' cy='225.0' r='5' fill='#0072b2' />
+<circle cx='422.7' cy='178.8' r='5' fill='#0072b2' />
+<circle cx='388.1' cy='151.5' r='5' fill='#0072b2' />
+<circle cx='402.7' cy='233.7' r='5' fill='#0072b2' />
+<circle cx='496.9' cy='153.4' r='5' fill='#0072b2' />
+<circle cx='491.1' cy='227.5' r='5' fill='#0072b2' />
+<circle cx='382.9' cy='157.6' r='5' fill='#0072b2' />
+<circle cx='374.8' cy='229.8' r='5' fill='#0072b2' />
+<circle cx='477.9' cy='155.7' r='5' fill='#0072b2' />
+<circle cx='431.7' cy='170.3' r='5' fill='#0072b2' />
+<circle cx='410.0' cy='176.5' r='5' fill='#0072b2' />
+<circle cx='412.2' cy='165.1' r='5' fill='#0072b2' />
+<circle cx='475.3' cy='229.4' r='5' fill='#0072b2' />
+<circle cx='382.0' cy='220.9' r='5' fill='#0072b2' />
+<circle cx='399.5' cy='179.1' r='5' fill='#0072b2' />
+<circle cx='457.3' cy='179.5' r='5' fill='#0072b2' />
+<circle cx='390.8' cy='171.7' r='5' fill='#0072b2' />
+<path d='M441.6,161.7 L451.6,171.7 M441.6,171.7 L451.6,161.7' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M390.0,152.2 L400.0,162.2 M390.0,162.2 L400.0,152.2' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M419.0,160.2 L429.0,170.2 M419.0,170.2 L429.0,160.2' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M426.4,179.1 L436.4,189.1 M426.4,189.1 L436.4,179.1' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M389.4,157.4 L399.4,167.4 M389.4,167.4 L399.4,157.4' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M412.6,156.1 L422.6,166.1 M412.6,166.1 L422.6,156.1' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M441.8,224.4 L451.8,234.4 M441.8,234.4 L451.8,224.4' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M545.2,165.4 L555.2,175.4 M545.2,175.4 L555.2,165.4' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M536.5,222.4 L546.5,232.4 M536.5,232.4 L546.5,222.4' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M509.0,180.8 L519.0,190.8 M509.0,190.8 L519.0,180.8' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M568.2,160.6 L578.2,170.6 M568.2,170.6 L578.2,160.6' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M499.5,206.6 L509.5,216.6 M499.5,216.6 L509.5,206.6' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M526.4,211.7 L536.4,221.7 M526.4,221.7 L536.4,211.7' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<path d='M529.4,210.6 L539.4,220.6 M529.4,220.6 L539.4,210.6' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<line x1='345' y1='256' x2='600' y2='256' stroke='#1a1a1a' stroke-width='1.5'/>
+<text x='345' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>low</text>
+<text x='600' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='end'>high uncertainty</text>
+<line x1='485' y1='104' x2='485' y2='262' stroke='#6a3d9a' stroke-width='2.4' stroke-dasharray='6 4'/>
+<text x='490' y='116' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#6a3d9a' text-anchor='start'>threshold</text>
+<text x='345' y='310' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='start'>More wrong detections pass:</text>
+<text x='345' y='330' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='start'>is the target still met?</text>
+<path d='M615,190 L645,190' stroke='#5a5a5a' stroke-width='2.5' marker-end='url(#a)'/>
+<text x='665' y='34' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#5a5a5a' text-anchor='start'>STEP 3</text>
+<text x='665' y='58' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='17' font-weight='bold' fill='#1a1a1a' text-anchor='start'>Decide with the data</text>
+<text x='665' y='80' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#5a5a5a' text-anchor='start'>share of passed detections that are wrong</text>
+<line x1='673' y1='112' x2='673' y2='262' stroke='#1a1a1a' stroke-width='1.5'/>
+<text x='667' y='108' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>more</text>
+<text x='667' y='276' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>less</text>
+<line x1='673' y1='190' x2='945' y2='190' stroke='#1a1a1a' stroke-width='2' stroke-dasharray='6 4'/>
+<text x='945' y='182' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='bold' fill='#1a1a1a' text-anchor='end'>limit of the target</text>
+<line x1='720' y1='222' x2='720' y2='252' stroke='#009e73' stroke-width='10' stroke-linecap='round'/>
+<text x='720' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#009e73' text-anchor='middle'>applicable</text>
+<line x1='810' y1='160' x2='810' y2='230' stroke='#e6c700' stroke-width='10' stroke-linecap='round'/>
+<line x1='810' y1='160' x2='810' y2='230' stroke='#7a6a00' stroke-width='1' stroke-linecap='round' fill='none'/>
+<text x='810' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#7a6a00' text-anchor='middle'>not</text>
+<text x='810' y='308' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#7a6a00' text-anchor='middle'>determined</text>
+<line x1='900' y1='122' x2='900' y2='168' stroke='#d55e00' stroke-width='10' stroke-linecap='round'/>
+<text x='900' y='292' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#d55e00' text-anchor='middle'>not</text>
+<text x='900' y='308' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#d55e00' text-anchor='middle'>applicable</text>
+<text x='665' y='340' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='start'>The bar is the range in which the share</text>
+<text x='665' y='360' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='start'>lies; more independent data shorten it.</text>
+<circle cx='35.0' cy='380.0' r='5' fill='#0072b2' />
+<text x='46' y='384' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#5a5a5a' text-anchor='start'>correct detection</text>
+<path d='M175.0,375.0 L185.0,385.0 M175.0,385.0 L185.0,375.0' stroke='#d55e00' stroke-width='2.6' stroke-linecap='round' fill='none' />
+<text x='191' y='384' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#5a5a5a' text-anchor='start'>wrong detection</text>
+<text x='345' y='384' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#5a5a5a' text-anchor='start'>Schematic, not data.</text>
 </svg>

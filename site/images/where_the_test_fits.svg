@@ -1,0 +1,30 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 190' width='960' height='190' role='img' aria-labelledby='t d'><title id='t'>Where the applicability test fits in a SOTIF analysis</title><desc id='d'>Chain of five boxes: an acceptance criterion for the vehicle is allocated as a performance target to the detector; a threshold is chosen in the condition of selection; the applicability test checks it in each potential triggering condition; the outcome and the measure that follows enter the safety argument.</desc>
+<rect width='960' height='190' fill='white'/>
+<defs><marker id='a' viewBox='0 0 10 10' refX='8' refY='5' markerWidth='7' markerHeight='7' orient='auto'><path d='M0,0 L10,5 L0,10 z' fill='#5a5a5a'/></marker></defs>
+<rect x='20' y='40' width='164' height='108' rx='10' fill='#eef2f7' stroke='#d0d0d0' stroke-width='1.2'/>
+<text x='102.0' y='72' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>Vehicle</text>
+<text x='102.0' y='96' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='middle'>acceptance criterion</text>
+<text x='102.0' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='middle'>set for the whole vehicle</text>
+<path d='M187,94 L209,94' stroke='#5a5a5a' stroke-width='2.5' marker-end='url(#a)'/>
+<rect x='212' y='40' width='164' height='108' rx='10' fill='#eef2f7' stroke='#d0d0d0' stroke-width='1.2'/>
+<text x='294.0' y='72' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>Detector</text>
+<text x='294.0' y='96' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='middle'>performance target</text>
+<text x='294.0' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='middle'>limit on wrong outputs</text>
+<path d='M379,94 L401,94' stroke='#5a5a5a' stroke-width='2.5' marker-end='url(#a)'/>
+<rect x='404' y='40' width='164' height='108' rx='10' fill='#eef2f7' stroke='#d0d0d0' stroke-width='1.2'/>
+<text x='486.0' y='72' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>Condition of selection</text>
+<text x='486.0' y='96' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='middle'>threshold chosen</text>
+<text x='486.0' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='middle'>with a statistical guarantee</text>
+<path d='M571,94 L593,94' stroke='#5a5a5a' stroke-width='2.5' marker-end='url(#a)'/>
+<rect x='596' y='40' width='164' height='108' rx='10' fill='#e7f4ef' stroke='#009e73' stroke-width='2.5'/>
+<text x='678.0' y='72' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#009e73' text-anchor='middle'>Applicability test</text>
+<text x='678.0' y='96' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='middle'>in each potential</text>
+<text x='678.0' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='middle'>triggering condition</text>
+<path d='M763,94 L785,94' stroke='#5a5a5a' stroke-width='2.5' marker-end='url(#a)'/>
+<rect x='788' y='40' width='164' height='108' rx='10' fill='#eef2f7' stroke='#d0d0d0' stroke-width='1.2'/>
+<text x='870.0' y='72' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>Safety argument</text>
+<text x='870.0' y='96' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='normal' fill='#1a1a1a' text-anchor='middle'>outcome and measure</text>
+<text x='870.0' y='124' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='middle'>use, change or record more</text>
+<text x='20' y='26' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='15' font-weight='bold' fill='#1a1a1a' text-anchor='start'>Where the test fits in a safety analysis according to ISO 21448 (SOTIF)</text>
+<text x='20' y='178' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>Schematic. The test needs no access to the detector, only a table of its outputs.</text>
+</svg>

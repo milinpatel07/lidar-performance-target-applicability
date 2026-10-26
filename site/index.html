@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Applicability of performance targets across triggering conditions</title>
+<title>Does the threshold still hold? The applicability test</title>
 <meta name="description" content="Applicability test for uncertainty thresholds of machine-learning perception under triggering conditions (ISO 21448, SOTIF): browser pages, a Python package, and a case study with LiDAR object detection on KITTI and nuScenes.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Does the threshold still hold? The applicability test">
@@ -14,72 +14,75 @@
 <meta property="og:image:height" content="640">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="interactive/style.css">
-<style>
-  .hero { max-width: 46rem; }
-  .hero p { font-size: 1.05rem; line-height: 1.6; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; padding: 0; list-style: none; }
-  .cards li { border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
-  .cards h3 { margin: 0 0 .4rem; font-size: 1rem; }
-  .cards p { margin: 0; font-size: .92rem; line-height: 1.5; }
-  section { margin: 2rem 0; }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header class="hero">
-  <h1>Applicability of performance targets across triggering conditions</h1>
-  <p>An object detector can pass on only the detections whose uncertainty lies at or below a threshold. A performance
-  target sets a limit on the share of wrong detections among them (per frame, averaged over frames), for example 1 %.
-  A threshold chosen on data of one condition carries its statistical guarantee only for data distributed like those.</p>
-  <p><img src="images/how_the_test_works.svg" alt="How the applicability test works: choose a threshold in one condition, keep it unchanged in another, decide with an interval against the limit" style="width:100%;max-width:960px;height:auto"></p>
-  <p>The <strong>applicability test</strong> applies the same threshold, unchanged, under another condition, for example
-  far distance or rain, and states at a given error probability whether the target is <em>applicable</em> there,
-  <em>not applicable</em>, or <em>not determined</em> by the data (or that <em>no threshold</em> could be selected in
-  the condition of selection). It also gives the minimum number of independent units (for example recorded sequences)
-  that an applicable outcome needs.</p>
-</header>
-<main>
+<nav class="site" aria-label="Site"><a class="brand" href="./">Applicability test</a><a href="./" aria-current="page">Start</a><a href="story.html">The idea</a><a href="interactive/walkthrough.html">Walk-through</a><a href="interactive/own-data.html">Your data</a><a href="interactive/test.html">Calculator</a><a href="explorer/">Results</a><a href="interactive/">All pages</a><a href="https://github.com/milinpatel07/lidar-performance-target-applicability">Code and paper</a></nav>
+<main class="home">
+  <header class="hero">
+    <h1>Does the threshold still hold?</h1>
+    <p class="lead">An object detector in an automated car passes on only the reports it is sure about, using a threshold
+    on its uncertainty. The threshold is set on recordings of one condition, for example clear weather, so that only a
+    limited share of the passed-on reports is wrong. The <strong>applicability test</strong> checks with recorded data
+    whether this still holds under another condition, for example rain or far distance: a question that a safety
+    analysis according to ISO 21448 (SOTIF) asks for each potential triggering condition it identifies.</p>
+  </header>
+
+  <figure>
+    <a href="images/how_the_test_works.svg"><img src="images/how_the_test_works_animated.svg" alt="How the applicability test works in three steps: choose a threshold in the condition of selection; keep it unchanged in the condition of use, where more wrong detections fall below it; decide with an interval of the share of wrong passed-on detections against the limit: applicable, not determined or not applicable."></a>
+    <figcaption>Schematic, not data. In step 2 some wrong detections move below the unchanged threshold. Select the figure to open it at full size.</figcaption>
+  </figure>
+
+  <div class="doors">
+    <a class="d1" href="story.html"><strong>Understand it in two minutes</strong><span>Eight short scenes, no formulas:
+    a detector, a gate, rain, and a measured answer.</span></a>
+    <a class="d2" href="interactive/own-data.html"><strong>Try it on your data</strong><span>Load a CSV file of detections;
+    everything is computed in your browser and no file leaves your computer.</span></a>
+    <a class="d3" href="explorer/"><strong>See the evidence</strong><span>Every outcome of the case study with two LiDAR
+    detectors on KITTI and nuScenes, with its source.</span></a>
+  </div>
+
   <section>
-    <h2>Understand the idea</h2>
-    <ul class="cards">
-      <li><h3><a href="interactive/walkthrough.html">Walk-through</a></h3><p>Seven steps with one interactive figure each, from
-      what the detector passes on to the measure that follows from each outcome.</p></li>
-      <li><h3><a href="interactive/concept.html">Four changes in the detections</a></h3><p>Why AUROC can stay unchanged
-      while a transferred threshold exceeds its limit (schematic).</p></li>
-      <li><h3><a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/concept.md">The applicability test in one page</a></h3><p>The chain from acceptance criterion to
-      measure, the statistics, and the independent unit (text).</p></li>
+    <h2>Choose your path</h2>
+    <ul class="paths">
+      <li><h3>New to the topic</h3><p>Students, teachers, anyone curious.</p>
+        <p><a href="story.html">The idea in two minutes</a>, then the <a href="interactive/walkthrough.html">walk-through</a>.</p></li>
+      <li><h3>Building a perception system</h3><p>Choose and check thresholds.</p>
+        <p><a href="interactive/own-data.html">Your data</a>, the
+        <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/tree/main/package">Python package</a>,
+        <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/guides/apply-to-your-detector.md">step by step</a>.</p></li>
+      <li><h3>Writing or reviewing a safety argument</h3><p>What an outcome supports and what it does not.</p>
+        <p><a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/guides/outcomes-in-a-safety-argument.md">Outcomes in a safety argument</a>,
+        <a href="interactive/units.html">how much data a condition needs</a>.</p></li>
+      <li><h3>Research</h3><p>Method, statistics, reproduction.</p>
+        <p><a href="https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/docs/concept.md">The test in one page</a>,
+        <a href="https://github.com/milinpatel07/lidar-performance-target-applicability/tree/main/case_study">the case study</a>,
+        <a href="interactive/separation.html">separation and FAP</a>.</p></li>
     </ul>
   </section>
+
   <section>
-    <h2>Use it</h2>
-    <ul class="cards">
-      <li><h3><a href="interactive/own-data.html">Run the test on your own detections</a></h3><p>Load a CSV of detections;
-      everything is computed in the browser and no data leave your computer.</p></li>
-      <li><h3><a href="interactive/test.html">Applicability test calculator</a></h3><p>Interval, outcome and minimum number of units
-      for a given estimate, limit and error probability.</p></li>
-      <li><h3><a href="interactive/units.html">Independent units needed</a></h3><p>How many independent units a limit needs, with the
-      units of KITTI and nuScenes for comparison.</p></li>
-      <li><h3><a href="https://github.com/milinpatel07/lidar-performance-target-applicability/tree/main/package">Python package</a></h3><p><code>applicability-test</code>: the same test for
-      scripts and pipelines, checked against the study's analysis code.</p></li>
+    <h2>Every page of this site</h2>
+    <ul class="all">
+      <li><a href="story.html">The idea in two minutes</a>: eight scenes, no formulas</li>
+      <li><a href="interactive/walkthrough.html">Walk-through</a>: the test in seven steps, with the statistics</li>
+      <li><a href="interactive/concept.html">Four changes in the detections</a>: why the AUROC can stay the same while the share of wrong passed-on detections rises</li>
+      <li><a href="interactive/own-data.html">Your own data</a>: the test on a CSV file, in the browser</li>
+      <li><a href="interactive/test.html">Test calculator</a>: interval, outcome and minimum number of units</li>
+      <li><a href="interactive/units.html">Independent units needed</a>: how much data a limit needs</li>
+      <li><a href="interactive/separation.html">Separation and FAP</a>: the recorded curves of the case study</li>
+      <li><a href="explorer/">Results browser</a>: every recorded outcome of the case study</li>
     </ul>
   </section>
-  <section>
-    <h2>Case study: PointPillars ensembles on KITTI and nuScenes</h2>
-    <ul class="cards">
-      <li><h3><a href="explorer/">Results browser</a></h3><p>Every recorded outcome by pair of conditions, indicator,
-      limit, split and evaluation, with its source row.</p></li>
-      <li><h3><a href="interactive/separation.html">Separation and FAP</a></h3><p>The recorded ROC and FAP curves of three
-      transfers, with the transferred thresholds.</p></li>
-      <li><h3><a href="https://github.com/milinpatel07/lidar-performance-target-applicability">Code, results and provenance</a></h3><p>Experiment scripts, recorded results with
-      input hashes, detector configurations and checkpoints.</p></li>
-    </ul>
-  </section>
+
+  <footer>
+    <p>Milin Patel and Rolf Jung, Kempten University of Applied Sciences. <em>Uncertainty Evaluation to Support Safety of
+    the Intended Functionality Analysis for Determining the Applicability of Performance Targets Across Triggering
+    Conditions in ML-Based LiDAR Object Detection.</em> Submitted, 2026. Code, results and citation:
+    <a href="https://github.com/milinpatel07/lidar-performance-target-applicability">GitHub</a>; archived on Zenodo,
+    <a href="https://doi.org/10.5281/zenodo.23495356">10.5281/zenodo.23495356</a>.</p>
+    <p>Code MIT; results and documentation CC BY-NC-SA 4.0. No dataset content is included.</p>
+  </footer>
 </main>
-<footer>
-  <ul>
-    <li>Milin Patel and Rolf Jung, Kempten University of Applied Sciences. Archived on Zenodo:
-    <a href="https://doi.org/10.5281/zenodo.23495356">10.5281/zenodo.23495356</a>.</li>
-    <li>Code MIT; results and documentation CC BY-NC-SA 4.0. No dataset content is included.</li>
-  </ul>
-</footer>
 </body>
 </html>

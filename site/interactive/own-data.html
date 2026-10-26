@@ -19,10 +19,11 @@
   .warn { border-left: 4px solid var(--c-N); padding: .3rem .6rem; background: var(--shade); margin: .4rem 0; }
   textarea { font: inherit; width: 22rem; max-width: 100%; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 4px; }
 </style>
+<link rel="stylesheet" href="../site.css">
 </head>
 <body>
 <header>
-  <nav class="top" aria-label="Site"><a href="./">Interactive pages</a><a href="../explorer/">Results browser</a><a href="../">Start page</a></nav>
+  <nav class="site" aria-label="Site"><a class="brand" href="../">Applicability test</a><a href="../">Start</a><a href="../story.html">The idea</a><a href="../interactive/walkthrough.html">Walk-through</a><a href="../interactive/own-data.html" aria-current="page">Your data</a><a href="../interactive/test.html">Calculator</a><a href="../explorer/">Results</a><a href="../interactive/">All pages</a><a href="https://github.com/milinpatel07/lidar-performance-target-applicability">Code and paper</a></nav>
   <h1>Run the test on your own detections</h1>
   <p>This page applies the applicability test to a CSV file of detections of your own detector. A threshold τ<sub>c</sub> is
   selected on the selection part of the <strong>condition of selection</strong> c and tested unchanged on the test

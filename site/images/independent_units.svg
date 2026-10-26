@@ -1,0 +1,75 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 230' width='960' height='230' role='img' aria-labelledby='t d'><title id='t'>Frames of one drive are not independent</title><desc id='d'>Three recorded drives, each with ten frames. Frames within a drive share road, weather and traffic and look alike, so the thirty frames count as three independent units.</desc>
+<rect width='960' height='230' fill='white'/>
+<text x='20' y='28' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='16' font-weight='bold' fill='#1a1a1a' text-anchor='start'>Thirty frames, but only three independent units</text>
+<text x='20' y='50' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='normal' fill='#5a5a5a' text-anchor='start'>Frames of one drive share the road, the weather and the traffic: they repeat one another.</text>
+<rect x='20' y='68' width='295' height='118' rx='10' fill='none' stroke='#5a5a5a' stroke-width='1.5' stroke-dasharray='5 4'/>
+<text x='30' y='88' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#5a5a5a' text-anchor='start'>drive 1</text>
+<rect x='32' y='98' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M36,124 Q56,107.0 76,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='88' y='98' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M92,124 Q112,108.2 132,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='144' y='98' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M148,124 Q168,107.5 188,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='200' y='98' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M204,124 Q224,108.4 244,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='256' y='98' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M260,124 Q280,108.5 300,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='32' y='138' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M36,164 Q56,146.3 76,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='88' y='138' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M92,164 Q112,146.1 132,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='144' y='138' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M148,164 Q168,149.3 188,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='200' y='138' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M204,164 Q224,147.0 244,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='256' y='138' width='48' height='32' rx='4' fill='#cfe3f3' stroke='#d0d0d0'/>
+<path d='M260,164 Q280,146.9 300,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<text x='167' y='206' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>= 1 unit</text>
+<rect x='335' y='68' width='295' height='118' rx='10' fill='none' stroke='#5a5a5a' stroke-width='1.5' stroke-dasharray='5 4'/>
+<text x='345' y='88' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#5a5a5a' text-anchor='start'>drive 2</text>
+<rect x='347' y='98' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M351,124 Q371,110.0 391,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='403' y='98' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M407,124 Q427,107.9 447,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='459' y='98' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M463,124 Q483,109.3 503,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='515' y='98' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M519,124 Q539,107.9 559,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='571' y='98' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M575,124 Q595,108.6 615,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='347' y='138' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M351,164 Q371,146.6 391,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='403' y='138' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M407,164 Q427,148.5 447,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='459' y='138' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M463,164 Q483,149.5 503,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='515' y='138' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M519,164 Q539,148.1 559,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='571' y='138' width='48' height='32' rx='4' fill='#fde0c8' stroke='#d0d0d0'/>
+<path d='M575,164 Q595,149.0 615,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<text x='482' y='206' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>= 1 unit</text>
+<rect x='650' y='68' width='295' height='118' rx='10' fill='none' stroke='#5a5a5a' stroke-width='1.5' stroke-dasharray='5 4'/>
+<text x='660' y='88' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='13' font-weight='bold' fill='#5a5a5a' text-anchor='start'>drive 3</text>
+<rect x='662' y='98' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M666,124 Q686,108.7 706,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='718' y='98' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M722,124 Q742,106.3 762,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='774' y='98' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M778,124 Q798,109.0 818,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='830' y='98' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M834,124 Q854,108.4 874,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='886' y='98' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M890,124 Q910,107.2 930,124' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='662' y='138' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M666,164 Q686,146.1 706,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='718' y='138' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M722,164 Q742,149.5 762,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='774' y='138' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M778,164 Q798,147.9 818,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='830' y='138' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M834,164 Q854,148.9 874,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<rect x='886' y='138' width='48' height='32' rx='4' fill='#d6efe5' stroke='#d0d0d0'/>
+<path d='M890,164 Q910,149.5 930,164' stroke='#5a5a5a' stroke-width='1.2' fill='none'/>
+<text x='797' y='206' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='14' font-weight='bold' fill='#1a1a1a' text-anchor='middle'>= 1 unit</text>
+<text x='20' y='226' font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size='12' font-weight='normal' fill='#5a5a5a' text-anchor='start'>Count recorded sequences (drives, scenes) as units when their frames depend on each other.</text>
+</svg>

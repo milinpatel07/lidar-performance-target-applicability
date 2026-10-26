@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The idea in two minutes: does the threshold still hold?</title>
+<meta name="description" content="The applicability test explained in eight short scenes, without formulas: a detector, a gate on its uncertainty, rain, and a measured answer.">
+<link rel="stylesheet" href="interactive/style.css">
+<link rel="stylesheet" href="site.css">
+<style>
+  .story { max-width: 46rem; margin: 0 auto; }
+  .stage { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #ffffff; }
+  .stage svg { display: block; width: 100%; height: auto; }
+  .mark { transition: transform .9s ease, opacity .6s ease; }
+  .layer { transition: opacity .6s ease; }
+  .caption { min-height: 9.5rem; }
+  .caption h2 { margin: 1rem 0 .4rem; font-size: 1.3rem; }
+  .caption p { font-size: 1.05rem; line-height: 1.6; margin: .3rem 0; }
+  .controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin: 1rem 0 2rem; }
+  .controls button { font: inherit; font-size: 1rem; padding: .5rem 1.1rem; border-radius: 8px; border: 1px solid var(--line);
+    background: var(--shade); color: var(--fg); cursor: pointer; }
+  .controls button.primary { background: var(--link); border-color: var(--link); color: #ffffff; }
+  .controls button:disabled { opacity: .4; cursor: default; }
+  .dots { display: flex; gap: .45rem; }
+  .dots button { width: 24px; height: 24px; padding: 0; border: 0; background: transparent; cursor: pointer; position: relative; }
+  .dots button::after { content: ""; position: absolute; left: 6px; top: 6px; width: 12px; height: 12px; border-radius: 50%;
+    border: 1px solid var(--muted); box-sizing: border-box; }
+  .dots button[aria-current="step"]::after { background: var(--link); border-color: var(--link); }
+  @media (max-width: 600px) { .stage svg text { font-size: 20px; } .controls button { padding: .45rem .8rem; } }
+  .next-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .75rem; margin: .75rem 0; }
+  .next-cards a { display: block; border: 1px solid var(--line); border-radius: 10px; padding: .75rem; text-decoration: none; color: var(--fg); }
+  .next-cards a strong { color: var(--link); display: block; margin-bottom: .2rem; }
+  @media (prefers-reduced-motion: reduce) { .mark, .layer { transition: none; } }
+</style>
+</head>
+<body>
+<nav class="site" aria-label="Site"><a class="brand" href="./">Applicability test</a><a href="./">Start</a><a href="story.html" aria-current="page">The idea</a><a href="interactive/walkthrough.html">Walk-through</a><a href="interactive/own-data.html">Your data</a><a href="interactive/test.html">Calculator</a><a href="explorer/">Results</a><a href="interactive/">All pages</a><a href="https://github.com/milinpatel07/lidar-performance-target-applicability">Code and paper</a></nav>
+<main class="story">
+  <h1>The idea in two minutes</h1>
+  <p class="note">Eight short scenes, no formulas. Schematic marks, not data. Use the buttons or the arrow keys.</p>
+  <div class="stage">
+    <svg id="stage" viewBox="0 0 720 380" role="img" aria-labelledby="scene-title scene-text"></svg>
+  </div>
+  <div class="caption" aria-live="polite">
+    <h2 id="scene-title"></h2>
+    <div id="scene-text"></div>
+  </div>
+  <div class="controls">
+    <button type="button" id="back">Back</button>
+    <div class="dots" id="dots" role="group" aria-label="Scenes"></div>
+    <button type="button" id="next" class="primary">Next</button>
+  </div>
+</main>
+<script src="story.js"></script>
+</body>
+</html>
