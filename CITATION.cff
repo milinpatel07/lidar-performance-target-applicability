@@ -1,11 +1,15 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite them as below."
+message: "If you use this code or these results, please cite the paper (preferred citation) and this repository."
 title: "Code and results: Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection"
 type: software
-version: 1.2.0
-date-released: "2026-10-21"
+version: 2.0.0
+date-released: "2026-10-26"
 repository-code: "https://github.com/milinpatel07/lidar-performance-target-applicability"
-license: MIT
+url: "https://milinpatel07.github.io/lidar-performance-target-applicability/"
+license:
+  - MIT
+  - CC-BY-NC-SA-4.0
+  - Apache-2.0
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23495356"
@@ -18,13 +22,27 @@ keywords:
   - "uncertainty thresholds"
   - "Learn then Test"
   - "LiDAR object detection"
-abstract: "Code, recorded results and detector provenance of an applicability test that decides, at a stated error probability, whether a performance target met with an uncertainty threshold under one condition is applicable, not applicable or not determined under another, evaluated with PointPillars ensembles on KITTI and nuScenes."
+abstract: "A statistical test, a Python package and browser pages that decide, at a stated error probability, whether a performance target met with an uncertainty threshold under one condition is applicable, not applicable or not determined under another; with the code, recorded results and detector provenance of a case study with PointPillars ensembles on KITTI and nuScenes. Code: MIT; results, configurations and documentation: CC BY-NC-SA 4.0; detector configurations derived from OpenPCDet: Apache 2.0."
 authors:
   - family-names: Patel
     given-names: Milin
     orcid: "https://orcid.org/0000-0002-8357-6018"
-    affiliation: "Kempten University of Applied Sciences"
+    affiliation: "Institute for Driver Assistance and Connected Mobility, Kempten University of Applied Sciences, Benningen, Germany"
   - family-names: Jung
     given-names: Rolf
     orcid: "https://orcid.org/0000-0002-0366-4844"
-    affiliation: "Kempten University of Applied Sciences"
+    affiliation: "Faculty of Computer Science, Kempten University of Applied Sciences, Kempten, Germany"
+preferred-citation:
+  type: unpublished
+  title: "Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis for Determining the Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection"
+  authors:
+    - family-names: Patel
+      given-names: Milin
+      orcid: "https://orcid.org/0000-0002-8357-6018"
+      affiliation: "Institute for Driver Assistance and Connected Mobility, Kempten University of Applied Sciences, Benningen, Germany"
+    - family-names: Jung
+      given-names: Rolf
+      orcid: "https://orcid.org/0000-0002-0366-4844"
+      affiliation: "Faculty of Computer Science, Kempten University of Applied Sciences, Kempten, Germany"
+  year: 2026
+  notes: "Submitted."

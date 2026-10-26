@@ -9,6 +9,7 @@ venv/
 build/
 dist/
 .pytest_cache/
+.ruff_cache/
 .ipynb_checkpoints/
 .DS_Store
 # dataset files and detector checkpoints must never be committed

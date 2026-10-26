@@ -10,17 +10,19 @@ of the manifest of 1.0.0, updated for the normalised files. Not checked: `case_s
 that was extended, and `case_study/results/INPUT_HASHES.md`, a list that the build writes from the `provenance.json`
 files and whose headings name the run folders. Later versions add files and documentation.
 
-## 2.0 (unreleased; not yet archived on Zenodo)
+## 2.0.0 (2026-10-26)
 
-Terms of the submitted paper, detector provenance, interactive pages, a Python package, guides and a new folder layout;
-no recorded result changed.
+The method and the case study of the paper as separate parts, terms of the submitted paper, detector provenance,
+interactive pages, a Python package, guides, one command to reproduce the paper, and a new folder layout; no number,
+outcome or input hash of a recorded result changed.
 
 - Dataset mount paths normalised to /data/nuscenes; no change to code logic or results. Container paths are normalised
   in the same way: `/data/inputs` for the input folder (its project name is written `inputs`), `/data/work` for the
   working folder of the runs (including its subfolder for released code and results, and the folder of the experiment
   scripts, written `code/experiments`), `/data/OpenPCDet` for the training container, `/opt/repo` for the repository
-  in the Docker example, and `file:///data/build/` for the build folders of two packages in `pip_freeze.txt`. The SHA-256 recorded for the files concerned (script hashes in `provenance.json`, the list of
-  version 1.0.0 in `tests/`) are those of the normalised files.
+  in the Docker example, and `file:///data/build/` for the build folders of two packages in `pip_freeze.txt`. The
+  SHA-256 recorded for the files concerned (script hashes in `provenance.json`, the list of version 1.0.0 in
+  `case_study/checks/`) are those of the normalised files.
 
 ### Layout
 
@@ -71,9 +73,23 @@ the time they were written.
 - Results browser: paper terms, a notice on frame-unit views, the interval against the limit, links to source rows,
   shareable view state and CSV export.
 - Licence scope stated for the data of the pages, the notebook outputs and the detector configurations.
-- `package/`: the applicability test as a Python package (`applicability_test`), tested against
-  `case_study/experiments/m1_range_kitti.py`; `docs/guides/`: applying the test to another detector, planning a recording, outcomes
-  in a safety argument.
+- `package/`: the applicability test as a Python package (`applicability_test`, version 0.1.0, versioned on its own),
+  tested against `case_study/experiments/m1_range_kitti.py` and against a Hoeffding-Bentkus p-value computed from its
+  definition; input validation with messages in the command line; a synthetic sample of detections
+  (`package/examples/detections_example.csv`); `docs/guides/`: applying the test to another detector, planning a
+  recording, outcomes in a safety argument.
+- `README.md` starts with what the test does and what an outcome means, a quick start and the browser pages, followed
+  by the case study; `case_study/README.md` indexes the results by question; every result folder of `case_study/results/`
+  has a README; `docs/faq.md` answers the questions a first reader asks most; the limitations are section 7 of
+  `docs/concept.md`.
+- `case_study/reproduce_paper.py`: the checks of every number of the paper, of the recorded results and of the
+  supplementary material, and Fig. 2 to 6 from the recorded results, in one command. Two figure scripts were corrected
+  to run in the pinned environment (NumPy 1.26, Python 3.10) without a change in their output.
+- Continuous integration on Ubuntu 24.04 with pinned packages, including the post-hoc tests (`scipy` added to
+  `requirements-posthoc.txt` at the version of the analysis container), and the package on Linux, Windows and macOS
+  with Python 3.9, 3.11 and 3.13.
+- `CITATION.cff` with the paper as preferred citation, the three licences and the affiliations of the paper;
+  `CONTRIBUTING.md` and issue templates.
 
 ## 1.2.0 (2026-10-21)
 

@@ -141,7 +141,7 @@ case_study/       the case study of the paper (its own README)
   tools/            exports, supporting analyses, figures, supplementary material, data of the pages
   docs/             method as implemented, data, provenance, reproduction, paper map, study protocol, supplementary
   configs/  notebooks/  environment/
-CHANGELOG.md  CITATION.cff  LICENSE  LICENSE-results  MANIFEST.sha256
+CHANGELOG.md  CITATION.cff  CONTRIBUTING.md  LICENSE  LICENSE-results  MANIFEST.sha256
 ```
 
 Versions up to 1.2.0 used other paths; [`CHANGELOG.md`](CHANGELOG.md#layout) maps each old path to the current one.
@@ -165,8 +165,34 @@ the Applicability of Performance Targets Across Triggering Conditions in ML-Base
 
 Code and results: the concept DOI [10.5281/zenodo.23495356](https://doi.org/10.5281/zenodo.23495356) resolves to the
 latest archived version; [`CITATION.cff`](CITATION.cff) holds the metadata (GitHub shows it under "Cite this
-repository"). [`CHANGELOG.md`](CHANGELOG.md) lists what each version changed. No number, outcome or input hash of the
+repository"). BibTeX:
+
+```bibtex
+@unpublished{patel2026applicability,
+  author = {Patel, Milin and Jung, Rolf},
+  title  = {Uncertainty Evaluation to Support Safety of the Intended Functionality Analysis for Determining the
+            Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR Object Detection},
+  note   = {Submitted},
+  year   = {2026}
+}
+@software{patel2026applicability_code,
+  author  = {Patel, Milin and Jung, Rolf},
+  title   = {Code and results: Applicability of Performance Targets Across Triggering Conditions in ML-Based LiDAR
+             Object Detection},
+  version = {2.0.0},
+  year    = {2026},
+  doi     = {10.5281/zenodo.23495356},
+  url     = {https://github.com/milinpatel07/lidar-performance-target-applicability}
+}
+```
+[`CHANGELOG.md`](CHANGELOG.md) lists what each version changed. No number, outcome or input hash of the
 recorded results of version 1.0.0 has changed in any later version.
+
+## Questions and contributions
+
+Questions and error reports: [GitHub issues](https://github.com/milinpatel07/lidar-performance-target-applicability/issues).
+[`CONTRIBUTING.md`](CONTRIBUTING.md) says what can change (package, pages, documentation) and what cannot (the recorded
+results of the case study), and which checks to run.
 
 ## Licence
 

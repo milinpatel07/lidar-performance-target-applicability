@@ -24,7 +24,8 @@ or directly from GitHub:
 pip install "git+https://github.com/milinpatel07/lidar-performance-target-applicability#subdirectory=package"
 ```
 
-The only dependency is numpy. `pip install "./package[pandas]"` adds pandas, whose DataFrames can be passed in
+The package is versioned on its own (0.1.0); version 2.0.0 of the repository ships it. The only dependency is
+numpy. `pip install "./package[pandas]"` adds pandas, whose DataFrames can be passed in
 place of dictionaries of arrays. `pip install "./package[test]"` adds pytest for `pytest package/tests`.
 
 ## Example (synthetic data)

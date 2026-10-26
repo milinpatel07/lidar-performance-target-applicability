@@ -102,6 +102,12 @@ Three levels, from the cheapest ([`docs/reproduce.md`](docs/reproduce.md) has ev
    python reproduce_paper.py               # or: python reproduce_paper.py --no-latex
    ```
 
+   The pinned environment is that of the recorded runs, Python 3.10 (NumPy 1.26.3 does not install on Python 3.13).
+   Without a Python 3.10 at hand, `uv venv -p 3.10 && uv pip install -r environment/requirements.txt` or
+   `conda create -n applicability python=3.10` provides one; the commands are the same on Windows, Linux and macOS
+   (on Linux and macOS `python3` may be needed in place of `python`). The Docker image of
+   [`environment/Dockerfile`](environment/Dockerfile) is the third way.
+
    It checks every number of the paper against the recorded files (`checks/check_paper_numbers.py --check-fresh`),
    every recorded result file at its path (`checks/check_recorded_results.py`) and every number of the supplementary
    material (`tools/supplementary/make_supplementary.py --check`), and writes Fig. 2 to 6 of the paper to
