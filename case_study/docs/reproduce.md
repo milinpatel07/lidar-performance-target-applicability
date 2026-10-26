@@ -110,8 +110,9 @@ cd work/data && python3 ../../tools/figures/make_figures.py causes --csv kitti_d
     --tau tau_kitti_distance_split0.json --indicator u_s --out ../figures/fig_causes_kitti.pdf && cd ../..
 ```
 
-Each supporting script first recomputes the split-0 cells of every pair of conditions from the cache and compares them with
-`results/`; it stops on any difference.
+`retention_and_causes.py` first recomputes the split-0 cells of every pair of conditions from the cache and compares
+them with `results/`; it stops on any difference. `common_threshold_and_recall.py` checks the retention of each
+own-condition cell against the experiment code.
 
 ## 4. Comparing a rerun with the recorded results
 

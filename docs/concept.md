@@ -211,7 +211,7 @@ frame-level evaluation and in 5 of 113 in the third run (Sect. 5.1; file
 [`../case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv`](../case_study/results/division_by_sequence/nuscenes_by_scene/m7_scene_split.csv), `established` = `applied`). In the frame-level
 evaluation, frames of one sequence lie in both parts, so the first frequency is weak evidence.
 
-## 7. What the study does not show
+## 7. Limitations of the study
 
 - **Scope.** The study examines the detector as one system element. It derives no α from an acceptance criterion, does
   not estimate how often a condition occurs in operation, and proposes no new indicator, detector or selection method

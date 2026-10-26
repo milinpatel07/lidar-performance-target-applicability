@@ -20,7 +20,7 @@ threshold, and assessors who review the evidence. It contains
   detector;
 - [`site/`](https://milinpatel07.github.io/lidar-performance-target-applicability/): browser pages that run the test
   without installation;
-- [`docs/`](docs/README.md): the idea of the test, a glossary and guides;
+- [`docs/`](docs/README.md): the idea of the test, questions and answers, a glossary and guides;
 - [`case_study/`](case_study/README.md): the case study of the paper below (PointPillars ensembles on KITTI and
   nuScenes), with its code, recorded results, checks and detector provenance.
 
@@ -97,6 +97,8 @@ The pages run in the browser without installation ([start page](https://milinpat
   before a recording campaign.
 - [`docs/guides/outcomes-in-a-safety-argument.md`](docs/guides/outcomes-in-a-safety-argument.md): what an outcome
   supports in a SOTIF analysis and what it does not.
+- [`docs/faq.md`](docs/faq.md): short answers to the questions a first reader asks most.
+- [`docs/concept.md`, section 7](docs/concept.md#7-limitations-of-the-study): the limitations of the case study.
 
 ## The case study of the paper
 
@@ -121,7 +123,7 @@ python checks/check_recorded_results.py               # every recorded result fi
 
 ```
 package/          the applicability test as a Python package, with examples and tests
-docs/             the idea of the test, glossary, guides
+docs/             the idea of the test, questions and answers, glossary, guides
 site/             browser pages (published on GitHub Pages): walk-through, calculator, own data, results browser
 tests/            tests of the browser pages against the Python code, and the link check
 case_study/       the case study of the paper (its own README)

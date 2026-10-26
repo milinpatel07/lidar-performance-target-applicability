@@ -83,8 +83,7 @@ The folder names before version 2.0 are listed in [`../results/README.md`](../re
 
 ## Supporting analyses
 
-Written by the scripts in [`../tools/supporting/`](../tools/supporting/) from the per-detection tables; each script
-first checks the split-0 cells against the recorded run files.
+Written by the scripts in [`../tools/supporting/`](../tools/supporting/) from the per-detection tables; `retention_and_causes.py` first recomputes the split-0 cells from the per-detection tables and stops unless they equal the recorded run files, and `common_threshold_and_recall.py` checks that the retention of each own-condition cell equals the one the experiment code computes.
 
 | file | content |
 |---|---|
@@ -131,5 +130,5 @@ repository root. [`paper_map.md`](paper_map.md) lists single numbers with their 
 | Fig. 5 (separation) | [`../tools/figures/paper/README.md`](../tools/figures/paper/README.md) | `results/supporting_analyses/fig_separation_curves.csv`; `tools/figures/paper/make_fig_separation.py` |
 | Sect. 5.3, Fig. 6 (RQ3, units) | [`concept.md`, section 5](../../docs/concept.md#5-the-independent-unit-frame-or-recorded-sequence) | `results/supporting_analyses/frames_per_condition.csv`, `results/division_by_sequence/nuscenes_by_scene/m7_scene_split_summary.txt`, `results/supporting_analyses/m8_drives_per_part.csv`; splits without a threshold: `C_weather_nuscenes.csv`; figure source: `tools/figures/paper/fig_units.tex` |
 | Sect. 6.1, Table 5 (outcome, meaning, measure; common threshold) | [`concept.md`, section 1](../../docs/concept.md#1-from-the-acceptance-criterion-to-a-measure) | `results/supporting_analyses/common_threshold_outcomes.csv` |
-| Sect. 6.2 (limits of the study) | [`concept.md`, section 7](../../docs/concept.md#7-what-the-study-does-not-show) | `results/supporting_analyses/unannotated_wrong_boxes.csv`, `frame_candidates_log.txt`; `results/post_hoc/epoch_check.txt` (post hoc) |
+| Sect. 6.2 (limits of the study) | [`concept.md`, section 7](../../docs/concept.md#7-limitations-of-the-study) | `results/supporting_analyses/unannotated_wrong_boxes.csv`, `frame_candidates_log.txt`; `results/post_hoc/epoch_check.txt` (post hoc) |
 | supplementary material | | [`supplementary/supplementary.pdf`](supplementary/supplementary.pdf) |

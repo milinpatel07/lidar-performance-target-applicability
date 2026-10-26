@@ -93,6 +93,9 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 
 ## Names of runs and versions
 
+The scripts, file headers and `provenance.json` files of the case study name the runs by an ID; the result folders
+are named by content ([`../case_study/README.md`](../case_study/README.md#where-each-result-is) maps one to the other).
+
 | name | meaning |
 |---|---|
 | m1 … m8 | the experiment runs in the order they were made: m1 KITTI distance with the blended score (precursor); m2 KITTI distance with u_s, u_e; m3 nuScenes distance; m4 change of dataset and detector, one split; m6 KITTI rule, five splits of the control, nuScenes weather; m7 third run and sequence-level evaluation on nuScenes scenes; m8 the same on KITTI drives. **m5** was the frame figure and has no result folder |
