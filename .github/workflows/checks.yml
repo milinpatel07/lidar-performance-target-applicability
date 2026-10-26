@@ -1,15 +1,17 @@
-# Checks that need no dataset and no network access beyond installing the pinned packages: manifest, recorded results
-# of version 1.0.0 at their current paths, the numbers of the paper (and that case_study/docs/paper_map.md is fresh), the numbers
-# of the supplementary material, the data and the JavaScript of the results browser and of the interactive pages,
-# links, the tests of the package and the self-tests of the statistics.
+# Checks that need no dataset and no network access beyond installing the pinned packages.
+# Job "case-study" (the environment of the recorded runs, Python 3.10.13): manifest, the numbers of the paper and the
+# recorded results (case_study/reproduce_paper.py, which also draws the figures from the recorded results), the data
+# and the JavaScript of the browser pages, links, the self-tests of the statistics and the post-hoc tests.
+# Job "package": the tests and the example of the Python package on three operating systems and three Python versions,
+# with the current NumPy.
 name: checks
 on:
   push:
   pull_request:
   workflow_dispatch:
 jobs:
-  checks:
-    runs-on: ubuntu-latest
+  case-study:
+    runs-on: ubuntu-24.04   # Python 3.10.13 builds of actions/setup-python exist up to Ubuntu 24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,30 +20,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install
-        run: pip install -r case_study/environment/requirements.txt pytest
+      - name: Install (the post-hoc packages without dependencies, as for the recorded run)
+        run: |
+          pip install -r case_study/environment/requirements.txt pytest==9.1.1
+          pip install --no-deps -r case_study/environment/requirements-posthoc.txt
       - name: Manifest
         run: sha256sum -c --quiet MANIFEST.sha256
-      - name: Recorded results of version 1.0.0, unchanged at their current paths
-        run: python3 case_study/checks/check_recorded_results.py
-      - name: Numbers of the paper (and case_study/docs/paper_map.md fresh)
-        run: python3 case_study/checks/check_paper_numbers.py --check-fresh
-      - name: Numbers of the supplementary material
-        run: python3 case_study/tools/supplementary/make_supplementary.py --check
-      - name: Data of the results browser
-        run: python3 case_study/tools/build_explorer_data.py --check
-      - name: Data of the interactive pages
-        run: python3 case_study/tools/build_interactive_data.py --check
+      - name: Numbers of the paper, recorded results, supplementary material, figures from the recorded results
+        working-directory: case_study
+        run: python3 reproduce_paper.py --no-latex
+      - name: Data of the results browser and of the interactive pages
+        working-directory: case_study
+        run: |
+          python3 tools/build_explorer_data.py --check
+          python3 tools/build_interactive_data.py --check
       - name: Functions of the results browser (Node)
         run: node --test tests/test_explorer.mjs
-      - name: Statistics of the interactive pages against the experiment scripts
+      - name: Statistics of the interactive pages against the Python code
         run: |
           python3 tests/test_stats_js.py
           python3 tests/test_own_data_js.py
-      - name: Package against the reference implementation
-        run: python3 -m pytest -q package/tests
-        env:
-          PYTHONPATH: package/src
       - name: Links (relative, into this repository and into its GitHub Pages site)
         run: python3 tests/check_links.py
       - name: Self-tests of the statistics
@@ -49,3 +47,27 @@ jobs:
         run: |
           python3 m1_range_kitti.py --selftest
           python3 m3_range_nuscenes.py --selftest
+      - name: Post-hoc tests (the reproduction of the paper is skipped without the per-detection cache)
+        working-directory: case_study
+        run: python3 -m pytest -q -rs results/post_hoc/code/tests
+
+  package:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.9", "3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install the package
+        run: pip install ./package pytest
+      - name: Tests (also against case_study/experiments/m1_range_kitti.py)
+        run: python -m pytest -q package/tests
+      - name: Example and command line
+        run: |
+          python package/examples/synthetic_example.py
+          python -m applicability_test package/examples/detections_example.csv --selection-condition clear --use-condition rain --alpha 0.05

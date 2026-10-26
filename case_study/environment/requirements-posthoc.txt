@@ -1,6 +1,9 @@
 # additional packages for results/post_hoc/code (Method B and the tests), as installed for the recorded run;
-# confseq was installed with --no-deps next to the NumPy of environment/requirements.txt, so its dependencies are listed here
+# confseq was installed with --no-deps next to the NumPy of environment/requirements.txt; the packages it needs at run
+# time are listed here (scipy for confseq.betting, at the version of the analysis container, see
+# configs/detectors/environment/pip_freeze.txt)
 confseq==0.0.11
+scipy==1.15.2
 multiprocess==0.70.19
 dill==0.4.1
 pytest==9.1.1

@@ -19,5 +19,5 @@ a later version with the same licence elements) and nuScenes (non-commercial ter
 are not part of this repository and remain under their own licences.
 
 The code in package/, site/ (HTML, CSS and JavaScript), tests/, .github/, case_study/experiments/, case_study/tools/,
-case_study/checks/, case_study/environment/ and the code cells of the notebooks is licensed under the MIT License (see
+case_study/checks/, case_study/environment/, case_study/reproduce_paper.py and the code cells of the notebooks is licensed under the MIT License (see
 LICENSE).

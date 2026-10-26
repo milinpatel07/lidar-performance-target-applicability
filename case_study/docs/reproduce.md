@@ -10,6 +10,9 @@ Run every command from the folder `case_study/` (`cd case_study` after cloning);
 
 ## 0. Checks without data
 
+`python reproduce_paper.py` runs the three checks of the paper and draws its figures (sections 0 and 5) in one
+command. All checks:
+
 ```bash
 pip install -r environment/requirements.txt
 (cd .. && sha256sum -c MANIFEST.sha256)                   # every file of the repository against the manifest
@@ -25,7 +28,7 @@ PYTHONPATH=../package/src python3 -m pytest ../package/tests    # the package ag
 python3 ../tests/check_links.py                           # every relative link and every link into the pages
 ```
 
-These checks and the self-tests of section 1 run in GitHub Actions on every push
+These checks, the self-tests of section 1 and `reproduce_paper.py --no-latex` run in GitHub Actions on every push
 ([`../../.github/workflows/checks.yml`](../../.github/workflows/checks.yml)).
 
 ## Environment
@@ -129,6 +132,9 @@ written by a rerun differ from the recorded ones in their time stamps (`provenan
 and, for the `*_log.txt` files, in run times; compare the CSV and JSON result files.
 
 ## 5. Figures and supplementary material from the recorded results (no data)
+
+`python reproduce_paper.py` writes Fig. 2 to 6 to `work/figures/` and compiles the TikZ figures if pdflatex is installed.
+Step by step:
 
 ```bash
 mkdir -p work/figures

@@ -1,12 +1,32 @@
-"""Sanity tests of seq_ratio.py (run inside the container from /data/work: python3 -m pytest code/seq_ratio/tests)."""
+"""Sanity tests of seq_ratio.py. Run from case_study/: python3 -m pytest results/post_hoc/code/tests
+
+seq_ratio.py is published as it ran and loads the experiment scripts from the container folder
+/data/work/code/experiments; outside that container the test loads the same files from case_study/experiments/.
+The test of the betting interval needs confseq (requirements-posthoc.txt) and the reproduction of the paper needs the
+cache and the recorded results; both are skipped without them."""
 import importlib.util, math, sys
 from pathlib import Path
 import numpy as np
 import pytest
 
 HERE = Path(__file__).resolve().parent.parent
-spec = importlib.util.spec_from_file_location("seq_ratio", str(HERE / "seq_ratio.py"))
-sr = importlib.util.module_from_spec(spec); sys.modules["seq_ratio"] = sr; spec.loader.exec_module(sr)
+EXPERIMENTS = HERE.parents[2] / "experiments"
+_spec_from_file = importlib.util.spec_from_file_location
+
+
+def _from_experiments(name, location, *args, **kwargs):
+    p = Path(location)
+    if not p.exists() and p.parent.as_posix() == "/data/work/code/experiments":
+        location = str(EXPERIMENTS / p.name)
+    return _spec_from_file(name, location, *args, **kwargs)
+
+
+importlib.util.spec_from_file_location = _from_experiments
+try:
+    spec = importlib.util.spec_from_file_location("seq_ratio", str(HERE / "seq_ratio.py"))
+    sr = importlib.util.module_from_spec(spec); sys.modules["seq_ratio"] = sr; spec.loader.exec_module(sr)
+finally:
+    importlib.util.spec_from_file_location = _spec_from_file
 m1 = sr.m1
 
 
@@ -76,6 +96,7 @@ def test_single_frame_sequences_reproduce_the_paper():
 
 def test_betting_interval_covers_bernoulli_means():
     """Method B: coverage of betting_ci (two-sided, delta) on simulated Bernoulli data."""
+    pytest.importorskip("confseq")
     sr.BREAKS = 1000      # coarser grid for speed; confseq widens each bound by one grid step at any resolution
     rng = np.random.default_rng(4)
     for p, n in ((0.05, 60), (0.3, 150)):

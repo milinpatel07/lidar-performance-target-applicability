@@ -114,13 +114,13 @@ into rain and between the two detectors gave not applicable outcomes, and thresh
 rejected most correct detections. [`case_study/README.md`](case_study/README.md) gives the findings with their files, the
 folders, and how to check every number of the paper.
 
-To check the numbers of the paper against the recorded results (no dataset needed, Python 3.10):
+To check every number of the paper against the recorded results and rebuild its figures (no dataset needed; Python
+3.10, because the recorded environment pins NumPy 1.26.3, which has no wheels for Python 3.13; pdflatex optional):
 
 ```bash
 cd case_study
 pip install -r environment/requirements.txt
-python checks/check_paper_numbers.py --check-fresh    # every number of the paper against the recorded files
-python checks/check_recorded_results.py               # every recorded result file at its path
+python reproduce_paper.py      # three checks, then Fig. 2 to 6 into work/figures/ (9 steps; 5 without pdflatex)
 ```
 
 ## Repository layout
@@ -171,6 +171,6 @@ recorded results of version 1.0.0 has changed in any later version.
 ## Licence
 
 Code (`package/`, `site/`, `tests/`, `.github/`, and in `case_study/` the folders `experiments/`, `tools/`, `checks/`,
-`environment/`, `results/post_hoc/code/` and the notebook code): MIT, see [`LICENSE`](LICENSE). Results, data files of
+`environment/`, `results/post_hoc/code/`, `reproduce_paper.py` and the notebook code): MIT, see [`LICENSE`](LICENSE). Results, data files of
 the pages, configurations and documentation: CC BY-NC-SA 4.0, see [`LICENSE-results`](LICENSE-results), as required by
 the dataset licences. Detector configurations in `case_study/configs/detectors/`: Apache License 2.0 (OpenPCDet).

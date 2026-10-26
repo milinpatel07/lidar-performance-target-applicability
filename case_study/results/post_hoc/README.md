@@ -45,7 +45,11 @@ sequence, and [`provenance.json`](provenance.json) the script version, seeds and
   bounds, fixed-sequence selection, division into parts) unchanged from the scripts in [`../../experiments/`](../../experiments/README.md);
   the path constant `CODE` names the folder that holds them.
 - `tests/test_seq_ratio.py`: sanity tests (N_s = 1 reproduces the frame-level outcomes; the transform keeps the
-  condition E[S]/E[N] ≤ α; zero false acceptances give the implied p-value; coverage of the betting interval).
+  condition E[S]/E[N] ≤ α; zero false acceptances give the implied p-value; coverage of the betting interval). Run from
+  `case_study/`: `python -m pytest results/post_hoc/code/tests`. Outside the container the test loads the experiment
+  scripts from `experiments/`; the test of the betting interval needs `confseq`, the reproduction of the paper the
+  per-detection cache, and both are skipped without them. The test file is the only file of this folder edited after
+  the run (to run outside the container); the scripts are as they ran.
 - `check_epochs.sh`: the epoch check (reads only).
 - `make_report.py`: writes `REPORT.md` from the files of this folder.
 
@@ -54,7 +58,8 @@ the reproduction check fails.
 
 The scripts read the per-detection tables, the nuScenes metadata and the KITTI devkit mapping files described in
 [`../../docs/data.md`](../../docs/data.md); `confseq` 0.0.11 is needed for Method B
-([`../../environment/requirements-posthoc.txt`](../../environment/requirements-posthoc.txt)).
+([`../../environment/requirements-posthoc.txt`](../../environment/requirements-posthoc.txt)); it has wheels for Linux and
+macOS (up to Python 3.10) and is built from source on Windows, which needs the Microsoft C++ build tools.
 
 **Paths.** The scripts are published as they ran, with mount paths normalised, so that the SHA-256 in [`provenance.json`](provenance.json) matches
 `code/seq_ratio.py`. Their path constants are container paths (`/data/work` is the working folder of the runs). The corresponding locations in this repository:

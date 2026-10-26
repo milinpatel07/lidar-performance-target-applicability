@@ -95,17 +95,20 @@ document.
 
 Three levels, from the cheapest ([`docs/reproduce.md`](docs/reproduce.md) has every command):
 
-1. **Checks, no data** (Python 3.10, from this folder):
+1. **Checks and figures, no data** (Python 3.10, from this folder; pdflatex optional):
 
    ```bash
    pip install -r environment/requirements.txt
-   python checks/check_paper_numbers.py --check-fresh       # every number of the paper against the recorded files
-   python checks/check_recorded_results.py                  # every recorded result file at its path
-   python tools/supplementary/make_supplementary.py --check # every number of the supplementary material
+   python reproduce_paper.py               # or: python reproduce_paper.py --no-latex
    ```
 
-   [`docs/paper_map.md`](docs/paper_map.md) lists each number of the paper with its file, filter and script.
-2. **Figures from the recorded results, no data**: [`tools/figures/paper/README.md`](tools/figures/paper/README.md).
+   It checks every number of the paper against the recorded files (`checks/check_paper_numbers.py --check-fresh`),
+   every recorded result file at its path (`checks/check_recorded_results.py`) and every number of the supplementary
+   material (`tools/supplementary/make_supplementary.py --check`), and writes Fig. 2 to 6 of the paper to
+   `work/figures/`. [`docs/paper_map.md`](docs/paper_map.md) lists each number of the paper, including those of its
+   tables, with its file, filter and script.
+2. **Each figure on its own**: [`tools/figures/paper/README.md`](tools/figures/paper/README.md); Fig. 1 shows dataset
+   images and needs the datasets.
 3. **Experiment runs**: need the datasets and the detector outputs ([`docs/data.md`](docs/data.md),
    [`docs/provenance.md`](docs/provenance.md)); a rerun reproduces a recorded run if its result files and input hashes
    equal the recorded ones.
