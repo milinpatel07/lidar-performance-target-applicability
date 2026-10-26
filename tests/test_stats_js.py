@@ -11,13 +11,15 @@
    recomputed by stats.js from A_hat * n_eval_units and n_eval_units at delta/2 = 0.025 and agree to 1e-6, and the
    outcome rule gives the recorded outcome.
 
-Needs node; without it the check is skipped with a message (exit 0). No network access.
+Needs node; without it the check is skipped with a message (exit 0), except in continuous integration (environment
+variable CI set), where a missing node fails the check. No network access.
 """
 import argparse
 import csv
 import importlib.util
 import json
 import math
+import os
 import random
 import shutil
 import subprocess
@@ -89,6 +91,8 @@ def run(root, stats_js):
     node = shutil.which("node")
     if node is None:
         print("SKIPPED: node is not installed; stats.js was not checked.")
+        if os.environ.get("CI"):   # in continuous integration a missing node is an error, not a skip
+            return 1
         return 0
     m1 = load_m1(root)
     cases, rows = random_cases(), recorded_rows(root)

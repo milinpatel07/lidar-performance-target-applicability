@@ -9,7 +9,7 @@ Writes only below work/supporting_analyses.
 
 Usage: python3 tools/supporting/annotation_checks.py   (after tools/export_tables.py)
 """
-import csv, importlib.util, json, pickle, struct, sys
+import csv, json, pickle, struct, sys
 from pathlib import Path
 from collections import Counter
 import numpy as np

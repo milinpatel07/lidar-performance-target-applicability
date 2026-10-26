@@ -20,7 +20,7 @@ Writes only below work/supporting_analyses and work/figures.
 
 Usage: python3 tools/supporting/retention_and_causes.py
 """
-import csv, importlib.util, json, pickle, re, struct, sys
+import csv, json, pickle, re, struct, sys
 from pathlib import Path
 import numpy as np
 import pandas as pd

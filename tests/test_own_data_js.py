@@ -12,12 +12,14 @@ are compared with
   1. an independent Python implementation written here from Sect. 3 of the paper, using hb_pvalue, hb_upper and
      hb_lower of case_study/experiments/m1_range_kitti.py (and, for the frame unit, its class Cell and chain_index);
   2. the package in package/src/applicability_test (applicability_test), if it is present.
-Needs node; without it the check is skipped with a message (exit 0). No network access.
+Needs node; without it the check is skipped with a message (exit 0), except in continuous integration (environment
+variable CI set), where a missing node fails the check. No network access.
 """
 import argparse
 import csv
 import importlib.util
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -207,6 +209,8 @@ def run(root, apptest_js):
     node = shutil.which("node")
     if node is None:
         print("SKIPPED: node is not installed; apptest.js was not checked.")
+        if os.environ.get("CI"):   # in continuous integration a missing node is an error, not a skip
+            return 1
         return 0
     m1 = load(root / "case_study" / "experiments" / "m1_range_kitti.py", "m1_range_kitti")
     pkg_src = root / "package" / "src"

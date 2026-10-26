@@ -88,40 +88,6 @@ ALPHA_ORDER = [1e-2, 1e-3, 1e-4, 5e-2, 1e-1]
 
 
 CODE = {"applies": "A", "does not apply": "N", "not determined": "?", "no threshold established": "-"}
-SOURCES = []
-
-
-def sha(rel):
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
-
-
-def num(value, fmt, src, where, col, ctx):
-    """Format a recorded value and log it in the sources file."""
-    s = fmt.format(float(value)) if fmt else str(value)
-    SOURCES.append({"context": ctx, "value_printed": s, "value_recorded": value, "file": F.get(src, src),
-                    "row_or_line": where, "column": col})
-    return s
-
-
-def rows(key):
-    with open(ROOT / F[key], newline="") as f:
-        return list(csv.DictReader(f))     # row i (0-based) is file line i + 2
-
-
-def tex(s):
-    """Escape plain text for LaTeX (the recorded strings hold no backslashes or braces)."""
-    s = str(s)
-    for a, b in (("_", "\\_"), ("%", "\\%"), ("&", "\\&"), ("#", "\\#"), ("$", "\\$"), ("~", "\\~{}"), ("^", "\\^{}")):
-        s = s.replace(a, b)
-    return s
-
-
-def alpha_tex(a):
-    a = float(a)
-    return {1e-2: "$10^{-2}$", 1e-3: "$10^{-3}$", 1e-4: "$10^{-4}$", 5e-2: "0.05", 1e-1: "0.1"}[a]
-
-
-ALPHA_ORDER = [1e-2, 1e-3, 1e-4, 5e-2, 1e-1]
 
 
 def compact(key, rs, group, cell, ctx):
@@ -706,7 +672,6 @@ def main():
     ap = argparse.ArgumentParser(description=VERSION); ap.add_argument("--check", action="store_true"); a = ap.parse_args()
     if a.check:
         sys.exit(0 if check() else 1)
-    hashes = {k: sha(v) for k, v in F.items()}
     body = (sec_intro() + sec_classes() + sec_outcomes() + sec_per_split_A() + sec_rule() + sec_bins() + sec_sequence() +
             sec_review_tables() + sec_posthoc() + sec_predictions() + sec_frames())
     files = sorted(set(F.values()))

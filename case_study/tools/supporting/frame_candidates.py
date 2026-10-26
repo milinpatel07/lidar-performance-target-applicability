@@ -17,7 +17,7 @@ The PNG files contain dataset images and are not part of the repository.
 
 Usage: python3 tools/supporting/frame_candidates.py
 """
-import csv, importlib.util, json, pickle, sys
+import json, pickle, sys
 from pathlib import Path
 import numpy as np
 import pandas as pd

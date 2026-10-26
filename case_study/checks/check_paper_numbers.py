@@ -296,7 +296,7 @@ add(S51, "largest median retention of the thresholds selected in the conditions 
 taus = pd.concat([m3p[(m3p.indicator == "u_e") & (m3p.alpha == 0.01)].tau, m6C[(m6C.indicator == "u_e") & (m6C.alpha == 0.01)].tau,
                   m6B[(m6B.indicator == "u_e") & (m6B.alpha == 0.01) & (m6B.protocol == "kitti_ignore")].tau]).dropna()
 add(S51, "largest threshold for u_e at 1e-2 (m6 A records no threshold, KITTI distance is not covered)", "< 0.25",
-    f"{taus.max():.4f}" if taus.max() < 0.25 else f"{taus.max():.4f} (not below 0.25)", None, f"m3, m6 C, m6 B `tau`", "experiments/")
+    f"{taus.max():.4f}" if taus.max() < 0.25 else f"{taus.max():.4f} (not below 0.25)", None, "m3, m6 C, m6 B `tau`", "experiments/")
 add(S51, "transfer cells with one outcome on all five splits with the KITTI rule that change when the excluded detections are included",
     "0 (\"changed no outcome that held on all five splits\")", str(len(kitti_rule_changes())), None,
     "results/division_by_frame/kitti_rule_dataset_change_weather/A_kitti_range_protocol.csv and B_shift_seeds_protocol.csv, protocol `kitti_ignore` against `as_run`",
@@ -577,7 +577,9 @@ def main():
     for e in E:
         e["ok"] = ok(e)
     bad = [e for e in E if e["ok"] is False and not e["note"]]
-    print(f"{VERSION}: {len(E)} statements checked, {len(bad)} differ")
+    noted = sorted({e["note"] for e in E if e["ok"] is False and e["note"]})
+    print(f"{VERSION}: {len(E)} statements checked, {len(bad)} differ"
+          + (f"; documented differences from the paper text: {', '.join(noted)} of docs/paper_map.md" if noted else ""))
     for e in bad:
         print(f"  DIFFERS  {e['where']}: {e['what']}: paper {e['printed']}, files {fmt(e)}")
     for b in bad4:

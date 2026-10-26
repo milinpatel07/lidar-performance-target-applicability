@@ -1,15 +1,24 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "applicability-test"
 version = "0.1.0"
-description = "Test whether a threshold on an uncertainty indicator, selected with a guarantee on the false acceptance proportion in one condition, applies in another condition."
+description = "Test whether a threshold on an uncertainty indicator, selected with a guarantee on the false acceptance proportion in one condition, is applicable in another condition."
 readme = "README.md"
 requires-python = ">=3.9"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{name = "Milin Patel"}, {name = "Rolf Jung"}]
+keywords = ["SOTIF", "ISO 21448", "uncertainty", "object detection", "Learn then Test", "Hoeffding-Bentkus", "performance target"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
 dependencies = ["numpy"]
 
 [project.optional-dependencies]
@@ -18,6 +27,9 @@ test = ["pytest"]
 
 [project.urls]
 Homepage = "https://github.com/milinpatel07/lidar-performance-target-applicability"
+Documentation = "https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/package/README.md"
+Issues = "https://github.com/milinpatel07/lidar-performance-target-applicability/issues"
+Changelog = "https://github.com/milinpatel07/lidar-performance-target-applicability/blob/main/CHANGELOG.md"
 
 [project.scripts]
 applicability-test = "applicability_test.cli:main"

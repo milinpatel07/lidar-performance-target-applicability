@@ -10,7 +10,7 @@ recorded run files before anything is written; the script stops on a difference.
 Inputs: work/cache/tables.pkl (tools/export_tables.py build), results/division_by_frame/kitti_rule_dataset_change_weather, NUSC_META.
 Outputs: work/supporting_analyses/fig_separation_curves.csv (compare with results/supporting_analyses/) and a draft
 plot work/figures/fig_separation_draft.pdf. The paper's figure is drawn from the CSV by make_fig_separation.py."""
-import csv, importlib.util, json, pickle, sys
+import pickle, sys
 from pathlib import Path
 import numpy as np
 import pandas as pd

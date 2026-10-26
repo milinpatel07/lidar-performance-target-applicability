@@ -11,7 +11,7 @@ Statistics from m1 in experiments/. Writes only below work/supporting_analyses.
 
 Usage: python3 tools/supporting/common_threshold_and_recall.py
 """
-import csv, importlib.util, json, pickle, re, sys
+import csv, json, pickle, re, sys
 from pathlib import Path
 import numpy as np
 

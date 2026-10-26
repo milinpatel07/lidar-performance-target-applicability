@@ -2,7 +2,19 @@
 work/
 __pycache__/
 *.pyc
-# dataset files must never be committed
+# Python and notebook build files
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+# dataset files and detector checkpoints must never be committed
+*.pth
+*.ckpt
+*.pt
 *.pkl
 *.bin
 *.pcd

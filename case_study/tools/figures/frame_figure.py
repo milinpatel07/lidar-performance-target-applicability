@@ -18,7 +18,7 @@ compared with the recorded values in EXPECTED; the figure is not written if they
 
 Usage: python3 tools/figures/frame_figure.py   (writes work/figures/frame_figure.pdf and its log)
 """
-import csv, importlib.util, json, pickle, sys
+import csv, json, pickle, sys
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -206,7 +206,7 @@ def nusc_bundle(C, log):
     log += [f"nuScenes: weather counts {wcounts}; clear-weather tau(u_e) {tau:.5f} (m6 C_weather_nuscenes.csv, seed 0, alpha 0.1; recomputed equal)",
             f"   rain frames in the evaluation part of split 0: {n_rain_eval}; qualifying (accepted correct >= 3 and accepted wrong >= 1): {len(cand)}",
             f"   median accepted wrong over qualifying frames: {med:g}; frames at the minimum distance {best:g}: {len(tied)}",
-            f"   tie-break (most accepted wrong in CAM_FRONT view, then most accepted correct there, then token): top 5 "
+            "   tie-break (most accepted wrong in CAM_FRONT view, then most accepted correct there, then token): top 5 "
             + str([(c['token'][:8], c['acc_wrong'], c['acc_correct'], c['fov_acc_wrong'], c['fov_acc_correct']) for c in tied[:5]]),
             f"   CHOSEN sample token {tok}, scene {sc['name']} ('{sc['description']}'), lidar {e['lidar_path']}, camera {e['cam_front_path']}",
             f"   car detections {len(rows)}: accepted correct {int((acc & cor).sum())}, accepted wrong {int((acc & ~cor).sum())}, rejected {int((~acc).sum())}; "
