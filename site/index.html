@@ -19,12 +19,15 @@
 <body>
 <header class="hero">
   <h1>Applicability of performance targets across triggering conditions</h1>
-  <p>An object detector can meet a performance target, a limit α on the share of wrong detections it passes on, by
-  rejecting detections whose uncertainty exceeds a threshold. A threshold selected on data of one condition carries a
-  statistical guarantee only for data like those. The <strong>applicability test</strong> uses the same threshold under
-  another condition, for example far distance or rain, and decides at a stated error probability whether the target is
-  <em>applicable</em>, <em>not applicable</em> or <em>not determined</em> there. A lower bound gives the number of
-  independent recorded sequences that an applicable outcome needs.</p>
+  <p>An object detector can pass on only the detections whose uncertainty lies at or below a threshold. A performance
+  target sets a limit on the share of wrong detections among them (per frame, averaged over frames), for example 1 %.
+  A threshold chosen on data of one condition carries its statistical guarantee only for data distributed like those.</p>
+  <p><img src="images/how_the_test_works.svg" alt="How the applicability test works: choose a threshold in one condition, keep it unchanged in another, decide with an interval against the limit" style="width:100%;max-width:960px;height:auto"></p>
+  <p>The <strong>applicability test</strong> applies the same threshold, unchanged, under another condition, for example
+  far distance or rain, and states at a given error probability whether the target is <em>applicable</em> there,
+  <em>not applicable</em>, or <em>not determined</em> by the data (or that <em>no threshold</em> could be selected in
+  the condition of selection). It also gives the minimum number of independent units (for example recorded sequences)
+  that an applicable outcome needs.</p>
 </header>
 <main>
   <section>
