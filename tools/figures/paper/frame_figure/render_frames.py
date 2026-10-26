@@ -7,7 +7,7 @@ with the thresholds selected at near and at far distance) and a header line with
 Optionally one MP4 of all rendered frames (ffmpeg, in the container).
 
 Settings as in Fig. 1: spatial indicator u_s, car detections, split 0, thresholds selected at the exploratory limit 0.1
-(release/data/tau_<dataset>_distance_split0.json); a detection is accepted if u_s <= threshold selected at near distance.
+(data/tau_<dataset>_distance_split0.json); a detection is accepted if u_s <= threshold selected at near distance.
 KITTI: KITTI rule (detections it removes are drawn dotted grey, not scored). Numbered detections: 1 = accepted correct near
 detection with the lowest u_s; 2 = accepted wrong detection seen by the camera (far preferred, then no annotated car under it, then lowest
 u_s). A frame without one of them is drawn without that inset.
@@ -17,10 +17,10 @@ Frame selection (one of): --frames ID ... | --frame-list FILE (one id per line) 
 key frames in time order) | --all. --limit N keeps the first N.
 KITTI object frames of one drive are a sparse sample of the drive, so a KITTI drive video jumps; nuScenes key frames are 2 Hz.
 
-Usage (server container, project root mounted at /work, /rum and /heinrich_nuscenes read-only):
-  python3 release/code/tools/render_frames.py --dataset kitti --frames 005345 000323 --out release/frames/kitti_test
-  python3 release/code/tools/render_frames.py --dataset kitti --drive 2011_09_26_drive_0005 --mp4
-  python3 release/code/tools/render_frames.py --dataset nuscenes --scene scene-0003 --mp4 --fps 2
+Usage (server container, project root mounted at /data/work, /data/inputs and /data/nuscenes read-only):
+  python3 code/tools/render_frames.py --dataset kitti --frames 005345 000323 --out frames/kitti_test
+  python3 code/tools/render_frames.py --dataset kitti --drive 2011_09_26_drive_0005 --mp4
+  python3 code/tools/render_frames.py --dataset nuscenes --scene scene-0003 --mp4 --fps 2
 MP4: MPEG-4 part 2 (the container ffmpeg has no working H.264 encoder); plays in VLC and common players.
 Writes <out>/<NNNNN>_<frame>.png, <out>/index.csv (frame, scene or drive, counts) and, with --mp4, <out>/<out name>.mp4.
 """
@@ -34,8 +34,8 @@ from matplotlib.patches import Polygon, Rectangle
 from matplotlib.lines import Line2D
 
 VERSION = "render-0.1"
-W = Path("/work"); REL = W / "release"; RUM = Path("/rum"); CODE = REL / "code/m7v2"
-META = Path("/heinrich_nuscenes/v1.0-trainval"); NUS_ROOT = RUM / "data/nuscenes/v1.0-trainval"
+W = Path("/data/work"); REL = W; RUM = Path("/data/inputs"); CODE = REL / "code/experiments"
+META = Path("/data/nuscenes/v1.0-trainval"); NUS_ROOT = RUM / "data/nuscenes/v1.0-trainval"
 sys.path.insert(0, str(CODE))
 spec = importlib.util.spec_from_file_location("m6", str(CODE / "m6_protocol_seeds_weather.py"))
 m6 = importlib.util.module_from_spec(spec); sys.modules["m6"] = m6; spec.loader.exec_module(m6)

@@ -19,7 +19,7 @@ B_shift_seeds_protocol.csv byte for byte and the input hashes must equal m6/resu
 otherwise the script stops before any drive-split result is computed. No analysis logic is changed: statistics,
 split function and Cell come from m1, m3 and m4 unchanged; only m1.split_frames, m1.Cell and the unit array
 passed to the m4-style halving are replaced at run time.
-Read-only on /rum, /heinrich_nuscenes and the recorded results; writes only below --out.
+Read-only on /data/inputs, /data/nuscenes and the recorded results; writes only below --out.
 """
 import argparse, filecmp, importlib.util, json, platform, sys, time
 from pathlib import Path
@@ -109,8 +109,8 @@ def units(rows):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rum", default="/rum"); ap.add_argument("--out", required=True)
-    ap.add_argument("--recorded", default="/work/m6/results"); ap.add_argument("--devkit", required=True)
+    ap.add_argument("--rum", default="/data/inputs"); ap.add_argument("--out", required=True)
+    ap.add_argument("--recorded", default="/data/work/m6/results"); ap.add_argument("--devkit", required=True)
     ap.add_argument("--nusc-meta", default="")
     a = ap.parse_args()
     t0 = time.time(); rum, out, rec = Path(a.rum), Path(a.out), Path(a.recorded); out.mkdir(parents=True, exist_ok=True)
@@ -119,7 +119,7 @@ def main():
             "devkit_sha256": {f: m1.sha256(Path(a.devkit) / f) for f in ("mapping/train_rand.txt", "mapping/train_mapping.txt")}}
     meta = m6.find_meta(rum, a.nusc_meta)
     if meta is None:
-        sys.exit("scene.json/sample.json not reachable; mount the nuScenes root at /heinrich_nuscenes")
+        sys.exit("scene.json/sample.json not reachable; mount the nuScenes root at /data/nuscenes")
     print("building KITTI table and KITTI rule ...", flush=True)
     ktab, kscored, kseed, kin = m6.build_kitti(rum)
     why = m6.kitti_ignore(rum, ktab, kscored, kseed); kign = m6.subset(ktab, why == "")

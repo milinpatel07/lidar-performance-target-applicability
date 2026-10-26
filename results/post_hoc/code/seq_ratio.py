@@ -18,11 +18,11 @@ a 95 % percentile bootstrap over recorded sequences.
 
 Divisions by recorded sequence as in the paper: m7 (nuScenes scenes, m3.split_variants) and m8 (KITTI drives;
 change of dataset: KITTI drives and nuScenes scenes in halves). Statistics come from m1 unchanged (loaded through
-release/code/m7v2, as in v24/v25). Gate before any new number: (1) with every frame its own sequence (N_s = 1),
+code/experiments, as in v24/v25). Gate before any new number: (1) with every frame its own sequence (N_s = 1),
 the frame division reproduces the recorded frame-unit rows of the paper; (2) the sequence division with frame
 units reproduces the recorded m7/m8 frame-unit rows. The script stops on any difference.
-Inputs read-only: release/cache/tables.pkl, recorded CSVs, /heinrich_nuscenes (sample.json, scene.json),
-release/ext/kitti_devkit (mapping files). Writes only below --out.
+Inputs read-only: cache/tables.pkl, recorded CSVs, /data/nuscenes (sample.json, scene.json),
+ext/kitti_devkit (mapping files). Writes only below --out.
 """
 import argparse, csv, importlib.util, json, math, pickle, platform, sys, time
 from pathlib import Path
@@ -30,8 +30,8 @@ import numpy as np
 import pandas as pd
 
 SCRIPT_VERSION = "seq-0.2"   # 0.2: configuration check limited to the statistics keys (m3 renames classes)
-W = Path("/work"); REL = W / "release"
-CODE = REL / "code/m7v2"
+W = Path("/data/work"); REL = W
+CODE = REL / "code/experiments"
 spec = importlib.util.spec_from_file_location("m6", str(CODE / "m6_protocol_seeds_weather.py"))
 m6 = importlib.util.module_from_spec(spec); sys.modules["m6"] = m6; spec.loader.exec_module(m6)
 m1, m3, m4 = m6.m1, m6.m3, m6.m4
@@ -339,7 +339,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(REL / "results/seq_ratio"))
     ap.add_argument("--devkit", default=str(REL / "ext/kitti_devkit"))
-    ap.add_argument("--nusc-meta", default="/heinrich_nuscenes/v1.0-trainval")
+    ap.add_argument("--nusc-meta", default="/data/nuscenes/v1.0-trainval")
     a = ap.parse_args()
     t0 = time.time(); out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     meta, devkit = Path(a.nusc_meta), Path(a.devkit)

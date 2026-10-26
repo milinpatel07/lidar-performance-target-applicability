@@ -18,18 +18,18 @@ WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be avai
    https://docs.nvidia.com/datacenter/cloud-native/ .
 
 == NUM_EPOCHS in the training configurations
-/rum/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20
 
 == member seed 1
--- /rum/training_seed1_nuscenes.log: last epoch progress line and last 'Train: e/20' line
+-- /data/inputs/training_seed1_nuscenes.log: last epoch progress line and last 'Train: e/20' line
 epochs:  50%|█████     | 10/20 [293:49:51<287:10:47, 103384.73s/it]
 Train:   10/20
 Train:   11/20
--- checkpoint files in /rum/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed1/seed_1/ckpt
+-- checkpoint files in /data/inputs/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed1/seed_1/ckpt
 -rw-r--r-- 1 root root 73172014 2026-05-10T22:59 checkpoint_epoch_10.pth
 -rw-r--r-- 1 root root 73172013 2026-05-06T04:36 checkpoint_epoch_6.pth
 -rw-r--r-- 1 root root 73172013 2026-05-07T09:11 checkpoint_epoch_7.pth
@@ -37,14 +37,14 @@ Train:   11/20
 -rw-r--r-- 1 root root 73172012 2026-05-09T18:14 checkpoint_epoch_9.pth
 -rw-r--r-- 1 root root 73172015 2026-05-10T22:54 latest_model.pth
 -- checkpoint loaded by inference (logs/nuscenes_inference_seed1.log)
-/workspace/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed1/seed_1/ckpt/latest_model.pth
+/data/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed1/seed_1/ckpt/latest_model.pth
 
 == member seed 2
--- /rum/training_seed2_nuscenes.log: last epoch progress line and last 'Train: e/20' line
+-- /data/inputs/training_seed2_nuscenes.log: last epoch progress line and last 'Train: e/20' line
 epochs:  50%|█████     | 10/20 [294:43:48<287:51:18, 103627.88s/it]
 Train:   10/20
 Train:   11/20
--- checkpoint files in /rum/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed2/seed_2/ckpt
+-- checkpoint files in /data/inputs/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed2/seed_2/ckpt
 -rw-r--r-- 1 root root 73171826 2026-05-10T23:53 checkpoint_epoch_10.pth
 -rw-r--r-- 1 root root 73171825 2026-05-06T05:10 checkpoint_epoch_6.pth
 -rw-r--r-- 1 root root 73171825 2026-05-07T10:07 checkpoint_epoch_7.pth
@@ -52,14 +52,14 @@ Train:   11/20
 -rw-r--r-- 1 root root 73171824 2026-05-09T19:15 checkpoint_epoch_9.pth
 -rw-r--r-- 1 root root 73171828 2026-05-10T23:50 latest_model.pth
 -- checkpoint loaded by inference (logs/nuscenes_inference_seed2.log)
-/workspace/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed2/seed_2/ckpt/latest_model.pth
+/data/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed2/seed_2/ckpt/latest_model.pth
 
 == member seed 3
--- /rum/training_seed3_nuscenes.log: last epoch progress line and last 'Train: e/20' line
+-- /data/inputs/training_seed3_nuscenes.log: last epoch progress line and last 'Train: e/20' line
 epochs:  50%|█████     | 10/20 [294:38:08<287:44:06, 103584.69s/it]
 Train:   10/20
 Train:   11/20
--- checkpoint files in /rum/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed3/seed_3/ckpt
+-- checkpoint files in /data/inputs/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed3/seed_3/ckpt
 -rw-r--r-- 1 root root 73172448 2026-05-10T23:47 checkpoint_epoch_10.pth
 -rw-r--r-- 1 root root 73172447 2026-05-06T05:07 checkpoint_epoch_6.pth
 -rw-r--r-- 1 root root 73172447 2026-05-07T09:56 checkpoint_epoch_7.pth
@@ -67,14 +67,14 @@ Train:   11/20
 -rw-r--r-- 1 root root 73172446 2026-05-09T19:05 checkpoint_epoch_9.pth
 -rw-r--r-- 1 root root 73172447 2026-05-10T23:45 latest_model.pth
 -- checkpoint loaded by inference (logs/nuscenes_inference_seed3.log)
-/workspace/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed3/seed_3/ckpt/latest_model.pth
+/data/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed3/seed_3/ckpt/latest_model.pth
 
 == member seed 4
--- /rum/training_seed4_nuscenes.log: last epoch progress line and last 'Train: e/20' line
+-- /data/inputs/training_seed4_nuscenes.log: last epoch progress line and last 'Train: e/20' line
 epochs:  50%|█████     | 10/20 [295:27:42<283:14:17, 101965.72s/it]
 Train:   10/20
 Train:   11/20
--- checkpoint files in /rum/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed4/seed_4/ckpt
+-- checkpoint files in /data/inputs/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed4/seed_4/ckpt
 -rw-r--r-- 1 root root 73172690 2026-05-11T00:37 checkpoint_epoch_10.pth
 -rw-r--r-- 1 root root 73172689 2026-05-06T07:17 checkpoint_epoch_6.pth
 -rw-r--r-- 1 root root 73172689 2026-05-07T12:09 checkpoint_epoch_7.pth
@@ -82,7 +82,7 @@ Train:   11/20
 -rw-r--r-- 1 root root 73172688 2026-05-09T22:10 checkpoint_epoch_9.pth
 -rw-r--r-- 1 root root 73172689 2026-05-11T00:35 latest_model.pth
 -- checkpoint loaded by inference (logs/nuscenes_inference_seed4.log)
-/workspace/third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed4/seed_4/ckpt/latest_model.pth
+/data/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed4/seed_4/ckpt/latest_model.pth
 
 == epoch stored inside latest_model.pth and checkpoint_epoch_10.pth
 seed 1 latest_model.pth: epoch=9 it=308860

@@ -60,7 +60,7 @@ earlier record of this is
 
 | item | value |
 |---|---|
-| container image | `milin_monitoring:latest` (local build, image id `sha256:36077376c42c231f7d597110d563bff17f98e8b6f319fce10e56c5e729788952`, created 2025-06-11), Ubuntu 22.04.3 |
+| container image | the analysis image (local build, image id `sha256:36077376c42c231f7d597110d563bff17f98e8b6f319fce10e56c5e729788952`, created 2025-06-11), Ubuntu 22.04.3 |
 | Python and libraries | Python 3.10.13, PyTorch 2.2.1 (CUDA 12.1, cuDNN 8.9.2), torchvision 0.17.1, spconv-cu120 2.3.6, NumPy 1.26.3, SciPy 1.15.2, pandas 2.2.3, Matplotlib 3.10.0, scikit-learn 1.6.1, numba 0.61.0, kornia 0.8.0 |
 | full package list | [`configs/detectors/environment/pip_freeze.txt`](../configs/detectors/environment/pip_freeze.txt) |
 | OpenPCDet | not installed as a package; used from its source tree through `PYTHONPATH` |

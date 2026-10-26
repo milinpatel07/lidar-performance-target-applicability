@@ -1,7 +1,7 @@
 #!/bin/bash
 # check_epochs.sh - item C: number of training epochs of the four nuScenes ensemble members. Reads only.
-# Run inside the container with runtime-monitoring mounted at /rum.
-R=/rum
+# Run inside the container with inputs mounted at /data/inputs.
+R=/data/inputs
 O=$R/third_party/OpenPCDet/output/workspace/configs
 echo "== NUM_EPOCHS in the training configurations"
 grep -n "NUM_EPOCHS" $R/configs/cbgs_pp_multihead_nuscenes_seed*.yaml
@@ -19,7 +19,7 @@ done
 echo; echo "== epoch stored inside latest_model.pth and checkpoint_epoch_10.pth"
 python3 - <<'EOF'
 import torch
-base = "/rum/third_party/OpenPCDet/output/workspace/configs"
+base = "/data/inputs/third_party/OpenPCDet/output/workspace/configs"
 for s in (1, 2, 3, 4):
     for f in ("latest_model.pth", "checkpoint_epoch_10.pth"):
         p = f"{base}/cbgs_pp_multihead_nuscenes_seed{s}/seed_{s}/ckpt/{f}"

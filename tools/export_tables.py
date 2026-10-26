@@ -11,7 +11,7 @@ Read-only on the inputs and on results/; writes only below --work (default work/
   export  write <work>/data/*.csv and tau_*.json for split 0 and run the checks against the recorded values
 
 Usage:
-  python3 tools/export_tables.py build  --rum /rum --nusc-meta /nuscenes/v1.0-trainval
+  python3 tools/export_tables.py build  --rum /data/inputs --nusc-meta /data/nuscenes/v1.0-trainval
   python3 tools/export_tables.py export --kitti-cut m6rule
 """
 import argparse, csv, hashlib, importlib.util, json, pickle, sys, time
@@ -41,7 +41,7 @@ def sha256(p):
 
 # ------------------------------------------------------------------ build
 def cmd_build(a):
-    t0 = time.time(); rum, rel = Path(a.rum), Path(a.release)
+    t0 = time.time(); rum, rel = Path(a.rum), Path(a.work)
     (rel / "cache").mkdir(parents=True, exist_ok=True)
     m6 = load_code(a.code); m1, m4 = m6.m1, m6.m4
     print(f"box overlap backend: {m1._resolve_backend()} (m6 default 'auto'; m2/m3/m4 recorded 'clip')", flush=True)
@@ -94,7 +94,7 @@ def distance_rows(ds, tab, car, cut, codes, excluded):
 
 
 def cmd_export(a):
-    rel = Path(a.release); (rel / "data").mkdir(parents=True, exist_ok=True)
+    rel = Path(a.work); (rel / "data").mkdir(parents=True, exist_ok=True)
     m6 = load_code(a.code); m1, m4 = m6.m1, m6.m4
     C = pickle.load(open(rel / "cache/tables.pkl", "rb"))
     ktab, why, ntab = C["ktab"], C["why"], C["ntab"]
@@ -192,6 +192,6 @@ if __name__ == "__main__":
     b.add_argument("--nusc-meta", default=str(layout.NUSC_META))
     e = sp.add_parser("export"); e.add_argument("--kitti-cut", choices=["m6rule", "m2"], required=True)
     for q in (b, e):
-        q.add_argument("--code", default=str(layout.ANALYSIS)); q.add_argument("--work", dest="release", default=str(layout.WORK))
+        q.add_argument("--code", default=str(layout.ANALYSIS)); q.add_argument("--work", default=str(layout.WORK))
     a = p.parse_args()
     {"build": cmd_build, "export": cmd_export}.get(a.cmd, lambda _: p.print_help())(a)

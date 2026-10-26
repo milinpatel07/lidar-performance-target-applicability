@@ -208,8 +208,8 @@ configurations, training runs and the SHA-256 of every checkpoint that inference
 ## Versions and citation
 
 The repository is archived on Zenodo; the concept DOI [10.5281/zenodo.23495356](https://doi.org/10.5281/zenodo.23495356)
-resolves to the latest archived version. The recorded results of version 1.0.0 are unchanged, byte for byte, in every
-later version. Since the layout of version 2.0, some run folders carry new names, and
+resolves to the latest archived version. No value in the recorded results of version 1.0.0 has changed in any later
+version. Since version 2.0, some run folders carry new names and mount paths are normalised, and
 [`tests/check_recorded_results.py`](tests/check_recorded_results.py) checks every file at its current path.
 [`CHANGELOG.md`](CHANGELOG.md) lists what each version added. Citation metadata: [`CITATION.cff`](CITATION.cff).
 

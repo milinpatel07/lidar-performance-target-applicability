@@ -39,7 +39,7 @@ All four files must sit in the same folder.
 
 Usage (inside the container):
   python3 m4_dataset_shift.py --selftest
-  python3 m4_dataset_shift.py --rum /rum --out /work/m4_dataset_shift/results
+  python3 m4_dataset_shift.py --rum /data/inputs --out /data/work/m4_dataset_shift/results
 
 Inputs (read-only): the KITTI and nuScenes detection files used by m2 and m3.
 Outputs: only below --out.
@@ -165,7 +165,7 @@ def evaluate(cell_eval, tau, alpha, delta, n_boot, seed):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rum", default="/rum")
+    ap.add_argument("--rum", default="/data/inputs")
     ap.add_argument("--out", default="results")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--bev", choices=["auto", "shapely", "clip"], default="auto")

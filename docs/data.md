@@ -22,11 +22,11 @@ proportions, intervals, thresholds and frame identifiers only.
 
 ## Inputs the scripts read
 
-The scripts read their inputs from one folder, mounted read-only at `/rum` (option `--rum`, or the environment
+The scripts read their inputs from one folder, mounted read-only at `/data/inputs` (option `--rum`, or the environment
 variable `RUM` for the tools). It holds the outputs of the detector ensembles and the dataset files in this layout:
 
 ```
-/rum/
+/data/inputs/
   detections/kitti_v2/seed1_val.pkl ... seed4_val.pkl    per-network detections, KITTI validation frames
   detections/kitti_v2/scored_val.pkl                      merged detections of the pipeline and the merge parameters
   detections/kitti_v2/frame_errors_cache.pkl              per-frame missed and false detections (consistency check)

@@ -4,7 +4,7 @@
   "started": "2026-10-21 10:10:02",
   "python": "3.10.13",
   "numpy": "1.26.3",
-  "statistics_from": "/work/release/code/m7v2",
+  "statistics_from": "/data/work/code/experiments",
   "m1_cfg": {
     "delta": 0.05,
     "alphas_frozen": [
@@ -193,18 +193,18 @@
   "kitti_drives": 45,
   "nuscenes_scenes": 150,
   "inputs_sha256": {
-    "/work/release/cache/tables.pkl": "9e9fbc67b27dfb5a672cd7ad11c394e9227503d848a0c295bb6fb8590c5dea19",
-    "/heinrich_nuscenes/v1.0-trainval/sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d",
-    "/heinrich_nuscenes/v1.0-trainval/scene.json": "bdc3211bfbfda652d5e9dab73c45c7132925ca84f869bf45e8e14edeafb1d20b",
-    "/work/release/ext/kitti_devkit/mapping/train_rand.txt": "0976b8b4f876f538010a9690249b60c0766d852e23acd5e07b4c3e0bd70f305f",
-    "/work/release/ext/kitti_devkit/mapping/train_mapping.txt": "ca9a80524adbfbebc3179987e70a8dab1488a88ba368e77715d561c901196a54",
-    "/work/m6/results/A_kitti_range_protocol.csv": "56a3721febba396f78880f1ed9f0af0c288da1f5f49f64017d365119ffb464c8",
-    "/work/m6/results/B_shift_seeds_protocol.csv": "7bc64acb59d6e7b14b96f16272f4a643bb54dbff2d38885cfb294a63b9b49930",
-    "/work/release/results/m7_scene_split.csv": "75452edfe3893c706305f816279bf263ff483c1135331e14f05d2d1638a7a3ca",
-    "/work/release/results/m8/A_kitti_distance_drive.csv": "e41badb9bb9965aee6ad8e1a2ad4b27163bbc8d02285d333304c40a4d6809586",
-    "/work/release/results/m8/B_dataset_drive.csv": "2fa112cfe06ea761fbae6973f286ba4d6eaf34f0e90c5f3ce0c4a98ca526861e"
+    "/data/work/cache/tables.pkl": "9e9fbc67b27dfb5a672cd7ad11c394e9227503d848a0c295bb6fb8590c5dea19",
+    "/data/nuscenes/v1.0-trainval/sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d",
+    "/data/nuscenes/v1.0-trainval/scene.json": "bdc3211bfbfda652d5e9dab73c45c7132925ca84f869bf45e8e14edeafb1d20b",
+    "/data/work/ext/kitti_devkit/mapping/train_rand.txt": "0976b8b4f876f538010a9690249b60c0766d852e23acd5e07b4c3e0bd70f305f",
+    "/data/work/ext/kitti_devkit/mapping/train_mapping.txt": "ca9a80524adbfbebc3179987e70a8dab1488a88ba368e77715d561c901196a54",
+    "/data/work/m6/results/A_kitti_range_protocol.csv": "56a3721febba396f78880f1ed9f0af0c288da1f5f49f64017d365119ffb464c8",
+    "/data/work/m6/results/B_shift_seeds_protocol.csv": "7bc64acb59d6e7b14b96f16272f4a643bb54dbff2d38885cfb294a63b9b49930",
+    "/data/work/results/m7_scene_split.csv": "75452edfe3893c706305f816279bf263ff483c1135331e14f05d2d1638a7a3ca",
+    "/data/work/results/m8/A_kitti_distance_drive.csv": "e41badb9bb9965aee6ad8e1a2ad4b27163bbc8d02285d333304c40a4d6809586",
+    "/data/work/results/m8/B_dataset_drive.csv": "2fa112cfe06ea761fbae6973f286ba4d6eaf34f0e90c5f3ce0c4a98ca526861e"
   },
   "gate": "GATE PASSED: 1600 recomputed rows compared with the recorded rows (frame division with N_s = 1 against m6 A/B and m7 frame rows; sequence division with frame units against m7 scene_frame_unit and m8 frame-unit rows); 0 differ",
   "finished": "2026-10-21 10:13:13",
-  "script_sha256": "896c2793c6b7b96a590e0e63de13be6610e18b8a63d9ac7f0f79203088ccfafc"
+  "script_sha256": "6f11e1634599bd9e6b244ab701ab1e8dde1de4d4fc8a6f9a3f9db5299cab465a"
 }

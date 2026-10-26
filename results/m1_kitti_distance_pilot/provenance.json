@@ -5,11 +5,11 @@
   "python": "3.10.13",
   "numpy": "1.26.3",
   "inputs_sha256": {
-    "/rum/detections/kitti_v2/scored_val.pkl": "d3503186e3cc9afa468989c7c6274bcc7334792b019139e34f134255e888aca7",
-    "/rum/detections/kitti_v2/frame_errors_cache.pkl": "4693a30330184aa3f2d10f7695a6ea4dd97850c72dc01290bb3dc510cb33e2e5",
-    "/rum/third_party/OpenPCDet/data/kitti/kitti_infos_val.pkl": "1efeceb2ef91fa2f02b3377176e5f5b82b6ec633578d185ee67e544f160c151a"
+    "/data/inputs/detections/kitti_v2/scored_val.pkl": "d3503186e3cc9afa468989c7c6274bcc7334792b019139e34f134255e888aca7",
+    "/data/inputs/detections/kitti_v2/frame_errors_cache.pkl": "4693a30330184aa3f2d10f7695a6ea4dd97850c72dc01290bb3dc510cb33e2e5",
+    "/data/inputs/third_party/OpenPCDet/data/kitti/kitti_infos_val.pkl": "1efeceb2ef91fa2f02b3377176e5f5b82b6ec633578d185ee67e544f160c151a"
   },
-  "script_sha256": "8f0dfc3045ba2d984b7604a7257483d4d3c55433fc6ad95748e177b6bc12a4b4",
+  "script_sha256": "64355a602f1f68d9fc1716458cc1be9d82793efce62e0615bac34f557e001189",
   "config": {
     "delta": 0.05,
     "alphas_frozen": [

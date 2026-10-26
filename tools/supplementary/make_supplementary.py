@@ -641,7 +641,7 @@ def sec_frames():
     lines = []
     for i, s in enumerate(facts):
         s2 = s.strip()
-        if not s2 or s2.startswith("v25_fig1") or s2.startswith("selected from release/"):
+        if not s2 or s2.startswith("v25_fig1") or s2.startswith("selected from "):
             continue
         SOURCES.append({"context": "Fig. 1 facts", "value_printed": s2, "value_recorded": s2, "file": F["fig1facts"], "row_or_line": i + 1, "column": ""})
         lines.append(s2)

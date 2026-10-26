@@ -8766,11 +8766,11 @@ post-hoc N_s change of dataset and detector nuScenes,150,150,results/post_hoc/ns
 post-hoc N_s change of dataset and detector nuScenes,12,12,results/post_hoc/ns_per_condition.csv,33,N_s_min
 post-hoc N_s change of dataset and detector nuScenes,40.0,40.0,results/post_hoc/ns_per_condition.csv,33,N_s_median
 post-hoc N_s change of dataset and detector nuScenes,41,41,results/post_hoc/ns_per_condition.csv,33,N_s_max
-post-hoc epoch check,/rum/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20,/rum/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,21,
-post-hoc epoch check,/rum/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20,/rum/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,22,
-post-hoc epoch check,/rum/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20,/rum/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,23,
-post-hoc epoch check,/rum/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20,/rum/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,24,
-post-hoc epoch check,/rum/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20,/rum/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,25,
+post-hoc epoch check,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,21,
+post-hoc epoch check,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,22,
+post-hoc epoch check,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,23,
+post-hoc epoch check,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,24,
+post-hoc epoch check,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20,/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20,results/post_hoc/epoch_check.txt,25,
 post-hoc epoch check,Train:   10/20,Train:   10/20,results/post_hoc/epoch_check.txt,30,
 post-hoc epoch check,Train:   11/20,Train:   11/20,results/post_hoc/epoch_check.txt,31,
 post-hoc epoch check,Train:   10/20,Train:   10/20,results/post_hoc/epoch_check.txt,45,

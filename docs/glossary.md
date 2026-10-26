@@ -100,4 +100,4 @@ was fixed and keep their original names so that their SHA-256 hashes stay valid.
 | `SCRIPT_VERSION` (e.g. `m3-0.4`) | version label inside each script, recorded in each run's `provenance.json`; [`experiments/SCRIPT_VERSIONS.md`](../experiments/SCRIPT_VERSIONS.md) maps runs to shipped files |
 | `export-v13.1`, `export-1.1` | version labels of the per-detection table cache: `export-v13.1` on the recorded cache from which the supporting analyses, the figure data and the post-hoc analysis were computed; `export-1.1` on `tools/export_tables.py`, the repository version of the same builder. Each tool checks its split-0 values against `results/` before it writes anything |
 | v24, v25 | labels of internal analysis rounds that appear in some script headers and logs (for example `v25f5-0.2`); they carry no meaning beyond the date order |
-| `RUM`, `/rum` | folder of the detector outputs and dataset files that the scripts read (named after the runtime-monitoring project that produced the detector outputs) |
+| `RUM`, `/data/inputs` | folder of the detector outputs and dataset files that the scripts read (option `--rum`, environment variable `RUM`) |

@@ -9,10 +9,10 @@ Each column: camera image with projected boxes (1 = accepted correct with the lo
 bird's-eye view (annotated cars grey, detections outlined, near|far boundary in (a)); inset of the accepted wrong
 detection with its member boxes and the annotated cars; indicator strip.
 Style as fig_scenes_005345.pdf (v25_fig1.py): correct #0072B2, wrong #D55E00, rejected dashed, KITTI-rule detections dotted
-grey; serif (STIX), 7 pt. Frame data are loaded with release/code/tools/render_frames.py (render-0.1).
-Thresholds: release/data/tau_kitti_distance_split0.json; m6/results/C_weather_nuscenes.csv on the server (= experiments/m6/run1 locally; u_e, seed 0, 0.1).
-Writes release/figures/v25/fig_scenes.pdf and release/results/v25/fig1_two_panel_facts.txt.
-Usage (server container): python3 release/code/v25/v25_fig1_two_panel.py
+grey; serif (STIX), 7 pt. Frame data are loaded with code/tools/render_frames.py (render-0.1).
+Thresholds: data/tau_kitti_distance_split0.json; m6/results/C_weather_nuscenes.csv on the server (= experiments/m6/run1 locally; u_e, seed 0, 0.1).
+Writes figures/v25/fig_scenes.pdf and results/v25/fig1_two_panel_facts.txt.
+Usage (server container): python3 code/v25/v25_fig1_two_panel.py
 """
 import csv, importlib.util, json, pickle, sys
 from pathlib import Path
@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon, Rectangle
 from matplotlib.lines import Line2D
 
-W = Path("/work"); REL = W / "release"
+W = Path("/data/work"); REL = W
 spec = importlib.util.spec_from_file_location("render_frames", str(REL / "code/tools/render_frames.py"))
 rf = importlib.util.module_from_spec(spec); spec.loader.exec_module(rf)
 m1 = rf.m1
@@ -31,7 +31,7 @@ GTF, PTC, FOV = "#D9D9D9", "#808080", "#BBBBBB"   # annotated-car fill; LiDAR po
 plt.rcParams.update({"font.size": 7, "axes.labelsize": 7, "xtick.labelsize": 7, "ytick.labelsize": 7, "legend.fontsize": 7})
 MM = 1 / 25.4
 FW, FH = 122, 95
-# (b): rank 2 of release/results/v25/fig1b_candidates.csv (v25_fig1b_candidates.py), scene-0626; rank 1 (8b3831ab) has 3D IoU 0 only
+# (b): rank 2 of results/v25/fig1b_candidates.csv (v25_fig1b_candidates.py), scene-0626; rank 1 (8b3831ab) has 3D IoU 0 only
 # because it sits 1.9 m below an annotated car on a ramp (same position in the bird's-eye view), so it is not an empty-scene case
 KITTI_FID, NUSC_TOK = "005345", "f0f7fec4524045f4a2f44866d410ec84"
 # recorded counts (frame CSV of fig_scenes_005345; fig1b_candidates.csv): a changed input stops the script
@@ -241,7 +241,7 @@ def main():
             if d.get("id") == 1:
                 L.append(f"    numbered 1: accepted correct, distance {d['dist']:.2f} m, {ind} {d['u']:.4f}")
         if name == "nuScenes":
-            L.append(f"    selected from release/results/v25/fig1b_candidates.csv (rank 2 of {sum(1 for _ in open(REL / 'results/v25/fig1b_candidates.csv')) - 1})")
+            L.append(f"    selected from results/v25/fig1b_candidates.csv (rank 2 of {sum(1 for _ in open(REL / 'results/v25/fig1b_candidates.csv')) - 1})")
         L.append("")
     (REL / "results/v25/fig1_two_panel_facts.txt").write_bytes("\n".join(L).encode())
     print("\n".join(L))

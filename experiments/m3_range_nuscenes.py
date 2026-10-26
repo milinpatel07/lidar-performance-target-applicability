@@ -32,7 +32,7 @@ m1_range_kitti.py. Put both files in the same folder.
 
 Usage (inside the container):
   python3 m3_range_nuscenes.py --selftest
-  python3 m3_range_nuscenes.py --rum /rum --out /work/m2_indicators_kitti/results
+  python3 m3_range_nuscenes.py --rum /data/inputs --out /data/work/m2_indicators_kitti/results
 
 Inputs (read-only): detections/nuscenes/seed1_val.pkl ... seed4_val.pkl,
 detections/nuscenes/scored_val.pkl, detections/nuscenes/frame_errors_cache.pkl,
@@ -321,13 +321,13 @@ def check_rebuild(tab, scored):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rum", default="/rum")
+    ap.add_argument("--rum", default="/data/inputs")
     ap.add_argument("--out", default="results")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--allow-mismatch", action="store_true")
     ap.add_argument("--bev", choices=["auto", "shapely", "clip"], default="auto")
     ap.add_argument("--split", choices=["frame", "scene"], default="frame")
-    ap.add_argument("--nusc-meta", default="/heinrich_nuscenes/v1.0-trainval",
+    ap.add_argument("--nusc-meta", default="/data/nuscenes/v1.0-trainval",
                     help="folder with sample.json (only for --split scene)")
     args = ap.parse_args()
     m1.BEV_BACKEND = args.bev

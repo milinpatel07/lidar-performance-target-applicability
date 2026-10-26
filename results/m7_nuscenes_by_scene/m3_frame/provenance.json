@@ -6,15 +6,15 @@
   "numpy": "1.26.3",
   "m1_version": "m1-0.2",
   "inputs_sha256": {
-    "/rum/detections/nuscenes/scored_val.pkl": "fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf",
-    "/rum/detections/nuscenes/frame_errors_cache.pkl": "93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0",
-    "/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl": "ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566",
-    "/rum/detections/nuscenes/seed1_val.pkl": "ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7",
-    "/rum/detections/nuscenes/seed2_val.pkl": "50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7",
-    "/rum/detections/nuscenes/seed3_val.pkl": "4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3",
-    "/rum/detections/nuscenes/seed4_val.pkl": "57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d"
+    "/data/inputs/detections/nuscenes/scored_val.pkl": "fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf",
+    "/data/inputs/detections/nuscenes/frame_errors_cache.pkl": "93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0",
+    "/data/inputs/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl": "ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566",
+    "/data/inputs/detections/nuscenes/seed1_val.pkl": "ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7",
+    "/data/inputs/detections/nuscenes/seed2_val.pkl": "50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7",
+    "/data/inputs/detections/nuscenes/seed3_val.pkl": "4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3",
+    "/data/inputs/detections/nuscenes/seed4_val.pkl": "57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d"
   },
-  "script_sha256": "b6af3474c51156a93ead294e417b1c9438916cd07677899ee4f81b14368b3aff",
+  "script_sha256": "d270f962e0000eaf791f934c52c9ef23ead0ce7ac753f7e4d7f5fd1a141317f3",
   "config": {
     "delta": 0.05,
     "alphas_frozen": [

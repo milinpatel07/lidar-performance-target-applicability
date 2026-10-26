@@ -56,17 +56,16 @@ The scripts read the per-detection tables, the nuScenes metadata and the KITTI d
 [`../../docs/data.md`](../../docs/data.md); `confseq` 0.0.11 is needed for Method B
 ([`../../environment/requirements-posthoc.txt`](../../environment/requirements-posthoc.txt)).
 
-**Paths.** The scripts are published as they ran, so that the SHA-256 in [`provenance.json`](provenance.json) matches
-`code/seq_ratio.py`. Their path constants refer to the layout of the machine that ran them (`/work` mounted as the
-working folder). The corresponding locations in this repository:
+**Paths.** The scripts are published as they ran, with mount paths normalised, so that the SHA-256 in [`provenance.json`](provenance.json) matches
+`code/seq_ratio.py`. Their path constants are container paths (`/data/work` is the working folder of the runs). The corresponding locations in this repository:
 
 | constant in the scripts | in this repository |
 |---|---|
-| `/work/release/code/m7v2/` (`CODE`), the analysis scripts loaded through m6 | [`experiments/`](../../experiments/README.md) (same files; m3 and m6 at versions m3-0.4 and m6-0.3) |
-| `/work/release/cache/tables.pkl` | `work/cache/tables.pkl`, written by `tools/export_tables.py build` |
-| `/work/m6/results/*.csv` | [`results/m6_five_splits/`](../m6_five_splits/) |
-| `/work/release/results/m7_scene_split.csv` | [`results/m7_nuscenes_by_scene/m7_scene_split.csv`](../m7_nuscenes_by_scene/m7_scene_split.csv) |
-| `/work/release/results/m8/*.csv` | [`results/m8_kitti_by_drive/`](../m8_kitti_by_drive/) |
-| `/work/release/ext/kitti_devkit` (`--devkit`) | KITTI devkit mapping files, see `docs/data.md` |
+| `/data/work/code/experiments/` (`CODE`), the analysis scripts loaded through m6 | [`experiments/`](../../experiments/README.md) (same files; m3 and m6 at versions m3-0.4 and m6-0.3) |
+| `/data/work/cache/tables.pkl` | `work/cache/tables.pkl`, written by `tools/export_tables.py build` |
+| `/data/work/m6/results/*.csv` | [`results/m6_five_splits/`](../m6_five_splits/) |
+| `/data/work/results/m7_scene_split.csv` | [`results/m7_nuscenes_by_scene/m7_scene_split.csv`](../m7_nuscenes_by_scene/m7_scene_split.csv) |
+| `/data/work/results/m8/*.csv` | [`results/m8_kitti_by_drive/`](../m8_kitti_by_drive/) |
+| `/data/work/ext/kitti_devkit` (`--devkit`) | KITTI devkit mapping files, see `docs/data.md` |
 | default of `--nusc-meta` | nuScenes v1.0-trainval metadata folder (`NUSC_META` in `tools/layout.py`) |
-| `/rum` (in `check_epochs.sh`) | detector outputs, training logs and checkpoints (`RUM`) |
+| `/data/inputs` (in `check_epochs.sh`) | detector outputs, training logs and checkpoints (`RUM`) |

@@ -22,7 +22,7 @@ Outputs are written only below --out.
 
 Usage (inside the container):
   python3 m1_range_kitti.py --selftest
-  python3 m1_range_kitti.py --rum /rum --out /work/m1_range_kitti/results
+  python3 m1_range_kitti.py --rum /data/inputs --out /data/work/m1_range_kitti/results
 
 Indicator: the saved per-detection value u of the RUM pipeline (a weighted
 sum of box spread and confidence spread). It is NOT yet mapped to the
@@ -778,7 +778,7 @@ def write_summary(out_dir, primary_info, primary_results, tally_rows, verify_msg
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rum", type=str, default="/rum")
+    ap.add_argument("--rum", type=str, default="/data/inputs")
     ap.add_argument("--out", type=str, default="results")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--allow-mismatch", action="store_true")

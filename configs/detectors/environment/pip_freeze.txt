@@ -21,7 +21,7 @@ Brotli @ file:///tmp/abs_ecyw11_7ze/croots/recipe/brotli-split_1659616059936/wor
 ccimport==0.4.4
 certifi @ file:///croot/certifi_1707229174982/work/certifi
 cffi @ file:///croot/cffi_1700254295673/work
-chardet @ file:///home/builder/ci_310/chardet_1640804867535/work
+chardet @ file:///data/build/ci_310/chardet_1640804867535/work
 charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
 click @ file:///croot/click_1698129812380/work
 colorlog==6.9.0
@@ -126,7 +126,7 @@ pyOpenSSL @ file:///croot/pyopenssl_1708380408460/work
 pyparsing==3.2.1
 pyproj==3.7.1
 pyquaternion==0.9.9
-PySocks @ file:///home/builder/ci_310/pysocks_1640793678128/work
+PySocks @ file:///data/build/ci_310/pysocks_1640793678128/work
 python-dateutil==2.9.0.post0
 python-etcd==0.4.5
 pytz @ file:///croot/pytz_1695131579487/work
@@ -167,7 +167,7 @@ tzdata==2025.1
 universal_pathlib==0.2.6
 urllib3 @ file:///croot/urllib3_1707770551213/work
 virtualenv==20.29.2
-wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+wcwidth @ file:///data/build/demo/mc3/conda-bld/wcwidth_1629357192024/work
 Werkzeug==3.0.6
 widgetsnbextension==4.0.13
 zipp==3.21.0

@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """check_recorded_results.py - every recorded result file of version 1.0.0 is unchanged, at its current path.
 
-tests/recorded_results_v1.0.0.sha256 holds the results/ lines of MANIFEST.sha256 of the tag v1.0.0. Since the layout of
+tests/recorded_results_v1.0.0.sha256 holds the results/ lines of MANIFEST.sha256 of the tag v1.0.0; for the files whose
+dataset or container mount paths were normalised in version 2.0 (the provenance.json files) it holds the SHA-256 of the
+normalised file. Since the layout of
 version 2.0, the run folders of results/ are named by content; RENAMED maps the folder names of 1.0.0 to the current
 ones. For every listed file the check computes the SHA-256 of the file at its current path and compares it with the
 recorded one. Two files are not recorded results and are skipped: results/README.md (a description, extended since)

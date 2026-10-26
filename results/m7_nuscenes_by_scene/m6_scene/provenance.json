@@ -12,7 +12,7 @@
       "rain_night": 120,
       "unknown": 0
     },
-    "meta_dir": "/heinrich_nuscenes/v1.0-trainval",
+    "meta_dir": "/data/nuscenes/v1.0-trainval",
     "n_scenes": 150,
     "parts": {
       "seed0": {
@@ -212,13 +212,13 @@
     "sample.json": "6035ac58b6e971622be2bb1be15b917e7cb4e05ae984d6b339c27c1699c4ad9d"
   },
   "inputs_sha256": {
-    "/rum/detections/nuscenes/scored_val.pkl": "fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf",
-    "/rum/detections/nuscenes/frame_errors_cache.pkl": "93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0",
-    "/rum/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl": "ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566",
-    "/rum/detections/nuscenes/seed1_val.pkl": "ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7",
-    "/rum/detections/nuscenes/seed2_val.pkl": "50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7",
-    "/rum/detections/nuscenes/seed3_val.pkl": "4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3",
-    "/rum/detections/nuscenes/seed4_val.pkl": "57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d"
+    "/data/inputs/detections/nuscenes/scored_val.pkl": "fae54ec1701eff1e9f8444c08310d49bcf144d4de7d757245205953b0759b9cf",
+    "/data/inputs/detections/nuscenes/frame_errors_cache.pkl": "93149a7d786531108285f3eadbc9eee21349dc0d5fe7d9c50a7660499d5476e0",
+    "/data/inputs/data/nuscenes/v1.0-trainval/nuscenes_infos_10sweeps_val.pkl": "ae670fdc6641f3bc49f8abf74e24749eb112eff3905acc525a65f96ac88b8566",
+    "/data/inputs/detections/nuscenes/seed1_val.pkl": "ecc5da7e151fcf62176c85002b090022ba7c400bdb9186836d7e3f7b44312bb7",
+    "/data/inputs/detections/nuscenes/seed2_val.pkl": "50b8c7a90539e257b0305528a3232ea84e936827aa891843ba2e7239ea6491d7",
+    "/data/inputs/detections/nuscenes/seed3_val.pkl": "4cf7e830d369f6150eb4dbba9cf65329b96a6631cea9e9a773bc04a3b624bcb3",
+    "/data/inputs/detections/nuscenes/seed4_val.pkl": "57c8836e1d67f01557ecb59c622889a02befdf38e28ef1193cb3410ea65a210d"
   },
-  "script_sha256": "161775194e1d38ff70a4901721d8cbbbeb27ae6395924cff0dfafde568f436d9"
+  "script_sha256": "12471263830f08c4990f11a5057cf84bf9dfdd2f79add9a0a8a6647a456d8a84"
 }

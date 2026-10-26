@@ -200,7 +200,7 @@ def tally(rows, keys):
 
 
 def find_meta(rum, nusc_meta):
-    cands = [Path(nusc_meta)] if nusc_meta else [rum / "data/nuscenes/v1.0-trainval/v1.0-trainval", Path("/heinrich_nuscenes/v1.0-trainval")]
+    cands = [Path(nusc_meta)] if nusc_meta else [rum / "data/nuscenes/v1.0-trainval/v1.0-trainval", Path("/data/nuscenes/v1.0-trainval")]
     return next((c for c in cands if (c / "scene.json").exists() and (c / "sample.json").exists()), None)
 
 
@@ -210,7 +210,7 @@ def main_scene(args, rum, out, t0):
     have no scene split and are not run."""
     meta = find_meta(rum, args.nusc_meta)
     if meta is None:
-        sys.exit("scene.json/sample.json not reachable; mount the nuScenes root at /heinrich_nuscenes")
+        sys.exit("scene.json/sample.json not reachable; mount the nuScenes root at /data/nuscenes")
     S = [f"M6 SUMMARY ({SCRIPT_VERSION}, --split scene: part C only)", ""]
     prov = {"script_version": SCRIPT_VERSION, "split": "scene", "started": time.strftime("%Y-%m-%d %H:%M:%S"),
             "python": platform.python_version(), "numpy": np.__version__}
@@ -258,7 +258,7 @@ def main_scene(args, rum, out, t0):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rum", default="/rum"); ap.add_argument("--out", default="results")
+    ap.add_argument("--rum", default="/data/inputs"); ap.add_argument("--out", default="results")
     ap.add_argument("--nusc-meta", default="")
     ap.add_argument("--skip-shift", action="store_true"); ap.add_argument("--skip-weather", action="store_true")
     ap.add_argument("--split", choices=["frame", "scene"], default="frame")
@@ -337,12 +337,12 @@ def main():
 
     # C
     meta = Path(args.nusc_meta) if args.nusc_meta else None
-    cands = [meta] if meta else [rum / "data/nuscenes/v1.0-trainval/v1.0-trainval", Path("/heinrich_nuscenes/v1.0-trainval")]
+    cands = [meta] if meta else [rum / "data/nuscenes/v1.0-trainval/v1.0-trainval", Path("/data/nuscenes/v1.0-trainval")]
     meta = next((c for c in cands if c and (c / "scene.json").exists() and (c / "sample.json").exists()), None)
     if args.skip_weather or args.skip_shift:
         S += ["", "C. Weather: skipped (needs the nuScenes table from part B)."]
     elif meta is None:
-        S += ["", "C. Weather: skipped, scene.json/sample.json not reachable. Mount the nuScenes root at /heinrich_nuscenes."]
+        S += ["", "C. Weather: skipped, scene.json/sample.json not reachable. Mount the nuScenes root at /data/nuscenes."]
     else:
         fcls, counts = nusc_weather_classes(meta, ntab["fids"])
         S += ["", f"C. Weather (nuScenes, recorded), frames by scene description: {counts}"]

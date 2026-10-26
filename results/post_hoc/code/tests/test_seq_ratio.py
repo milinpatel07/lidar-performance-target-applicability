@@ -1,4 +1,4 @@
-"""Sanity tests of seq_ratio.py (run inside the container from /work: python3 -m pytest release/code/seq_ratio/tests)."""
+"""Sanity tests of seq_ratio.py (run inside the container from /data/work: python3 -m pytest code/seq_ratio/tests)."""
 import importlib.util, math, sys
 from pathlib import Path
 import numpy as np
@@ -69,7 +69,7 @@ def test_single_frame_sequences_equal_frame_unit():
 @pytest.mark.skipif(not (sr.REL / "cache/tables.pkl").exists(), reason="needs the cache and recorded results")
 def test_single_frame_sequences_reproduce_the_paper():
     """N_s = 1 (every frame its own sequence, frame division): every recorded frame-unit row of the paper, all splits."""
-    data = sr.load(sr.REL / "ext/kitti_devkit", Path("/heinrich_nuscenes/v1.0-trainval"))
+    data = sr.load(sr.REL / "ext/kitti_devkit", Path("/data/nuscenes/v1.0-trainval"))
     n, bad = sr.gate(data, modes=("frame/frame",))
     assert n == 4 * 2 * 5 * 5 * 4 and not bad, bad[:5]
 

@@ -10,7 +10,7 @@ Compare the outputs with results/supporting_analyses/.
 
 Usage, from the repository root:
   python3 tools/supporting/m8_tables.py counts
-  python3 tools/supporting/m8_tables.py drives --devkit /path/to/kitti_devkit
+  python3 tools/supporting/m8_tables.py drives --devkit /data/kitti_devkit
 """
 import argparse, pickle, sys
 from collections import Counter

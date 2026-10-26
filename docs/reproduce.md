@@ -37,12 +37,13 @@ builds this environment:
 docker build -f environment/Dockerfile -t pt-applicability .     # from the repository root
 ```
 
-All commands below run inside the container with the repository mounted at `/repo`, the inputs at `/rum` and the
-nuScenes metadata at `/nuscenes` (see [`data.md`](data.md)):
+All commands below run inside the container with the repository mounted at `/opt/repo`, the inputs at `/data/inputs` and
+the nuScenes metadata at `/data/nuscenes` (see [`data.md`](data.md)). `INPUTS` and `NUSCENES` are the folders on your
+machine:
 
 ```bash
-docker run --rm -it -v "$PWD:/repo" -v /path/to/inputs:/rum:ro -v /path/to/nuscenes:/nuscenes:ro \
-    -w /repo pt-applicability bash
+docker run --rm -it -v "$PWD:/opt/repo" -v "$INPUTS:/data/inputs:ro" -v "$NUSCENES:/data/nuscenes:ro" \
+    -w /opt/repo pt-applicability bash
 ```
 
 ## 1. Self-tests (no data needed)
@@ -60,21 +61,21 @@ each other by file name. A run on the nuScenes table takes about 20 minutes on 4
 
 ```bash
 cd experiments
-python3 m1_range_kitti.py      --rum /rum --out ../work/m1
-python3 m2_indicators_kitti.py --rum /rum --out ../work/m2
-python3 m3_range_nuscenes.py   --rum /rum --out ../work/m3
-python3 m4_dataset_shift.py    --rum /rum --out ../work/m4
-python3 m6_protocol_seeds_weather.py --rum /rum --out ../work/m6 --nusc-meta /nuscenes/v1.0-trainval
+python3 m1_range_kitti.py      --rum /data/inputs --out ../work/m1
+python3 m2_indicators_kitti.py --rum /data/inputs --out ../work/m2
+python3 m3_range_nuscenes.py   --rum /data/inputs --out ../work/m3
+python3 m4_dataset_shift.py    --rum /data/inputs --out ../work/m4
+python3 m6_protocol_seeds_weather.py --rum /data/inputs --out ../work/m6 --nusc-meta /data/nuscenes/v1.0-trainval
 ```
 
 Third run and sequence-level evaluation on nuScenes scenes (m7; terms in [`concept.md`, section 5](concept.md#5-the-independent-unit-frame-or-recorded-sequence)). The frame-level evaluation must first reproduce the recorded results.
 
 ```bash
-python3 m3_range_nuscenes.py --rum /rum --out ../work/m7/m3_frame --split frame
-python3 m6_protocol_seeds_weather.py --rum /rum --out ../work/m7/m6_frame --nusc-meta /nuscenes/v1.0-trainval --split frame
+python3 m3_range_nuscenes.py --rum /data/inputs --out ../work/m7/m3_frame --split frame
+python3 m6_protocol_seeds_weather.py --rum /data/inputs --out ../work/m7/m6_frame --nusc-meta /data/nuscenes/v1.0-trainval --split frame
 python3 m7_scene_split_report.py gate --run ../work/m7          # stops unless every row and input hash is equal
-python3 m3_range_nuscenes.py --rum /rum --out ../work/m7/m3_scene --split scene --nusc-meta /nuscenes/v1.0-trainval
-python3 m6_protocol_seeds_weather.py --rum /rum --out ../work/m7/m6_scene --nusc-meta /nuscenes/v1.0-trainval --split scene
+python3 m3_range_nuscenes.py --rum /data/inputs --out ../work/m7/m3_scene --split scene --nusc-meta /data/nuscenes/v1.0-trainval
+python3 m6_protocol_seeds_weather.py --rum /data/inputs --out ../work/m7/m6_scene --nusc-meta /data/nuscenes/v1.0-trainval --split scene
 python3 m7_scene_split_report.py collect --run ../work/m7
 ```
 
@@ -83,8 +84,8 @@ Third run and sequence-level evaluation on KITTI drives (m8). The devkit folder 
 evaluation first and stops unless it equals the recorded m6 results byte for byte with equal input hashes.
 
 ```bash
-python3 m8_kitti_drive_split.py --rum /rum --out ../work/m8 --devkit /path/to/kitti_devkit \
-    --nusc-meta /nuscenes/v1.0-trainval --recorded ../results/m6_five_splits
+python3 m8_kitti_drive_split.py --rum /data/inputs --out ../work/m8 --devkit /data/kitti_devkit \
+    --nusc-meta /data/nuscenes/v1.0-trainval --recorded ../results/m6_five_splits
 cd ..
 ```
 
@@ -93,7 +94,7 @@ cd ..
 The tools build one cache of the per-detection tables and read it afterwards (`work/` is not versioned).
 
 ```bash
-python3 tools/export_tables.py build --rum /rum --nusc-meta /nuscenes/v1.0-trainval   # about 20 minutes
+python3 tools/export_tables.py build --rum /data/inputs --nusc-meta /data/nuscenes/v1.0-trainval   # about 20 minutes
 python3 tools/export_tables.py export --kitti-cut m6rule      # work/data: split-0 exports and thresholds
 python3 tests/check_export.py                                # AUROC, A and R recomputed independently
 python3 tools/table_and_figure_values.py                     # frame counts and split-0 values

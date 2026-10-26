@@ -16,8 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ANALYSIS = ROOT / "experiments"
 RESULTS = ROOT / "results"
 WORK = Path(os.environ.get("WORK_DIR", ROOT / "work"))
-RUM = Path(os.environ.get("RUM", "/rum"))
-NUSC_META = Path(os.environ.get("NUSC_META", "/nuscenes/v1.0-trainval"))
+RUM = Path(os.environ.get("RUM", "/data/inputs"))
+NUSC_META = Path(os.environ.get("NUSC_META", "/data/nuscenes/v1.0-trainval"))
 CACHE = WORK / "cache/tables.pkl"
 
 

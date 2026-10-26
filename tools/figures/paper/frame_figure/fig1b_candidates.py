@@ -9,9 +9,9 @@ Rain frames of the evaluation part of split 0 (m6 weather classes), car detectio
   - its 3D IoU with every annotation of any class is 0, or else its IoU with the nearest annotated car is below 0.3;
   - 3 to 8 accepted correct and at most 3 rejected car detections; every car detection at most 50 m forward.
 Ranking: IoU 0 with all annotations first; then the larger projected height of the wrong box in the image (clearer crop);
-then more accepted correct detections. Writes release/figures/v25/fig1b_candidates.png (top 12: camera crop around the
-wrong box, margin twice the box size, and the full image with all accepted boxes) and release/results/v25/fig1b_candidates.csv.
-Usage (server container): python3 release/code/v25/v25_fig1b_candidates.py
+then more accepted correct detections. Writes figures/v25/fig1b_candidates.png (top 12: camera crop around the
+wrong box, margin twice the box size, and the full image with all accepted boxes) and results/v25/fig1b_candidates.csv.
+Usage (server container): python3 code/v25/v25_fig1b_candidates.py
 """
 import csv, importlib.util, pickle
 from pathlib import Path
@@ -20,7 +20,7 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
-W = Path("/work"); REL = W / "release"
+W = Path("/data/work"); REL = W
 spec = importlib.util.spec_from_file_location("render_frames", str(REL / "code/tools/render_frames.py"))
 rf = importlib.util.module_from_spec(spec); spec.loader.exec_module(rf)
 m1, m3 = rf.m1, rf.m3

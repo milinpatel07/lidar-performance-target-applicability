@@ -32,7 +32,7 @@ m1_range_kitti.py. Put both files in the same folder.
 
 Usage (inside the container):
   python3 m2_indicators_kitti.py --selftest
-  python3 m2_indicators_kitti.py --rum /rum --out /work/m2_indicators_kitti/results
+  python3 m2_indicators_kitti.py --rum /data/inputs --out /data/work/m2_indicators_kitti/results
 
 Inputs (read-only): detections/kitti_v2/seed1_val.pkl ... seed4_val.pkl,
 detections/kitti_v2/scored_val.pkl, detections/kitti_v2/frame_errors_cache.pkl,
@@ -200,7 +200,7 @@ def check_rebuild(tab, scored):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--rum", default="/rum")
+    ap.add_argument("--rum", default="/data/inputs")
     ap.add_argument("--out", default="results")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--allow-mismatch", action="store_true")

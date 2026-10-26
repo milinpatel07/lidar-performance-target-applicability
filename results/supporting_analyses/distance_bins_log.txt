@@ -19,7 +19,7 @@ bin   55-60   m: accepted correct    42, wrong    54, share wrong 0.562
 bin   60-65   m: accepted correct    24, wrong    31, share wrong 0.564
 bin   65-70   m: accepted correct     9, wrong    16, share wrong (0.640, not printed: < 30)
 bin   70-75   m: accepted correct     0, wrong     3, share wrong (1.000, not printed: < 30)
-make_figures v13.4 (2026-10-12) wrote release/figures/fig_causes_kitti.pdf
+make_figures v13.4 (2026-10-12) wrote figures/fig_causes_kitti.pdf
 ==== causes nuScenes
 AUROC near: 0.729
 AUROC far: 0.655
@@ -37,7 +37,7 @@ bin   45-50   m: accepted correct     6, wrong    22, share wrong (0.786, not pr
 bin   50-55   m: accepted correct     0, wrong    10, share wrong (1.000, not printed: < 30)
 bin   55-60   m: accepted correct     0, wrong     1, share wrong (1.000, not printed: < 30)
 bin   60-65   m: accepted correct     0, wrong     2, share wrong (1.000, not printed: < 30)
-make_figures v13.4 (2026-10-12) wrote release/figures/fig_causes_nuscenes.pdf
+make_figures v13.4 (2026-10-12) wrote figures/fig_causes_nuscenes.pdf
 ==== retention gap
 GAP as_run u_s alpha 0.01 cut 35.685 tau {'near': 0.08801, 'far': 0.08801, 'star': 0.08161} {'near': '0.0596 [0.0526, 0.0665]', 'far': '0.0174 [0.0107, 0.0248]'} R near->near 0.1381 far->far 0.0272
 GAP as_run u_s alpha 0.1 cut 35.685 tau {'near': 0.1478, 'far': 0.12275, 'star': 0.12275} {'near': '0.2130 [0.2005, 0.2257]', 'far': '0.0000 [0.0000, 0.0000]'} R near->near 0.7687 far->far 0.2534

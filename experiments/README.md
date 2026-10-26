@@ -25,8 +25,8 @@ copies (or links) of `results/m3_nuscenes_distance` and `results/m6_five_splits`
 [`SCRIPT_VERSIONS.md`](SCRIPT_VERSIONS.md) names the file behind each recorded run; earlier versions are in
 [`recorded_versions/`](recorded_versions/).
 
-**Headers written during the study.** The scripts are published byte for byte as they ran, so that their SHA-256 values
-match the provenance of the runs (`m8_kitti_drive_split.py` differs from its run version only in its docstring). Their
+**Headers written during the study.** The scripts are published as they ran, with dataset and container mount paths normalised
+(`/data/...`); their SHA-256 values match the provenance of the runs (`m8_kitti_drive_split.py` differs from its run version only in its docstring). Their
 header texts therefore keep the wording and numbering of the time they were written:
 
 | in the scripts | in the submitted paper |

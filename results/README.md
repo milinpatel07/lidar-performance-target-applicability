@@ -23,7 +23,7 @@ are labelled as post hoc throughout.
 | [`supporting_analyses/`](supporting_analyses/) | - | `tools/supporting/`, `tools/figures/` | retention, changes in the detections, intervals, common threshold, recall, annotation checks, figure data | (unchanged) |
 | [`post_hoc/`](post_hoc/README.md) | - | `post_hoc/code/` | analyses added after the outcomes were known | (unchanged) |
 
-The folders were renamed in version 2.0; their files are byte for byte those of the runs.
+The folders were renamed in version 2.0; their files are those of the runs, with mount paths normalised.
 [`../tests/check_recorded_results.py`](../tests/check_recorded_results.py) checks every result file of version 1.0.0 at
 its current path against the SHA-256 recorded in that version's manifest. The files themselves keep the folder names of
 the time they were written (for example in `provenance.json` or in `REPRO_PASSED.txt`).

@@ -34,9 +34,9 @@ python3 tools/figures/paper/separation_curves.py      # needs work/cache/tables.
 `rows`), and `fig_units.tex` holds the curve of Eq. 5 and the marker positions as coordinates. `tests/check_paper_numbers.py`
 compares every count of `make_fig_outcomes.py` with the result files on every push.
 
-**Fig. 1 scripts.** The three scripts in `frame_figure/` are published as they ran. Their paths refer to the layout of
-the machine that ran them: `REL / "cache/tables.pkl"` is the cache that `tools/export_tables.py build` writes to
-`work/cache/tables.pkl`; `REL / "results/v25"` and `REL / "figures/v25"` are output folders; `/rum` and the nuScenes
+**Fig. 1 scripts.** The three scripts in `frame_figure/` are published as they ran, with mount paths normalised. Their path constants are container
+paths: `REL / "cache/tables.pkl"` is the cache that `tools/export_tables.py build` writes to
+`work/cache/tables.pkl`; `REL / "results/v25"` and `REL / "figures/v25"` are output folders; `/data/inputs` and the nuScenes
 metadata folder are the inputs described in [`docs/data.md`](../../../docs/data.md). Adapt these constants to rerun them.
 The KITTI frame 005345 was chosen by the authors from
 [`results/supporting_analyses/frame_candidates_ranked.csv`](../../../results/supporting_analyses/frame_candidates_ranked.csv);

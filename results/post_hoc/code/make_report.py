@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """make_report.py (seq-0.1) - REPORT.md of the post-hoc sequence-level test, built only from the files of
-release/results/seq_ratio and the recorded frame-unit and sequence-unit rows. No value is typed in."""
+results/seq_ratio and the recorded frame-unit and sequence-unit rows. No value is typed in."""
 import argparse, re
 from pathlib import Path
 import pandas as pd
 
-W = Path("/work"); REL = W / "release"
+W = Path("/data/work"); REL = W
 DSN = {"kitti": "KITTI", "nuscenes": "nuScenes"}
 NAMES = {"applies": "applicable", "does not apply": "not applicable", "not determined": "not determined",
          "no threshold established": "no threshold selected"}
@@ -141,11 +141,11 @@ def main():
     ck = [l.split()[-1] for l in ep if l.rstrip().endswith(".pth") and "/" not in l.split()[-1]]
     inf = sorted({l.strip() for l in ep if l.strip().endswith("latest_model.pth") and l.strip().startswith("/")})
     L += ["## 5. Training epochs of the nuScenes members (item C, nothing changed)", "",
-          f"- Configurations `runtime-monitoring/configs/cbgs_pp_multihead_nuscenes_seed{{1..5}}.yaml`: NUM_EPOCHS = {', '.join(cfg)}.",
-          f"- Training logs `runtime-monitoring/training_seed{{1..4}}_nuscenes.log`, last epoch markers: {'; '.join(last)}.",
+          f"- Configurations `inputs/configs/cbgs_pp_multihead_nuscenes_seed{{1..5}}.yaml`: NUM_EPOCHS = {', '.join(cfg)}.",
+          f"- Training logs `inputs/training_seed{{1..4}}_nuscenes.log`, last epoch markers: {'; '.join(last)}.",
           f"- Checkpoint files per member (`third_party/OpenPCDet/output/workspace/configs/cbgs_pp_multihead_nuscenes_seed<s>/seed_<s>/ckpt/`): "
           f"{', '.join(sorted(set(ck)))}.",
-          f"- Inference logs `runtime-monitoring/logs/nuscenes_inference_seed<s>.log` load: {'; '.join(inf)}.",
+          f"- Inference logs `inputs/logs/nuscenes_inference_seed<s>.log` load: {'; '.join(inf)}.",
           f"- Epoch stored in the checkpoints: {'; '.join(stored)}.", ""]
     its = {l.split()[1]: (l.split()[2], int(re.search(r"it=(\d+)", l).group(1)), int(re.search(r"epoch=(\d+)", l).group(1))) for l in stored}
     ends = [int(re.search(r"it=(\d+)", l).group(1)) for l in stored if "checkpoint_epoch_10" in l]

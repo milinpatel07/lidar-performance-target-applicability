@@ -2252,11 +2252,11 @@ change of dataset and detector & nuScenes & 150 & 12 & 40.0 & 41 \\
 \paragraph{Training epochs of the nuScenes members (post-hoc check).} The training configurations of the nuScenes ensemble members set 20 epochs, but training ended after epoch 10: each training log reaches the start of epoch 11, and the checkpoints that inference loaded (\texttt{latest\_model.pth}) stop shortly before the end of epoch 10. The nuScenes members were therefore trained for about 10 epochs, not 20. The configuration of seed 5 belongs to no ensemble member; inference used the members of seeds 1 to 4. Lines of the check (\path{results/post_hoc/epoch_check.txt}):
 
 {\scriptsize\begin{verbatim}
-/rum/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20
-/rum/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed1.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed2.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed3.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed4.yaml:233:    NUM_EPOCHS: 20
+/data/inputs/configs/cbgs_pp_multihead_nuscenes_seed5.yaml:233:    NUM_EPOCHS: 20
 Train:   10/20
 Train:   11/20
 Train:   10/20
@@ -2335,7 +2335,7 @@ Every number in this document is read by \path{tools/supplementary/make_suppleme
 \path{results/m6_five_splits/A_kitti_range_protocol.csv} & {\tiny\texttt{56a3721febba396f78880f1ed9f0af0c288da1f5f49f64017d365119ffb464c8}} \\
 \path{results/m6_five_splits/B_shift_seeds_protocol.csv} & {\tiny\texttt{7bc64acb59d6e7b14b96f16272f4a643bb54dbff2d38885cfb294a63b9b49930}} \\
 \path{results/m6_five_splits/C_weather_nuscenes.csv} & {\tiny\texttt{e0cf1586b2b2f3fa5fa14f6d69df020fb8be00f91a7fe99e00454ebb72c03af0}} \\
-\path{results/m6_five_splits/provenance.json} & {\tiny\texttt{180a69d5fd714702df9c4673e5ae1fde1bc77867a92b0c0e5e57dfe5b72e1dea}} \\
+\path{results/m6_five_splits/provenance.json} & {\tiny\texttt{81d9a22cf8feeba3388c8f356c8265447bbe90f5a3ffba67c8b38498387a69dd}} \\
 \path{results/m6_five_splits/summary.txt} & {\tiny\texttt{79f649f444cadee0dd60dd31da1fac00b1cf6b76964f00d3dfae8b0640bd18cb}} \\
 \path{results/m7_nuscenes_by_scene/REPRO_PASSED.txt} & {\tiny\texttt{cae93f90717884984c296e34a6eb5485b5d756c9c2fc4a68e94b29ec66abe478}} \\
 \path{results/m7_nuscenes_by_scene/m7_scene_split.csv} & {\tiny\texttt{75452edfe3893c706305f816279bf263ff483c1135331e14f05d2d1638a7a3ca}} \\
@@ -2343,12 +2343,12 @@ Every number in this document is read by \path{tools/supplementary/make_suppleme
 \path{results/m8_kitti_by_drive/REPRO_PASSED.txt} & {\tiny\texttt{8aa86eb948c468156748f370c5cf576596451addf6bc3b2d8f92486f64cf3a41}} \\
 \path{results/post_hoc/GATE_PASSED.txt} & {\tiny\texttt{c2bbbc20f5f9473b714a71800068b59dbe16120226274fa5ab53718b6c259313}} \\
 \path{results/post_hoc/auroc_bootstrap.csv} & {\tiny\texttt{bd9a4dd02c255fe2f447c584f6625b657c695b27e46a9b235c4399730d94eaac}} \\
-\path{results/post_hoc/epoch_check.txt} & {\tiny\texttt{521f21656408971bcdcd813e08c9b1b80b304535a4ae4cb03c40e55893fc6028}} \\
+\path{results/post_hoc/epoch_check.txt} & {\tiny\texttt{2f76488d915b9f235938bfb7d20e90434e2c7255d54fb64a93cced7c3323c5fd}} \\
 \path{results/post_hoc/ns_per_condition.csv} & {\tiny\texttt{6fa3a284054683cae5171815864d751309d3ba0f59b11d5e0313ff1b9d32158f}} \\
 \path{results/post_hoc/summary.csv} & {\tiny\texttt{77d964cb6ba9cac9ba9f7cde14e88bfa866dae550e6b74966c698d7e8f904309}} \\
 \path{results/supporting_analyses/common_threshold_outcomes.csv} & {\tiny\texttt{3330fa05988c7fc7e872d86d02bbd346de8de6e3e628a8f1b86fb74d1c6071bc}} \\
-\path{results/supporting_analyses/distance_bins_log.txt} & {\tiny\texttt{40a232d4658f4b42cdc4d8d6a54a5d1626ef6b0fdc1992bcc6c9eb70119929f0}} \\
-\path{results/supporting_analyses/fig1_two_panel_facts.txt} & {\tiny\texttt{7e2e44b2bab9bc70d6abf41d7c819d1ae981c9d72833bfa8035d701979e28300}} \\
+\path{results/supporting_analyses/distance_bins_log.txt} & {\tiny\texttt{54aead337fbe573e7a37ef8a8ca4de7643661fc5773d7fcd4ac61eb9c73c87c3}} \\
+\path{results/supporting_analyses/fig1_two_panel_facts.txt} & {\tiny\texttt{7be313c997986d0a67beb405706209c19afea02b010ec597a6fba3c89f2478c3}} \\
 \path{results/supporting_analyses/fig1b_candidates.csv} & {\tiny\texttt{f335f25d407480f78417312015e6c2dd663f8e4dca7eae4c9401fb2399f3e2f5}} \\
 \path{results/supporting_analyses/frames_per_condition.csv} & {\tiny\texttt{ffc49f8a86cca9ae035d963485fa1fd98ce7433c62ad42ae04855506d4b7cd04}} \\
 \path{results/supporting_analyses/intervals_clear_to_rain.csv} & {\tiny\texttt{399ece8a413fd4730380bcc5bfe725b1cd8eacf7fb10d0a0f3749a97233ea007}} \\

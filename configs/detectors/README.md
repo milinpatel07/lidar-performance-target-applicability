@@ -9,7 +9,7 @@ training machine. What was trained, for how long, and which checkpoint each memb
 | `kitti/` | `pointpillar_kitti_v2_seed1.yaml` ... `seed4.yaml`: the four KITTI members (identical files; the seed is passed on the command line as `--seed k`) |
 | `nuscenes/` | `cbgs_pp_multihead_nuscenes_seed1.yaml` ... `seed4.yaml`: the four nuScenes members (each with a header `RANDOM_SEED: k`) |
 | `openpcdet_base/` | the OpenPCDet configurations the member files derive from or include, unmodified at commit 233f849, and `openpcdet_local_modifications.diff`, the changes in the OpenPCDet working tree on the training machine |
-| `environment/pip_freeze.txt` | `pip freeze` of the container image `milin_monitoring:latest` (inference and analysis; whether training ran in the same image could not be confirmed, see [`provenance.md`](../../docs/provenance.md#software-environment)) |
+| `environment/pip_freeze.txt` | `pip freeze` of the analysis container image (inference and analysis; whether training ran in the same image could not be confirmed, see [`provenance.md`](../../docs/provenance.md#software-environment)) |
 
 Differences from the OpenPCDet base files:
 

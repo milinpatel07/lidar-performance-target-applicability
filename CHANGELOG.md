@@ -1,10 +1,11 @@
 # Changelog
 
-The recorded results of version 1.0.0 are unchanged in every later version: each result file of `results/` that existed
-in 1.0.0 has the same SHA-256 in every later version. Up to version 1.2.0 each file also kept its path. Since the layout
-of version 2.0, seven run folders carry names that describe their content; the files in them are byte
-for byte the same, and `tests/check_recorded_results.py` checks every result file of 1.0.0 at its current path against
-the SHA-256 in the manifest of 1.0.0 (kept as `tests/recorded_results_v1.0.0.sha256`). Not checked: `results/README.md`, a
+The recorded results of version 1.0.0 are unchanged in every later version: no number, outcome or input hash in a result
+file of `results/` that existed in 1.0.0 has changed. Up to version 1.2.0 each file also kept its path and SHA-256. Since version 2.0, run folders
+carry names that describe their content, and dataset and container mount paths are normalised (see 2.0), which changes
+the SHA-256 of the files that name such a path (the `provenance.json` files). `tests/check_recorded_results.py` checks
+every result file of 1.0.0 at its current path against `tests/recorded_results_v1.0.0.sha256`: the SHA-256 of the
+manifest of 1.0.0, updated for the normalised files. Not checked: `results/README.md`, a
 description that was extended, and `results/INPUT_HASHES.md`, a list that the build writes from the `provenance.json`
 files and whose headings name the run folders. Later versions add files and documentation.
 
@@ -13,19 +14,26 @@ files and whose headings name the run folders. Later versions add files and docu
 Terms of the submitted paper, detector provenance, interactive pages, a Python package, guides and a new folder layout;
 no recorded result changed.
 
+- Dataset mount paths normalised to /data/nuscenes; no change to code logic or results. Container paths are normalised
+  in the same way: `/data/inputs` for the input folder (its project name is written `inputs`), `/data/work` for the
+  working folder of the runs (including its subfolder for released code and results, and the folder of the experiment
+  scripts, written `code/experiments`), `/data/OpenPCDet` for the training container, `/opt/repo` for the repository
+  in the Docker example, and `file:///data/build/` for the build folders of two packages in `pip_freeze.txt`. The SHA-256 recorded for the files concerned (script hashes in `provenance.json`, the list of
+  version 1.0.0 in `tests/`) are those of the normalised files.
+
 ### Layout
 
 | new path | path up to 1.2.0 | content |
 |---|---|---|
 | `site/index.html`, `site/interactive/`, `site/explorer/` | `index.html`, `interactive/`, `explorer/` | everything GitHub Pages serves; published by `.github/workflows/pages.yml`, the public URLs are unchanged |
 | `experiments/` | `analysis/` | experiment scripts m1 to m8, `recorded_versions/`, `SCRIPT_VERSIONS.md` (file names unchanged) |
-| `results/m1_kitti_distance_pilot/` | `results/m1_range_kitti/` | recorded files, byte for byte |
-| `results/m2_kitti_distance/` | `results/m2_indicators_kitti/` | recorded files, byte for byte |
-| `results/m3_nuscenes_distance/` | `results/m3_range_nuscenes/` | recorded files, byte for byte |
-| `results/m4_dataset_change/` | `results/m4_dataset_shift/` | recorded files, byte for byte |
-| `results/m6_five_splits/` | `results/m6_protocol_seeds_weather/` | recorded files, byte for byte |
-| `results/m7_nuscenes_by_scene/` | `results/m7_scene_split/` | recorded files, byte for byte |
-| `results/m8_kitti_by_drive/` | `results/m8_kitti_drive_split/` | recorded files, byte for byte |
+| `results/m1_kitti_distance_pilot/` | `results/m1_range_kitti/` | recorded files (mount paths normalised) |
+| `results/m2_kitti_distance/` | `results/m2_indicators_kitti/` | recorded files (mount paths normalised) |
+| `results/m3_nuscenes_distance/` | `results/m3_range_nuscenes/` | recorded files (mount paths normalised) |
+| `results/m4_dataset_change/` | `results/m4_dataset_shift/` | recorded files (mount paths normalised) |
+| `results/m6_five_splits/` | `results/m6_protocol_seeds_weather/` | recorded files (mount paths normalised) |
+| `results/m7_nuscenes_by_scene/` | `results/m7_scene_split/` | recorded files (mount paths normalised) |
+| `results/m8_kitti_by_drive/` | `results/m8_kitti_drive_split/` | recorded files (mount paths normalised) |
 | `tests/` | `tools/check_paper_numbers.py`, `tools/check_export.py`, `tools/test_stats_js.py`, `tools/test_own_data_js.py`, `tools/test_explorer.mjs` | checks and tests; new: `check_recorded_results.py`, `check_links.py` |
 | `tools/build_interactive_data.py` | `interactive/build_data.py` | writes `site/interactive/data/` |
 | `environment/` | `Dockerfile`, `requirements.txt`, `requirements-posthoc.txt` | build the image from the repository root with `docker build -f environment/Dockerfile .` |
